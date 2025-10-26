@@ -1,0 +1,168 @@
+// Prisma Schema - Ezgi Evgin Aktaş Website
+// Diyetisyen website için database modelleri
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Model - Admin ve üyeler için
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          UserRole  @default(CLIENT)
+  
+  accounts      Account[]
+  sessions      Session[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Blog Post Model
+model BlogPost {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  content   String   @db.Text
+  excerpt   String
+  image     String?
+  category  String
+  tags      String[]
+  published Boolean  @default(false)
+  views     Int      @default(0)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([published])
+  @@index([category])
+}
+
+// Recipe Model
+model Recipe {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  ingredients String[]
+  steps       String[]
+  image       String?
+  calories    Int?
+  prepTime    Int?     // dakika
+  cookTime    Int?     // dakika
+  servings    Int      @default(1)
+  category    String?
+  difficulty  String?  // Kolay, Orta, Zor
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([category])
+}
+
+// Program Model
+model Program {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String   @db.Text
+  features    String[]
+  price       String   // Fiyat bilgisi text olarak (WhatsApp'tan sorulacak)
+  duration    String   // "10 Gün", "2 Ay" gibi
+  whatsappText String  // WhatsApp mesaj template
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([active])
+}
+
+// Contact Message Model
+model ContactMessage {
+  id      String   @id @default(cuid())
+  name    String
+  email   String
+  phone   String?
+  subject String?
+  message String   @db.Text
+  status  MessageStatus @default(UNREAD)
+  
+  createdAt DateTime @default(now())
+  
+  @@index([status])
+  @@index([createdAt])
+}
+
+// Newsletter Model
+model Newsletter {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  active    Boolean  @default(true)
+  
+  createdAt DateTime @default(now())
+  
+  @@index([email])
+  @@index([active])
+}
+
+// Enums
+enum UserRole {
+  ADMIN
+  CLIENT
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  REPLIED
+}
