@@ -9,28 +9,28 @@ import { Card } from "@/components/ui/card";
 const instagramPosts = [
   {
     id: 1,
-    image: "/images/instagram/posts/post-05.jpeg",
-    label: "Tarif",
+    image: "/images/instagram/posts/post-01.jpeg",
+    label: "Paylaşım",
   },
   {
     id: 2,
-    image: "/images/instagram/posts/post-06.jpeg",
-    label: "Kahvaltı",
+    image: "/images/instagram/posts/post-02.jpeg",
+    label: "Öneri",
   },
   {
-    id: 3,
-    image: "/images/instagram/posts/post-07.jpeg",
+    id: 9,
+    image: "/images/instagram/posts/post-09.jpeg",
     label: "Motivasyon",
   },
   {
-    id: 4,
-    image: "/images/instagram/posts/post-08.jpeg",
+    id: 7,
+    image: "/images/instagram/posts/post-07.jpeg",
     label: "Danışan",
   },
   {
-    id: 5,
-    image: "/images/instagram/posts/post-09.jpeg",
-    label: "Soru-Cevap",
+    id: 6,
+    image: "/images/instagram/posts/post-06.jpeg",
+    label: "Kahvaltı",
   },
 ];
 
@@ -50,7 +50,7 @@ export function InstagramSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center gap-3 mb-4 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 rounded-full">
+          <div className="inline-flex items-center justify-center gap-2 md:gap-3 mb-4 px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 rounded-full">
             <Image
               src="/images/instagram/profile.jpg"
               alt="dyt_ezgievgin profil"
@@ -59,7 +59,7 @@ export function InstagramSection() {
               className="rounded-full border border-white/70"
             />
             <Instagram className="w-6 h-6 text-white" />
-            <span className="text-white font-semibold text-lg">
+            <span className="text-white font-semibold text-sm md:text-lg">
               Instagram Ailem
             </span>
           </div>
@@ -71,15 +71,15 @@ export function InstagramSection() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-            Sağlıklı tarifler, beslenme ipuçları ve günlük motivasyon için
-            Instagram hesabımı takip edin.
+            Klinikten gerçek anlar, danışan süreci ve günlük motivasyon
+            paylaşımları için Instagram hesabımı takip edin.
           </p>
 
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-7">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground mb-7">
             <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
-            <span>Tarifler</span>
+            <span>Gerçek Süreç</span>
             <span className="text-gray-300">•</span>
-            <span>Pratik Öğünler</span>
+            <span>Klinikten Kareler</span>
             <span className="text-gray-300">•</span>
             <span>Danışan Motivasyonu</span>
           </div>
@@ -116,24 +116,19 @@ export function InstagramSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Card className="group relative overflow-hidden border-2 border-transparent hover:border-[var(--brand-primary)] transition-all duration-300 cursor-pointer aspect-square">
+                <Card className="group relative overflow-hidden border-2 border-transparent hover:border-[var(--brand-primary)] transition-all duration-300 cursor-pointer aspect-[4/5] md:aspect-square">
                   <Image
                     src={post.image}
                     alt={`Instagram içerik ${post.id}`}
                     fill
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                   />
-
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/90 to-[var(--brand-secondary)]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="text-white p-4 w-full">
-                      <span className="inline-flex text-xs font-semibold px-2.5 py-1 bg-white/20 rounded-full">
-                        {post.label}
-                      </span>
-                    </div>
-                  </div>
                 </Card>
               </a>
+              <p className="mt-2 text-center text-xs font-medium text-muted-foreground">
+                {post.label}
+              </p>
             </motion.div>
           ))}
         </div>
