@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
   BellRing,
@@ -9,7 +10,11 @@ import {
   Camera,
   History,
   Activity,
+  ExternalLink,
 } from "lucide-react";
+
+const CLIENT_APP_LOGIN_URL =
+  process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
 
 const features = [
   { text: "7/24 online destek", icon: MessageCircle },
@@ -86,6 +91,23 @@ export function OnlineSupportFeatures() {
             <p className="text-xs font-medium">{item.label}</p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-6 rounded-xl border bg-white p-4 md:p-5 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="text-center md:text-left">
+          <p className="text-sm font-semibold text-[var(--brand-dark)]">
+            Danışan Portalına Tek Tıkla Geçiş
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Telefon numaranızla giriş yapıp diyet planlarınızı ve bildirimlerinizi anında takip edin.
+          </p>
+        </div>
+        <a href={CLIENT_APP_LOGIN_URL} target="_blank" rel="noopener noreferrer">
+          <Button className="h-10 px-5">
+            Uygulamaya Git
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </Button>
+        </a>
       </div>
     </Card>
   );

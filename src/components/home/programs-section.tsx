@@ -4,10 +4,19 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { MessageCircle, Sparkles, Smartphone, CalendarCheck2 } from "lucide-react";
+import {
+  MessageCircle,
+  Sparkles,
+  Smartphone,
+  CalendarCheck2,
+  ExternalLink,
+} from "lucide-react";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
 
 export function ProgramsSection() {
+  const clientAppUrl =
+    process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
+
   const conversionCards = [
     {
       title: "Haftalık Strateji Görüşmesi",
@@ -17,7 +26,7 @@ export function ProgramsSection() {
     },
     {
       title: "Mobil Uygulama ile Süreç Yönetimi",
-      text: "Diyetleriniz, geçmiş kayıtlarınız, aktivite verileriniz ve ilerleme grafikleri tek ekranda.",
+      text: "Diyetleriniz, geçmiş kayıtlarınız, aktivite verileriniz ve ilerleme grafikleri aktif danışan portalında tek ekranda.",
       icon: Smartphone,
       badge: "Uygulama Destekli",
     },
@@ -73,6 +82,26 @@ export function ProgramsSection() {
         </div>
 
         <OnlineSupportFeatures />
+
+        <div className="mt-6 rounded-2xl border border-primary/20 bg-gradient-to-r from-cyan-50 to-pink-50 p-5 md:p-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p className="text-base font-semibold text-[var(--brand-dark)]">
+                Takip sadece anlatılmıyor, uygulamada aktif kullanılıyor.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Danışanlar telefon numarasıyla giriş yapıp diyetlerini, geçmiş
+                planlarını ve mesajlarını günlük olarak takip ediyor.
+              </p>
+            </div>
+            <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="h-11 px-5 bg-white">
+                Danışan Portalını Aç
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Button>
+            </a>
+          </div>
+        </div>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
-import { CalendarCheck2, MessageCircle, Smartphone, LineChart } from "lucide-react";
+import { CalendarCheck2, MessageCircle, Smartphone, LineChart, ExternalLink } from "lucide-react";
 
 const processSteps = [
   {
@@ -34,6 +34,8 @@ const processSteps = [
 
 const whatsappLink =
   "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20online%20diyet%20s%C3%BCreci%20i%C3%A7in%20randevu%20almak%20istiyorum.";
+const clientAppUrl =
+  process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
 
 export default function ProgramsPage() {
   return (
@@ -60,6 +62,17 @@ export default function ProgramsPage() {
               <Button size="lg" className="h-12 px-8">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp&apos;tan Randevu Al
+              </Button>
+            </a>
+            <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 px-8 bg-white/80"
+              >
+                <Smartphone className="w-5 h-5 mr-2" />
+                Danışan Uygulamasını Aç
+                <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
             </a>
           </div>

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 
 const GOOGLE_MAPS_PROFILE_URL =
   "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
+const CLIENT_APP_URL =
+  process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
 
 export function ReviewCtaSection() {
   return (
@@ -29,10 +31,17 @@ export function ReviewCtaSection() {
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Deneyiminizi Google ve DoktorTakvimi profillerinde paylaşarak
-              diğer danışanlara da yol gösterebilirsiniz.
+              diğer danışanlara da yol gösterebilirsiniz. Danışan portalını aktif
+              kullanıyorsanız uygulama deneyiminizden de bahsetmeniz çok kıymetli.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+              <a href={CLIENT_APP_URL} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="h-12 px-7 border-2">
+                  Danışan Portalı
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
               <a
                 href={GOOGLE_MAPS_PROFILE_URL}
                 target="_blank"
