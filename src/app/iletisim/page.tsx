@@ -9,10 +9,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ImageSlider } from "@/components/ui/image-slider";
 import { placeholderImages } from "@/lib/placeholder-images";
-import { Mail, Phone, MessageCircle, MapPin, Clock, Send } from "lucide-react";
+import { OnlineSupportFeatures } from "@/components/online-support-features";
+import {
+  Mail,
+  Phone,
+  MessageCircle,
+  MapPin,
+  Clock,
+  Send,
+  Smartphone,
+} from "lucide-react";
 import { toast } from "sonner";
 
 export default function ContactPage() {
+  const googleMapsPlaceUrl =
+    "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -46,8 +58,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Telefon",
-      value: "0533 310 49 70",
-      link: "tel:+905333104970",
+      value: "0546 265 04 40",
+      link: "tel:+905462650440",
       color: "from-pink-500 to-rose-500",
     },
     {
@@ -61,7 +73,7 @@ export default function ContactPage() {
       icon: MessageCircle,
       title: "WhatsApp",
       value: "Hemen Mesaj Gönder",
-      link: "https://wa.me/905333104970?text=Merhaba",
+      link: "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba",
       color: "from-green-500 to-emerald-500",
     },
     {
@@ -77,6 +89,13 @@ export default function ContactPage() {
       value: "Pazartesi - Cumartesi",
       subtitle: "09:00 - 18:00",
       color: "from-purple-500 to-indigo-500",
+    },
+    {
+      icon: Smartphone,
+      title: "Mobil Uygulama",
+      value: "Süreci Uygulamadan Takip Et",
+      subtitle: "Diyet, öğün, bildirim ve grafiksel gelişim takibi",
+      color: "from-indigo-500 to-violet-500",
     },
   ];
 
@@ -103,7 +122,7 @@ export default function ContactPage() {
       {/* Contact Info Cards */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
@@ -137,6 +156,9 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-16 bg-gradient-to-br from-pink-50/30 to-white">
         <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto mb-10">
+            <OnlineSupportFeatures />
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Form */}
             <Card className="p-8">
@@ -248,12 +270,12 @@ export default function ContactPage() {
                 <p className="text-muted-foreground mb-6">
                   Anında cevap almak için WhatsApp üzerinden bizimle iletişime
                   geçebilirsiniz. Online danışmanlık randevusu almak için de
-                  WhatsApp'ı kullanabilirsiniz.
+                  WhatsApp&apos;ı kullanabilirsiniz.
                 </p>
                 <Button
                   onClick={() =>
                     window.open(
-                      "https://wa.me/905333104970?text=Merhaba",
+                      "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba",
                       "_blank"
                     )
                   }
@@ -261,7 +283,7 @@ export default function ContactPage() {
                   className="w-full bg-[#25D366] hover:bg-[#20BD5A]"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp'tan Mesaj Gönder
+                  WhatsApp&apos;tan Mesaj Gönder
                 </Button>
               </Card>
 
@@ -322,7 +344,7 @@ export default function ContactPage() {
                   {/* Google Maps Embed */}
                   <div className="relative w-full h-64 rounded-xl overflow-hidden border-2 border-orange-100 shadow-md">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.6!2d32.677!3d39.947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU2JzQ5LjIiTiAzMsKwNDAnMzcuMiJF!5e0!3m2!1str!2str!4v1234567890"
+                      src="https://www.google.com/maps?q=39.9669753,32.6358095&z=17&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -335,13 +357,13 @@ export default function ContactPage() {
                   </div>
 
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Ezgi+Evgin+Beslenme+ve+Diyet+Dan%C4%B1%C5%9Fmanl%C4%B1%C4%9F%C4%B1%2C+Eryaman+Altay+mah.Orhan+Bey+cad.+Atay%C4%B1ld%C4%B1z+plaza%2C+no%3A1%2F70+kat%3A8%2C+06820+Etimesgut%2FAnkara%2C+T%C3%BCrkiye"
+                    href={googleMapsPlaceUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors"
                   >
                     <MapPin className="w-4 h-4 mr-1" />
-                    Google Maps'te Aç
+                    Google Maps&apos;te Aç
                   </a>
 
                   <p className="text-sm text-muted-foreground">

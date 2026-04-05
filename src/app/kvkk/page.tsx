@@ -135,7 +135,7 @@ export default function KVKKPage() {
             <p className="font-semibold">
               E-posta: info@ezgievginaktas.com
               <br />
-              Telefon: 0533 310 49 70
+              Telefon: 0546 265 04 40
             </p>
           </section>
         </div>

@@ -1,26 +1,54 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ImageSlider } from "@/components/ui/image-slider";
-import { placeholderImages } from "@/lib/placeholder-images";
 import { GraduationCap, Award, Heart, Target } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function AboutPage() {
   const education = [
     {
-      year: "2018 - 2022",
+      year: "Lisans Eğitimi",
       title: "Beslenme ve Diyetetik",
-      institution: "İstanbul Üniversitesi",
-      description: "Lisans eğitimi",
+      institution: "Başkent Üniversitesi",
+      description:
+        "Obez olan ve olmayan adölesanların beslenme alışkanlıklarının karşılaştırılması konulu tez ile tamamlandı.",
     },
     {
-      year: "2022 - 2024",
-      title: "Klinik Beslenme Yüksek Lisans",
-      institution: "Hacettepe Üniversitesi",
-      description: "Yüksek lisans tamamlandı",
+      year: "Yüksek Lisans",
+      title: "Beslenme ve Diyetetik",
+      institution: "Başkent Üniversitesi",
+      description: "Lisansüstü akademik uzmanlaşma süreci devam etmektedir.",
+    },
+  ];
+
+  const internships = [
+    "Etimesgut Toplum Sağlığı Merkezi",
+    "Ankara Tıp Fakültesi Çocuk Hastanesi",
+    "Ankara Numune Eğitim ve Araştırma Hastanesi",
+    "Gülhane Tıp Akademisi",
+  ];
+
+  const careerJourney = [
+    {
+      period: "İlk Klinik Deneyim",
+      place: "Özel Çankaya Hastanesi",
+      detail:
+        "Klinik, poliklinik ve kurum diyetisyenliği alanlarında; kilo yönetimi ve hastalıklarda diyet tedavisi konularında danışan takibi.",
+    },
+    {
+      period: "İkinci Kurumsal Adım",
+      place: "Özel Koru Hastanesi",
+      detail:
+        "Kilo yönetimi, gebe-emziklilik dönemi beslenmesi, çocuk ve ergenlerde kilo yönetimi ve hastalıklarda beslenme tedavisi.",
+    },
+    {
+      period: "2016 Eylül - Günümüz",
+      place: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+      detail:
+        "Kurucusu olduğu merkezde yasaksız, sürdürülebilir ve kişiye özel beslenme yaklaşımıyla danışanlarına hizmet vermektedir.",
     },
   ];
 
@@ -148,11 +176,38 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto drop-shadow-sm"
             >
-              Uzman diyetisyen olarak, binlerce kişinin sağlıklı yaşam
-              yolculuğunda rehberlik ettim. Amacım, sadece kilo verdirmek değil,
-              yaşam tarzı değişikliği yaratarak kalıcı sonuçlar elde etmenizi
-              sağlamak.
+              Ankara Eryaman merkezli kliniğimde ve online görüşmelerde;
+              kilo verme, sürdürülebilir beslenme, metabolik hastalıklarda
+              beslenme ve yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
             </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto"
+            >
+              Yaklaşımım, kısa süreli kısıtlamalardan çok uzun vadeli alışkanlık
+              dönüşümünü hedefleyen; bilimsel, uygulanabilir ve danışan odaklı
+              bir beslenme planlamasıdır.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="max-w-md mx-auto"
+            >
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/70">
+                <Image
+                  src="/images/instagram/posts/post-09.jpeg"
+                  alt="Diyetisyen Ezgi Evgin Aktaş - Ofiste"
+                  fill
+                  className="object-contain object-center bg-white"
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  priority
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
 
@@ -185,9 +240,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold">Misyonum</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Sağlıklı beslenmeyi herkes için erişilebilir kılmak ve kişiye
-                özel programlarla insanların en iyi versiyonlarına ulaşmalarına
-                yardımcı olmak.
+                Sağlıklı beslenmeyi sürdürülebilir hale getirip, kişiye özel
+                planlarla danışanlarımın günlük yaşam içinde zorlanmadan
+                ilerleyebildiği bir sistem kurmak.
               </p>
             </Card>
 
@@ -199,9 +254,9 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold">Vizyonum</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Türkiye'nin ve dünyanın her yerinden insanlara online
-                platformlar aracılığıyla ulaşarak, global bir sağlıklı yaşam
-                topluluğu oluşturmak.
+                Eryaman ve Etimesgut başta olmak üzere Ankara&apos;da yüz yüze,
+                Türkiye ve yurt dışından danışanlarla online olarak bilimsel ve
+                uygulanabilir beslenme danışmanlığı sunmak.
               </p>
             </Card>
           </div>
@@ -242,6 +297,59 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internship + Career */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">
+                Mesleki{" "}
+                <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
+                  Yolculuğum
+                </span>
+              </h2>
+              <p className="text-muted-foreground">
+                Eğitim, staj ve hastane deneyimlerinden kliniğime uzanan süreç
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              <Card className="p-6">
+                <h3 className="text-xl font-bold mb-4">Staj Deneyimleri</h3>
+                <div className="space-y-3">
+                  {internships.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="w-2 h-2 mt-2 rounded-full bg-[var(--brand-primary)]" />
+                      <p className="text-sm text-muted-foreground">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+              <Card className="p-6">
+                <h3 className="text-xl font-bold mb-4">Lisans Tez Konusu</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Obez olan ve olmayan adölesanların beslenme alışkanlıklarının
+                  karşılaştırılması.
+                </p>
+              </Card>
+            </div>
+
+            <div className="space-y-4">
+              {careerJourney.map((item) => (
+                <Card key={item.place} className="p-6">
+                  <Badge className="mb-3">{item.period}</Badge>
+                  <h3 className="text-lg font-bold mb-2">{item.place}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.detail}
+                  </p>
                 </Card>
               ))}
             </div>
@@ -323,12 +431,12 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a
-                href="https://wa.me/905333104970?text=Merhaba"
+                href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-12 px-8 bg-white text-primary hover:bg-white/90 rounded-lg font-semibold transition-colors"
               >
-                WhatsApp'tan İletişime Geç
+                WhatsApp&apos;tan İletişime Geç
               </a>
               <a
                 href="/programlar"
@@ -341,13 +449,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Çalışmalarımızdan Kareler */}
-      <ImageSlider
-        images={placeholderImages.workGallery}
-        title="Çalışmalarımızdan Kareler"
-        autoplay={true}
-        autoplayInterval={6000}
-      />
     </div>
   );
 }

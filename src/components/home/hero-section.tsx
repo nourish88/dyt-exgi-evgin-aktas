@@ -92,7 +92,7 @@ export function HeroSection() {
               </Button>
             </Link>
             <Link
-              href="https://wa.me/905333104970?text=Merhaba"
+              href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
               target="_blank"
             >
               <Button

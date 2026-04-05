@@ -1,113 +1,36 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram, Heart, MessageCircle, ExternalLink } from "lucide-react";
+import { Instagram, ExternalLink, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-// Placeholder Instagram posts
 const instagramPosts = [
   {
     id: 1,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#e91e8c;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig1)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🥗</text>
-      </svg>
-    `)}`,
-    likes: 1247,
-    comments: 89,
+    image: "/images/instagram/posts/post-05.jpeg",
+    label: "Tarif",
   },
   {
     id: 2,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig2)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🥑</text>
-      </svg>
-    `)}`,
-    likes: 982,
-    comments: 64,
+    image: "/images/instagram/posts/post-06.jpeg",
+    label: "Kahvaltı",
   },
   {
     id: 3,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig3" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f9a8d4;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig3)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🍓</text>
-      </svg>
-    `)}`,
-    likes: 1534,
-    comments: 112,
+    image: "/images/instagram/posts/post-07.jpeg",
+    label: "Motivasyon",
   },
   {
     id: 4,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig4" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig4)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🥤</text>
-      </svg>
-    `)}`,
-    likes: 876,
-    comments: 45,
+    image: "/images/instagram/posts/post-08.jpeg",
+    label: "Danışan",
   },
   {
     id: 5,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig5" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig5)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🥦</text>
-      </svg>
-    `)}`,
-    likes: 1103,
-    comments: 78,
-  },
-  {
-    id: 6,
-    image: `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="ig6" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="400" height="400" fill="url(#ig6)"/>
-        <text x="200" y="200" font-family="Arial" font-size="80" font-weight="bold" text-anchor="middle" dominant-baseline="middle" fill="white" opacity="0.9">🍎</text>
-      </svg>
-    `)}`,
-    likes: 1421,
-    comments: 95,
+    image: "/images/instagram/posts/post-09.jpeg",
+    label: "Soru-Cevap",
   },
 ];
 
@@ -128,6 +51,13 @@ export function InstagramSection() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center justify-center gap-3 mb-4 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 rounded-full">
+            <Image
+              src="/images/instagram/profile.jpg"
+              alt="dyt_ezgievgin profil"
+              width={28}
+              height={28}
+              className="rounded-full border border-white/70"
+            />
             <Instagram className="w-6 h-6 text-white" />
             <span className="text-white font-semibold text-lg">
               Instagram Ailem
@@ -141,9 +71,18 @@ export function InstagramSection() {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-            Sağlıklı tarifler, beslenme ipuçları ve motivasyon dolu anlar için
-            beni Instagram&apos;da takip edin!
+            Sağlıklı tarifler, beslenme ipuçları ve günlük motivasyon için
+            Instagram hesabımı takip edin.
           </p>
+
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-7">
+            <Sparkles className="w-4 h-4 text-[var(--brand-primary)]" />
+            <span>Tarifler</span>
+            <span className="text-gray-300">•</span>
+            <span>Pratik Öğünler</span>
+            <span className="text-gray-300">•</span>
+            <span>Danışan Motivasyonu</span>
+          </div>
 
           <a
             href="https://instagram.com/dyt_ezgievgin"
@@ -163,7 +102,7 @@ export function InstagramSection() {
         </motion.div>
 
         {/* Instagram Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {instagramPosts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -172,30 +111,29 @@ export function InstagramSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="group relative overflow-hidden border-2 border-transparent hover:border-[var(--brand-primary)] transition-all duration-300 cursor-pointer aspect-square">
-                {/* Image */}
-                <img
-                  src={post.image}
-                  alt={`Instagram post ${post.id}`}
-                  className="w-full h-full object-cover"
-                />
+              <a
+                href="https://instagram.com/dyt_ezgievgin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card className="group relative overflow-hidden border-2 border-transparent hover:border-[var(--brand-primary)] transition-all duration-300 cursor-pointer aspect-square">
+                  <Image
+                    src={post.image}
+                    alt={`Instagram içerik ${post.id}`}
+                    fill
+                    className="w-full h-full object-cover"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
+                  />
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/90 to-[var(--brand-secondary)]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-white text-center space-y-3">
-                    <div className="flex items-center justify-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Heart className="w-5 h-5 fill-white" />
-                        <span className="font-semibold">{post.likes}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MessageCircle className="w-5 h-5" />
-                        <span className="font-semibold">{post.comments}</span>
-                      </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-primary)]/90 to-[var(--brand-secondary)]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="text-white p-4 w-full">
+                      <span className="inline-flex text-xs font-semibold px-2.5 py-1 bg-white/20 rounded-full">
+                        {post.label}
+                      </span>
                     </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -209,8 +147,7 @@ export function InstagramSection() {
           className="text-center mt-12"
         >
           <p className="text-muted-foreground mb-4">
-            Daha fazlası için Instagram&apos;da beni takip edin ve topluluğumuza
-            katılın! 💖
+            Daha fazlası için Instagram&apos;da beni takip edin.
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">

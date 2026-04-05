@@ -29,15 +29,19 @@ export const metadata: Metadata = {
     template: "%s | Diyetisyen Ezgi Evgin Aktaş",
   },
   description:
-    "Ankara Etimesgut'ta online beslenme danışmanlığı, kilo yönetimi ve sağlıklı beslenme programları. Uzman diyetisyen Ezgi Evgin Aktaş ile kişiye özel diyet programları ve WhatsApp desteği.",
+    "Ankara Eryaman ve Etimesgut'ta online/yüz yüze beslenme danışmanlığı, kilo verme ve kilo yönetimi programları. Uzman diyetisyen Ezgi Evgin Aktaş ile kişiye özel diyet programları.",
   keywords: [
     "diyetisyen ankara",
+    "diyetisyen eryaman",
+    "eryaman diyetisyen",
+    "etimesgut diyetisyen",
+    "ankara kilo verme",
+    "eryaman kilo verme",
+    "etimesgut kilo verme",
     "online diyetisyen",
     "beslenme danışmanı ankara",
     "kilo verme programı",
     "online diyet programı",
-    "etimesgut diyetisyen",
-    "eryaman diyetisyen",
     "beslenme koçu",
     "sağlıklı kilo verme",
     "kişiye özel diyet",
@@ -67,7 +71,7 @@ export const metadata: Metadata = {
     siteName: "Diyetisyen Ezgi Evgin Aktaş",
     title: "Diyetisyen Ezgi Evgin Aktaş | Online Beslenme Danışmanlığı Ankara",
     description:
-      "Ankara'da online beslenme danışmanlığı ve kilo yönetimi programları. Kişiye özel diyet, WhatsApp desteği ve uzman diyetisyen rehberliği.",
+      "Ankara Eryaman ve Etimesgut'ta online beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
     images: [
       {
         url: "/logo.svg",
@@ -81,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Diyetisyen Ezgi Evgin Aktaş",
     description:
-      "Online beslenme danışmanlığı ve kilo yönetimi programları - Ankara",
+      "Eryaman ve Etimesgut odaklı online/yüz yüze beslenme danışmanlığı",
     images: ["/logo.svg"],
   },
   robots: {

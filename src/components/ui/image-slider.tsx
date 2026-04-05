@@ -13,6 +13,7 @@ interface ImageSliderProps {
   autoplayInterval?: number;
   showNavigation?: boolean;
   showDots?: boolean;
+  fullScreen?: boolean;
   className?: string;
 }
 
@@ -23,6 +24,7 @@ export function ImageSlider({
   autoplayInterval = 5000,
   showNavigation = true,
   showDots = true,
+  fullScreen = false,
   className = "",
 }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +61,7 @@ export function ImageSlider({
     <section
       className={`py-16 bg-gradient-to-br from-pink-50/30 to-white ${className}`}
     >
-      <div className="container mx-auto px-4">
+      <div className={fullScreen ? "" : "container mx-auto px-4"}>
         {title && (
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
@@ -67,12 +69,18 @@ export function ImageSlider({
         )}
 
         <div
-          className="relative max-w-6xl mx-auto"
+          className={fullScreen ? "relative" : "relative max-w-6xl mx-auto"}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Main Image Container */}
-          <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+          <div
+            className={`relative overflow-hidden shadow-xl ${
+              fullScreen
+                ? "h-[85vh] min-h-[520px] rounded-none"
+                : "h-[400px] md:h-[500px] rounded-2xl"
+            }`}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -86,8 +94,8 @@ export function ImageSlider({
                   src={images[currentIndex]}
                   alt={`Slider image ${currentIndex + 1}`}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                  className={`object-cover ${fullScreen ? "object-top" : ""}`}
+                  sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"}
                 />
               </motion.div>
             </AnimatePresence>

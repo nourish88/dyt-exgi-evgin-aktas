@@ -4,15 +4,28 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function WhatsAppFloat() {
-  const phoneNumber = "905333104970";
+  const phoneNumber = "905462650440";
   const message = encodeURIComponent(
-    "Merhaba, online diyet programları hakkında bilgi almak istiyorum."
+    "Merhaba, randevu almak istiyorum."
   );
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    const isMobile =
+      /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+    const targetUrl = isMobile
+      ? `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+      : whatsappWebUrl;
+
+    window.open(targetUrl, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <motion.a
-      href={whatsappUrl}
+      href={whatsappWebUrl}
+      onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -30,7 +43,7 @@ export function WhatsAppFloat() {
         initial={{ opacity: 0, x: 10 }}
         whileHover={{ opacity: 1, x: 0 }}
       >
-        WhatsApp'tan Bize Ulaşın
+        WhatsApp&apos;tan Bize Ulaşın
         <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-full w-0 h-0 border-t-8 border-b-8 border-l-8 border-transparent border-l-gray-900" />
       </motion.div>
 

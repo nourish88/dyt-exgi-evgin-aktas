@@ -9,8 +9,12 @@ export function StructuredData() {
     image: "https://ezgievginaktas.com/logo.svg",
     logo: "https://ezgievginaktas.com/logo.svg",
     url: "https://ezgievginaktas.com",
-    telephone: "+905333104970",
+    telephone: "+905462650440",
     email: "info@ezgievginaktas.com",
+    sameAs: [
+      "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
+      "https://www.instagram.com/dyt_ezgievgin",
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -44,6 +48,13 @@ export function StructuredData() {
     areaServed: {
       "@type": "Place",
       name: "Türkiye",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "130",
+      bestRating: "5",
+      worstRating: "1",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -79,7 +90,7 @@ export function StructuredData() {
     description: "Uzman diyetisyen, beslenme ve diyet danışmanı",
     url: "https://ezgievginaktas.com",
     image: "https://ezgievginaktas.com/logo.svg",
-    telephone: "+905333104970",
+    telephone: "+905462650440",
     email: "info@ezgievginaktas.com",
     address: {
       "@type": "PostalAddress",
@@ -102,11 +113,6 @@ export function StructuredData() {
       name: "Ezgi Evgin Aktaş",
     },
     inLanguage: "tr-TR",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://ezgievginaktas.com/blog?search={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const professionalServiceSchema = {
@@ -115,7 +121,7 @@ export function StructuredData() {
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description: "Online ve yüz yüze beslenme danışmanlığı hizmetleri",
     image: "https://ezgievginaktas.com/logo.svg",
-    telephone: "+905333104970",
+    telephone: "+905462650440",
     email: "info@ezgievginaktas.com",
     address: {
       "@type": "PostalAddress",

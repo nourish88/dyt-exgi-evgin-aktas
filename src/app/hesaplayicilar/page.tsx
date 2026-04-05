@@ -387,7 +387,7 @@ export default function CalculatorsPage() {
             <Button
               onClick={() =>
                 window.open(
-                  "https://wa.me/905333104970?text=Merhaba, hesaplama sonuçlarıma göre kişiye özel program almak istiyorum.",
+                  "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba, hesaplama sonuçlarıma göre kişiye özel program almak istiyorum.",
                   "_blank"
                 )
               }

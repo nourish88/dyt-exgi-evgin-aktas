@@ -3,35 +3,38 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ExternalLink } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
-    name: "Ayşe K.",
-    role: "10 Günlük Program",
+    name: "Danışan Yorumu",
+    role: "Kilo Verme Süreci",
     content:
-      "10 günde 4 kilo verdim ve kendimi çok daha enerjik hissediyorum. Ezgi Hanım'ın profesyonel yaklaşımı ve sürekli desteği sayesinde hedefime ulaştım.",
+      "Süreçte motivasyonun yüksek tutulduğu, düzenli takip edilen ve sürdürülebilir şekilde kilo yönetimine odaklanan bir danışmanlık deneyimi.",
     rating: 5,
-    initials: "AK",
+    initials: "DY",
+    source: "DoktorTakvimi",
   },
   {
     id: 2,
-    name: "Mehmet Y.",
-    role: "4 Diyet Danışmanlığı",
+    name: "Danışan Yorumu",
+    role: "Online Danışmanlık",
     content:
-      "Yıllardır vermeye çalıştığım kiloları sonunda verdim. Program boyunca her soruma anında cevap aldım. Kesinlikle tavsiye ediyorum!",
+      "Online görüşme düzeni ve günlük yaşama uyarlanabilir planlarla, farklı şehirlerden de düzenli ilerleme sağlanabildiğini vurgulayan geri bildirimler.",
     rating: 5,
-    initials: "MY",
+    initials: "DY",
+    source: "DoktorTakvimi",
   },
   {
     id: 3,
-    name: "Zeynep T.",
-    role: "Sürdürülebilir Yaşam",
+    name: "Danışan Yorumu",
+    role: "Yaşam Tarzı Değişimi",
     content:
-      "Sadece kilo vermekle kalmadım, beslenme alışkanlıklarımı tamamen değiştirdim. Artık daha sağlıklı ve mutluyum. Teşekkürler!",
+      "Sadece kilo kaybı değil, beslenme alışkanlıklarının kalıcı şekilde değişmesi ve sürecin uzun vadede sürdürülebilir olması öne çıkıyor.",
     rating: 5,
-    initials: "ZT",
+    initials: "DY",
+    source: "DoktorTakvimi",
   },
 ];
 
@@ -59,7 +62,7 @@ export function TestimonialsSection() {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground"
           >
-            Binlerce mutlu danışanımızdan bazılarının deneyimleri
+            DoktorTakvimi profilindeki danışan geri bildirimlerinden derlenmiştir
           </motion.p>
         </div>
 
@@ -90,7 +93,7 @@ export function TestimonialsSection() {
 
                   {/* Content */}
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
 
                   {/* Author */}
@@ -107,12 +110,27 @@ export function TestimonialsSection() {
                       <div className="text-xs text-muted-foreground">
                         {testimonial.role}
                       </div>
+                      <div className="text-[11px] text-primary font-medium mt-1">
+                        Kaynak: {testimonial.source}
+                      </div>
                     </div>
                   </div>
                 </div>
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-sm text-primary hover:underline"
+          >
+            Tüm yorumları DoktorTakvimi&apos;nde görüntüle
+            <ExternalLink className="w-4 h-4 ml-1.5" />
+          </a>
         </div>
       </div>
     </section>
