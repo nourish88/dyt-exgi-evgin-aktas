@@ -16,7 +16,6 @@ export function Navbar() {
     { href: "/", label: "Ana Sayfa" },
     { href: "/hakkimda", label: "Hakkımda" },
     { href: "/programlar", label: "Online Programlar" },
-    { href: "/tarifler", label: "Tarifler" },
     { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
     { href: "/iletisim", label: "İletişim" },
   ];

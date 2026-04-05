@@ -55,7 +55,7 @@ export function OnlineSupportFeatures() {
           <div className="relative mx-auto w-[210px] h-[360px] rounded-[28px] border-4 border-[var(--brand-dark)] bg-black p-2 shadow-xl">
             <div className="relative w-full h-full rounded-[20px] overflow-hidden">
               <Image
-                src="/images/instagram/posts/post-09.jpeg"
+                src="/images/mobil-pic.jpeg"
                 alt="Mobil uygulama ile diyet takibi"
                 fill
                 className="object-cover"

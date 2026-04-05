@@ -1,14 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { ImageSlider } from "@/components/ui/image-slider";
-import { placeholderImages } from "@/lib/placeholder-images";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
 import {
   Mail,
@@ -16,43 +9,12 @@ import {
   MessageCircle,
   MapPin,
   Clock,
-  Send,
   Smartphone,
 } from "lucide-react";
-import { toast } from "sonner";
 
 export default function ContactPage() {
   const googleMapsPlaceUrl =
     "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Lütfen zorunlu alanları doldurun");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // API call simülasyonu (gerçek implementasyonda backend'e istek atılacak)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast.success(
-        "Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız."
-      );
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-    }, 1500);
-  };
 
   const contactInfo = [
     {
@@ -159,111 +121,7 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto mb-10">
             <OnlineSupportFeatures />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Form */}
-            <Card className="p-8">
-              <h2 className="text-2xl font-bold mb-6">Mesaj Gönderin</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name" className="text-base">
-                    Adınız Soyadınız <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
-                    placeholder="Ad Soyad"
-                    className="mt-2 h-12"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="email" className="text-base">
-                    E-posta Adresiniz <span className="text-red-500">*</span>
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    placeholder="ornek@email.com"
-                    className="mt-2 h-12"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone" className="text-base">
-                    Telefon Numaranız
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    placeholder="05XX XXX XX XX"
-                    className="mt-2 h-12"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="subject" className="text-base">
-                    Konu
-                  </Label>
-                  <Input
-                    id="subject"
-                    value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
-                    }
-                    placeholder="Konu başlığı"
-                    className="mt-2 h-12"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="message" className="text-base">
-                    Mesajınız <span className="text-red-500">*</span>
-                  </Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    placeholder="Mesajınızı buraya yazın..."
-                    rows={6}
-                    className="mt-2"
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full h-12 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    "Gönderiliyor..."
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Mesajı Gönder
-                    </>
-                  )}
-                </Button>
-              </form>
-            </Card>
-
-            {/* Additional Info */}
+          <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <Card className="p-8 bg-gradient-to-br from-pink-50 to-white">
                 <h3 className="text-2xl font-bold mb-4">Hızlı İletişim</h3>
@@ -376,14 +234,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Bize Katılanlar */}
-      <ImageSlider
-        images={placeholderImages.communityMembers}
-        title="Bize Katılanlar"
-        autoplay={true}
-        autoplayInterval={8000}
-      />
     </div>
   );
 }

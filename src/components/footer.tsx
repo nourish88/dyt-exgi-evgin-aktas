@@ -66,14 +66,6 @@ export function Footer() {
                   Online Programlar
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/tarifler"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Tarifler
-                </Link>
-              </li>
             </ul>
           </div>
 
