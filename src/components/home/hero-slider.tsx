@@ -76,7 +76,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[92svh] md:min-h-screen flex items-center justify-center overflow-hidden py-6 md:py-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       role="region"
@@ -97,15 +97,13 @@ export function HeroSlider() {
           className="absolute inset-0"
         >
           <Image
-            src={currentSlide.backgroundImage ?? "/images/instagram/posts/post-01.jpeg"}
+            src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
             alt={currentSlide.title}
             fill
-            className="object-cover object-top"
+            className="object-contain object-center p-4 md:p-8"
             sizes="100vw"
             priority={currentSlide.id === 1}
           />
-          <div className={`absolute inset-0 bg-gradient-to-br ${currentSlide.backgroundGradient} opacity-45`} />
-          <div className="absolute inset-0 bg-black/30" />
         </motion.div>
       </AnimatePresence>
 
@@ -117,25 +115,25 @@ export function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.45 }}
-            className="max-w-3xl mx-auto text-center space-y-6"
+            className="max-w-3xl mx-auto text-center space-y-4 md:space-y-6 md:-translate-y-24 lg:-translate-y-28"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-xs font-semibold text-[var(--brand-dark)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
               Dünyanın Neresinde Olursanız Olun
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-md">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.55)]">
               {currentSlide.title}
             </h1>
-            <p className="text-lg md:text-2xl text-white/95 drop-shadow-md">
+            <p className="text-base md:text-2xl text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               {currentSlide.description}
             </p>
-            <p className="text-base md:text-lg text-white/90">
+            <p className="text-sm md:text-lg text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
               Aç kalmadan, sürdürülebilir beslenme adımlarıyla ilerleyelim.
             </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
               <Link href="/programlar">
                 <Button
                   size="lg"
-                  className="bg-white text-[var(--brand-dark)] hover:bg-white/90 shadow-lg transition-all duration-300 group h-12 px-7"
+                  className="w-full sm:w-auto bg-white text-[var(--brand-dark)] hover:bg-white/90 shadow-lg transition-all duration-300 group h-12 px-7"
                 >
                   Şimdi Başla
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -149,14 +147,14 @@ export function HeroSlider() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white/75 bg-transparent text-white hover:bg-white/10 h-12 px-7"
+                  className="w-full sm:w-auto border-2 border-white/75 bg-transparent text-white hover:bg-white/10 h-12 px-7"
                 >
                   WhatsApp&apos;tan Bilgi Al
                 </Button>
               </Link>
             </div>
 
-            <div className="pt-3 flex flex-wrap justify-center gap-2">
+            <div className="pt-1 flex flex-wrap justify-center gap-2">
               {[
                 "7/24 Online Destek",
                 "Öğün Hatırlatıcı",
@@ -165,7 +163,7 @@ export function HeroSlider() {
               ].map((item) => (
                 <span
                   key={item}
-                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/80 text-[var(--brand-dark)]"
+                  className="px-2.5 md:px-3 py-1.5 rounded-full text-[11px] md:text-xs font-medium bg-white/80 text-[var(--brand-dark)]"
                 >
                   {item}
                 </span>
@@ -174,10 +172,10 @@ export function HeroSlider() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-10 flex items-center justify-center gap-4">
+        <div className="mt-8 md:mt-10 flex items-center justify-center gap-4">
           <button
             onClick={goToPrevious}
-            className="bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
+            className="hidden sm:inline-flex bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -201,7 +199,7 @@ export function HeroSlider() {
 
           <button
             onClick={goToNext}
-            className="bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
+            className="hidden sm:inline-flex bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
             aria-label="Next slide"
           >
             <ChevronRight className="w-5 h-5" />
