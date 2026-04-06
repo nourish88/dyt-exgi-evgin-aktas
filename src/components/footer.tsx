@@ -94,7 +94,7 @@ export function Footer() {
                   href="/mobil-uygulamamiz"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Danışan portalı (mobil / PWA)
+                  Danışan portalı — telefondan takip
                 </Link>
               </li>
               <li>

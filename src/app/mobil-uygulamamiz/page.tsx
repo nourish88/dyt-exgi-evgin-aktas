@@ -88,10 +88,12 @@ export default function MobileAppPage() {
 
       if (hasInstalledRelatedApp) {
         setOpenHint(
-          "Kurulu uygulama destekleniyorsa doğrudan PWA açılır; aksi durumda web portalı açılır."
+          "Bağlantı hazır. Uygulamayı telefonunuza daha önce eklemişseniz doğrudan o ekrandan açılabilir; olmazsa tarayıcıdan giriş yapmaya devam edersiniz — ikisi de aynı içerik."
         );
       } else {
-        setOpenHint("Uygulama tarayıcıda açıldı. Ana ekrana ekleyerek PWA gibi kullanabilirsiniz.");
+        setOpenHint(
+          "Tarayıcınızda açıldı. Menüden «Ana ekrana ekle» derseniz bir dahaki sefere tek dokunuşla yine buradasınız."
+        );
       }
     } finally {
       setIsOpening(false);
@@ -149,9 +151,13 @@ export default function MobileAppPage() {
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 Telefon numaranız ile hızlı danışan girişi
               </div>
-              <div className="flex items-center gap-2 text-sm text-[var(--brand-dark)]">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                Uyumlu cihazlarda kurulu PWA açılışı otomatik desteklenir
+              <div className="flex items-start gap-2 text-sm text-[var(--brand-dark)] leading-snug">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span>
+                  Ana ekranınıza kaydettiyseniz sonraki girişler tek dokunuşla;
+                  kaydetmediyseniz tarayıcıdan devam edersiniz — planlar ve
+                  mesajlarınız yine aynı yerde.
+                </span>
               </div>
             </div>
 
