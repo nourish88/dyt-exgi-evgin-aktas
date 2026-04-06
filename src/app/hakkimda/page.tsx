@@ -100,56 +100,15 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Slider */}
-      <section className="relative py-20 overflow-hidden min-h-[480px]">
-        <div className="absolute inset-0">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={heroIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="absolute inset-0"
-            >
-              <Image
-                src={aboutPageSliderImages[heroIndex]}
-                alt={`Ezgi Evgin Aktaş — görsel ${heroIndex + 1}`}
-                fill
-                className="object-cover object-center"
-                sizes="100vw"
-                priority={heroIndex === 0}
-              />
-            </motion.div>
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-white/35 backdrop-blur-[2px]" />
-        </div>
-
-        <button
-          type="button"
-          onClick={goHeroPrev}
-          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/90 text-[var(--brand-dark)] shadow-md hover:bg-white transition-colors"
-          aria-label="Önceki görsel"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          type="button"
-          onClick={goHeroNext}
-          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/90 text-[var(--brand-dark)] shadow-md hover:bg-white transition-colors"
-          aria-label="Sonraki görsel"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Hero: metin + ana sayfadaki hero’ya benzer kompakt çerçeveli galeri */}
+      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-br from-pink-50/90 via-white to-cyan-50/70">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--brand-dark)]"
             >
               Merhaba, Ben{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
@@ -160,7 +119,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto drop-shadow-sm"
+              className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
             >
               Ankara Eryaman merkezli kliniğimde ve online görüşmelerde;
               kilo verme, sürdürülebilir beslenme, metabolik hastalıklarda
@@ -177,27 +136,79 @@ export default function AboutPage() {
               bir beslenme planlamasıdır.
             </motion.p>
           </div>
-        </div>
 
-        <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-wrap justify-center gap-2 px-12 max-w-full"
-          role="tablist"
-          aria-label="Hero görselleri"
-        >
-          {aboutPageSliderImages.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => setHeroIndex(index)}
-              className={`transition-all duration-300 rounded-full touch-manipulation ${
-                index === heroIndex
-                  ? "bg-[var(--brand-primary)] w-8 h-3"
-                  : "bg-white/60 hover:bg-white/85 w-3 h-3"
-              }`}
-              aria-label={`Görsel ${index + 1}`}
-              aria-current={index === heroIndex}
-            />
-          ))}
+          <div
+            className="max-w-md mx-auto mt-10"
+            role="region"
+            aria-label="Fotoğraf galerisi"
+          >
+            <div className="rounded-[24px] border border-slate-200/80 bg-white/95 shadow-[0_24px_70px_-36px_rgba(15,23,42,0.45)] overflow-hidden">
+              <div className="relative aspect-[4/3] w-full bg-neutral-100">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={heroIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={aboutPageSliderImages[heroIndex]}
+                      alt={`Ezgi Evgin Aktaş — görsel ${heroIndex + 1}`}
+                      fill
+                      className="object-contain object-center"
+                      sizes="(max-width: 768px) 100vw, 28rem"
+                      priority={heroIndex === 0}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              <div className="border-t border-slate-200/80 bg-slate-50/90 px-3 py-3 sm:px-4 sm:py-4">
+                <div className="flex items-center justify-center gap-3 sm:gap-4">
+                  <button
+                    type="button"
+                    onClick={goHeroPrev}
+                    className="inline-flex bg-white hover:bg-slate-100 text-[var(--brand-dark)] p-2.5 rounded-full shadow-sm transition-colors touch-manipulation shrink-0"
+                    aria-label="Önceki görsel"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+
+                  <div
+                    className="flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-[200px] sm:max-w-none"
+                    role="tablist"
+                    aria-label="Görsel seç"
+                  >
+                    {aboutPageSliderImages.map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => setHeroIndex(index)}
+                        className={`transition-all duration-300 rounded-full touch-manipulation ${
+                          index === heroIndex
+                            ? "bg-[var(--brand-primary)] w-6 sm:w-8 h-2 sm:h-3"
+                            : "bg-gray-300 hover:bg-gray-400 w-2 h-2 sm:w-3 sm:h-3"
+                        }`}
+                        aria-label={`Görsel ${index + 1}`}
+                        aria-current={index === heroIndex}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={goHeroNext}
+                    className="inline-flex bg-white hover:bg-slate-100 text-[var(--brand-dark)] p-2.5 rounded-full shadow-sm transition-colors touch-manipulation shrink-0"
+                    aria-label="Sonraki görsel"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

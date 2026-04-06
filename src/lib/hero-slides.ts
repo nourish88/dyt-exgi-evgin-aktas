@@ -57,10 +57,13 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
-/** Hakkımda hero arka planı — hero + ek mevcut görseller */
+/** Hakkımda sayfası küçük çerçeveli galeri — klinik + ofis görselleri */
 export const aboutPageSliderImages = Array.from(
   new Set([
     ...heroSlides.map((s) => s.backgroundImage).filter(Boolean) as string[],
     "/images/instagram/posts/post-09.jpeg",
+    "/images/instagram/posts/post-07.jpeg",
+    "/images/instagram/posts/post-04.jpeg",
+    "/images/instagram/posts/post-01.jpeg",
   ])
 );
