@@ -3,35 +3,43 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "KVKK Bilgilendirme | Diyetisyen Ezgi Evgin Aktaş",
   description:
-    "Kişisel verilerin korunması ve işlenmesi hakkında bilgilendirme metni.",
+    "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, danışan portalı ve haklarınız hakkında bilgilendirme.",
 };
 
 export default function KVKKPage() {
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-8">KVKK Bilgilendirme Metni</h1>
+        <h1 className="text-4xl font-bold mb-4">KVKK Aydınlatma Metni</h1>
+        <p className="text-muted-foreground mb-8 max-w-3xl">
+          Bu sayfa, web sitemizi ziyaret etmeniz ve hizmet öncesi/sonrası iletişim
+          sırasında işlenen kişisel veriler hakkında genel bilgilendirme sağlar.
+          Danışan portalında (çevrimiçi takip uygulaması) sunulan hizmete ilişkin
+          özel nitelikli veri işleme için uygulama içinde ayrıca{" "}
+          <strong>açık rıza</strong> onayı istenmektedir.
+        </p>
 
         <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              1. Veri Sorumlusu
+              1. Veri sorumlusu
             </h2>
             <p>
-              6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca,
-              kişisel verileriniz; veri sorumlusu olarak Ezgi Evgin Aktaş
-              tarafından aşağıda açıklanan kapsamda işlenebilecektir.
+              6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;)
+              uyarınca veri sorumlusu: <strong>Ezgi Evgin Aktaş</strong> (iletişim
+              bilgileri aşağıdadır).
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              2. Kişisel Verilerin İşlenme Amacı
+              2. İşlenme amaçları
             </h2>
             <p>
-              Toplanan kişisel verileriniz, online diyet danışmanlığı hizmeti
-              vermek, iletişim sağlamak, randevu yönetimi yapmak ve yasal
-              yükümlülükleri yerine getirmek amacıyla işlenmektedir.
+              Kişisel verileriniz; beslenme ve diyet danışmanlığı sözleşmesinin
+              kurulması ve ifası, iletişim ve randevu koordinasyonu, yasal
+              yükümlülüklerin yerine getirilmesi ve hizmet kalitesinin
+              iyileştirilmesi amaçlarıyla işlenir.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Online danışmanlık hizmeti sunmak</li>
@@ -45,23 +53,43 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              3. İşlenen Kişisel Veriler
+              3. İşlenen veri kategorileri
             </h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Kimlik bilgileri (ad, soyad, doğum tarihi)</li>
-              <li>İletişim bilgileri (telefon, e-posta, adres)</li>
+              <li>Kimlik ve iletişim (ad, soyad, telefon, e-posta, adres)</li>
               <li>
-                Sağlık verileri (kilo, boy, hastalık bilgileri, alerjiler)
+                Hizmet kapsamında sizin paylaştığınız sağlık ve yaşam tarzına
+                dair bilgiler (ör. kilo, boy, paylaşılan ölçüler, varsa hastalık /
+                alerji bilgisi)
               </li>
               <li>
-                Fiziksel ve fizyolojik veriler (vücut ölçüleri, kan değerleri)
+                <strong>Not:</strong> Sistemimizde danışan verisi olarak{" "}
+                <strong>laboratuvar / kan tahlili sonucu saklanmamaktadır</strong>.
+                Böyle bir değerlendirme gerekiyorsa sonuçlar yalnızca sizin
+                ilettiğiniz bilgi çerçevesinde danışmanlıkta kullanılabilir;
+                tahlil arşivi tutulmaz.
               </li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              4. Kişisel Verilerin Aktarılması
+              3 bis. Çerezler ve ölçüm
+            </h2>
+            <p>
+              Web sitemizde temel işlev ve (etkinleştirildiyse) ziyaret
+              istatistikleri için çerez veya benzeri teknolojiler
+              kullanılabilir. Ayrıntılar için{" "}
+              <a href="/gizlilik-politikasi" className="text-primary hover:underline">
+                Gizlilik Politikası
+              </a>{" "}
+              sayfamıza bakabilirsiniz.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              4. Aktarım
             </h2>
             <p>
               Toplanan kişisel verileriniz, KVKK'nın 8. ve 9. maddelerinde
@@ -73,7 +101,7 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              5. Kişisel Veri Toplamanın Yöntemi ve Hukuki Sebebi
+              5. Toplama yöntemi ve hukuki sebepler
             </h2>
             <p>
               Kişisel verileriniz, online form doldurma, WhatsApp iletişimi,
@@ -84,7 +112,7 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              6. Kişisel Veri Sahibinin Hakları
+              6. İlgili kişinin hakları
             </h2>
             <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
             <ul className="list-disc pl-6 space-y-2">
@@ -126,7 +154,7 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              7. İletişim
+              7. İletişim ve başvuru
             </h2>
             <p>
               Kişisel verilerinizle ilgili sorularınız için bizimle iletişime

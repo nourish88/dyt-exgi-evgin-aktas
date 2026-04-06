@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { getClientAppLoginUrl } from "@/lib/client-app-url";
 
-const APP_URL =
-  process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
+const APP_URL = getClientAppLoginUrl();
 
 type InstalledRelatedApp = {
   id?: string;
@@ -161,22 +161,30 @@ export default function MobileAppPage() {
           <div className="relative">
             <div className="absolute -top-8 -left-8 w-40 h-40 rounded-full bg-pink-200/60 blur-3xl" />
             <div className="absolute -bottom-8 -right-8 w-44 h-44 rounded-full bg-cyan-200/60 blur-3xl" />
-            <div className="relative mx-auto w-[250px] h-[500px] rounded-[34px] border-[10px] border-[var(--brand-dark)] bg-black p-2 shadow-2xl">
-              <div className="relative w-full h-full rounded-[24px] overflow-hidden bg-white">
-                <Image
-                  src="/images/mobil-pic.jpeg"
-                  alt="Diyetisyen Ezgi Evgin Aktaş danışan mobil uygulama ekranı"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 250px, 300px"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <p className="text-sm font-semibold">Günlük Takip Aktif</p>
-                  <p className="text-xs text-white/90">
-                    Diyet planı, hatırlatıcılar ve gelişim grafikleri tek ekranda
-                  </p>
+            <div className="space-y-3">
+              <p className="text-xs text-muted-foreground max-w-[280px] mx-auto text-center leading-relaxed">
+                Danışan giriş uygulaması, hesap güvenliği için başka sitelerin
+                içine gömülmesine izin vermiyor; bu yüzden canlı sürüm yalnızca
+                yeni sekmede açılabilir. Buradaki görsel örnek arayüzdür; tam
+                deneyim için «Uygulamayı Aç» düğmesini kullanın.
+              </p>
+              <div className="relative mx-auto w-[250px] h-[500px] rounded-[34px] border-[10px] border-[var(--brand-dark)] bg-black p-2 shadow-2xl">
+                <div className="relative w-full h-full rounded-[24px] overflow-hidden bg-white">
+                  <Image
+                    src="/images/mobil-pic.jpeg"
+                    alt="Danışan portalı arayüz örneği"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 250px, 300px"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <p className="text-sm font-semibold">Arayüz önizlemesi</p>
+                    <p className="text-xs text-white/90">
+                      Planlar, hatırlatıcılar ve grafikler — gerçek giriş yeni sekmede
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

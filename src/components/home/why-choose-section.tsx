@@ -13,7 +13,7 @@ const reasons = [
   {
     title: "Kişiye Özel Planlama",
     description:
-      "Yaşam düzeninize, kan tahlillerinize ve hedeflerinize uygun, uygulanabilir bir beslenme planı oluşturulur.",
+      "Yaşam düzeninize, paylaştığınız sağlık ve beslenme bilgilerinize ve hedeflerinize uygun, uygulanabilir bir beslenme planı oluşturulur.",
     icon: Target,
   },
   {

@@ -14,10 +14,10 @@ import {
 import { OnlineSupportFeatures } from "@/components/online-support-features";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { getClientAppLoginUrl } from "@/lib/client-app-url";
 
 export function ProgramsSection() {
-  const clientAppUrl =
-    process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
+  const clientAppUrl = getClientAppLoginUrl();
 
   const conversionCards = [
     {
@@ -89,16 +89,16 @@ export function ProgramsSection() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-base font-semibold text-[var(--brand-dark)]">
-                Takip sistemimiz lafta değil, danışan portalında her gün aktif.
+                Danışan portalı — giriş ve günlük takip
               </p>
               <p className="text-sm text-muted-foreground">
-                Danışanlar telefon numarasıyla giriş yapıyor; diyetlerini,
-                geçmiş planlarını ve mesajlarını tek ekranda anlık takip ediyor.
+                Telefon numaranızla giriş yapın; diyet planları, geçmiş kayıtlar
+                ve mesajlar tek ekranda. Yeni sekmede güvenli giriş.
               </p>
             </div>
             <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="h-11 px-5 bg-white">
-                Danışan Portalını Aç
+              <Button className="h-11 px-5 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] hover:opacity-90 text-white">
+                Danışan portalına git
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
             </a>

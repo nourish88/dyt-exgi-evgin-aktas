@@ -6,6 +6,7 @@ import { OnlineSupportFeatures } from "@/components/online-support-features";
 import { CalendarCheck2, MessageCircle, Smartphone, LineChart, ExternalLink } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { getClientAppLoginUrl } from "@/lib/client-app-url";
 
 const processSteps = [
   {
@@ -38,8 +39,7 @@ const whatsappLink = buildWhatsAppApiUrl(
   "Merhaba, online diyet süreci için randevu almak istiyorum.",
   "programlar"
 );
-const clientAppUrl =
-  process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
+const clientAppUrl = getClientAppLoginUrl();
 
 export default function ProgramsPage() {
   return (

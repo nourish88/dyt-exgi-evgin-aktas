@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Logo & About */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-3 space-y-5">
             <Image
               src="/logo.svg"
               alt="Ezgi Evgin Aktaş - Beslenme ve Diyet Danışmanlığı"
@@ -69,16 +69,16 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Hizmetler */}
-          <div className="lg:col-span-3">
-            <h4 className="font-semibold mb-4">Sistem Özellikleri</h4>
+          {/* Takip sistemi — gerçek ürün özellikleri */}
+          <div className="lg:col-span-2">
+            <h4 className="font-semibold mb-4">Takip sistemi</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/programlar"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Haftada 1 Görüşme
+                  Haftalık görüşme ve plan güncellemesi
                 </Link>
               </li>
               <li>
@@ -86,7 +86,15 @@ export function Footer() {
                   href="/programlar"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Devamlı Online Takip
+                  Online takip ve anlık iletişim
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mobil-uygulamamiz"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Danışan portalı (mobil / PWA)
                 </Link>
               </li>
               <li>
@@ -94,15 +102,7 @@ export function Footer() {
                   href="/programlar"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Mobil Uygulama Üzerinden Süreç Yönetimi
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/programlar"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Öğün Hatırlatıcı ve Bildirimler
+                  Öğün hatırlatıcı ve bildirimler
                 </Link>
               </li>
               <li>
@@ -110,15 +110,25 @@ export function Footer() {
                   href="/hesaplayicilar"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Grafiksel Kilo ve Aktivite Takibi
+                  Kilo ve aktivite hesaplayıcıları
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Yerel bilgi sayfaları — arama için ayrı blok */}
+          <div className="lg:col-span-2">
+            <h4 className="font-semibold mb-4">Hizmet bölgeleri & bilgi</h4>
+            <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+              Ankara ve çevrimiçi hizmet hakkında açıklayıcı sayfalar.
+            </p>
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/eryaman-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Eryaman Diyetisyen
+                  Eryaman diyetisyen
                 </Link>
               </li>
               <li>
@@ -126,7 +136,7 @@ export function Footer() {
                   href="/ankara-kilo-verme-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ankara Kilo Verme
+                  Ankara kilo verme
                 </Link>
               </li>
               <li>
@@ -134,7 +144,7 @@ export function Footer() {
                   href="/ankara-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ankara Diyetisyen
+                  Ankara diyetisyen
                 </Link>
               </li>
               <li>
@@ -142,7 +152,7 @@ export function Footer() {
                   href="/online-diyet-ankara"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Online Diyet Ankara
+                  Online diyet Ankara
                 </Link>
               </li>
               <li>
@@ -150,7 +160,7 @@ export function Footer() {
                   href="/ezgi-evgin-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ezgi Evgin Diyetisyen
+                  Ezgi Evgin diyetisyen
                 </Link>
               </li>
             </ul>
