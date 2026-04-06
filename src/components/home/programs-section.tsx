@@ -87,11 +87,11 @@ export function ProgramsSection() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <p className="text-base font-semibold text-[var(--brand-dark)]">
-                Takip sadece anlatılmıyor, uygulamada aktif kullanılıyor.
+                Takip sistemimiz lafta değil, danışan portalında her gün aktif.
               </p>
               <p className="text-sm text-muted-foreground">
-                Danışanlar telefon numarasıyla giriş yapıp diyetlerini, geçmiş
-                planlarını ve mesajlarını günlük olarak takip ediyor.
+                Danışanlar telefon numarasıyla giriş yapıyor; diyetlerini,
+                geçmiş planlarını ve mesajlarını tek ekranda anlık takip ediyor.
               </p>
             </div>
             <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
