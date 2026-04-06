@@ -183,10 +183,10 @@ export function Footer() {
                 <li className="flex items-center space-x-2 text-muted-foreground">
                   <Mail size={16} />
                   <a
-                    href="mailto:info@ezgievginaktas.com"
+                    href="mailto:ezgievgin_dytsyn@hotmail.com"
                     className="hover:text-primary transition-colors"
                   >
-                    info@ezgievginaktas.com
+                    ezgievgin_dytsyn@hotmail.com
                   </a>
                 </li>
                 <li>

@@ -10,7 +10,7 @@ export function StructuredData() {
     logo: "https://ezgievginaktas.com/logo.svg",
     url: "https://ezgievginaktas.com",
     telephone: "+905462650440",
-    email: "info@ezgievginaktas.com",
+    email: "ezgievgin_dytsyn@hotmail.com",
     sameAs: [
       "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
       "https://www.instagram.com/dyt_ezgievgin",
@@ -94,7 +94,7 @@ export function StructuredData() {
     url: "https://ezgievginaktas.com",
     image: "https://ezgievginaktas.com/logo.svg",
     telephone: "+905462650440",
-    email: "info@ezgievginaktas.com",
+    email: "ezgievgin_dytsyn@hotmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Etimesgut",
@@ -128,7 +128,7 @@ export function StructuredData() {
     description: "Online ve yüz yüze beslenme danışmanlığı hizmetleri",
     image: "https://ezgievginaktas.com/logo.svg",
     telephone: "+905462650440",
-    email: "info@ezgievginaktas.com",
+    email: "ezgievgin_dytsyn@hotmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress:

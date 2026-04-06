@@ -52,7 +52,7 @@ NEXTAUTH_URL="http://localhost:3000"
 # WhatsApp & İletişim
 NEXT_PUBLIC_WHATSAPP_NUMBER="905333104970"
 NEXT_PUBLIC_PHONE_NUMBER="0533 310 49 70"
-NEXT_PUBLIC_EMAIL="info@ezgievginaktas.com"
+NEXT_PUBLIC_EMAIL="ezgievgin_dytsyn@hotmail.com"
 
 # Site URL (production)
 NEXT_PUBLIC_SITE_URL="https://ezgievginaktas.com"
@@ -197,7 +197,7 @@ const whatsappLink = `https://wa.me/905333104970?text=${encodeURIComponent(
 ## 🤝 İletişim
 
 - **Telefon**: 0533 310 49 70
-- **Email**: info@ezgievginaktas.com
+- **Email**: ezgievgin_dytsyn@hotmail.com
 - **WhatsApp**: [Mesaj Gönder](https://wa.me/905333104970)
 
 ## 📄 Lisans

@@ -31,8 +31,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "E-posta",
-      value: "info@ezgievginaktas.com",
-      link: "mailto:info@ezgievginaktas.com",
+      value: "ezgievgin_dytsyn@hotmail.com",
+      link: "mailto:ezgievgin_dytsyn@hotmail.com",
       color: "from-cyan-500 to-blue-500",
     },
     {

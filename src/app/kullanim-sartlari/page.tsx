@@ -107,7 +107,7 @@ export default function TermsPage() {
               geçebilirsiniz:
             </p>
             <p className="font-semibold">
-              E-posta: info@ezgievginaktas.com
+              E-posta: ezgievgin_dytsyn@hotmail.com
               <br />
               Telefon: 0546 265 04 40
             </p>

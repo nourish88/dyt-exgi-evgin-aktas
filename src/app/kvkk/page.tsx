@@ -59,22 +59,23 @@ export default function KVKKPage() {
               <li>Kimlik ve iletişim (ad, soyad, telefon, e-posta, adres)</li>
               <li>
                 Hizmet kapsamında sizin paylaştığınız sağlık ve yaşam tarzına
-                dair bilgiler (ör. kilo, boy, paylaşılan ölçüler, varsa hastalık /
-                alerji bilgisi)
-              </li>
-              <li>
-                <strong>Not:</strong> Sistemimizde danışan verisi olarak{" "}
-                <strong>laboratuvar / kan tahlili sonucu saklanmamaktadır</strong>.
-                Böyle bir değerlendirme gerekiyorsa sonuçlar yalnızca sizin
-                ilettiğiniz bilgi çerçevesinde danışmanlıkta kullanılabilir;
-                tahlil arşivi tutulmaz.
+                dair bilgiler (ör. kilo, boy, paylaşılan ölçüler, varsa hastalık
+                veya alerji bilgisi)
               </li>
             </ul>
+            <p className="mt-4">
+              <strong>Laboratuvar sonuçları:</strong> Danışan verisi olarak{" "}
+              <strong>
+                laboratuvar veya kan tahlili sonucu sistemde saklanmaz
+              </strong>
+              ; tahlil arşivi tutulmaz. Gerekirse sonuçlar yalnızca sizin
+              ilettiğiniz bilgi çerçevesinde danışmanlıkta değerlendirilebilir.
+            </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              3 bis. Çerezler ve ölçüm
+              4. Çerezler ve ölçüm
             </h2>
             <p>
               Web sitemizde temel işlev ve (etkinleştirildiyse) ziyaret
@@ -83,16 +84,16 @@ export default function KVKKPage() {
               <a href="/gizlilik-politikasi" className="text-primary hover:underline">
                 Gizlilik Politikası
               </a>{" "}
-              sayfamıza bakabilirsiniz.
+              sayfasına bakabilirsiniz.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              4. Aktarım
+              5. Aktarım
             </h2>
             <p>
-              Toplanan kişisel verileriniz, KVKK'nın 8. ve 9. maddelerinde
+              Toplanan kişisel verileriniz, KVKK&apos;nın 8. ve 9. maddelerinde
               belirtilen kişisel veri işleme şartları ve amaçları çerçevesinde
               gerektiğinde yasal yükümlülüklerimizi yerine getirmek için yetkili
               kamu kurum ve kuruluşlarına aktarılabilir.
@@ -101,7 +102,7 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              5. Toplama yöntemi ve hukuki sebepler
+              6. Toplama yöntemi ve hukuki sebepler
             </h2>
             <p>
               Kişisel verileriniz, online form doldurma, WhatsApp iletişimi,
@@ -112,9 +113,9 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              6. İlgili kişinin hakları
+              7. İlgili kişinin hakları
             </h2>
-            <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+            <p>KVKK&apos;nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
               <li>
@@ -133,7 +134,7 @@ export default function KVKKPage() {
                 bunların düzeltilmesini isteme
               </li>
               <li>
-                KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel
+                KVKK&apos;nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel
                 verilerin silinmesini veya yok edilmesini isteme
               </li>
               <li>
@@ -154,14 +155,14 @@ export default function KVKKPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              7. İletişim ve başvuru
+              8. İletişim ve başvuru
             </h2>
             <p>
               Kişisel verilerinizle ilgili sorularınız için bizimle iletişime
               geçebilirsiniz:
             </p>
             <p className="font-semibold">
-              E-posta: info@ezgievginaktas.com
+              E-posta: ezgievgin_dytsyn@hotmail.com
               <br />
               Telefon: 0546 265 04 40
             </p>

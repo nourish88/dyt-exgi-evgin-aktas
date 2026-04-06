@@ -653,6 +653,6 @@ Tutarlılık + Kalite + Etkileşim + Sabır = Büyüme
 
 **Güncelleme:** Bu doküman canlı bir dokümandır. Her ay stratejini gözden geçir ve güncelle.
 
-**Sorular:** Herhangi bir konuda yardım için: info@ezgievginaktas.com
+**Sorular:** Herhangi bir konuda yardım için: ezgievgin_dytsyn@hotmail.com
 
 Başarılar! 🌟
