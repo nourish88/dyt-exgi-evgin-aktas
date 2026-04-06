@@ -2,21 +2,22 @@
 
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { buildWhatsAppApiUrl, buildWhatsAppWebUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
+
+const FLOAT_MESSAGE = "Merhaba, randevu almak istiyorum.";
 
 export function WhatsAppFloat() {
-  const phoneNumber = "905462650440";
-  const message = encodeURIComponent(
-    "Merhaba, randevu almak istiyorum."
-  );
-  const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  const whatsappWebUrl = buildWhatsAppWebUrl(FLOAT_MESSAGE, "float");
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    trackWhatsAppClick("float");
 
     const isMobile =
       /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
     const targetUrl = isMobile
-      ? `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+      ? buildWhatsAppApiUrl(FLOAT_MESSAGE, "float")
       : whatsappWebUrl;
 
     window.open(targetUrl, "_blank", "noopener,noreferrer");
@@ -28,7 +29,7 @@ export function WhatsAppFloat() {
       onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+      className="fixed bottom-6 right-6 max-[380px]:bottom-20 z-50 flex items-center justify-center w-14 h-14 min-h-[44px] min-w-[44px] bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}

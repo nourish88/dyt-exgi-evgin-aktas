@@ -12,6 +12,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function ProgramsSection() {
   const clientAppUrl =
@@ -105,9 +107,13 @@ export function ProgramsSection() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20online%20diyet%20randevusu%20almak%20istiyorum."
+            href={buildWhatsAppApiUrl(
+              "Merhaba, online diyet randevusu almak istiyorum.",
+              "home_programs_section"
+            )}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("home_programs_section")}
           >
             <Button className="h-12 px-8">
               <MessageCircle className="w-4 h-4 mr-2" />

@@ -1,4 +1,5 @@
 import { HeroSlider } from "@/components/home/hero-slider";
+import { TrustStrip } from "@/components/home/trust-strip";
 import { StatsSection } from "@/components/home/stats-section";
 import { SuccessStoriesSection } from "@/components/home/success-stories-section";
 import { ProgramsSection } from "@/components/home/programs-section";
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSlider />
+      <TrustStrip />
       <StatsSection />
       <SuccessStoriesSection />
       <ProgramsSection />

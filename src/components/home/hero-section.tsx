@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function HeroSection() {
   return (
@@ -92,8 +94,12 @@ export function HeroSection() {
               </Button>
             </Link>
             <Link
-              href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
+              href={buildWhatsAppApiUrl(
+                "Merhaba, bilgi almak istiyorum.",
+                "legacy_hero_section"
+              )}
               target="_blank"
+              onClick={() => trackWhatsAppClick("legacy_hero_section")}
             >
               <Button
                 size="lg"

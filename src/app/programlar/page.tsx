@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
 import { CalendarCheck2, MessageCircle, Smartphone, LineChart, ExternalLink } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const processSteps = [
   {
@@ -32,8 +34,10 @@ const processSteps = [
   },
 ];
 
-const whatsappLink =
-  "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20online%20diyet%20s%C3%BCreci%20i%C3%A7in%20randevu%20almak%20istiyorum.";
+const whatsappLink = buildWhatsAppApiUrl(
+  "Merhaba, online diyet süreci için randevu almak istiyorum.",
+  "programlar"
+);
 const clientAppUrl =
   process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
 
@@ -58,7 +62,12 @@ export default function ProgramsPage() {
               Hedefimiz yalnızca kilo vermek değil; süreci sürdürülebilir,
               takip edilebilir ve motive kalabileceğiniz hale getirmek.
             </p>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("programlar_hero")}
+            >
               <Button size="lg" className="h-12 px-8">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp&apos;tan Randevu Al
@@ -116,7 +125,12 @@ export default function ProgramsPage() {
               grafikleriniz tek yerde. Anlık iletişimle sürecinizi birlikte
               yönetiyoruz.
             </p>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("programlar_footer")}
+            >
               <Button
                 size="lg"
                 className="bg-white text-primary hover:bg-white/90 h-12 px-8 font-semibold"

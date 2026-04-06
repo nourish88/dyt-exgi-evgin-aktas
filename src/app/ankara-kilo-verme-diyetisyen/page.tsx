@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, TrendingDown, Salad, Activity } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Ankara Kilo Verme Diyetisyeni | Ezgi Evgin Aktaş",
@@ -13,10 +15,15 @@ export const metadata: Metadata = {
     "online diyetisyen ankara",
     "eryaman diyetisyen",
   ],
+  alternates: {
+    canonical: "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen",
+  },
 };
 
-const whatsappLink =
-  "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20Ankara%20kilo%20verme%20program%C4%B1%20i%C3%A7in%20randevu%20almak%20istiyorum.";
+const whatsappLink = buildWhatsAppApiUrl(
+  "Merhaba, Ankara kilo verme programı için randevu almak istiyorum.",
+  "ankara-kilo-verme-diyetisyen"
+);
 
 export default function AnkaraKiloVermeDiyetisyenPage() {
   return (
@@ -34,7 +41,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
             beslenme programlarıyla sağlıklı kilo yönetimi.
           </p>
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="h-12 px-8">
+            <Button size="lg" className="h-12 px-8 min-h-[44px]">
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp&apos;tan Randevu Al
             </Button>
@@ -66,6 +73,33 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
                 Haftalık kontrol, motivasyon desteği ve gerekli revizyonlar.
               </p>
             </Card>
+          </div>
+
+          <div className="mt-14 max-w-prose mx-auto px-4 text-center space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+            <p>
+              Ankara&apos;da kilo verme diyetisyeni ile çalışmak; sadece liste
+              vermek değil, haftalık revizyon ve günlük iletişimle süreci
+              sürdürmektir. Yüz yüze{" "}
+              <Link href="/eryaman-diyetisyen" className="text-primary font-medium hover:underline">
+                Eryaman diyetisyen
+              </Link>{" "}
+              ofisinde veya{" "}
+              <Link href="/online-diyet-ankara" className="text-primary font-medium hover:underline">
+                online diyet
+              </Link>{" "}
+              ile şehrin her yerinden aynı takip modelini kullanabilirsiniz.
+            </p>
+            <p>
+              Tüm hizmet profili için{" "}
+              <Link href="/ankara-diyetisyen" className="text-primary font-medium hover:underline">
+                Ankara diyetisyen
+              </Link>{" "}
+              ve{" "}
+              <Link href="/ezgi-evgin-diyetisyen" className="text-primary font-medium hover:underline">
+                Ezgi Evgin Aktaş
+              </Link>{" "}
+              sayfalarımıza bakın.
+            </p>
           </div>
         </div>
       </section>

@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,11 +72,16 @@ export function Navbar() {
               <Phone className="w-4 h-4 mr-1.5" />
               0546 265 04 40
             </a>
-            <Link href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba" target="_blank">
+            <a
+              href={buildWhatsAppApiUrl("Merhaba, randevu almak istiyorum.", "navbar_desktop")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("navbar_desktop")}
+            >
               <Button className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] hover:opacity-90 text-white">
                 Randevu Al
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -107,15 +114,17 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
+            <a
+              href={buildWhatsAppApiUrl("Merhaba, randevu almak istiyorum.", "navbar_mobile_menu")}
               target="_blank"
+              rel="noopener noreferrer"
               className="block mt-4"
+              onClick={() => trackWhatsAppClick("navbar_mobile_menu")}
             >
               <Button className="w-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] text-white">
                 Randevu Al
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}

@@ -11,6 +11,10 @@ import {
   Clock,
   Smartphone,
 } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
+
+const iletisimWhatsappUrl = buildWhatsAppApiUrl("Merhaba", "iletisim_card");
 
 export default function ContactPage() {
   const googleMapsPlaceUrl =
@@ -35,7 +39,7 @@ export default function ContactPage() {
       icon: MessageCircle,
       title: "WhatsApp",
       value: "Hemen Mesaj Gönder",
-      link: "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba",
+      link: iletisimWhatsappUrl,
       color: "from-green-500 to-emerald-500",
     },
     {
@@ -89,7 +93,13 @@ export default function ContactPage() {
               <Card
                 key={index}
                 className="p-6 hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                onClick={() => info.link && window.open(info.link, "_blank")}
+                onClick={() => {
+                  if (!info.link) return;
+                  if (info.title === "WhatsApp") {
+                    trackWhatsAppClick("iletisim_card");
+                  }
+                  window.open(info.link, "_blank");
+                }}
               >
                 <div className="space-y-4">
                   <div
@@ -131,12 +141,16 @@ export default function ContactPage() {
                   WhatsApp&apos;ı kullanabilirsiniz.
                 </p>
                 <Button
-                  onClick={() =>
+                  onClick={() => {
+                    trackWhatsAppClick("iletisim_cta");
                     window.open(
-                      "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba",
+                      buildWhatsAppApiUrl(
+                        "Merhaba, online danışmanlık hakkında bilgi almak istiyorum.",
+                        "iletisim_cta"
+                      ),
                       "_blank"
-                    )
-                  }
+                    );
+                  }}
                   size="lg"
                   className="w-full bg-[#25D366] hover:bg-[#20BD5A]"
                 >

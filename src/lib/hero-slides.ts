@@ -9,34 +9,34 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    title: "Hayalinizdeki Kiloya Ulaşın",
+    title: "Ankara, Eryaman ve Türkiye Genelinde Kişiye Özel Beslenme",
     description:
-      "Bilimsel yöntemler ve özel programlarla kalıcı kilo verme. Sağlıklı ve sürdürülebilir bir yaşam için ilk adımı atın.",
+      "Yüz yüze (Etimesgut–Eryaman) veya online diyet ile hedefinize uygun, uygulanabilir planlar. Aç kalmadan sürdürülebilir adımlar ve uygulama üzerinden düzenli takip.",
     backgroundGradient: "from-pink-600/70 via-rose-700/70 to-pink-900/70",
-    backgroundImage: "/images/instagram/posts/post-01.jpeg",
+    backgroundImage: "/images/instagram/posts/clinic-01.jpeg",
   },
   {
     id: 2,
-    title: "Sağlıklı Yaşam Birlikte Başlasın",
+    title: "Online Diyet ve Anlık Diyetisyen Desteği",
     description:
-      "Online beslenme danışmanlığı ile dünyanın neresinde olursanız olun, kişiye özel diyet programları ve uzman desteğiyle hedeflerinize ulaşın.",
+      "Nerede olursanız olun mesajlaşma, öğün geri bildirimi ve hatırlatmalarla süreç kopmadan ilerler. Haftalık görüşmelerle planınız güncellenir.",
     backgroundGradient: "from-cyan-700/70 via-teal-800/70 to-cyan-900/70",
-    backgroundImage: "/images/instagram/posts/post-02.jpeg",
+    backgroundImage: "/images/instagram/posts/clinic-03.jpeg",
   },
   {
     id: 3,
-    title: "Size Özel Beslenme Programları",
+    title: "Kalıcı Alışkanlık ve Kilo Yönetimi",
     description:
-      "Kişiye özel diyet programları ve uzman desteğiyle hedeflerinize ulaşın. Her bireyin ihtiyacı farklıdır, programlarımız da öyle.",
+      "Hızlı çözüm yerine yaşam tarzınıza uyumlu beslenme. Kişiye özel diyet programları ve uzman rehberliğiyle hedeflerinize güvenle yaklaşın.",
     backgroundGradient: "from-fuchsia-700/70 via-purple-800/70 to-pink-900/70",
-    backgroundImage: "/images/instagram/posts/post-03.jpeg",
+    backgroundImage: "/images/instagram/posts/clinic-06.jpeg",
   },
   {
     id: 4,
-    title: "Uzman Diyetisyen Rehberliği",
+    title: "Uygulama ile Takip: Diyet, Grafik, Bildirimler",
     description:
-      "7/24 online destek ve profesyonel takip sistemi. Yolculuğunuzun her anında yanınızdayız, sorularınız için her zaman hazırız.",
+      "Danışan portalında planlarınız, mesajlarınız ve gelişim grafikleriniz tek yerde. Sürecin her aşamasında yanınızdayız.",
     backgroundGradient: "from-blue-700/70 via-indigo-800/70 to-blue-900/70",
-    backgroundImage: "/images/instagram/posts/post-04.jpeg",
+    backgroundImage: "/images/instagram/posts/clinic-02.jpeg",
   },
 ];

@@ -12,6 +12,8 @@ import {
   ExternalLink,
   CheckCircle2,
 } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 const APP_URL =
   process.env.NEXT_PUBLIC_CLIENT_APP_URL || "https://diet-six.vercel.app/login";
@@ -128,9 +130,13 @@ export default function MobileAppPage() {
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
               <a
-                href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20mobil%20uygulama%20hakkinda%20bilgi%20almak%20istiyorum."
+                href={buildWhatsAppApiUrl(
+                  "Merhaba, mobil uygulama hakkında bilgi almak istiyorum.",
+                  "mobil_uygulamamiz"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("mobil_uygulamamiz")}
               >
                 <Button variant="outline" className="h-12 px-7 bg-white">
                   WhatsApp&apos;tan Bilgi Al

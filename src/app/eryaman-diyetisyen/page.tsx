@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, MessageCircle } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Eryaman Diyetisyen | Ezgi Evgin Aktaş",
@@ -14,10 +15,15 @@ export const metadata: Metadata = {
     "eryaman kilo verme",
     "etimesgut diyetisyen",
   ],
+  alternates: {
+    canonical: "https://ezgievginaktas.com/eryaman-diyetisyen",
+  },
 };
 
-const whatsappLink =
-  "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba,%20Eryaman%20i%C3%A7in%20diyetisyen%20randevusu%20almak%20istiyorum.";
+const whatsappLink = buildWhatsAppApiUrl(
+  "Merhaba, Eryaman için diyetisyen randevusu almak istiyorum.",
+  "eryaman-diyetisyen"
+);
 
 export default function EryamanDiyetisyenPage() {
   return (
@@ -36,7 +42,7 @@ export default function EryamanDiyetisyenPage() {
               Eryaman/Etimesgut bölgesinde kişiye özel diyetisyen danışmanlığı.
             </p>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="h-12 px-8">
+              <Button size="lg" className="h-12 px-8 min-h-[44px]">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp&apos;tan Randevu Al
               </Button>
@@ -58,9 +64,39 @@ export default function EryamanDiyetisyenPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Link href="/programlar" className="text-primary hover:underline">
+          <div className="mt-12 max-w-prose mx-auto text-left space-y-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+            <p>
+              Eryaman ve çevresinde &ldquo;diyetisyen arıyorum&rdquo; diyorsanız;
+              ofisimiz Etimesgut ilçesi sınırlarında, ulaşımı kolay bir konumdadır.
+              Aynı zamanda{" "}
+              <Link href="/online-diyet-ankara" className="text-primary font-medium hover:underline">
+                online diyet Ankara
+              </Link>{" "}
+              veya başka şehirlerden sürece devam etmek isteyenler için tam
+              dijital takip de mümkündür.
+            </p>
+            <p>
+              Genel Ankara aramaları için{" "}
+              <Link href="/ankara-diyetisyen" className="text-primary font-medium hover:underline">
+                Ankara diyetisyen
+              </Link>{" "}
+              sayfamızda süreci özetledik. Uzman hakkında markalı aramalar için{" "}
+              <Link href="/ezgi-evgin-diyetisyen" className="text-primary font-medium hover:underline">
+                Ezgi Evgin Aktaş
+              </Link>{" "}
+              sayfasına göz atabilirsiniz.
+            </p>
+          </div>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+            <Link href="/programlar" className="text-primary hover:underline font-medium">
               Programları incele
+            </Link>
+            <span className="text-muted-foreground" aria-hidden>
+              ·
+            </span>
+            <Link href="/mobil-uygulamamiz" className="text-primary hover:underline font-medium">
+              Danışan uygulaması
             </Link>
           </div>
         </div>

@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award, Heart, Target } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function AboutPage() {
   const education = [
@@ -431,10 +433,14 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a
-                href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
+                href={buildWhatsAppApiUrl(
+                  "Merhaba, sizinle tanışmak ve bilgi almak istiyorum.",
+                  "hakkimda"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-12 px-8 bg-white text-primary hover:bg-white/90 rounded-lg font-semibold transition-colors"
+                onClick={() => trackWhatsAppClick("hakkimda")}
               >
                 WhatsApp&apos;tan İletişime Geç
               </a>

@@ -77,7 +77,7 @@ export function ImageSlider({
           <div
             className={`relative overflow-hidden shadow-xl ${
               fullScreen
-                ? "h-[85vh] min-h-[520px] rounded-none"
+                ? "h-[78svh] min-h-[420px] md:h-[85vh] md:min-h-[520px] rounded-none"
                 : "h-[400px] md:h-[500px] rounded-2xl"
             }`}
           >
@@ -94,7 +94,7 @@ export function ImageSlider({
                   src={images[currentIndex]}
                   alt={`Slider image ${currentIndex + 1}`}
                   fill
-                  className={`object-cover ${fullScreen ? "object-top" : ""}`}
+                  className={fullScreen ? "object-contain object-center" : "object-cover object-center"}
                   sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"}
                 />
               </motion.div>
@@ -106,18 +106,18 @@ export function ImageSlider({
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 shadow-lg"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 shadow-lg h-9 w-9 md:h-10 md:w-10"
                   onClick={goToPrevious}
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 shadow-lg"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 shadow-lg h-9 w-9 md:h-10 md:w-10"
                   onClick={goToNext}
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5" />
                 </Button>
               </>
             )}

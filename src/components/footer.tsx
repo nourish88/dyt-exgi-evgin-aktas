@@ -129,6 +129,30 @@ export function Footer() {
                   Ankara Kilo Verme
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/ankara-diyetisyen"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Ankara Diyetisyen
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/online-diyet-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Online Diyet Ankara
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ezgi-evgin-diyetisyen"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Ezgi Evgin Diyetisyen
+                </Link>
+              </li>
             </ul>
           </div>
 

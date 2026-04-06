@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { StructuredData } from "@/components/structured-data";
+import { GoogleAnalytics } from "@/components/google-analytics";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -29,26 +30,26 @@ export const metadata: Metadata = {
     template: "%s | Diyetisyen Ezgi Evgin Aktaş",
   },
   description:
-    "Ankara Eryaman ve Etimesgut'ta online/yüz yüze beslenme danışmanlığı, kilo verme ve kilo yönetimi programları. Uzman diyetisyen Ezgi Evgin Aktaş ile kişiye özel diyet programları.",
+    "Ankara ve Eryaman diyetisyen Ezgi Evgin Aktaş: online diyet Ankara, yüz yüze beslenme danışmanlığı Etimesgut–Eryaman, kişiye özel program ve uygulama ile takip. Ezgi Evgin (Dyt Ezgi Evgin) ile sürdürülebilir kilo yönetimi.",
   keywords: [
+    "ankara diyetisyen",
+    "eryaman diyetisyen",
+    "online diyet ankara",
+    "ezgi evgin",
+    "ezgi evgin aktaş",
+    "dyt ezgi evgin",
     "diyetisyen ankara",
     "diyetisyen eryaman",
-    "eryaman diyetisyen",
     "etimesgut diyetisyen",
     "ankara kilo verme",
-    "eryaman kilo verme",
-    "etimesgut kilo verme",
     "online diyetisyen",
     "beslenme danışmanı ankara",
     "kilo verme programı",
     "online diyet programı",
-    "beslenme koçu",
-    "sağlıklı kilo verme",
     "kişiye özel diyet",
     "whatsapp diyetisyen",
     "uzaktan diyet",
     "Ezgi Evgin Aktaş",
-    "dyt ezgi evgin",
   ],
   authors: [{ name: "Ezgi Evgin Aktaş" }],
   creator: "Ezgi Evgin Aktaş",
@@ -59,9 +60,14 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -102,9 +108,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ezgievginaktas.com",
   },
-  verification: {
-    google: "google-site-verification-code", // Google Search Console'dan alınacak
-  },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({
@@ -120,6 +130,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${inter.variable} font-sans antialiased`}
       >
+        <GoogleAnalytics />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

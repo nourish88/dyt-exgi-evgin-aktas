@@ -45,10 +45,11 @@ export function StructuredData() {
       },
     ],
     priceRange: "$$",
-    areaServed: {
-      "@type": "Place",
-      name: "Türkiye",
-    },
+    areaServed: [
+      { "@type": "City", name: "Ankara", containedInPlace: { "@type": "Country", name: "Türkiye" } },
+      { "@type": "Place", name: "Eryaman, Etimesgut, Ankara" },
+      { "@type": "Country", name: "Türkiye" },
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
@@ -86,8 +87,10 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Ezgi Evgin Aktaş",
+    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Diyetisyen Ezgi Evgin"],
     jobTitle: "Diyetisyen",
-    description: "Uzman diyetisyen, beslenme ve diyet danışmanı",
+    description:
+      "Uzman diyetisyen; Ankara Eryaman ve online diyet ile beslenme danışmanlığı",
     url: "https://ezgievginaktas.com",
     image: "https://ezgievginaktas.com/logo.svg",
     telephone: "+905462650440",
@@ -98,7 +101,10 @@ export function StructuredData() {
       addressRegion: "Ankara",
       addressCountry: "TR",
     },
-    sameAs: ["https://instagram.com/dyt_ezgievgin"],
+    sameAs: [
+      "https://www.instagram.com/dyt_ezgievgin",
+      "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
+    ],
   };
 
   const websiteSchema = {
@@ -133,7 +139,11 @@ export function StructuredData() {
       addressCountry: "TR",
     },
     priceRange: "$$",
-    areaServed: "TR",
+    areaServed: [
+      { "@type": "City", name: "Ankara", containedInPlace: { "@type": "Country", name: "Türkiye" } },
+      { "@type": "Place", name: "Eryaman, Etimesgut, Ankara" },
+      { "@type": "Country", name: "Türkiye" },
+    ],
   };
 
   return (

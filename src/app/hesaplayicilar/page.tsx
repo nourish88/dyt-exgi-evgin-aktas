@@ -17,6 +17,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Calculator, TrendingDown, Activity } from "lucide-react";
+import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function CalculatorsPage() {
   // BMI State
@@ -385,12 +387,16 @@ export default function CalculatorsPage() {
               için hemen başvurun!
             </p>
             <Button
-              onClick={() =>
+              onClick={() => {
+                trackWhatsAppClick("hesaplayicilar");
                 window.open(
-                  "https://api.whatsapp.com/send?phone=905462650440&text=Merhaba, hesaplama sonuçlarıma göre kişiye özel program almak istiyorum.",
+                  buildWhatsAppApiUrl(
+                    "Merhaba, hesaplama sonuçlarıma göre kişiye özel program almak istiyorum.",
+                    "hesaplayicilar"
+                  ),
                   "_blank"
-                )
-              }
+                );
+              }}
               size="lg"
               className="bg-white text-primary hover:bg-white/90 h-14 px-10"
             >

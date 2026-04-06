@@ -1,13 +1,13 @@
 const gallery = [
-  "/images/instagram/posts/post-01.jpeg",
-  "/images/instagram/posts/post-02.jpeg",
-  "/images/instagram/posts/post-03.jpeg",
-  "/images/instagram/posts/post-04.jpeg",
-  "/images/instagram/posts/post-05.jpeg",
-  "/images/instagram/posts/post-06.jpeg",
-  "/images/instagram/posts/post-07.jpeg",
-  "/images/instagram/posts/post-08.jpeg",
-  "/images/instagram/posts/post-09.jpeg",
+  "/images/instagram/posts/clinic-01.jpeg",
+  "/images/instagram/posts/clinic-02.jpeg",
+  "/images/instagram/posts/clinic-03.jpeg",
+  "/images/instagram/posts/clinic-04.jpeg",
+  "/images/instagram/posts/clinic-05.jpeg",
+  "/images/instagram/posts/clinic-06.jpeg",
+  "/images/instagram/posts/clinic-01.jpeg",
+  "/images/instagram/posts/clinic-03.jpeg",
+  "/images/instagram/posts/clinic-05.jpeg",
 ];
 
 export const placeholderImages = {
