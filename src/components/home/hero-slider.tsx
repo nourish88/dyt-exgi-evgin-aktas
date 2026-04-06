@@ -118,7 +118,7 @@ export function HeroSlider() {
             transition={{ duration: 0.45 }}
             className="max-w-2xl mx-auto text-center space-y-3 md:space-y-5 md:-translate-y-10"
           >
-            <div className="rounded-2xl bg-black/26 backdrop-blur-[2px] px-4 py-4 md:px-6 md:py-6 border border-white/20">
+            <div className="rounded-2xl bg-black/22 px-4 py-4 md:px-6 md:py-6 border border-white/20">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
                 Dünyanın Neresinde Olursanız Olun
               </div>
