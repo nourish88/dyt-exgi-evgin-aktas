@@ -82,33 +82,7 @@ export function HeroSlider() {
       role="region"
       aria-label="Hero slider"
     >
-      <AnimatePresence initial={false} custom={direction} mode="wait">
-        <motion.div
-          key={`bg-${currentSlide.id}`}
-          custom={direction}
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.5 },
-          }}
-          className="absolute inset-0 hidden md:block"
-        >
-          <Image
-            src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
-            alt={currentSlide.title}
-            fill
-            className="object-cover object-center"
-            sizes="100vw"
-            priority={currentSlide.id === 1}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/8 to-black/12" />
-        </motion.div>
-      </AnimatePresence>
-
-      <div className="container mx-auto px-4 relative z-10 py-4 md:py-0 md:h-screen md:flex md:items-center">
+      <div className="container mx-auto px-4 relative z-10 py-4 md:py-0 md:pb-24 md:h-screen md:flex md:items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide.id}`}
@@ -116,15 +90,15 @@ export function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.45 }}
-            className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 items-center"
+            className="w-full grid grid-cols-1 md:grid-cols-[1.35fr_1fr] gap-5 md:gap-8 items-center"
           >
-            <div className="relative h-[42svh] min-h-[320px] rounded-3xl overflow-hidden border border-black/10 md:h-[72vh]">
+            <div className="relative h-[44svh] min-h-[330px] rounded-3xl overflow-hidden border border-black/10 md:h-[76vh]">
               <Image
                 src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
                 alt={currentSlide.title}
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 60vw"
                 priority={currentSlide.id === 1}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent md:hidden" />
@@ -186,7 +160,7 @@ export function HeroSlider() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-4 md:mt-6 flex items-center justify-center gap-4">
+        <div className="mt-4 flex items-center justify-center gap-4 md:mt-0 md:absolute md:bottom-6 md:left-1/2 md:-translate-x-1/2">
           <button
             onClick={goToPrevious}
             className="inline-flex bg-white/95 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
