@@ -76,7 +76,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-[88svh] md:min-h-screen flex items-end md:items-center justify-center overflow-hidden py-4 md:py-0"
+      className="relative min-h-[88svh] md:min-h-screen overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       role="region"
@@ -94,21 +94,21 @@ export function HeroSlider() {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.5 },
           }}
-          className="absolute inset-0 bg-[#1A2332]/8"
+          className="absolute inset-0 hidden md:block"
         >
           <Image
             src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
             alt={currentSlide.title}
             fill
-            className="object-contain object-center p-4 md:p-8"
+            className="object-cover object-center"
             sizes="100vw"
             priority={currentSlide.id === 1}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,35,50,0.16)] via-[rgba(26,35,50,0.06)] to-[rgba(26,35,50,0.14)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/8 to-black/12" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="container mx-auto px-4 relative z-10 pb-8 md:pb-0">
+      <div className="container mx-auto px-4 relative z-10 py-4 md:py-0 md:h-screen md:flex md:items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide.id}`}
@@ -116,26 +116,38 @@ export function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.45 }}
-            className="max-w-2xl mx-auto text-center space-y-3 md:space-y-5 md:-translate-y-10"
+            className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 items-center"
           >
-            <div className="rounded-2xl bg-black/22 px-4 py-4 md:px-6 md:py-6 border border-white/20">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
-                Dünyanın Neresinde Olursanız Olun
+            <div className="relative h-[42svh] min-h-[320px] rounded-3xl overflow-hidden border border-black/10 md:h-[72vh]">
+              <Image
+                src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
+                alt={currentSlide.title}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={currentSlide.id === 1}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent md:hidden" />
+            </div>
+
+            <div className="rounded-2xl bg-white/92 md:bg-white/95 px-4 py-5 md:px-8 md:py-8 border border-black/8 shadow-xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
+                Online Beslenme Danışmanlığı
               </div>
-              <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.55)] break-words">
+              <h1 className="mt-3 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-[var(--brand-dark)] break-words">
                 {currentSlide.title}
               </h1>
-              <p className="mt-3 text-sm md:text-xl text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] break-words">
+              <p className="mt-3 text-sm md:text-lg text-slate-700 break-words">
                 {currentSlide.description}
               </p>
-              <p className="hidden md:block mt-3 text-base text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+              <p className="hidden md:block mt-3 text-sm text-slate-600">
                 Aç kalmadan, sürdürülebilir beslenme adımlarıyla ilerleyelim.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
                 <Link href="/programlar">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto bg-white text-[var(--brand-dark)] hover:bg-white/90 shadow-lg transition-all duration-300 group h-11 md:h-12 px-6"
+                    className="w-full sm:w-auto bg-[var(--brand-dark)] text-white hover:bg-[var(--brand-secondary)] shadow-lg transition-all duration-300 group h-11 md:h-12 px-6"
                   >
                     Şimdi Başla
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -149,36 +161,35 @@ export function HeroSlider() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full sm:w-auto border-2 border-white/75 bg-transparent text-white hover:bg-white/10 h-11 md:h-12 px-6"
+                    className="w-full sm:w-auto border-2 border-[var(--brand-dark)]/20 bg-transparent text-[var(--brand-dark)] hover:bg-slate-50 h-11 md:h-12 px-6"
                   >
                     WhatsApp&apos;tan Bilgi Al
                   </Button>
                 </Link>
               </div>
-            </div>
-
-            <div className="hidden md:flex pt-1 flex-wrap justify-center gap-2">
-              {[
-                "7/24 Online Destek",
-                "Öğün Hatırlatıcı",
-                "Öğün Resmi Gönderimi",
-                "Mobil Uygulama ile Grafiksel Takip",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="px-2.5 md:px-3 py-1.5 rounded-full text-[11px] md:text-xs font-medium bg-white/80 text-[var(--brand-dark)]"
-                >
-                  {item}
-                </span>
-              ))}
+              <div className="hidden md:flex pt-4 flex-wrap gap-2">
+                {[
+                  "7/24 Online Destek",
+                  "Öğün Hatırlatıcı",
+                  "Öğün Resmi Gönderimi",
+                  "Mobil Uygulama ile Grafiksel Takip",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="px-2.5 py-1.5 rounded-full text-[11px] font-medium bg-slate-100 text-[var(--brand-dark)]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-5 md:mt-10 flex items-center justify-center gap-4">
+        <div className="mt-4 md:mt-6 flex items-center justify-center gap-4">
           <button
             onClick={goToPrevious}
-            className="hidden sm:inline-flex bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
+            className="inline-flex bg-white/95 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -202,7 +213,7 @@ export function HeroSlider() {
 
           <button
             onClick={goToNext}
-            className="hidden sm:inline-flex bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
+            className="inline-flex bg-white/95 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
             aria-label="Next slide"
           >
             <ChevronRight className="w-5 h-5" />
