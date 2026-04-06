@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Award, Heart, Target, ChevronLeft, ChevronRight } from "lucide-react";
+import { GraduationCap, Award, Heart, Target } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
@@ -80,23 +80,10 @@ export default function AboutPage() {
     setHeroIndex((prev) => (prev + 1) % slideCount);
   }, [slideCount]);
 
-  const goHeroPrev = useCallback(() => {
-    setHeroIndex((prev) => (prev - 1 + slideCount) % slideCount);
-  }, [slideCount]);
-
   useEffect(() => {
     const interval = setInterval(goHeroNext, 5000);
     return () => clearInterval(interval);
   }, [goHeroNext]);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") goHeroPrev();
-      if (e.key === "ArrowRight") goHeroNext();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [goHeroNext, goHeroPrev]);
 
   return (
     <div className="min-h-screen">
@@ -138,7 +125,7 @@ export default function AboutPage() {
           </div>
 
           <div
-            className="max-w-md mx-auto mt-10"
+            className="max-w-2xl mx-auto mt-10 w-full"
             role="region"
             aria-label="Fotoğraf galerisi"
           >
@@ -158,53 +145,33 @@ export default function AboutPage() {
                       alt={`Ezgi Evgin Aktaş — görsel ${heroIndex + 1}`}
                       fill
                       className="object-contain object-center"
-                      sizes="(max-width: 768px) 100vw, 28rem"
+                      sizes="(max-width: 768px) 100vw, 42rem"
                       priority={heroIndex === 0}
                     />
                   </motion.div>
                 </AnimatePresence>
               </div>
 
-              <div className="border-t border-slate-200/80 bg-slate-50/90 px-3 py-3 sm:px-4 sm:py-4">
-                <div className="flex items-center justify-center gap-3 sm:gap-4">
-                  <button
-                    type="button"
-                    onClick={goHeroPrev}
-                    className="inline-flex bg-white hover:bg-slate-100 text-[var(--brand-dark)] p-2.5 rounded-full shadow-sm transition-colors touch-manipulation shrink-0"
-                    aria-label="Önceki görsel"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-
-                  <div
-                    className="flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-[200px] sm:max-w-none"
-                    role="tablist"
-                    aria-label="Görsel seç"
-                  >
-                    {aboutPageSliderImages.map((_, index) => (
-                      <button
-                        key={index}
-                        type="button"
-                        onClick={() => setHeroIndex(index)}
-                        className={`transition-all duration-300 rounded-full touch-manipulation ${
-                          index === heroIndex
-                            ? "bg-[var(--brand-primary)] w-6 sm:w-8 h-2 sm:h-3"
-                            : "bg-gray-300 hover:bg-gray-400 w-2 h-2 sm:w-3 sm:h-3"
-                        }`}
-                        aria-label={`Görsel ${index + 1}`}
-                        aria-current={index === heroIndex}
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={goHeroNext}
-                    className="inline-flex bg-white hover:bg-slate-100 text-[var(--brand-dark)] p-2.5 rounded-full shadow-sm transition-colors touch-manipulation shrink-0"
-                    aria-label="Sonraki görsel"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
+              <div className="border-t border-slate-200/80 bg-slate-50/90 px-3 py-3 sm:px-4 sm:py-3">
+                <div
+                  className="flex flex-wrap justify-center gap-1.5 sm:gap-2"
+                  role="tablist"
+                  aria-label="Görsel seç (otomatik 5 sn)"
+                >
+                  {aboutPageSliderImages.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => setHeroIndex(index)}
+                      className={`transition-all duration-300 rounded-full touch-manipulation ${
+                        index === heroIndex
+                          ? "bg-[var(--brand-primary)] w-6 sm:w-8 h-2 sm:h-3"
+                          : "bg-gray-300 hover:bg-gray-400 w-2 h-2 sm:w-3 sm:h-3"
+                      }`}
+                      aria-label={`Görsel ${index + 1}`}
+                      aria-current={index === heroIndex}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
