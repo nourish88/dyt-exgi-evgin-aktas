@@ -76,7 +76,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-[92svh] md:min-h-screen flex items-center justify-center overflow-hidden py-6 md:py-0"
+      className="relative min-h-[88svh] md:min-h-screen flex items-end md:items-center justify-center overflow-hidden py-4 md:py-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       role="region"
@@ -108,7 +108,7 @@ export function HeroSlider() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pb-8 md:pb-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide.id}`}
@@ -116,46 +116,48 @@ export function HeroSlider() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.45 }}
-            className="max-w-3xl mx-auto text-center space-y-4 md:space-y-6 md:-translate-y-24 lg:-translate-y-28"
+            className="max-w-2xl mx-auto text-center space-y-3 md:space-y-5 md:-translate-y-10"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
-              Dünyanın Neresinde Olursanız Olun
-            </div>
-            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.55)]">
-              {currentSlide.title}
-            </h1>
-            <p className="text-base md:text-2xl text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
-              {currentSlide.description}
-            </p>
-            <p className="text-sm md:text-lg text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
-              Aç kalmadan, sürdürülebilir beslenme adımlarıyla ilerleyelim.
-            </p>
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-              <Link href="/programlar">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-white text-[var(--brand-dark)] hover:bg-white/90 shadow-lg transition-all duration-300 group h-12 px-7"
+            <div className="rounded-2xl bg-black/26 backdrop-blur-[2px] px-4 py-4 md:px-6 md:py-6 border border-white/20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)]">
+                Dünyanın Neresinde Olursanız Olun
+              </div>
+              <h1 className="mt-3 text-2xl md:text-5xl lg:text-6xl font-bold leading-tight text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.55)] break-words">
+                {currentSlide.title}
+              </h1>
+              <p className="mt-3 text-sm md:text-xl text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] break-words">
+                {currentSlide.description}
+              </p>
+              <p className="hidden md:block mt-3 text-base text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+                Aç kalmadan, sürdürülebilir beslenme adımlarıyla ilerleyelim.
+              </p>
+              <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+                <Link href="/programlar">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-white text-[var(--brand-dark)] hover:bg-white/90 shadow-lg transition-all duration-300 group h-11 md:h-12 px-6"
+                  >
+                    Şimdi Başla
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link
+                  href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Şimdi Başla
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link
-                href="https://api.whatsapp.com/send?phone=905462650440&text=Merhaba"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-2 border-white/75 bg-transparent text-white hover:bg-white/10 h-12 px-7"
-                >
-                  WhatsApp&apos;tan Bilgi Al
-                </Button>
-              </Link>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full sm:w-auto border-2 border-white/75 bg-transparent text-white hover:bg-white/10 h-11 md:h-12 px-6"
+                  >
+                    WhatsApp&apos;tan Bilgi Al
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            <div className="pt-1 flex flex-wrap justify-center gap-2">
+            <div className="hidden md:flex pt-1 flex-wrap justify-center gap-2">
               {[
                 "7/24 Online Destek",
                 "Öğün Hatırlatıcı",
@@ -173,7 +175,7 @@ export function HeroSlider() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="mt-8 md:mt-10 flex items-center justify-center gap-4">
+        <div className="mt-5 md:mt-10 flex items-center justify-center gap-4">
           <button
             onClick={goToPrevious}
             className="hidden sm:inline-flex bg-white/90 hover:bg-white text-[var(--brand-dark)] p-3 rounded-full transition-all duration-300 shadow-md"
