@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Award, Heart, Target } from "lucide-react";
+import { GraduationCap, Award, Heart, Target, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { aboutPageSliderImages } from "@/lib/hero-slides";
 
 export default function AboutPage() {
   const education = [
@@ -72,91 +73,74 @@ export default function AboutPage() {
     "Beslenme Koçluğu",
   ];
 
-  // Background slider state
-  const [currentBg, setCurrentBg] = useState(0);
+  const slideCount = aboutPageSliderImages.length;
+  const [heroIndex, setHeroIndex] = useState(0);
 
-  const backgroundImages = [
-    `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#fce7f3;stop-opacity:1" />
-            <stop offset="50%" style="stop-color:#cffafe;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#d1fae5;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="1920" height="1080" fill="url(#bg1)"/>
-        <circle cx="300" cy="200" r="150" fill="white" opacity="0.1"/>
-        <circle cx="1600" cy="800" r="200" fill="white" opacity="0.15"/>
-        <circle cx="1000" cy="400" r="120" fill="white" opacity="0.1"/>
-      </svg>
-    `)}`,
-    `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#fbcfe8;stop-opacity:1" />
-            <stop offset="50%" style="stop-color:#e0f2fe;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#fef3c7;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="1920" height="1080" fill="url(#bg2)"/>
-        <circle cx="500" cy="600" r="180" fill="white" opacity="0.12"/>
-        <circle cx="1400" cy="300" r="150" fill="white" opacity="0.1"/>
-        <circle cx="900" cy="850" r="130" fill="white" opacity="0.15"/>
-      </svg>
-    `)}`,
-    `data:image/svg+xml,${encodeURIComponent(`
-      <svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#ddd6fe;stop-opacity:1" />
-            <stop offset="50%" style="stop-color:#fce7f3;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#cffafe;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <rect width="1920" height="1080" fill="url(#bg3)"/>
-        <circle cx="400" cy="400" r="160" fill="white" opacity="0.1"/>
-        <circle cx="1500" cy="700" r="190" fill="white" opacity="0.12"/>
-        <circle cx="1100" cy="200" r="140" fill="white" opacity="0.15"/>
-      </svg>
-    `)}`,
-  ];
+  const goHeroNext = useCallback(() => {
+    setHeroIndex((prev) => (prev + 1) % slideCount);
+  }, [slideCount]);
 
-  // Auto-rotate background
+  const goHeroPrev = useCallback(() => {
+    setHeroIndex((prev) => (prev - 1 + slideCount) % slideCount);
+  }, [slideCount]);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000); // 5 saniyede bir değiş
-
+    const interval = setInterval(goHeroNext, 5000);
     return () => clearInterval(interval);
-  }, [backgroundImages.length]);
+  }, [goHeroNext]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") goHeroPrev();
+      if (e.key === "ArrowRight") goHeroNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [goHeroNext, goHeroPrev]);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Slider */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background Slider */}
+      <section className="relative py-20 overflow-hidden min-h-[480px]">
         <div className="absolute inset-0">
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentBg}
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              key={heroIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
               className="absolute inset-0"
-              style={{
-                backgroundImage: `url("${backgroundImages[currentBg]}")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
+            >
+              <Image
+                src={aboutPageSliderImages[heroIndex]}
+                alt={`Ezgi Evgin Aktaş — görsel ${heroIndex + 1}`}
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+                priority={heroIndex === 0}
+              />
+            </motion.div>
           </AnimatePresence>
-
-          {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-white/35 backdrop-blur-[2px]" />
         </div>
+
+        <button
+          type="button"
+          onClick={goHeroPrev}
+          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/90 text-[var(--brand-dark)] shadow-md hover:bg-white transition-colors"
+          aria-label="Önceki görsel"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          type="button"
+          onClick={goHeroNext}
+          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/90 text-[var(--brand-dark)] shadow-md hover:bg-white transition-colors"
+          aria-label="Sonraki görsel"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
 
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
@@ -192,39 +176,26 @@ export default function AboutPage() {
               dönüşümünü hedefleyen; bilimsel, uygulanabilir ve danışan odaklı
               bir beslenme planlamasıdır.
             </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="max-w-md mx-auto"
-            >
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-white/70">
-                <Image
-                  src="/images/instagram/posts/post-09.jpeg"
-                  alt="Diyetisyen Ezgi Evgin Aktaş - Ofiste"
-                  fill
-                  className="object-contain object-center bg-white"
-                  sizes="(max-width: 768px) 100vw, 420px"
-                  priority
-                />
-              </div>
-            </motion.div>
           </div>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-          {backgroundImages.map((_, index) => (
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-wrap justify-center gap-2 px-12 max-w-full"
+          role="tablist"
+          aria-label="Hero görselleri"
+        >
+          {aboutPageSliderImages.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentBg(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === currentBg
+              type="button"
+              onClick={() => setHeroIndex(index)}
+              className={`transition-all duration-300 rounded-full touch-manipulation ${
+                index === heroIndex
                   ? "bg-[var(--brand-primary)] w-8 h-3"
-                  : "bg-white/50 hover:bg-white/70 w-3 h-3"
+                  : "bg-white/60 hover:bg-white/85 w-3 h-3"
               }`}
-              aria-label={`Arka plan ${index + 1}`}
+              aria-label={`Görsel ${index + 1}`}
+              aria-current={index === heroIndex}
             />
           ))}
         </div>

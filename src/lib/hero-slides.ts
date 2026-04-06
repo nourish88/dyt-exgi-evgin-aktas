@@ -39,4 +39,28 @@ export const heroSlides: HeroSlide[] = [
     backgroundGradient: "from-blue-700/70 via-indigo-800/70 to-blue-900/70",
     backgroundImage: "/images/instagram/posts/clinic-02.jpeg",
   },
+  {
+    id: 5,
+    title: "Klinikte Yüz Yüze Danışmanlık",
+    description:
+      "Eryaman–Etimesgut bölgesinde ofis ortamında ölçü, değerlendirme ve birebir beslenme planlaması.",
+    backgroundGradient: "from-emerald-700/70 via-teal-800/70 to-cyan-900/70",
+    backgroundImage: "/images/instagram/posts/clinic-04.jpeg",
+  },
+  {
+    id: 6,
+    title: "Süreç İçi Destek ve Motivasyon",
+    description:
+      "Hedefe giden yolda düzenli iletişim, öğün geri bildirimi ve kişiye özel ayarlamalarla ilerleyin.",
+    backgroundGradient: "from-rose-700/70 via-pink-800/70 to-fuchsia-900/70",
+    backgroundImage: "/images/instagram/posts/clinic-05.jpeg",
+  },
 ];
+
+/** Hakkımda hero arka planı — hero + ek mevcut görseller */
+export const aboutPageSliderImages = Array.from(
+  new Set([
+    ...heroSlides.map((s) => s.backgroundImage).filter(Boolean) as string[],
+    "/images/instagram/posts/post-09.jpeg",
+  ])
+);

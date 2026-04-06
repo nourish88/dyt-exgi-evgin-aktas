@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ImageSlider } from "@/components/ui/image-slider";
-import { placeholderImages } from "@/lib/placeholder-images";
 import {
   Select,
   SelectContent,
@@ -405,14 +402,6 @@ export default function CalculatorsPage() {
           </div>
         </div>
       </section>
-
-      {/* Dönüşüm Hikayeleri */}
-      <ImageSlider
-        images={placeholderImages.transformationStories}
-        title="Dönüşüm Hikayeleri"
-        autoplay={true}
-        autoplayInterval={6000}
-      />
     </div>
   );
 }

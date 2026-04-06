@@ -16,6 +16,5 @@ export const placeholderImages = {
   programResults: [gallery[0], gallery[3], gallery[5], gallery[7], gallery[8]],
   featuredImages: [gallery[2], gallery[4], gallery[6]],
   recipeMoments: [gallery[1], gallery[3], gallery[5], gallery[7]],
-  transformationStories: [gallery[0], gallery[4], gallery[6], gallery[8]],
   communityMembers: [gallery[2], gallery[5], gallery[7]],
 };
