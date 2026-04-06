@@ -4,10 +4,9 @@
  */
 export const WHATSAPP_PHONE_DIGITS = "905462650440";
 
-export function whatsappMessageWithSource(message: string, source?: string): string {
-  const trimmed = message.trim();
-  if (!source) return trimmed;
-  return `${trimmed}\n\n[kaynak: ${source}]`;
+/** Mesajda kaynak etiketi yok; tıklama kaynağı yalnızca analytics (ör. trackWhatsAppClick) ile tutulur. */
+export function whatsappMessageWithSource(message: string, _source?: string): string {
+  return message.trim();
 }
 
 export function buildWhatsAppApiUrl(message: string, source?: string): string {
