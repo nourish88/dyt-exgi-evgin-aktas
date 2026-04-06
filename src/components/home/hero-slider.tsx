@@ -94,7 +94,7 @@ export function HeroSlider() {
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.5 },
           }}
-          className="absolute inset-0"
+          className="absolute inset-0 bg-[#1A2332]/8"
         >
           <Image
             src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
@@ -104,6 +104,7 @@ export function HeroSlider() {
             sizes="100vw"
             priority={currentSlide.id === 1}
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,35,50,0.16)] via-[rgba(26,35,50,0.06)] to-[rgba(26,35,50,0.14)]" />
         </motion.div>
       </AnimatePresence>
 
