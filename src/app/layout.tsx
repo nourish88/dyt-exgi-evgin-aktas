@@ -109,13 +109,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ezgievginaktas.com",
   },
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? {
-        verification: {
-          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-        },
-      }
-    : {}),
+  verification: {
+    google: "Q3VVByxsORC_2cAitdb6jxy1hIkv864O4aArpuNosss",
+  },
 };
 
 export default function RootLayout({
