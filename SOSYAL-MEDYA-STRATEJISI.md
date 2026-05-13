@@ -6,7 +6,7 @@
 
 ## 📊 Mevcut Durum Analizi
 
-### Platform Durumu
+### Platform Durumu.
 
 - ✅ Instagram: @dyt_ezgievgin (aktif)
 - ❌ Facebook: Sayfa yok (oluşturulmalı)
