@@ -10,12 +10,16 @@ import {
   Mail,
   LogOut,
   ChevronRight,
+  Instagram,
+  Image,
 } from "lucide-react";
 
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/blog", label: "Blog Yazıları", icon: FileText },
   { href: "/admin/tarifler", label: "Tarifler", icon: UtensilsCrossed },
+  { href: "/admin/instagram", label: "Instagram", icon: Instagram },
+  { href: "/admin/gorseller", label: "Görseller", icon: Image },
   { href: "/admin/mesajlar", label: "Mesajlar", icon: MessageSquare },
   { href: "/admin/newsletter", label: "Newsletter", icon: Mail },
 ];

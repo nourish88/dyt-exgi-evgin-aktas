@@ -1,55 +1,26 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Instagram, ExternalLink, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { prisma } from "@/lib/prisma";
+import { InstagramGrid } from "./instagram-grid";
 
-const instagramPosts = [
-  {
-    id: 1,
-    image: "/images/instagram/posts/post-01.jpeg",
-    label: "Paylaşım",
-  },
-  {
-    id: 2,
-    image: "/images/instagram/posts/post-02.jpeg",
-    label: "Öneri",
-  },
-  {
-    id: 9,
-    image: "/images/instagram/posts/post-09.jpeg",
-    label: "Motivasyon",
-  },
-  {
-    id: 7,
-    image: "/images/instagram/posts/post-07.jpeg",
-    label: "Danışan",
-  },
-  {
-    id: 6,
-    image: "/images/instagram/posts/post-06.jpeg",
-    label: "Kahvaltı",
-  },
-];
+export async function InstagramSection() {
+  const posts = await prisma.instagramPost.findMany({
+    where: { active: true },
+    orderBy: { order: "asc" },
+    take: 6,
+  });
 
-export function InstagramSection() {
+  if (posts.length === 0) return null;
+
   return (
     <section className="py-20 bg-gradient-to-br from-pink-50/50 via-white to-cyan-50/50 relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-[var(--brand-secondary)]/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center gap-2 md:gap-3 mb-4 px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 rounded-full">
             <Image
               src="/images/instagram/profile.jpg"
@@ -99,48 +70,12 @@ export function InstagramSection() {
               <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>
-        </motion.div>
-
-        {/* Instagram Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          {instagramPosts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <a
-                href="https://instagram.com/dyt_ezgievgin"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Card className="group relative overflow-hidden border-2 border-transparent hover:border-[var(--brand-primary)] transition-all duration-300 cursor-pointer aspect-[4/5] md:aspect-square">
-                  <Image
-                    src={post.image}
-                    alt={`Instagram içerik ${post.id}`}
-                    fill
-                    className="w-full h-full object-cover object-center"
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
-                  />
-                </Card>
-              </a>
-              <p className="mt-2 text-center text-xs font-medium text-muted-foreground">
-                {post.label}
-              </p>
-            </motion.div>
-          ))}
         </div>
 
+        <InstagramGrid posts={posts} />
+
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
             Daha fazlası için Instagram&apos;da beni takip edin.
           </p>
@@ -155,7 +90,7 @@ export function InstagramSection() {
               <span>Canlı soru-cevap</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

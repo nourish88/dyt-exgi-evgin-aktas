@@ -9,7 +9,7 @@ import { heroSlides } from "@/lib/hero-slides";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
-export function HeroSlider() {
+export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<number, string> }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -71,7 +71,7 @@ export function HeroSlider() {
             <div className="relative h-[45svh] min-h-[320px] lg:h-[560px] bg-slate-100">
               <Image
                 key={`image-${currentSlide.id}`}
-                src={currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
+                src={imageOverrides[currentSlide.id] ?? currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
                 alt={currentSlide.title}
                 fill
                 className="object-cover object-center"
