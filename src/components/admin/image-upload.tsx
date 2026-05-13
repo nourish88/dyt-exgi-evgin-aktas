@@ -67,10 +67,10 @@ export function ImageUpload({ value, onChange, label = "Görsel" }: Props) {
       <div className="flex gap-2">
         <ImageIcon className="w-4 h-4 text-gray-400 mt-2 shrink-0" />
         <input
-          type="url"
+          type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          placeholder="veya görsel URL'si yapıştır"
+          placeholder="veya görsel URL'si / site içi yol yapıştır"
           className="flex-1 h-8 rounded-md border border-input bg-transparent px-3 py-1 text-xs shadow-sm"
         />
       </div>

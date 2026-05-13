@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ImageUpload } from "./image-upload";
 import type { BlogPost } from "@prisma/client";
 
 const CATEGORIES = [
@@ -18,10 +19,12 @@ type Props = {
 };
 
 export function BlogForm({ post, action, submitLabel }: Props) {
-  const formRef = useRef<HTMLFormElement>(null);
+  const [imageUrl, setImageUrl] = useState(post?.image ?? "");
 
   return (
-    <form ref={formRef} action={action} className="space-y-5">
+    <form action={action} className="space-y-5">
+      <input type="hidden" name="image" value={imageUrl} />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="md:col-span-2 space-y-1.5">
           <Label htmlFor="title">Başlık *</Label>
@@ -81,13 +84,10 @@ export function BlogForm({ post, action, submitLabel }: Props) {
         </div>
 
         <div className="md:col-span-2 space-y-1.5">
-          <Label htmlFor="image">Kapak Görseli URL</Label>
-          <Input
-            id="image"
-            name="image"
-            type="url"
-            defaultValue={post?.image ?? ""}
-            placeholder="https://... veya /images/blog/gorsel.jpg"
+          <ImageUpload
+            value={imageUrl}
+            onChange={setImageUrl}
+            label="Kapak Görseli"
           />
         </div>
 

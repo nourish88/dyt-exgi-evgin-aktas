@@ -2,7 +2,8 @@ import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Plus, Edit, Trash2, Eye, EyeOff } from "lucide-react";
+import { DeleteBlogButton } from "@/components/admin/delete-blog-button";
+import { Plus, Edit, Eye, EyeOff } from "lucide-react";
 import { deleteBlogPost, togglePublished } from "@/lib/actions/blog";
 
 export default async function AdminBlogPage() {
@@ -79,22 +80,10 @@ export default async function AdminBlogPage() {
                       <Edit className="w-4 h-4" />
                     </button>
                   </Link>
-                  <form
-                    action={async () => {
-                      "use server";
-                      await deleteBlogPost(post.id);
-                    }}
-                  >
-                    <button
-                      type="submit"
-                      className="p-2 rounded-lg hover:bg-red-50 text-gray-500 hover:text-red-600 transition-colors"
-                      onClick={(e) => {
-                        if (!confirm(`"${post.title}" silinsin mi?`)) e.preventDefault();
-                      }}
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </form>
+                  <DeleteBlogButton
+                    action={deleteBlogPost.bind(null, post.id)}
+                    title={post.title}
+                  />
                 </div>
               </div>
             </Card>
