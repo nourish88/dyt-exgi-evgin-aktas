@@ -7,7 +7,6 @@ module.exports = {
   priority: 0.7,
   exclude: ["/admin/*", "/api/*"],
   robotsTxtOptions: {
-    additionalSitemaps: ["https://ezgievginaktas.com/sitemap.xml"],
     policies: [
       {
         userAgent: "*",
