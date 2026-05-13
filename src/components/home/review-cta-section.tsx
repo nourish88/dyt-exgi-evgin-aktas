@@ -27,39 +27,51 @@ export function ReviewCtaSection() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold"
             >
-              Yorumunuzu Paylaşın
+              Deneyiminizi Paylaşın, Bize Destek Olun!
             </motion.h2>
 
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Deneyiminizi Google ve DoktorTakvimi profillerinde paylaşarak
-              diğer danışanlara da yol gösterebilirsiniz. Danışan portalını aktif
-              kullanıyorsanız uygulama deneyiminizden de bahsetmeniz çok kıymetli.
+            <div className="flex justify-center gap-1 my-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-8 h-8 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-6">
+              Sizlerin başarısı ve memnuniyeti bizim en büyük motivasyonumuz. 
+              Google ve DoktorTakvimi üzerinde bırakacağınız <strong className="text-[var(--brand-dark)]">5 yıldızlı</strong> bir yorum, 
+              hem bize destek olacak hem de sağlıklı yaşama adım atmak isteyen diğer danışanlara rehberlik edecektir.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="h-12 px-7 border-2">
-                  Danışan Portalı
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <a
                 href={GOOGLE_MAPS_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                <Button className="h-12 px-7 bg-[#4285F4] hover:bg-[#3a77df] text-white">
-                  Google&apos;da İşletmeyi Aç
-                  <ExternalLink className="w-4 h-4 ml-2" />
+                <Button className="w-full sm:w-auto h-14 px-8 bg-[#4285F4] hover:bg-[#3a77df] text-white text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+                  Google&apos;da Değerlendir
+                  <ExternalLink className="w-5 h-5 ml-2" />
                 </Button>
               </a>
               <a
                 href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                <Button variant="outline" className="h-12 px-7 border-2">
-                  DoktorTakvimi Yorumları
+                <Button variant="outline" className="w-full sm:w-auto h-14 px-8 border-2 border-[var(--brand-primary)] text-[var(--brand-primary)] hover:bg-pink-50 text-lg font-semibold shadow-md hover:shadow-lg transition-all">
+                  DoktorTakvimi&apos;nde Yorum Yap
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </Button>
+              </a>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-black/5">
+              <p className="text-sm text-muted-foreground mb-3">Danışan portalını aktif kullanıyor musunuz?</p>
+              <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" className="text-muted-foreground hover:text-[var(--brand-dark)]">
+                  Uygulamaya Git
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </Button>
               </a>

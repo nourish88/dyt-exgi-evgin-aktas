@@ -20,6 +20,7 @@ export function Navbar() {
     { href: "/programlar", label: "Online Programlar" },
     { href: "/mobil-uygulamamiz", label: "Mobil Uygulamamız" },
     { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
+    { href: "/blog", label: "Blog" },
     { href: "/iletisim", label: "İletişim" },
   ];
 
@@ -73,6 +74,15 @@ export function Navbar() {
               0546 265 04 40
             </a>
             <a
+              href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="text-[var(--brand-primary)] border-[var(--brand-primary)] hover:bg-pink-50">
+                Doktor Takvimi
+              </Button>
+            </a>
+            <a
               href={buildWhatsAppApiUrl("Merhaba, randevu almak istiyorum.", "navbar_desktop")}
               target="_blank"
               rel="noopener noreferrer"
@@ -115,10 +125,21 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href={buildWhatsAppApiUrl("Merhaba, randevu almak istiyorum.", "navbar_mobile_menu")}
+              href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
               target="_blank"
               rel="noopener noreferrer"
               className="block mt-4"
+              onClick={() => setIsOpen(false)}
+            >
+              <Button variant="outline" className="w-full text-[var(--brand-primary)] border-[var(--brand-primary)]">
+                Doktor Takvimi
+              </Button>
+            </a>
+            <a
+              href={buildWhatsAppApiUrl("Merhaba, randevu almak istiyorum.", "navbar_mobile_menu")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-2"
               onClick={() => trackWhatsAppClick("navbar_mobile_menu")}
             >
               <Button className="w-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] text-white">
