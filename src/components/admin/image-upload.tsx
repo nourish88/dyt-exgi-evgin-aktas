@@ -21,8 +21,11 @@ export function ImageUpload({ value, onChange, label = "Görsel" }: Props) {
       const form = new FormData();
       form.append("file", file);
       const res = await fetch("/api/admin/upload", { method: "POST", body: form });
-      const json = await res.json();
+      const json = await res
+        .json()
+        .catch(() => ({ error: "Sunucu görsel yükleme cevabını okuyamadı." }));
       if (!res.ok) throw new Error(json.error ?? "Yükleme hatası");
+      if (!json.url) throw new Error("Yükleme tamamlandı ama görsel URL'si alınamadı.");
       onChange(json.url);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Hata");
