@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { StructuredData } from "@/components/structured-data";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { MetaPixel } from "@/components/meta-pixel";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -131,6 +132,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${inter.variable} font-sans antialiased`}
       >
         <GoogleAnalytics />
+        <MetaPixel />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

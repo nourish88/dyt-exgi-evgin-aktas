@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
 import {
   Mail,
@@ -10,13 +13,42 @@ import {
   MapPin,
   Clock,
   Smartphone,
+  Send,
+  CheckCircle2,
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
-import { trackWhatsAppClick } from "@/lib/analytics";
+import { trackWhatsAppClick, trackContactFormSubmit } from "@/lib/analytics";
+import { toast } from "sonner";
 
 const iletisimWhatsappUrl = buildWhatsAppApiUrl("Merhaba", "iletisim_card");
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error ?? "Hata");
+      setSent(true);
+      trackContactFormSubmit();
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Bir hata oluştu.";
+      toast.error(msg);
+    } finally {
+      setSending(false);
+    }
+  };
+
   const googleMapsPlaceUrl =
     "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
 
@@ -121,6 +153,98 @@ export default function ContactPage() {
                 </div>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-2">Mesaj Gönderin</h2>
+            <p className="text-center text-muted-foreground mb-8">
+              Formu doldurun, en kısa sürede dönüş yapılır.
+            </p>
+
+            {sent ? (
+              <Card className="p-10 text-center">
+                <CheckCircle2 className="w-14 h-14 text-green-500 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Mesajınız Alındı!</h3>
+                <p className="text-muted-foreground">En kısa sürede size geri döneceğiz.</p>
+                <Button onClick={() => setSent(false)} variant="outline" className="mt-6">
+                  Yeni Mesaj Gönder
+                </Button>
+              </Card>
+            ) : (
+              <Card className="p-8">
+                <form onSubmit={handleFormSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="contact-name">Adınız *</Label>
+                      <Input
+                        id="contact-name"
+                        value={formData.name}
+                        onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
+                        placeholder="Adınız Soyadınız"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="contact-email">E-posta *</Label>
+                      <Input
+                        id="contact-email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
+                        placeholder="ornek@mail.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="contact-phone">Telefon</Label>
+                      <Input
+                        id="contact-phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData((p) => ({ ...p, phone: e.target.value }))}
+                        placeholder="0532 000 00 00"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="contact-subject">Konu</Label>
+                      <Input
+                        id="contact-subject"
+                        value={formData.subject}
+                        onChange={(e) => setFormData((p) => ({ ...p, subject: e.target.value }))}
+                        placeholder="Online danışmanlık"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="contact-message">Mesajınız *</Label>
+                    <textarea
+                      id="contact-message"
+                      value={formData.message}
+                      onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
+                      placeholder="Mesajınızı buraya yazın..."
+                      required
+                      rows={5}
+                      className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm resize-none"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    disabled={sending}
+                    className="w-full h-11 bg-linear-to-r from-(--brand-primary) to-(--brand-secondary) text-white hover:opacity-90"
+                  >
+                    <Send className="w-4 h-4 mr-2" />
+                    {sending ? "Gönderiliyor..." : "Mesaj Gönder"}
+                  </Button>
+                </form>
+              </Card>
+            )}
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { Mail, Send, Check } from "lucide-react";
 import { toast } from "sonner";
+import { trackNewsletterSignup } from "@/lib/analytics";
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -22,16 +23,25 @@ export function NewsletterSection() {
 
     setIsLoading(true);
 
-    // API call simülasyonu (gerçek implementasyonda backend'e istek atılacak)
-    setTimeout(() => {
-      setIsLoading(false);
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error ?? "Hata");
       setIsSubscribed(true);
-      toast.success("Başarıyla abone oldunuz! 🎉");
+      trackNewsletterSignup();
+      toast.success("Başarıyla abone oldunuz!");
       setEmail("");
-
-      // 3 saniye sonra formu tekrar göster
       setTimeout(() => setIsSubscribed(false), 3000);
-    }, 1500);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Bir hata oluştu.";
+      toast.error(msg);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

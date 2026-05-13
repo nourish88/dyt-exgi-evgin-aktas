@@ -21,6 +21,7 @@ export function Navbar() {
     { href: "/mobil-uygulamamiz", label: "Mobil Uygulamamız" },
     { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
     { href: "/blog", label: "Blog" },
+    { href: "/randevu", label: "Randevu Al" },
     { href: "/iletisim", label: "İletişim" },
   ];
 
