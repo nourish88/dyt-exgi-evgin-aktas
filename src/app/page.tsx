@@ -1,7 +1,6 @@
 import { HeroSlider } from "@/components/home/hero-slider";
 import { TrustStrip } from "@/components/home/trust-strip";
 import { StatsSection } from "@/components/home/stats-section";
-import { SuccessStoriesSection } from "@/components/home/success-stories-section";
 import { ProgramsSection } from "@/components/home/programs-section";
 import { WhyChooseSection } from "@/components/home/why-choose-section";
 import { InstagramSection } from "@/components/home/instagram-section";
@@ -25,11 +24,10 @@ export default async function HomePage() {
       <HeroSlider imageOverrides={imageOverrides} />
       <TrustStrip />
       <StatsSection />
-      <SuccessStoriesSection />
       <ProgramsSection />
       <WhyChooseSection />
-      <InstagramSection />
       <TestimonialsSection />
+      <InstagramSection />
       <ReviewCtaSection />
     </>
   );

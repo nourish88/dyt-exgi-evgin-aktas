@@ -227,11 +227,11 @@ export default function AboutPage() {
               </h2>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {education.map((item, index) => (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-lg transition-shadow"
+                  className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)] flex items-center justify-center flex-shrink-0">
@@ -271,8 +271,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <Card className="p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+              <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-bold mb-4">Staj Deneyimleri</h3>
                 <div className="space-y-3">
                   {internships.map((item) => (
@@ -284,7 +284,7 @@ export default function AboutPage() {
                 </div>
               </Card>
 
-              <Card className="p-6">
+              <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-bold mb-4">Lisans Tez Konusu</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Obez olan ve olmayan adölesanların beslenme alışkanlıklarının
@@ -293,77 +293,78 @@ export default function AboutPage() {
               </Card>
             </div>
 
-            <div className="space-y-4">
+            {/* Timeline-style career */}
+            <div className="relative space-y-4 before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-[var(--brand-primary)]/40 before:via-[var(--brand-secondary)]/40 before:to-[var(--brand-accent)]/40">
               {careerJourney.map((item) => (
-                <Card key={item.place} className="p-6">
-                  <Badge className="mb-3">{item.period}</Badge>
-                  <h3 className="text-lg font-bold mb-2">{item.place}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.detail}
-                  </p>
-                </Card>
+                <div key={item.place} className="relative pl-10">
+                  <div className="absolute left-0 top-5 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand-primary)] to-[var(--brand-secondary)] flex items-center justify-center ring-4 ring-white">
+                    <div className="w-2 h-2 rounded-full bg-white" />
+                  </div>
+                  <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
+                    <Badge className="mb-3">{item.period}</Badge>
+                    <h3 className="text-lg font-bold mb-2">{item.place}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.detail}
+                    </p>
+                  </Card>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Certificates */}
-      <section className="py-16 bg-white">
+      {/* Certificates & Expertise */}
+      <section className="py-16 bg-gradient-to-br from-cyan-50/30 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Sertifikalar & Uzmanlık
+                Sertifikalar & Uzmanlık{" "}
                 <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
-                  {" "}
                   Alanlarım
                 </span>
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Certificates */}
-              <div>
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-bold mb-5 flex items-center gap-2">
                   <Award className="w-5 h-5 text-primary" />
                   Sertifikalar
                 </h3>
-                <div className="space-y-3">
-                  {certificates.map((cert, index) => (
-                    <Card
-                      key={index}
-                      className="p-4 hover:shadow-md transition-shadow"
+                <div className="flex flex-wrap gap-2">
+                  {certificates.map((cert) => (
+                    <span
+                      key={cert}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-pink-50 border border-pink-100 text-xs font-medium text-[var(--brand-dark)]"
                     >
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]" />
-                        <span className="text-sm font-medium">{cert}</span>
-                      </div>
-                    </Card>
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]" />
+                      {cert}
+                    </span>
                   ))}
                 </div>
-              </div>
+              </Card>
 
               {/* Expertise */}
-              <div>
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-bold mb-5 flex items-center gap-2">
                   <Target className="w-5 h-5 text-secondary" />
                   Uzmanlık Alanları
                 </h3>
-                <div className="space-y-3">
-                  {expertise.map((item, index) => (
-                    <Card
-                      key={index}
-                      className="p-4 hover:shadow-md transition-shadow"
+                <div className="flex flex-wrap gap-2">
+                  {expertise.map((item) => (
+                    <span
+                      key={item}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-xs font-medium text-[var(--brand-dark)]"
                     >
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]" />
-                        <span className="text-sm font-medium">{item}</span>
-                      </div>
-                    </Card>
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)]" />
+                      {item}
+                    </span>
                   ))}
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

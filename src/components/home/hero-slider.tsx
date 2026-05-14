@@ -68,7 +68,7 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto rounded-[30px] border border-slate-200/80 bg-white/90 shadow-[0_24px_70px_-36px_rgba(15,23,42,0.55)] overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_1fr]">
-            <div className="relative h-[45svh] min-h-[320px] lg:h-[560px] bg-slate-100">
+            <div className="relative h-[32svh] min-h-[240px] lg:h-[560px] bg-slate-100">
               <Image
                 key={`image-${currentSlide.id}`}
                 src={imageOverrides[currentSlide.id] ?? currentSlide.backgroundImage ?? "/images/instagram/posts/clinic-01.jpeg"}
@@ -81,13 +81,13 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent pointer-events-none" />
             </div>
 
-            <div className="px-5 py-6 sm:px-7 sm:py-8 lg:px-9 lg:py-10 bg-gradient-to-br from-white to-slate-50/70">
-              <div key={`text-${currentSlide.id}`} className="space-y-4">
+            <div className="px-5 py-5 sm:px-7 sm:py-7 lg:px-9 lg:py-10 bg-gradient-to-br from-white to-slate-50/70">
+              <div key={`text-${currentSlide.id}`} className="space-y-3 lg:space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)] text-left leading-snug max-w-full">
                   {"Ankara & Eryaman · Online beslenme danışmanlığı"}
                 </div>
 
-                <h1 className="text-2xl md:text-4xl font-bold leading-tight text-[var(--brand-dark)]">
+                <h1 className="text-xl md:text-4xl font-bold leading-tight text-[var(--brand-dark)]">
                   {currentSlide.title}
                 </h1>
 
@@ -95,7 +95,7 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
                   {currentSlide.description}
                 </p>
 
-                <p className="text-sm text-slate-600">
+                <p className="hidden lg:block text-sm text-slate-600">
                   Aç kalmadan, sürdürülebilir beslenme adımlarıyla ilerleyelim.
                 </p>
 
