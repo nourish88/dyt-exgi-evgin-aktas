@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gizlilik Politikası | Diyetisyen Ezgi Evgin Aktaş",
+  title: "Gizlilik Politikası",
   description:
-    "Web sitesi gizlilik politikası ve kullanıcı bilgilerinin korunması.",
+    "Diyetisyen Ezgi Evgin Aktaş web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı haklarının korunması hakkında bilgilendirme.",
+  alternates: { canonical: "https://ezgievginaktas.com/gizlilik-politikasi" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {

@@ -10,9 +10,18 @@ import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Beslenme & Sağlıklı Yaşam Blogu | Dyt. Ezgi Evgin Aktaş",
+  title: "Beslenme & Sağlıklı Yaşam Blogu",
   description:
     "Sağlıklı beslenme, kilo verme, insülin direnci, hamile beslenmesi ve güncel diyet konularında uzman diyetisyen kaleminden makaleler.",
+  alternates: { canonical: "https://ezgievginaktas.com/blog" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/blog",
+    title: "Beslenme & Sağlıklı Yaşam Blogu | Dyt. Ezgi Evgin Aktaş",
+    description:
+      "Sağlıklı beslenme, kilo verme, insülin direnci ve güncel diyet konularında uzman diyetisyen kaleminden makaleler.",
+  },
 };
 
 function calculateReadingTime(content: string): number {

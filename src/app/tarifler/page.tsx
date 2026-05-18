@@ -10,9 +10,18 @@ import { placeholderImages } from "@/lib/placeholder-images";
 export const revalidate = 600;
 
 export const metadata: Metadata = {
-  title: "Sağlıklı Tarifler | Diyetisyen Ezgi Evgin Aktaş",
+  title: "Sağlıklı & Diyet Tarifleri",
   description:
-    "Lezzetli ve sağlıklı tarifler. Düşük kalorili, fit ve besleyici yemek tarifleri.",
+    "Diyetisyen onaylı lezzetli ve sağlıklı tarifler: düşük kalorili, fit, besleyici ve kolay yemek tarifleriyle mutfağınıza renk katın.",
+  alternates: { canonical: "https://ezgievginaktas.com/tarifler" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/tarifler",
+    title: "Sağlıklı Tarifler | Diyetisyen Ezgi Evgin Aktaş",
+    description:
+      "Diyetisyen onaylı, düşük kalorili ve besleyici sağlıklı yemek tarifleri.",
+  },
 };
 
 export default async function RecipesPage() {

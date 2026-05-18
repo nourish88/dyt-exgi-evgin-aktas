@@ -14,9 +14,18 @@ import {
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Randevu Al | Diyetisyen Ezgi Evgin Aktaş",
+  title: "Randevu Al — Online & Yüz Yüze Görüşme",
   description:
-    "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın. Diyetisyen Ezgi Evgin Aktaş ile yüz yüze veya online görüşme.",
+    "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın. Diyetisyen Ezgi Evgin Aktaş ile yüz yüze veya online görüşme. Kolay 3 adımda randevu.",
+  alternates: { canonical: "https://ezgievginaktas.com/randevu" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/randevu",
+    title: "Randevu Al | Diyetisyen Ezgi Evgin Aktaş",
+    description:
+      "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın.",
+  },
 };
 
 const DOKTOR_TAKVIMI_URL = "https://www.doktortakvimi.com";

@@ -6,7 +6,7 @@ import { MessageCircle, CheckCircle2 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Ezgi Evgin Aktaş — Uzman Diyetisyen | Beslenme Danışmanlığı",
+  title: "Ezgi Evgin Aktaş — Uzman Diyetisyen",
   description:
     "Diyetisyen Ezgi Evgin Aktaş: Başkent Üniversitesi mezunu, Ankara Eryaman ofisi ve online beslenme danışmanlığı. Kişiye özel plan, haftalık takip ve danışan portalı.",
   keywords: [
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Ezgi Evgin Aktaş — Uzman Diyetisyen",
     description:

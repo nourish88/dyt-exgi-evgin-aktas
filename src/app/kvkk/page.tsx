@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KVKK Bilgilendirme | Diyetisyen Ezgi Evgin Aktaş",
+  title: "KVKK Aydınlatma Metni",
   description:
     "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, danışan portalı ve haklarınız hakkında bilgilendirme.",
+  alternates: { canonical: "https://ezgievginaktas.com/kvkk" },
+  robots: { index: true, follow: true },
 };
 
 export default function KVKKPage() {

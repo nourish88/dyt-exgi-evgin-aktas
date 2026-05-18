@@ -17,9 +17,10 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Ana Sayfa" },
     { href: "/hakkimda", label: "Hakkımda" },
-    { href: "/programlar", label: "Online Programlar" },
-    { href: "/mobil-uygulamamiz", label: "Mobil Uygulamamız" },
+    { href: "/online-diyet-ankara", label: "Online Diyet" },
+    { href: "/programlar", label: "Programlar" },
     { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
+    { href: "/tarifler", label: "Tarifler" },
     { href: "/blog", label: "Blog" },
     { href: "/randevu", label: "Randevu Al" },
     { href: "/iletisim", label: "İletişim" },

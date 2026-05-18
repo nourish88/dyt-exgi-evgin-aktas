@@ -66,6 +66,38 @@ export function Footer() {
                   Online Programlar
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tarifler"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Sağlıklı Tarifler
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/randevu"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Randevu Al
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/iletisim"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  İletişim
+                </Link>
+              </li>
             </ul>
           </div>
 

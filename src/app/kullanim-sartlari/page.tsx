@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kullanım Şartları | Diyetisyen Ezgi Evgin Aktaş",
-  description: "Web sitesi kullanım şartları ve koşulları.",
+  title: "Kullanım Şartları",
+  description:
+    "Diyetisyen Ezgi Evgin Aktaş web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
+  alternates: { canonical: "https://ezgievginaktas.com/kullanim-sartlari" },
+  robots: { index: true, follow: true },
 };
 
 export default function TermsPage() {
