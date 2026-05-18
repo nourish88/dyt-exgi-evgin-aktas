@@ -6,7 +6,7 @@ import { MessageCircle, CheckCircle2, Smartphone } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Online Diyet Ankara — Uzaktan Beslenme Danışmanlığı",
+  title: { absolute: "Online Diyet Ankara — Uzaktan Beslenme Danışmanlığı" },
   description:
     "Online diyet ile Ankara ve Türkiye genelinden kişiye özel beslenme danışmanlığı. Haftalık görüşme, danışan portalı ve anlık destek ile sürdürülebilir takip.",
   keywords: [

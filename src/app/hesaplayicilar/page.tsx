@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CalculatorsClient from "./calculators-client";
 
 export const metadata: Metadata = {
-  title: "BMI, İdeal Kilo & Kalori Hesaplayıcıları",
+  title: { absolute: "BMI, İdeal Kilo ve Kalori Hesaplayıcıları" },
   description:
     "Ücretsiz vücut kitle indeksi (BMI), ideal kilo ve günlük kalori ihtiyacı hesaplayıcıları. Diyetisyen Ezgi Evgin Aktaş ile sağlıklı hedeflerinizi belirleyin.",
   alternates: { canonical: "https://ezgievginaktas.com/hesaplayicilar" },
