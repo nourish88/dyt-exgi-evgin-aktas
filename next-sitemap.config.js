@@ -41,6 +41,10 @@ module.exports = {
     };
   },
   robotsTxtOptions: {
+    additionalSitemaps: [
+      (process.env.NEXT_PUBLIC_SITE_URL || "https://ezgievginaktas.com") +
+        "/server-sitemap.xml",
+    ],
     policies: [
       {
         userAgent: "*",

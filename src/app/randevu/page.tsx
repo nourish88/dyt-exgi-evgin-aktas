@@ -57,9 +57,60 @@ const sessionTypes = [
   },
 ];
 
+const randevuFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Randevu nasıl alınır?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Web sitesinden DoktorTakvimi üzerinden online randevu alabilir, WhatsApp ile mesaj gönderebilir veya 0546 265 04 40 numarasını arayabilirsiniz. Tarih ve saat seçimi sonrası onay mesajı gönderilir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Görüşme süresi ne kadar?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "İlk değerlendirme görüşmesi ortalama 50 dakika sürer. Devam görüşmeleri programınıza göre 30-45 dakika arasında planlanır.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Online görüşme hangi platformlardan yapılıyor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Online görüşmeler WhatsApp görüntülü arama, Zoom veya Google Meet üzerinden yapılmaktadır. Tercihinizi randevu sırasında bildirebilirsiniz.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Yüz yüze görüşme nerede yapılıyor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Eryaman Altay Mahallesi, Orhan Bey Caddesi, Atayıldız Plaza Kat:8 adresindeki ofisimizde yüz yüze görüşme yapılmaktadır.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Randevumu iptal veya erteleyebilir miyim?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Randevu saatinden en az 24 saat önce WhatsApp veya telefon ile bildirmeniz koşuluyla iptal veya erteleme yapılabilir.",
+      },
+    },
+  ],
+};
+
 export default function RandevuPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(randevuFaqJsonLd) }}
+      />
       {/* Hero */}
       <section className="py-20 bg-linear-to-br from-pink-50 via-cyan-50 to-green-50">
         <div className="container mx-auto px-4 text-center max-w-3xl">

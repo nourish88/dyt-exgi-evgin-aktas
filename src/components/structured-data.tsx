@@ -12,7 +12,13 @@ export function StructuredData() {
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
     medicalSpecialty: "DietNutrition",
+    alternateName: [
+      "Diyetisyen Ezgi Evgin",
+      "Dyt. Ezgi Evgin Aktaş",
+      "Ezgi Evgin",
+    ],
     sameAs: [
+      "https://diyetisyenezgievgin.com",
       "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
       "https://www.instagram.com/dyt_ezgievgin",
       "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs"
@@ -104,8 +110,17 @@ export function StructuredData() {
       addressCountry: "TR",
     },
     sameAs: [
+      "https://diyetisyenezgievgin.com",
       "https://www.instagram.com/dyt_ezgievgin",
       "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
+      "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z",
+    ],
+    knowsAbout: [
+      "Beslenme ve Diyetetik",
+      "Online Diyet Danışmanlığı",
+      "Kilo Yönetimi",
+      "İnsülin Direnci ve Beslenme",
+      "Sporcu Beslenmesi",
     ],
   };
 

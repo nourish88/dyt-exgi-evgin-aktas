@@ -6,6 +6,7 @@ import { WhyChooseSection } from "@/components/home/why-choose-section";
 import { InstagramSection } from "@/components/home/instagram-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { ExploreLinksSection } from "@/components/home/explore-links-section";
+import { HomeFaqJsonLd } from "@/components/home/home-faq-jsonld";
 import { ReviewCtaSection } from "@/components/home/review-cta-section";
 import { prisma } from "@/lib/prisma";
 
@@ -22,6 +23,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <HomeFaqJsonLd />
       <HeroSlider imageOverrides={imageOverrides} />
       <TrustStrip />
       <StatsSection />

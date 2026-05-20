@@ -31,6 +31,19 @@ export function BlogForm({ post, action, submitLabel }: Props) {
           <Input id="title" name="title" defaultValue={post?.title} required placeholder="Blog yazısı başlığı" />
         </div>
 
+        <div className="md:col-span-2 space-y-1.5">
+          <Label htmlFor="slug">URL (slug)</Label>
+          <Input
+            id="slug"
+            name="slug"
+            defaultValue={post?.slug}
+            placeholder="online-diyet-nasil-calisir-ankara"
+          />
+          <p className="text-xs text-muted-foreground">
+            Boş bırakılırsa başlıktan otomatik üretilir. SEO için kısa, anahtar kelime içeren bir slug girin (tarih/rastgele kod eklenmez).
+          </p>
+        </div>
+
         <div className="space-y-1.5">
           <Label htmlFor="category">Kategori *</Label>
           <select

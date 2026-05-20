@@ -58,6 +58,46 @@ function calculateReadingTime(content: string): number {
   return Math.max(1, Math.ceil(words / wordsPerMinute));
 }
 
+// Markdown içeriğinden "SSS / Sıkça Sorulan Sorular" bölümünü tarayıp
+// her `### Soru?` + sonrasındaki düz metin paragrafını Q&A olarak çıkarır.
+// En az 2 çift bulunursa FAQPage JSON-LD üretilir.
+function extractFaqPairs(content: string): { q: string; a: string }[] {
+  const lines = content.split("\n");
+  const faqHeading = /^##\s+(SSS|Sıkça\s+Sorulan(\s+Sorular)?)\b/i;
+  let inFaq = false;
+  let i = 0;
+  const pairs: { q: string; a: string }[] = [];
+
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!inFaq && faqHeading.test(line)) {
+      inFaq = true;
+      i += 1;
+      continue;
+    }
+    if (inFaq && /^##\s+/.test(line) && !faqHeading.test(line)) break;
+    if (inFaq) {
+      const m = line.match(/^###\s+(.+?)\s*$/);
+      if (m) {
+        const q = m[1].trim();
+        const answerLines: string[] = [];
+        i += 1;
+        while (i < lines.length) {
+          const l = lines[i];
+          if (/^###\s+/.test(l) || /^##\s+/.test(l)) break;
+          if (l.trim()) answerLines.push(l.trim());
+          i += 1;
+        }
+        const a = answerLines.join(" ").replace(/\s+/g, " ").trim();
+        if (q && a) pairs.push({ q, a });
+        continue;
+      }
+    }
+    i += 1;
+  }
+  return pairs;
+}
+
 function extractHeadings(content: string): { id: string; text: string; level: number }[] {
   const lines = content.split("\n");
   const headings: { id: string; text: string; level: number }[] = [];
@@ -161,12 +201,32 @@ export default async function BlogPostPage({ params }: Props) {
     mainEntityOfPage: postUrl,
   };
 
+  const faqPairs = extractFaqPairs(post.content);
+  const faqSchema =
+    faqPairs.length >= 2
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqPairs.map((p) => ({
+            "@type": "Question",
+            name: p.q,
+            acceptedAnswer: { "@type": "Answer", text: p.a },
+          })),
+        }
+      : null;
+
   return (
     <main className="min-h-screen bg-slate-50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Hero with image */}
       {post.image && (
@@ -405,6 +465,34 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* İlgili hizmetler — hub-spoke iç linkleme */}
+        <section className="mt-12 rounded-2xl border bg-white p-6 md:p-8">
+          <h2 className="text-xl md:text-2xl font-bold text-[var(--brand-dark)] mb-4">
+            İlgili hizmetler & sayfalar
+          </h2>
+          <p className="text-sm text-muted-foreground mb-5">
+            Bu yazıdaki konular için Ankara ve online diyetisyen hizmetlerimizi inceleyin.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { href: "/online-diyet-ankara", label: "Online Diyet Ankara" },
+              { href: "/eryaman-diyetisyen", label: "Eryaman Diyetisyen" },
+              { href: "/ankara-diyetisyen", label: "Ankara Diyetisyen" },
+              { href: "/randevu", label: "Randevu Al" },
+              { href: "/hesaplayicilar", label: "BMI & Kalori Hesapla" },
+              { href: "/ezgi-evgin-diyetisyen", label: "Diyetisyen Ezgi Evgin" },
+            ].map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="rounded-lg border px-3 py-2 text-sm text-[var(--brand-dark)] hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-colors"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Bottom navigation */}
         <footer className="mt-12 pb-12 flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -43,7 +43,9 @@ function CounterAnimation({
   suffix?: string;
   duration?: number;
 }) {
-  const [count, setCount] = useState(0);
+  // SSR/hidrasyon ile uyumlu olması ve Google'ın gerçek değeri görmesi için
+  // initial state `end` ile başlar; client'ta inView olunca 0'a düşüp animasyon başlar.
+  const [count, setCount] = useState(end);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
@@ -52,6 +54,7 @@ function CounterAnimation({
     if (!isInView || hasAnimated) return;
 
     setHasAnimated(true);
+    setCount(0);
     const startTime = Date.now();
     const step = () => {
       const now = Date.now();
