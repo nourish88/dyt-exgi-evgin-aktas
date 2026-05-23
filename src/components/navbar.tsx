@@ -33,7 +33,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/logo.svg"
+              src="/ezgi_evgin.png"
               alt="Ezgi Evgin Aktaş - Beslenme ve Diyet Danışmanlığı"
               width={180}
               height={50}
@@ -41,8 +41,8 @@ export function Navbar() {
               priority
             />
             <div className="hidden lg:block leading-tight">
-              <p className="text-xs text-muted-foreground">Diyetisyen</p>
-              <p className="text-sm font-semibold text-[var(--brand-dark)]">
+              <p className="text-xs text-[#dc107d]">Diyetisyen</p>
+              <p className="text-sm font-semibold text-[#312858]">
                 Ezgi Evgin Aktaş
               </p>
             </div>

@@ -17,7 +17,7 @@ export function Footer() {
           {/* Logo & About */}
           <div className="lg:col-span-3 space-y-5">
             <Image
-              src="/logo.svg"
+              src="/ezgi_evgin.png"
               alt="Ezgi Evgin Aktaş - Beslenme ve Diyet Danışmanlığı"
               width={120}
               height={40}

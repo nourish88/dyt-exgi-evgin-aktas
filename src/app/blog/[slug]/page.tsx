@@ -196,7 +196,7 @@ export default async function BlogPostPage({ params }: Props) {
       name: "Diyetisyen Ezgi Evgin Aktaş",
       logo: {
         "@type": "ImageObject",
-        url: "https://ezgievginaktas.com/logo.svg",
+        url: "https://ezgievginaktas.com/ezgi_evgin.png",
       },
     },
     mainEntityOfPage: postUrl,

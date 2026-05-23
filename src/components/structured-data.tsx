@@ -12,8 +12,8 @@ export function StructuredData() {
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Online beslenme danışmanlığı, kilo yönetimi programları ve sağlıklı yaşam koçluğu hizmeti veren uzman diyetisyen.",
-    image: "https://ezgievginaktas.com/logo.svg",
-    logo: "https://ezgievginaktas.com/logo.svg",
+    image: "https://ezgievginaktas.com/ezgi_evgin.png",
+    logo: "https://ezgievginaktas.com/ezgi_evgin.png",
     url: "https://ezgievginaktas.com",
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
@@ -106,7 +106,7 @@ export function StructuredData() {
     description:
       "Uzman diyetisyen; Ankara Eryaman ve online diyet ile beslenme danışmanlığı",
     url: "https://ezgievginaktas.com",
-    image: "https://ezgievginaktas.com/logo.svg",
+    image: "https://ezgievginaktas.com/ezgi_evgin.png",
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
     address: {
@@ -149,7 +149,7 @@ export function StructuredData() {
     "@type": "ProfessionalService",
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description: "Online ve yüz yüze beslenme danışmanlığı hizmetleri",
-    image: "https://ezgievginaktas.com/logo.svg",
+    image: "https://ezgievginaktas.com/ezgi_evgin.png",
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
     address: {
