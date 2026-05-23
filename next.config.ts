@@ -14,6 +14,31 @@ const nextConfig: NextConfig = {
         destination: `https://${CANONICAL_HOST}/:path*`,
         permanent: true,
       },
+      {
+        source: "/ezgi-evgin",
+        destination: "/ezgi-evgin-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/ezgi-evgin-aktas",
+        destination: "/ezgi-evgin-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/dyt-ezgi-evgin",
+        destination: "/ezgi-evgin-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/diyetisyen-ezgi-evgin",
+        destination: "/ezgi-evgin-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/diyetisyen-ezgi-evgin-aktas",
+        destination: "/ezgi-evgin-diyetisyen",
+        permanent: true,
+      },
     ];
   },
   async headers() {

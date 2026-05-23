@@ -22,9 +22,9 @@ import {
 } from "@/lib/external-links";
 
 export const metadata: Metadata = {
-  title: "Ezgi Evgin Aktaş — Uzman Diyetisyen",
+  title: "Ezgi Evgin Aktaş — Diyetisyen Ezgi Evgin",
   description:
-    "Diyetisyen Ezgi Evgin Aktaş: Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ofisi ve Türkiye genelinde online beslenme danışmanlığı. Kişiye özel plan, haftalık takip ve danışan portalı.",
+    "Ezgi Evgin Aktaş (Diyetisyen Ezgi Evgin): Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ofisi ve Türkiye genelinde online beslenme danışmanlığı.",
   keywords: [
     "ezgi evgin",
     "ezgi evgin aktaş",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "profile",
-    title: "Ezgi Evgin Aktaş — Uzman Diyetisyen",
+    title: "Ezgi Evgin Aktaş — Diyetisyen Ezgi Evgin",
     description:
       "Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ve online beslenme danışmanlığı.",
     url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
@@ -193,6 +193,21 @@ const faqJsonLd = {
   ],
 };
 
+const brandWebPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  name: "Ezgi Evgin Aktaş | Diyetisyen Ezgi Evgin",
+  alternateName: [
+    "Ezgi Evgin",
+    "Dyt. Ezgi Evgin",
+    "Dyt Ezgi Evgin",
+    "Diyetisyen Ezgi Evgin",
+    "Diyetisyen Ezgi Evgin Aktaş",
+  ],
+  url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
+  mainEntity: personJsonLd,
+};
+
 const expertiseAreas = [
   {
     icon: Stethoscope,
@@ -269,6 +284,10 @@ export default function EzgiEvginDiyetisyenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(brandWebPageJsonLd) }}
       />
       <script
         type="application/ld+json"

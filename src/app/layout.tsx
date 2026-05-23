@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ezgievginaktas.com"),
   title: {
     default:
-      "Dyt. Ezgi Evgin Aktaş | Online Beslenme Danışmanlığı Ankara",
+      "Diyetisyen Ezgi Evgin Aktaş | Ezgi Evgin | Ankara Eryaman",
     template: "%s | Dyt. Ezgi Evgin Aktaş",
   },
   description:

@@ -9,9 +9,9 @@ export interface HeroSlide {
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    title: "Ankara, Eryaman ve Türkiye Genelinde Kişiye Özel Beslenme",
+    title: "Diyetisyen Ezgi Evgin Aktaş ile Kişiye Özel Beslenme",
     description:
-      "Yüz yüze (Etimesgut–Eryaman) veya online diyet ile hedefinize uygun, uygulanabilir planlar. Aç kalmadan sürdürülebilir adımlar ve uygulama üzerinden düzenli takip.",
+      "Ezgi Evgin olarak Ankara Etimesgut–Eryaman ofisinde yüz yüze veya Türkiye genelinde online diyet ile hedefinize uygun, uygulanabilir planlar sunuyorum.",
     backgroundGradient: "from-pink-600/70 via-rose-700/70 to-pink-900/70",
     backgroundImage: "/images/instagram/posts/clinic-01.jpeg",
   },
