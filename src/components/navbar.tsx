@@ -40,7 +40,7 @@ export function Navbar() {
               className="h-11 w-auto md:h-12"
               priority
             />
-            <div className="hidden lg:flex flex-col justify-center">
+            <div className="hidden xl:flex flex-col justify-center">
               <p className="text-[11px] font-medium tracking-[0.3em] uppercase bg-gradient-to-r from-[#dc107d] to-[#312858] bg-clip-text text-transparent mb-0.5">
                 Diyetisyen
               </p>
@@ -51,7 +51,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden xl:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -101,7 +101,7 @@ export function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-accent"
+            className="xl:hidden p-2 rounded-lg hover:bg-accent"
             aria-label="Menüyü Aç/Kapat"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -111,7 +111,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden border-t bg-white/95 backdrop-blur-md">
+        <div className="xl:hidden border-t bg-white/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
