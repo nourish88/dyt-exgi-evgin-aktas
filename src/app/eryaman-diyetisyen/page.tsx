@@ -19,7 +19,12 @@ import {
   Apple,
   ClipboardList,
 } from "lucide-react";
+import { LocalProofSection } from "@/components/local-seo/local-proof-section";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import {
+  GOOGLE_MAPS_PROFILE_URL,
+  INSTAGRAM_PROFILE_URL,
+} from "@/lib/external-links";
 
 export const metadata: Metadata = {
   title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
@@ -197,6 +202,8 @@ const localBusinessJsonLd = {
   url: "https://ezgievginaktas.com/eryaman-diyetisyen",
   telephone: "+90 546 265 04 40",
   image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+  sameAs: [INSTAGRAM_PROFILE_URL, GOOGLE_MAPS_PROFILE_URL],
+  hasMap: GOOGLE_MAPS_PROFILE_URL,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
@@ -537,6 +544,8 @@ export default function EryamanDiyetisyenPage() {
             </div>
           </div>
         </section>
+
+        <LocalProofSection areaName="Eryaman" whatsappLink={whatsappLink} />
 
         {/* SSS */}
         <section className="py-12 md:py-16">

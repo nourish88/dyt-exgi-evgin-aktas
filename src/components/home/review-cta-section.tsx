@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getClientAppLoginUrl } from "@/lib/client-app-url";
-
-const GOOGLE_MAPS_PROFILE_URL =
-  "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
+import {
+  DOKTORTAKVIMI_PROFILE_URL,
+  GOOGLE_MAPS_PROFILE_URL,
+} from "@/lib/external-links";
 
 export function ReviewCtaSection() {
   const clientAppUrl = getClientAppLoginUrl();
@@ -55,7 +56,7 @@ export function ReviewCtaSection() {
                 </Button>
               </a>
               <a
-                href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
+                href={DOKTORTAKVIMI_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"

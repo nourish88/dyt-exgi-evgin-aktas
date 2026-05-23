@@ -1,25 +1,23 @@
 import Link from "next/link";
 import { Star, MapPin, Stethoscope, ExternalLink } from "lucide-react";
-
-const GOOGLE_REVIEW_URL =
-  "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
-
-const DOKTORTAKVIM_URL =
-  "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara";
+import {
+  DOKTORTAKVIMI_PROFILE_URL,
+  GOOGLE_MAPS_PROFILE_URL,
+} from "@/lib/external-links";
 
 const items = [
   {
     icon: Star,
     title: "Google yorumları",
     description: "Deneyiminizi paylaşın; doğru diyetisyeni arayanlara yardımcı olun.",
-    href: GOOGLE_REVIEW_URL,
+    href: GOOGLE_MAPS_PROFILE_URL,
     external: true,
   },
   {
     icon: Stethoscope,
     title: "DoktorTakvimi",
     description: "Profil ve randevu bilgilerinizi tek tıkla görün.",
-    href: DOKTORTAKVIM_URL,
+    href: DOKTORTAKVIMI_PROFILE_URL,
     external: true,
   },
   {

@@ -13,7 +13,12 @@ import {
   Smartphone,
   Users,
 } from "lucide-react";
+import { LocalProofSection } from "@/components/local-seo/local-proof-section";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import {
+  GOOGLE_MAPS_PROFILE_URL,
+  INSTAGRAM_PROFILE_URL,
+} from "@/lib/external-links";
 
 const PAGE_URL = "https://ezgievginaktas.com/etimesgut-diyetisyen";
 
@@ -108,6 +113,8 @@ const localBusinessJsonLd = {
   url: PAGE_URL,
   telephone: "+90 546 265 04 40",
   image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+  sameAs: [INSTAGRAM_PROFILE_URL, GOOGLE_MAPS_PROFILE_URL],
+  hasMap: GOOGLE_MAPS_PROFILE_URL,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
@@ -328,6 +335,8 @@ export default function EtimesgutDiyetisyenPage() {
               </div>
             </div>
           </section>
+
+          <LocalProofSection areaName="Etimesgut" whatsappLink={whatsappLink} />
 
           <section className="container mx-auto px-4 max-w-3xl mt-14">
             <h2 className="text-2xl font-bold text-center text-[var(--brand-dark)] mb-6">
