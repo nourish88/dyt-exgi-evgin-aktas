@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick, trackContactFormSubmit } from "@/lib/analytics";
+import { GOOGLE_MAPS_PROFILE_URL } from "@/lib/external-links";
 import { toast } from "sonner";
 
 const iletisimWhatsappUrl = buildWhatsAppApiUrl("Merhaba", "iletisim_card");
@@ -49,8 +50,7 @@ export default function ContactPage() {
     }
   };
 
-  const googleMapsPlaceUrl =
-    "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z/data=!3m1!4b1!4m6!3m5!1s0x14d330d2f71d4659:0x83b8bf59458d8408!8m2!3d39.9669753!4d32.6358095!16s%2Fg%2F11dymr8nhs?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D";
+  const googleMapsPlaceUrl = GOOGLE_MAPS_PROFILE_URL;
 
   const contactInfo = [
     {
@@ -350,6 +350,13 @@ export default function ContactPage() {
                       title="Ezgi Evgin Beslenme ve Diyet Danışmanlığı - Ofis Konumu"
                       className="absolute inset-0"
                     ></iframe>
+                    <a
+                      href={googleMapsPlaceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Google Maps işletme sayfasını aç"
+                      className="absolute inset-0 z-10"
+                    />
                   </div>
 
                   <a

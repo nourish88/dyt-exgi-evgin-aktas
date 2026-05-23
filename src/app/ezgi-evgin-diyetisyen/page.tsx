@@ -15,6 +15,11 @@ import {
   ClipboardList,
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import {
+  DOKTORTAKVIMI_PROFILE_URL,
+  GOOGLE_MAPS_PROFILE_URL,
+  INSTAGRAM_PROFILE_URL,
+} from "@/lib/external-links";
 
 export const metadata: Metadata = {
   title: "Ezgi Evgin Aktaş — Uzman Diyetisyen",
@@ -126,10 +131,10 @@ const personJsonLd = {
     { "@type": "Country", name: "Türkiye" },
   ],
   sameAs: [
-    "https://www.instagram.com/dyt_ezgievgin",
-    "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara",
+    INSTAGRAM_PROFILE_URL,
+    DOKTORTAKVIMI_PROFILE_URL,
     "https://diyetisyenezgievgin.com",
-    "https://www.google.com/maps/place/Diyetisyen+Ezgi+Evgin/@39.9669753,32.6332346,17z",
+    GOOGLE_MAPS_PROFILE_URL,
   ],
 };
 
