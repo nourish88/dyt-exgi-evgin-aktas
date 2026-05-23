@@ -333,6 +333,20 @@ export default async function BlogPostPage({ params }: Props) {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               components={{
+                a: ({ href, children, ...props }) => {
+                  if (href?.startsWith("/")) {
+                    return (
+                      <Link href={href} {...props as any}>
+                        {children}
+                      </Link>
+                    );
+                  }
+                  return (
+                    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+                      {children}
+                    </a>
+                  );
+                },
                 h2: ({ children, ...props }) => {
                   const text = String(children);
                   const id = text
@@ -491,15 +505,15 @@ export default async function BlogPostPage({ params }: Props) {
                   <Link
                     key={l.href}
                     href={l.href}
-                    className="group rounded-lg border px-4 py-3 hover:border-[var(--brand-primary)] hover:bg-pink-50/40 transition-colors block"
+                    className="group block rounded-xl border p-4 hover:shadow-md transition bg-white hover:border-[var(--brand-primary)]"
                   >
-                    <div className="font-medium text-sm text-[var(--brand-dark)] group-hover:text-[var(--brand-primary)]">
+                    <p className="font-semibold text-gray-900 group-hover:text-[var(--brand-primary)] transition-colors">
                       {l.label}
-                    </div>
+                    </p>
                     {l.hint && (
-                      <div className="text-xs text-muted-foreground mt-0.5">
+                      <p className="text-sm text-gray-500 mt-1">
                         {l.hint}
-                      </div>
+                      </p>
                     )}
                   </Link>
                 ))}

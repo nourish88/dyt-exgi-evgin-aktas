@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/saglikli-beslenmeye-baslamak-i-cin-pazartesiyi-beklemeyin-mpcjcifj",
+        destination: "/blog/saglikli-beslenmeye-baslamak-i-cin-pazartesiyi-beklemeyin-mpe87qa4",
+        permanent: true,
+      },
+      {
         source: "/ezgi-evgin",
         destination: "/ezgi-evgin-diyetisyen",
         permanent: true,
