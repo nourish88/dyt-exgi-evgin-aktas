@@ -22,7 +22,7 @@ import {
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Eryaman Diyetisyen — Optimum AVM Karşısı | Dyt. Ezgi Evgin Aktaş",
+  title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
   description:
     "Eryaman'da diyetisyen mi arıyorsunuz? Altay Mahallesi Atayıldız Plaza (Optimum AVM karşısı) ofisimizde kişiye özel beslenme danışmanlığı. Salı-Cumartesi 09:00-20:00. Yüz yüze veya online.",
   keywords: [
@@ -39,6 +39,19 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com/eryaman-diyetisyen",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/eryaman-diyetisyen",
+    title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
+    description:
+      "Eryaman Altay Mahallesi Atayıldız Plaza'da kişiye özel beslenme danışmanlığı. Yüz yüze veya online.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eryaman Diyetisyen — Dyt. Ezgi Evgin Aktaş",
+    description:
+      "Eryaman Optimum AVM karşısı, kişiye özel beslenme danışmanlığı.",
   },
 };
 

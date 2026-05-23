@@ -196,6 +196,50 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+
+            <h4 className="font-semibold mb-3 mt-6">Uzmanlık alanları</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/insulin-direnci-diyeti-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  İnsülin direnci diyeti
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pcos-diyetisyen-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  PCOS diyetisyeni
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hamilelik-beslenmesi-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Hamilelik beslenmesi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sporcu-beslenmesi-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Sporcu beslenmesi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cocuk-beslenmesi-diyetisyen"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Çocuk beslenmesi
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* İletişim */}

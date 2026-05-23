@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   description:
     "Diyetisyen Ezgi Evgin Aktaş web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
   alternates: { canonical: "https://ezgievginaktas.com/kullanim-sartlari" },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/kullanim-sartlari",
+    title: "Kullanım Şartları — Diyetisyen Ezgi Evgin Aktaş",
+    description:
+      "Hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Kullanım Şartları",
+    description: "Hizmet kapsamı ve kullanıcı sorumlulukları.",
+  },
   robots: { index: true, follow: true },
 };
 

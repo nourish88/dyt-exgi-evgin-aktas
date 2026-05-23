@@ -6,7 +6,7 @@ import { MessageCircle, CheckCircle2 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Ankara Diyetisyen — Beslenme ve Diyet Danışmanlığı | Ezgi Evgin Aktaş",
+  title: "Ankara Diyetisyen — Beslenme Danışmanlığı",
   description:
     "Ankara'da diyetisyen arıyorsanız: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı. Kişiye özel plan, haftalık görüşme ve danışan portalı ile takip.",
   keywords: [
@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com/ankara-diyetisyen",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/ankara-diyetisyen",
+    title: "Ankara Diyetisyen — Beslenme ve Diyet Danışmanlığı",
+    description:
+      "Ankara'da diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı. Kişiye özel plan ve haftalık görüşme.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ankara Diyetisyen — Ezgi Evgin Aktaş",
+    description:
+      "Ankara'da diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı.",
   },
 };
 

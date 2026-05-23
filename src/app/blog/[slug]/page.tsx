@@ -19,6 +19,7 @@ import {
 import { prisma } from "@/lib/prisma";
 import { ShareButtons } from "@/components/blog/share-buttons";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { getRelatedPagesForPost } from "@/lib/related-pages";
 
 export const revalidate = 3600;
 
@@ -466,33 +467,46 @@ export default async function BlogPostPage({ params }: Props) {
           </section>
         )}
 
-        {/* İlgili hizmetler — hub-spoke iç linkleme */}
-        <section className="mt-12 rounded-2xl border bg-white p-6 md:p-8">
-          <h2 className="text-xl md:text-2xl font-bold text-[var(--brand-dark)] mb-4">
-            İlgili hizmetler & sayfalar
-          </h2>
-          <p className="text-sm text-muted-foreground mb-5">
-            Bu yazıdaki konular için Ankara ve online diyetisyen hizmetlerimizi inceleyin.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {[
-              { href: "/online-diyet-ankara", label: "Online Diyet Ankara" },
-              { href: "/eryaman-diyetisyen", label: "Eryaman Diyetisyen" },
-              { href: "/ankara-diyetisyen", label: "Ankara Diyetisyen" },
-              { href: "/randevu", label: "Randevu Al" },
-              { href: "/hesaplayicilar", label: "BMI & Kalori Hesapla" },
-              { href: "/ezgi-evgin-diyetisyen", label: "Diyetisyen Ezgi Evgin" },
-            ].map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="rounded-lg border px-3 py-2 text-sm text-[var(--brand-dark)] hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-colors"
-              >
-                {l.label}
-              </Link>
-            ))}
-          </div>
-        </section>
+        {/* İlgili hizmetler — kategori ve etiket bazlı iç linkleme.
+            Aynı kategoriden yazıların alttaki RelatedPosts bölümünden farklı
+            olarak, burada blog yazısının konusuna göre yönlendirilecek
+            hizmet/landing sayfaları listelenir. */}
+        {(() => {
+          const relatedServicePages = getRelatedPagesForPost(
+            post.category,
+            post.tags,
+            6
+          );
+          return (
+            <section className="mt-12 rounded-2xl border bg-white p-6 md:p-8">
+              <h2 className="text-xl md:text-2xl font-bold text-[var(--brand-dark)] mb-4">
+                İlgili hizmetler & sayfalar
+              </h2>
+              <p className="text-sm text-muted-foreground mb-5">
+                Bu yazıdaki konular için size en uygun beslenme danışmanlığı
+                hizmetlerimiz:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {relatedServicePages.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="group rounded-lg border px-4 py-3 hover:border-[var(--brand-primary)] hover:bg-pink-50/40 transition-colors block"
+                  >
+                    <div className="font-medium text-sm text-[var(--brand-dark)] group-hover:text-[var(--brand-primary)]">
+                      {l.label}
+                    </div>
+                    {l.hint && (
+                      <div className="text-xs text-muted-foreground mt-0.5">
+                        {l.hint}
+                      </div>
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Bottom navigation */}
         <footer className="mt-12 pb-12 flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -6,7 +6,7 @@ import { MessageCircle, TrendingDown, Salad, Activity } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç | Ezgi Evgin Aktaş",
+  title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",
   description:
     "Ankara'da kilo vermek istiyorsanız, yasaksız ve kişiye özel beslenme planıyla sürdürülebilir sonuca ulaşın. Haftalık takip, danışan portalı ve uzman destek.",
   keywords: [
@@ -18,6 +18,19 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen",
+    title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",
+    description:
+      "Ankara'da kilo vermek için yasaksız ve kişiye özel beslenme planı. Haftalık takip ve uzman destek.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ankara Kilo Verme Diyetisyeni — Ezgi Evgin Aktaş",
+    description:
+      "Yasaksız, kişiye özel beslenme planıyla sürdürülebilir kilo verme.",
   },
 };
 

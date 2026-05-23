@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   description:
     "Diyetisyen Ezgi Evgin Aktaş web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı haklarının korunması hakkında bilgilendirme.",
   alternates: { canonical: "https://ezgievginaktas.com/gizlilik-politikasi" },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/gizlilik-politikasi",
+    title: "Gizlilik Politikası — Diyetisyen Ezgi Evgin Aktaş",
+    description:
+      "Kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı hakları hakkında bilgilendirme.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Gizlilik Politikası",
+    description: "Kişisel verilerinizin korunması hakkında bilgilendirme.",
+  },
   robots: { index: true, follow: true },
 };
 

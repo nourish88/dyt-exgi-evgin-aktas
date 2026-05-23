@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ezgievginaktas.com"),
   title: {
     default:
-      "Diyetisyen Ezgi Evgin Aktaş | Online Beslenme Danışmanlığı Ankara",
-    template: "%s | Diyetisyen Ezgi Evgin Aktaş",
+      "Dyt. Ezgi Evgin Aktaş | Online Beslenme Danışmanlığı Ankara",
+    template: "%s | Dyt. Ezgi Evgin Aktaş",
   },
   description:
     "Ankara ve Eryaman diyetisyen Ezgi Evgin Aktaş: online diyet Ankara, yüz yüze beslenme danışmanlığı Etimesgut–Eryaman, kişiye özel program ve uygulama ile takip. Ezgi Evgin (Dyt Ezgi Evgin) ile sürdürülebilir kilo yönetimi.",
