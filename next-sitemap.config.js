@@ -12,6 +12,7 @@ const PAGE_PRIORITY_MAP = {
   "/randevu": { priority: 0.9, changefreq: "monthly" },
   // Yerel SEO ve ikincil hizmet sayfaları
   "/eryaman-diyetisyen": { priority: 0.85, changefreq: "monthly" },
+  "/etimesgut-diyetisyen": { priority: 0.85, changefreq: "monthly" },
   "/ankara-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/ankara-kilo-verme-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   // Yeni uzmanlık sayfaları — eklendikçe burada da yer alacak

@@ -26,6 +26,11 @@ export const SERVICE_PAGES = {
     label: "Eryaman Diyetisyen",
     hint: "Yüz yüze · Optimum AVM karşısı",
   },
+  etimesgut: {
+    href: "/etimesgut-diyetisyen",
+    label: "Etimesgut Diyetisyen",
+    hint: "Eryaman ofisi · Etimesgut",
+  },
   ankaraGenel: {
     href: "/ankara-diyetisyen",
     label: "Ankara Diyetisyen",
@@ -145,6 +150,7 @@ const CATEGORY_MAP: Record<string, RelatedPage[]> = {
 const DEFAULT_RELATED: RelatedPage[] = [
   SERVICE_PAGES.onlineDiyet,
   SERVICE_PAGES.eryaman,
+  SERVICE_PAGES.etimesgut,
   SERVICE_PAGES.ankaraGenel,
   SERVICE_PAGES.programlar,
   SERVICE_PAGES.randevu,
@@ -178,6 +184,7 @@ const TAG_HINTS: Record<string, RelatedPage> = {
   "kilo verme": SERVICE_PAGES.kiloVerme,
   online: SERVICE_PAGES.onlineDiyet,
   eryaman: SERVICE_PAGES.eryaman,
+  etimesgut: SERVICE_PAGES.etimesgut,
   ankara: SERVICE_PAGES.ankaraGenel,
 };
 

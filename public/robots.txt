@@ -9,3 +9,4 @@ Host: https://ezgievginaktas.com
 
 # Sitemaps
 Sitemap: https://ezgievginaktas.com/sitemap.xml
+Sitemap: https://ezgievginaktas.com/server-sitemap.xml

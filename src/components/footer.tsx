@@ -165,6 +165,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/etimesgut-diyetisyen"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Etimesgut diyetisyen
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/ankara-kilo-verme-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
