@@ -99,7 +99,7 @@ export default function AboutPage() {
             >
               Merhaba, Ben{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
+                Diyetisyen Ezgi Evgin AKTAŞ
               </span>
             </motion.h1>
             <motion.p
@@ -108,9 +108,9 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
             >
-              Ankara Eryaman merkezli kliniğimde ve online görüşmelerde;
-              kilo verme, sürdürülebilir beslenme, metabolik hastalıklarda
-              beslenme ve yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
+              Ankara Eryaman merkezli kliniğimde ve online görüşmelerde; kilo
+              verme, sürdürülebilir beslenme, metabolik hastalıklarda beslenme
+              ve yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -385,7 +385,7 @@ export default function AboutPage() {
               <a
                 href={buildWhatsAppApiUrl(
                   "Merhaba, sizinle tanışmak ve bilgi almak istiyorum.",
-                  "hakkimda"
+                  "hakkimda",
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -404,7 +404,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
