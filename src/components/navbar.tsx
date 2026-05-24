@@ -41,9 +41,6 @@ export function Navbar() {
               priority
             />
             <div className="hidden xl:flex flex-col justify-center">
-              <p className="text-[11px] font-medium tracking-[0.3em] uppercase bg-gradient-to-r from-[#dc107d] to-[#312858] bg-clip-text text-transparent mb-0.5">
-                Diyetisyen
-              </p>
               <p className="text-[15px] font-bold tracking-[0.08em] bg-gradient-to-r from-[#312858] via-[#7c216e] to-[#dc107d] bg-clip-text text-transparent">
                 Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </p>
