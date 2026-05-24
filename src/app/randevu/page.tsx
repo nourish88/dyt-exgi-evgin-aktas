@@ -45,7 +45,7 @@ const sessionTypes = [
   {
     icon: MapPin,
     title: "Yüz Yüze Seans",
-    desc: "Eryaman Altay Mah. — Atayıldız Plaza Kat:8",
+    desc: "Eryaman Altay Mah. — Ata Yıldız Plaza Kat:8",
     duration: "50 dakika",
     color: "from-pink-500 to-rose-400",
   },
@@ -91,7 +91,7 @@ const randevuFaqJsonLd = {
       name: "Yüz yüze görüşme nerede yapılıyor?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Eryaman Altay Mahallesi, Orhan Bey Caddesi, Atayıldız Plaza Kat:8 adresindeki ofisimizde yüz yüze görüşme yapılmaktadır.",
+        text: "Eryaman Altay Mahallesi, Orhan Bey Caddesi, Ata Yıldız Plaza Kat:8 adresindeki ofisimizde yüz yüze görüşme yapılmaktadır.",
       },
     },
     {

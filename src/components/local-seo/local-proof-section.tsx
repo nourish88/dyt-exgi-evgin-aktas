@@ -38,7 +38,7 @@ const proofCards = [
   {
     icon: Navigation,
     title: "Konum ve yol tarifi",
-    text: "Altay Mahallesi Atayıldız Plaza, Optimum AVM karşısı. Harita üzerinden rotanızı açabilirsiniz.",
+    text: "Altay Mahallesi Ata Yıldız Plaza, Optimum AVM karşısı. Harita üzerinden rotanızı açabilirsiniz.",
     href: GOOGLE_MAPS_DIRECTIONS_URL,
     label: "Haritada Aç",
   },
