@@ -6,9 +6,14 @@ import { redirect } from "next/navigation";
 
 function slugify(text: string): string {
   return text
+    .trim()
+    .replace(/İ/g, "i")
+    .replace(/I/g, "i")
     .toLowerCase()
     .replace(/ğ/g, "g").replace(/ü/g, "u").replace(/ş/g, "s")
     .replace(/ı/g, "i").replace(/ö/g, "o").replace(/ç/g, "c")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
