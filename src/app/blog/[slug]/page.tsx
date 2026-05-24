@@ -333,7 +333,7 @@ export default async function BlogPostPage({ params }: Props) {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               components={{
-                a: ({ href, children, ...props }) => {
+                a: ({ href, children, node, ...props }) => {
                   if (href?.startsWith("/")) {
                     return (
                       <Link href={href} {...props as any}>
@@ -347,7 +347,7 @@ export default async function BlogPostPage({ params }: Props) {
                     </a>
                   );
                 },
-                h2: ({ children, ...props }) => {
+                h2: ({ children, node, ...props }) => {
                   const text = String(children);
                   const id = text
                     .toLowerCase()
@@ -361,7 +361,7 @@ export default async function BlogPostPage({ params }: Props) {
                     .replace(/\s+/g, "-");
                   return <h2 id={id} {...props}>{children}</h2>;
                 },
-                h3: ({ children, ...props }) => {
+                h3: ({ children, node, ...props }) => {
                   const text = String(children);
                   const id = text
                     .toLowerCase()
