@@ -206,7 +206,7 @@ const localBusinessJsonLd = {
   hasMap: GOOGLE_MAPS_PROFILE_URL,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
+    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
     addressLocality: "Etimesgut",
     addressRegion: "Ankara",
     postalCode: "06820",
@@ -436,7 +436,15 @@ export default function EryamanDiyetisyenPage() {
                 >
                   Ankara kilo verme diyetisyen
                 </Link>{" "}
-                sayfalarımızı inceleyebilirsiniz.
+                sayfalarımızı inceleyebilirsiniz. Ofisimizin bulunduğu bina hakkında
+                daha fazla bilgi için{" "}
+                <Link
+                  href="/atayildiz-plaza-diyetisyen"
+                  className="text-primary font-medium hover:underline"
+                >
+                  Atayıldız Plaza Diyetisyen
+                </Link>{" "}
+                sayfasını da ziyaret edebilirsiniz.
               </p>
             </div>
           </div>

@@ -16,7 +16,7 @@ import {
 } from "@/lib/external-links";
 
 type LocalProofSectionProps = {
-  areaName: "Eryaman" | "Etimesgut";
+  areaName: "Eryaman" | "Etimesgut" | "Atayıldız Plaza";
   whatsappLink: string;
 };
 

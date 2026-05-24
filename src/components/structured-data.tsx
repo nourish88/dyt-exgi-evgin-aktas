@@ -138,7 +138,7 @@ export function StructuredData() {
     "@type": "WebSite",
     "@id": "https://ezgievginaktas.com/#website",
     url: "https://ezgievginaktas.com",
-    name: "Diyetisyen Ezgi Evgin Aktaş",
+    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description: "Online beslenme danışmanlığı ve kilo yönetimi programları",
     publisher: {
       "@type": "Person",

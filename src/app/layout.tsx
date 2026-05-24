@@ -82,15 +82,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     url: "https://ezgievginaktas.com",
-    siteName: "Diyetisyen Ezgi Evgin Aktaş",
-    title: "Diyetisyen Ezgi Evgin Aktaş | Online Beslenme Danışmanlığı Ankara",
+    siteName: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Online Beslenme Danışmanlığı Ankara",
     description:
       "Ankara Eryaman ve Etimesgut'ta online beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
     // images otomatik olarak app/opengraph-image.tsx'den 1200x630 üretiliyor
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diyetisyen Ezgi Evgin Aktaş",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Eryaman ve Etimesgut odaklı online/yüz yüze beslenme danışmanlığı",
     // images otomatik olarak app/twitter-image.tsx veya opengraph-image.tsx'den
@@ -123,6 +123,14 @@ export default function RootLayout({
     <html lang="tr" className="scroll-smooth">
       <head>
         <StructuredData />
+        {/* Geo meta — yerel SEO sinyali (Bing, Yandex ve dolaylı Google) */}
+        <meta name="geo.region" content="TR-06" />
+        <meta name="geo.placename" content="Etimesgut, Ankara — Atayıldız Plaza" />
+        <meta name="geo.position" content="39.947;32.677" />
+        <meta name="ICBM" content="39.947, 32.677" />
+        {/* hreflang — tek dil site hijyeni */}
+        <link rel="alternate" hrefLang="tr-TR" href="https://ezgievginaktas.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://ezgievginaktas.com/" />
       </head>
       <body
         className={`${poppins.variable} ${inter.variable} font-sans antialiased`}

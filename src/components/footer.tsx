@@ -162,6 +162,14 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/atayildiz-plaza-diyetisyen"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Atayıldız Plaza Diyetisyen
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/eryaman-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
