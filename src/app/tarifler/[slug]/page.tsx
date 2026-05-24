@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -27,6 +27,19 @@ type Props = {
 async function getRecipe(slug: string) {
   return prisma.recipe.findUnique({
     where: { slug },
+  });
+}
+
+function stripLegacyRecipeSuffix(slug: string) {
+  return slug.replace(/-[a-z0-9]{6,}$/i, "");
+}
+
+async function getLegacyRecipe(slug: string) {
+  const cleanSlug = stripLegacyRecipeSuffix(slug);
+  if (cleanSlug === slug) return null;
+
+  return prisma.recipe.findUnique({
+    where: { slug: cleanSlug },
   });
 }
 
@@ -66,7 +79,7 @@ function absoluteImageUrl(image?: string | null) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const recipe = await getRecipe(slug);
+  const recipe = (await getRecipe(slug)) ?? (await getLegacyRecipe(slug));
 
   if (!recipe) {
     return { title: "Tarif Bulunamadı" };
@@ -100,6 +113,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RecipeDetailPage({ params }: Props) {
   const { slug } = await params;
   const recipe = await getRecipe(slug);
+
+  if (!recipe) {
+    const legacyRecipe = await getLegacyRecipe(slug);
+    if (legacyRecipe) permanentRedirect(`/tarifler/${legacyRecipe.slug}`);
+  }
 
   if (!recipe) notFound();
 

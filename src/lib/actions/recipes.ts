@@ -18,6 +18,19 @@ function slugify(text: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
+async function generateUniqueSlug(base: string, ignoreId?: string): Promise<string> {
+  const root = slugify(base) || "tarif";
+  let candidate = root;
+  let i = 1;
+
+  while (true) {
+    const existing = await prisma.recipe.findUnique({ where: { slug: candidate } });
+    if (!existing || existing.id === ignoreId) return candidate;
+    i += 1;
+    candidate = `${root}-${i}`;
+  }
+}
+
 export async function createRecipe(formData: FormData) {
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
@@ -35,7 +48,7 @@ export async function createRecipe(formData: FormData) {
   const stepsRaw = formData.get("steps") as string;
   const steps = stepsRaw.split("\n").map((l) => l.trim()).filter(Boolean);
 
-  const slug = slugify(title) + "-" + Date.now().toString(36);
+  const slug = await generateUniqueSlug(title);
 
   await prisma.recipe.create({
     data: {
