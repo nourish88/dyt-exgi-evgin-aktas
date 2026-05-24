@@ -10,8 +10,8 @@ import {
   Star,
 } from "lucide-react";
 import {
+  GOOGLE_BUSINESS_REVIEW_URL,
   GOOGLE_MAPS_DIRECTIONS_URL,
-  GOOGLE_MAPS_PROFILE_URL,
   INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
 
@@ -24,9 +24,9 @@ const proofCards = [
   {
     icon: Star,
     title: "Google yorumları",
-    text: "Gerçek danışan deneyimleri, Google Haritalar'da doğru diyetisyeni arayanlara yol gösterir.",
-    href: GOOGLE_MAPS_PROFILE_URL,
-    label: "Google'da Gör",
+    text: "Deneyiminizi paylaşarak Google'da doğru diyetisyeni arayanlara yol gösterebilirsiniz.",
+    href: GOOGLE_BUSINESS_REVIEW_URL,
+    label: "Google'da Yorum Yap",
   },
   {
     icon: Instagram,

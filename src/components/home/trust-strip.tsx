@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Star, MapPin, Stethoscope, ExternalLink } from "lucide-react";
 import {
   DOKTORTAKVIMI_PROFILE_URL,
-  GOOGLE_MAPS_PROFILE_URL,
+  GOOGLE_BUSINESS_REVIEW_URL,
 } from "@/lib/external-links";
 
 const items = [
@@ -10,7 +10,7 @@ const items = [
     icon: Star,
     title: "Google yorumları",
     description: "Deneyiminizi paylaşın; doğru diyetisyeni arayanlara yardımcı olun.",
-    href: GOOGLE_MAPS_PROFILE_URL,
+    href: GOOGLE_BUSINESS_REVIEW_URL,
     external: true,
   },
   {

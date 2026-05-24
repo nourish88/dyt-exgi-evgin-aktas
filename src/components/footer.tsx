@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Mail, Phone, Instagram, ExternalLink, MapPin } from "lucide-react";
 import {
   DOKTORTAKVIMI_PROFILE_URL,
-  GOOGLE_MAPS_PROFILE_URL,
+  GOOGLE_BUSINESS_REVIEW_URL,
   INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
 
@@ -291,7 +291,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href={GOOGLE_MAPS_PROFILE_URL}
+                    href={GOOGLE_BUSINESS_REVIEW_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
