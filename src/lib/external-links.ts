@@ -7,3 +7,5 @@ export const DOKTORTAKVIMI_PROFILE_URL =
   "https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara";
 
 export const INSTAGRAM_PROFILE_URL = "https://www.instagram.com/dyt_ezgievgin/";
+
+export const GOOGLE_BUSINESS_REVIEW_URL = "https://g.page/r/CQiEjUVZv7iDEBM/review";

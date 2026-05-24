@@ -10,10 +10,10 @@ Aşağıdaki bloğu **Claude** veya tarayıcı otomasyonuna olduğu gibi yapış
 Sen Google Search Console (GSC) üzerinde manuel SEO operatörüsün. Site: https://ezgievginaktas.com
 Dil: Türkçe arayüz kullanıyorsan Türkçe menü adlarını kullan.
 
-## Bağlam (deploy sonrası)
-- Canonical + openGraph.url düzeltmeleri yapıldı: /hakkimda, /programlar, /iletisim, /eryaman-diyetisyen, /ankara-diyetisyen, /ankara-kilo-verme-diyetisyen
-- Title şablonu kısaltıldı (çift suffix sorunu giderildi)
-- 5 yeni uzmanlık sayfası eklendi (sitemap’e dahil)
+## Bağlam (GMB Yerel SEO Güncellemesi)
+- Google Business Profil (GMB) kelimelerine uyumlu olarak ana sayfa layout, footer ve schema (Ata Yıldız Plaza, yorumlar vb.) güncellendi.
+- /eryaman-diyetisyen sayfasına "eryaman 1 etap", "eryaman diyetisyen tavsiye" gibi hedef kelimeler yerleştirildi.
+- /etimesgut-diyetisyen sayfasına "etimesgut belediyesi ücretsiz diyetisyen" hedef kitlesine yönelik bilgilendirme eklendi.
 - robots.txt: sadece /admin ve /api disallow; blog, tarifler, hesaplayicilar AÇIK
 
 ## Görev 1 — Sitemap yenileme
@@ -30,13 +30,13 @@ Sol menü: **URL denetimi** (URL Inspection). Her URL için:
 - Sonuç: “URL Google'da yok” veya “Dizine eklenmedi” ise → **Dizin oluşturma iste** (Request indexing)
 - Günlük kota ~10–20 URL; önce aşağıdaki sırayı uygula
 
-### Öncelik A (ACİL — meta sinyal düzeltmesi + Eryaman)
-1. https://ezgievginaktas.com/eryaman-diyetisyen
-2. https://ezgievginaktas.com/hakkimda
-3. https://ezgievginaktas.com/programlar
+### Öncelik A (ACİL — GMB Güncellemesi Gören Sayfalar)
+1. https://ezgievginaktas.com/
+2. https://ezgievginaktas.com/eryaman-diyetisyen
+3. https://ezgievginaktas.com/etimesgut-diyetisyen
 4. https://ezgievginaktas.com/iletisim
-5. https://ezgievginaktas.com/ankara-diyetisyen
-6. https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen
+5. https://ezgievginaktas.com/hakkimda
+6. https://ezgievginaktas.com/ankara-diyetisyen
 7. https://ezgievginaktas.com/online-diyet-ankara
 
 ### Öncelik B (yeni uzmanlık sayfaları)

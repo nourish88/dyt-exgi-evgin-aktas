@@ -78,14 +78,14 @@ export default function ContactPage() {
       icon: MapPin,
       title: "Adres",
       value: "Eryaman Altay mah. Orhan Bey cad.",
-      subtitle: "Atayıldız plaza, no:1/70 kat:8, 06820 Etimesgut/Ankara",
+      subtitle: "Ata Yıldız plaza, no:1/70 kat:8, 06820 Etimesgut/Ankara",
       color: "from-orange-500 to-red-500",
     },
     {
       icon: Clock,
       title: "Çalışma Saatleri",
-      value: "Pazartesi - Cumartesi",
-      subtitle: "09:00 - 18:00",
+      value: "Salı - Cuma: 09:00-19:00",
+      subtitle: "Cumartesi: 09:00-16:00",
       color: "from-purple-500 to-indigo-500",
     },
     {
@@ -331,7 +331,7 @@ export default function ContactPage() {
                     <p className="text-gray-700 text-sm leading-relaxed">
                       Eryaman Altay mah. Orhan Bey cad.
                       <br />
-                      Atayıldız plaza, no:1/70 kat:8
+                      Ata Yıldız plaza, no:1/70 kat:8
                       <br />
                       06820 Etimesgut/Ankara, Türkiye
                     </p>

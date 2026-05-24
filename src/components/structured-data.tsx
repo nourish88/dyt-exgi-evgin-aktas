@@ -22,6 +22,9 @@ export function StructuredData() {
       "Diyetisyen Ezgi Evgin",
       "Dyt. Ezgi Evgin Aktaş",
       "Ezgi Evgin",
+      "Diyetisyen Ezgi Evgin Yorumları",
+      "Ata Yıldız Plaza Diyetisyen",
+      "Diyetisyen",
     ],
     sameAs: [
       "https://diyetisyenezgievgin.com",
@@ -32,7 +35,7 @@ export function StructuredData() {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Eryaman Altay mah. Orhan Bey cad. Atayıldız plaza, no:1/70 kat:8",
+        "Altay mah. Orhan Bey cad. Atayıldız no:1/70 kat:8",
       addressLocality: "Etimesgut",
       addressRegion: "Ankara",
       postalCode: "06820",
@@ -47,15 +50,21 @@ export function StructuredData() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [
-          "Monday",
           "Tuesday",
           "Wednesday",
           "Thursday",
           "Friday",
+        ],
+        opens: "09:00",
+        closes: "19:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
           "Saturday",
         ],
         opens: "09:00",
-        closes: "18:00",
+        closes: "16:00",
       },
     ],
     priceRange: "$$",
@@ -64,13 +73,7 @@ export function StructuredData() {
       { "@type": "Place", name: "Eryaman, Etimesgut, Ankara" },
       { "@type": "Country", name: "Türkiye" },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "130",
-      bestRating: "5",
-      worstRating: "1",
-    },
+
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Beslenme ve Diyet Programları",
@@ -101,7 +104,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Ezgi Evgin Aktaş",
-    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Diyetisyen Ezgi Evgin"],
+    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Diyetisyen Ezgi Evgin", "Diyetisyen Ezgi Evgin Yorumları", "Ata Yıldız Plaza Diyetisyen"],
     jobTitle: "Diyetisyen",
     description:
       "Uzman diyetisyen; Ankara Eryaman ve online diyet ile beslenme danışmanlığı",
@@ -155,7 +158,7 @@ export function StructuredData() {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "Eryaman Altay mah. Orhan Bey cad. Atayıldız plaza, no:1/70 kat:8",
+        "Altay mah. Orhan Bey cad. Atayıldız no:1/70 kat:8",
       addressLocality: "Etimesgut",
       addressRegion: "Ankara",
       postalCode: "06820",

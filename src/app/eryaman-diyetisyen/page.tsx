@@ -29,7 +29,7 @@ import {
 export const metadata: Metadata = {
   title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
   description:
-    "Eryaman'da diyetisyen mi arıyorsunuz? Altay Mahallesi Atayıldız Plaza (Optimum AVM karşısı) ofisimizde kişiye özel beslenme danışmanlığı. Salı-Cumartesi 09:00-20:00. Yüz yüze veya online.",
+    "Eryaman'da diyetisyen mi arıyorsunuz? Altay Mahallesi Ata Yıldız Plaza (Optimum AVM karşısı) ofisimizde kişiye özel beslenme danışmanlığı. Salı-Cuma 09:00-19:00, Cmt 09:00-16:00. Yüz yüze veya online.",
   keywords: [
     "eryaman diyetisyen",
     "eryaman beslenme danışmanı",
@@ -161,7 +161,7 @@ const processSteps = [
 const faqs = [
   {
     q: "Eryaman'da kliniğiniz tam olarak nerede?",
-    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. Hem Eryaman içinden hem Etimesgut, Sincan, Batıkent yönlerinden kolay ulaşım var.",
+    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Ata Yıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. Hem Eryaman içinden hem Etimesgut, Sincan, Batıkent yönlerinden kolay ulaşım var.",
   },
   {
     q: "İlk görüşme ne kadar sürer ve nasıl ilerler?",
@@ -181,7 +181,7 @@ const faqs = [
   },
   {
     q: "Çalışma saatleriniz nedir?",
-    a: "Salı'dan Cumartesi'ye 09:00-20:00 arası açığız. Pazar ve Pazartesi kapalı. Randevu için WhatsApp üzerinden 0546 265 04 40 numarasına yazabilirsiniz.",
+    a: "Hafta içi Salı, Çarşamba, Perşembe, Cuma günleri 09:00 - 19:00, Cumartesi günleri 09:00 - 16:00 arası açığız. Pazar ve Pazartesi kapalı. Randevu için WhatsApp üzerinden 0546 265 04 40 numarasına yazabilirsiniz.",
   },
   {
     q: "Eryaman'a metro veya otobüsle nasıl gelirim?",
@@ -206,7 +206,7 @@ const localBusinessJsonLd = {
   hasMap: GOOGLE_MAPS_PROFILE_URL,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
+    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
     addressLocality: "Etimesgut",
     addressRegion: "Ankara",
     postalCode: "06820",
@@ -222,9 +222,15 @@ const localBusinessJsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
-      closes: "20:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "16:00",
     },
   ],
   priceRange: "₺₺",
@@ -307,7 +313,7 @@ export default function EryamanDiyetisyenPage() {
                   <p className="text-sm text-gray-800 mt-1 leading-relaxed">
                     Altay Mah. Orhan Bey Cad.
                     <br />
-                    Atayıldız Plaza No:1/70 Kat:8
+                    Ata Yıldız Plaza No:1/70 Kat:8
                     <br />
                     <span className="text-gray-500">
                       Optimum AVM karşısı · 06820 Etimesgut/Ankara
@@ -322,9 +328,9 @@ export default function EryamanDiyetisyenPage() {
                     Çalışma Saatleri
                   </p>
                   <p className="text-sm text-gray-800 mt-1 leading-relaxed">
-                    Salı – Cumartesi
+                    Salı – Cuma: 09:00 – 19:00
                     <br />
-                    09:00 – 20:00
+                    Cumartesi: 09:00 – 16:00
                     <br />
                     <span className="text-gray-500">Pazar & Pazartesi kapalı</span>
                   </p>
@@ -390,9 +396,9 @@ export default function EryamanDiyetisyenPage() {
               </h2>
               <p>
                 Semt dışındaki uzak bir ofise gitmek, yoğun bir günün üstüne
-                ekstra yük demek. Eryaman Altay Mahallesi&apos;nde, Optimum
-                AVM&apos;nin tam karşısındaki Atayıldız Plaza&apos;da
-                konumlanan kliniğimiz bu sorunu ortadan kaldırır. Eryaman
+                ekstra yük demek. Eryaman Altay Mahallesi'nde, Optimum
+                AVM'nin tam karşısındaki Ata Yıldız Plaza'da
+                konumlanan kliniğimiz bu sorunu ortadan kaldırır. Özellikle <strong>Eryaman 1. etap diyetisyen</strong> arayışında olanlar ve <strong>Eryaman diyetisyen tavsiye</strong> listelerinde bizi bulanlar için oldukça merkezi bir noktadayız. Eryaman
                 içinden 5 dakikada, Etimesgut merkezden 10 dakikada, Sincan ve
                 Batıkent yönünden 15 dakikada ulaşılır. M2 metro Eryaman
                 istasyonundan yürüme mesafesinde, AVM otoparkı ve sokak park

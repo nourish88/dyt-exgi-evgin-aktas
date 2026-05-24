@@ -91,7 +91,7 @@ const personJsonLd = {
     url: "https://ezgievginaktas.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
+      streetAddress: "Altay Mah. Orhan Bey Cad. Ata Yıldız Plaza No:1/70 Kat:8",
       addressLocality: "Etimesgut",
       addressRegion: "Ankara",
       postalCode: "06820",
@@ -179,7 +179,7 @@ const faqJsonLd = {
       name: "Ezgi Evgin'in ofisi nerede?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ankara Eryaman Altay Mahallesi Orhan Bey Caddesi Atayıldız Plaza No:1/70 Kat:8 — Optimum AVM'nin tam karşısında, Etimesgut/Ankara. Salı–Cumartesi 09:00–20:00 arası açıktır.",
+        text: "Ankara Eryaman Altay Mahallesi Orhan Bey Caddesi Ata Yıldız Plaza No:1/70 Kat:8 — Optimum AVM'nin tam karşısında, Etimesgut/Ankara. Salı–Cuma 09:00–19:00, Cumartesi 09:00-16:00 arası açıktır.",
       },
     },
     {

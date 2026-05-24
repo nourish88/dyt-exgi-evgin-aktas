@@ -84,7 +84,7 @@ const focusAreas = [
 const faqs = [
   {
     q: "Etimesgut'ta ofisiniz nerede?",
-    a: "Ofis Eryaman Altay Mahallesi Orhan Bey Caddesi Atayıldız Plaza No:1/70 Kat:8 adresinde, Optimum AVM karşısındadır. Etimesgut merkez, Elvankent, Bağlıca, Yapracık ve Sincan yönünden kolay ulaşım sağlanır.",
+    a: "Ofis Eryaman Altay Mahallesi Orhan Bey Caddesi Ata Yıldız Plaza No:1/70 Kat:8 adresinde, Optimum AVM karşısındadır. Etimesgut merkez, Elvankent, Bağlıca, Yapracık ve Sincan yönünden kolay ulaşım sağlanır.",
   },
   {
     q: "Etimesgut diyetisyen randevusu nasıl alınır?",
@@ -117,7 +117,7 @@ const localBusinessJsonLd = {
   hasMap: GOOGLE_MAPS_PROFILE_URL,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
+    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
     addressLocality: "Etimesgut",
     addressRegion: "Ankara",
     postalCode: "06820",
@@ -134,9 +134,15 @@ const localBusinessJsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
-      closes: "20:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "16:00",
     },
   ],
   priceRange: "₺₺",
@@ -234,9 +240,7 @@ export default function EtimesgutDiyetisyenPage() {
               Kilo verme veya sağlıklı beslenme süreci yalnızca bir listeyle
               ilerlemez. İyi bir takip; sağlık geçmişinizi, laboratuvar
               bulgularınızı, uyku ve stres düzeninizi, iş-okul temponuzu ve
-              yemek tercihlerinizi aynı anda değerlendirir. Bu nedenle
-              Etimesgut bölgesinde diyetisyen ararken konum kadar takip sistemi,
-              iletişim sıklığı ve planın sürdürülebilirliği de önemlidir.
+              yemek tercihlerinizi aynı anda değerlendirir. <strong>Etimesgut Belediyesi ücretsiz diyetisyen</strong> gibi hizmetleri araştıran, ancak tamamen kendine özel ilgi, sıkı takip sistemi ve iletişim sıklığı isteyen danışanlarımız için kliniğimiz oldukça ideal bir alternatiftir. Bu nedenle Etimesgut bölgesinde diyetisyen ararken konum kadar planın sürdürülebilirliği de önemlidir.
             </p>
 
             <h2 className="text-2xl font-bold text-[var(--brand-dark)] mt-10">

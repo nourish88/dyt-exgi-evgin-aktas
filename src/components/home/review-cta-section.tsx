@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { getClientAppLoginUrl } from "@/lib/client-app-url";
 import {
   DOKTORTAKVIMI_PROFILE_URL,
-  GOOGLE_MAPS_PROFILE_URL,
+  GOOGLE_BUSINESS_REVIEW_URL,
 } from "@/lib/external-links";
 
 export function ReviewCtaSection() {
@@ -19,7 +19,7 @@ export function ReviewCtaSection() {
           <div className="text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-sm font-semibold text-[var(--brand-dark)]">
               <Star className="w-4 h-4 text-[var(--brand-warning)] fill-[var(--brand-warning)]" />
-              Danışan Deneyimleri
+              Diyetisyen Ezgi Evgin Yorumları
             </div>
 
             <motion.h2
@@ -28,7 +28,7 @@ export function ReviewCtaSection() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold"
             >
-              Deneyiminizi Paylaşın, Bize Destek Olun!
+              Diyetisyen Ezgi Evgin Yorumları ve Deneyimleriniz
             </motion.h2>
 
             <div className="flex justify-center gap-1 my-4">
@@ -39,33 +39,43 @@ export function ReviewCtaSection() {
 
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-6">
               Sizlerin başarısı ve memnuniyeti bizim en büyük motivasyonumuz. 
-              Google ve DoktorTakvimi üzerinde bırakacağınız <strong className="text-[var(--brand-dark)]">5 yıldızlı</strong> bir yorum, 
-              hem bize destek olacak hem de sağlıklı yaşama adım atmak isteyen diğer danışanlara rehberlik edecektir.
+              Google ve DoktorTakvimi üzerinde bırakacağınız <strong className="text-[var(--brand-dark)]">5 yıldızlı</strong> yorumlar, 
+              hem bize destek olacak hem de Eryaman'da sağlıklı yaşama adım atmak isteyen diğer danışanlara rehberlik edecektir.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <a
-                href={GOOGLE_MAPS_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button className="w-full sm:w-auto h-14 px-8 bg-[#4285F4] hover:bg-[#3a77df] text-white text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
-                  Google&apos;da Değerlendir
-                  <ExternalLink className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
-              <a
-                href={DOKTORTAKVIMI_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button variant="outline" className="w-full sm:w-auto h-14 px-8 border-2 border-[var(--brand-primary)] text-[var(--brand-primary)] hover:bg-pink-50 text-lg font-semibold shadow-md hover:shadow-lg transition-all">
-                  DoktorTakvimi&apos;nde Yorum Yap
-                  <ExternalLink className="w-5 h-5 ml-2" />
-                </Button>
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+              <div className="flex flex-col items-center gap-3">
+                <img 
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(GOOGLE_BUSINESS_REVIEW_URL)}`} 
+                  alt="Google Yorum QR Kodu" 
+                  className="w-24 h-24 rounded-lg shadow-sm border p-2 bg-white hidden sm:block" 
+                />
+                <a
+                  href={GOOGLE_BUSINESS_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className="w-full h-14 px-8 bg-[#4285F4] hover:bg-[#3a77df] text-white text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+                    Google&apos;da Değerlendir
+                    <ExternalLink className="w-5 h-5 ml-2" />
+                  </Button>
+                </a>
+              </div>
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-24 h-24 hidden sm:block opacity-0 pointer-events-none"></div>
+                <a
+                  href={DOKTORTAKVIMI_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button variant="outline" className="w-full h-14 px-8 border-2 border-[var(--brand-primary)] text-[var(--brand-primary)] hover:bg-pink-50 text-lg font-semibold shadow-md hover:shadow-lg transition-all">
+                    DoktorTakvimi&apos;nde Yorum Yap
+                    <ExternalLink className="w-5 h-5 ml-2" />
+                  </Button>
+                </a>
+              </div>
             </div>
             
             <div className="mt-8 pt-6 border-t border-black/5">

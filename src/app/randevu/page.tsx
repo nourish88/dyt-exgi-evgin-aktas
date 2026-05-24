@@ -12,6 +12,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { DOKTORTAKVIMI_PROFILE_URL } from "@/lib/external-links";
 
 export const metadata: Metadata = {
   title: "Randevu Al — Online & Yüz Yüze Görüşme",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-const DOKTOR_TAKVIMI_URL = "https://www.doktortakvimi.com";
+const DOKTOR_TAKVIMI_URL = DOKTORTAKVIMI_PROFILE_URL;
 const WA_RANDEVU = buildWhatsAppApiUrl(
   "Merhaba, randevu almak istiyorum.",
   "randevu_sayfasi"
