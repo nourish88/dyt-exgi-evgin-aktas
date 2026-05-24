@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/blog",
-    title: "Beslenme & Sağlıklı Yaşam Blogu | Dyt. Ezgi Evgin Aktaş",
+    title: "Beslenme & Sağlıklı Yaşam Blogu | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Sağlıklı beslenme, kilo verme, insülin direnci ve güncel diyet konularında uzman diyetisyen kaleminden makaleler.",
   },

@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kullanım Şartları",
   description:
-    "Diyetisyen Ezgi Evgin Aktaş web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
   alternates: { canonical: "https://ezgievginaktas.com/kullanim-sartlari" },
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/kullanim-sartlari",
-    title: "Kullanım Şartları — Diyetisyen Ezgi Evgin Aktaş",
+    title: "Kullanım Şartları — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
   },

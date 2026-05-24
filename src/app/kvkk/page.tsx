@@ -40,7 +40,7 @@ export default function KVKKPage() {
             </h2>
             <p>
               6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;)
-              uyarınca veri sorumlusu: <strong>Ezgi Evgin Aktaş</strong> (iletişim
+              uyarınca veri sorumlusu: <strong>Ezgi Evgin Beslenme ve Diyet Danışmanlığı</strong> (iletişim
               bilgileri aşağıdadır).
             </p>
           </section>

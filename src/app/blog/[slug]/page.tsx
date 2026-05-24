@@ -188,12 +188,12 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.updatedAt.toISOString(),
     author: {
       "@type": "Person",
-      name: "Ezgi Evgin Aktaş",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
       url: "https://ezgievginaktas.com/hakkimda",
     },
     publisher: {
       "@type": "Organization",
-      name: "Diyetisyen Ezgi Evgin Aktaş",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
       logo: {
         "@type": "ImageObject",
         url: "https://ezgievginaktas.com/ezgi_evgin.png",
@@ -279,7 +279,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground pb-6 border-b border-gray-100">
               <span className="inline-flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5" />
-                Dyt. Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />

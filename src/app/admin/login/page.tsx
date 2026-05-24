@@ -46,7 +46,7 @@ export default function LoginPage() {
             <Lock className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-xl font-bold text-gray-900">Admin Girişi</h1>
-          <p className="text-sm text-gray-500 mt-1">Ezgi Evgin Aktaş</p>
+          <p className="text-sm text-gray-500 mt-1">Ezgi Evgin Beslenme ve Diyet Danışmanlığı</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">

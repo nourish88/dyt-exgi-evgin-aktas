@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Programlar — Diyetisyen Ezgi Evgin Aktaş",
+    title: "Programlar — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Haftalık görüşme, devamlı takip ve mobil uygulama desteğiyle kişiye özel diyet programları.",
   },

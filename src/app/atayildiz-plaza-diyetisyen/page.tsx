@@ -32,7 +32,7 @@ const PAGE_URL = "https://ezgievginaktas.com/atayildiz-plaza-diyetisyen";
 export const metadata: Metadata = {
   title: "Atayıldız Plaza Diyetisyen — Eryaman Ofis",
   description:
-    "Atayıldız Plaza'da (Altay Mah. Orhan Bey Cd. No:1/70 Kat:8) diyetisyen Ezgi Evgin Aktaş. Optimum AVM karşısı, Eryaman'da yüz yüze beslenme danışmanlığı. Salı-Cuma 09:00-19:00, Cmt 09:00-16:00.",
+    "Atayıldız Plaza'da (Altay Mah. Orhan Bey Cd. No:1/70 Kat:8) Ezgi Evgin Beslenme ve Diyet Danışmanlığı. Optimum AVM karşısı, Eryaman'da yüz yüze beslenme danışmanlığı. Salı-Cuma 09:00-19:00, Cmt 09:00-16:00.",
   keywords: [
     "atayıldız plaza diyetisyen",
     "ata yıldız plaza diyetisyen",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     title: "Atayıldız Plaza Diyetisyen — Eryaman Ofis",
     description:
-      "Atayıldız Plaza Kat:8'de diyetisyen Ezgi Evgin Aktaş. Optimum AVM karşısı, Eryaman'da yüz yüze ve online beslenme danışmanlığı.",
+      "Atayıldız Plaza Kat:8'de Ezgi Evgin Beslenme ve Diyet Danışmanlığı. Optimum AVM karşısı, Eryaman'da yüz yüze ve online beslenme danışmanlığı.",
   },
   twitter: {
     card: "summary_large_image",
@@ -297,7 +297,7 @@ export default function AtayildizPlazaDiyetisyenPage() {
                 Eryaman Altay Mahallesi&apos;nde, Optimum AVM&apos;nin tam karşısındaki{" "}
                 <strong>Atayıldız Plaza Kat:8</strong>&apos;de kişiye özel beslenme danışmanlığı.
                 Kilo yönetimi, insülin direnci, hamilelik beslenmesi ve daha fazlası —
-                uzman diyetisyen Ezgi Evgin Aktaş ile yüz yüze veya online.
+                uzman Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile yüz yüze veya online.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -400,7 +400,7 @@ export default function AtayildizPlazaDiyetisyenPage() {
                 EGO otobüsleri de Optimum durağına yoğun sıklıkla uğrar.
               </p>
               <p>
-                Başkent Üniversitesi Beslenme ve Diyetetik mezunu diyetisyen Ezgi Evgin Aktaş,
+                Başkent Üniversitesi Beslenme ve Diyetetik mezunu Ezgi Evgin Beslenme ve Diyet Danışmanlığı,
                 2016&apos;dan bu yana{" "}
                 <strong>Atayıldız Plaza</strong>&apos;daki ofisinde binden fazla danışana
                 rehberlik etmiştir. Yaklaşımın temeli şudur: hazır diyet listesi değil,

@@ -54,7 +54,7 @@ export const SERVICE_PAGES = {
   },
   ezgi: {
     href: "/ezgi-evgin-diyetisyen",
-    label: "Diyetisyen Ezgi Evgin",
+    label: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     hint: "Uzman tanıtım",
   },
   // Uzmanlık sayfaları (henüz yayında olmayanlar yayına alındığında çalışacak)

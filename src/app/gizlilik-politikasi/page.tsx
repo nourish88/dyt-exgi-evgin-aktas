@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Gizlilik Politikası",
   description:
-    "Diyetisyen Ezgi Evgin Aktaş web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı haklarının korunması hakkında bilgilendirme.",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı haklarının korunması hakkında bilgilendirme.",
   alternates: { canonical: "https://ezgievginaktas.com/gizlilik-politikasi" },
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/gizlilik-politikasi",
-    title: "Gizlilik Politikası — Diyetisyen Ezgi Evgin Aktaş",
+    title: "Gizlilik Politikası — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı hakları hakkında bilgilendirme.",
   },

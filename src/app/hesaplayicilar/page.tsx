@@ -4,13 +4,13 @@ import CalculatorsClient from "./calculators-client";
 export const metadata: Metadata = {
   title: { absolute: "BMI, İdeal Kilo ve Kalori Hesaplayıcıları" },
   description:
-    "Ücretsiz vücut kitle indeksi (BMI), ideal kilo ve günlük kalori ihtiyacı hesaplayıcıları. Diyetisyen Ezgi Evgin Aktaş ile sağlıklı hedeflerinizi belirleyin.",
+    "Ücretsiz vücut kitle indeksi (BMI), ideal kilo ve günlük kalori ihtiyacı hesaplayıcıları. Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile sağlıklı hedeflerinizi belirleyin.",
   alternates: { canonical: "https://ezgievginaktas.com/hesaplayicilar" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/hesaplayicilar",
-    title: "Sağlıklı Yaşam Hesaplayıcıları | Diyetisyen Ezgi Evgin Aktaş",
+    title: "Sağlıklı Yaşam Hesaplayıcıları | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Ücretsiz BMI, ideal kilo ve günlük kalori ihtiyacı hesaplayıcıları.",
   },

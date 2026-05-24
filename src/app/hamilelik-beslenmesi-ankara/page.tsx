@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hamilelik Beslenmesi — Dyt. Ezgi Evgin Aktaş",
+    title: "Hamilelik Beslenmesi — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Gebelik ve emzirme döneminde anne-bebek odaklı kişiye özel beslenme.",
   },

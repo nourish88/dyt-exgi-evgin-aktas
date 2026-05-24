@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Ankara Diyetisyen — Beslenme & Diyet Danışmanlığı · Dyt. Ezgi Evgin Aktaş";
+export const alt = "Ankara Diyetisyen — Beslenme & Diyet Danışmanlığı · Ezgi Evgin Beslenme ve Diyet Danışmanlığı";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -97,7 +97,7 @@ export default async function OpenGraphImage() {
               fontSize: 24,
             }}
           >
-            Dyt. Ezgi Evgin Aktaş
+            Ezgi Evgin Beslenme ve Diyet Danışmanlığı
           </div>
         </div>
       </div>

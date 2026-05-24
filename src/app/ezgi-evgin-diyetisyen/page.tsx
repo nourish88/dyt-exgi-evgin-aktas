@@ -22,9 +22,9 @@ import {
 } from "@/lib/external-links";
 
 export const metadata: Metadata = {
-  title: "Ezgi Evgin Aktaş — Diyetisyen Ezgi Evgin",
+  title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   description:
-    "Ezgi Evgin Aktaş (Diyetisyen Ezgi Evgin): Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ofisi ve Türkiye genelinde online beslenme danışmanlığı.",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı (Ezgi Evgin Beslenme ve Diyet Danışmanlığı): Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ofisi ve Türkiye genelinde online beslenme danışmanlığı.",
   keywords: [
     "ezgi evgin",
     "ezgi evgin aktaş",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "profile",
-    title: "Ezgi Evgin Aktaş — Diyetisyen Ezgi Evgin",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ve online beslenme danışmanlığı.",
     url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diyetisyen Ezgi Evgin Aktaş",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Ankara Eryaman ve online beslenme danışmanlığı — yasaksız, kişiye özel, sürdürülebilir.",
   },
 };
 
 const whatsappLink = buildWhatsAppApiUrl(
-  "Merhaba, Ezgi Evgin Aktaş ile beslenme danışmanlığı hakkında bilgi almak istiyorum.",
+  "Merhaba, Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile beslenme danışmanlığı hakkında bilgi almak istiyorum.",
   "ezgi-evgin-diyetisyen"
 );
 
@@ -68,13 +68,13 @@ const whatsappLink = buildWhatsAppApiUrl(
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Ezgi Evgin Aktaş",
+  name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   alternateName: [
     "Ezgi Evgin",
     "Dyt. Ezgi Evgin",
     "Dyt Ezgi Evgin",
-    "Diyetisyen Ezgi Evgin",
-    "Diyetisyen Ezgi Evgin Aktaş",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   ],
   givenName: "Ezgi",
   familyName: "Evgin Aktaş",
@@ -144,10 +144,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Ezgi Evgin Aktaş kimdir?",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Hakkında",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Diyetisyen Ezgi Evgin Aktaş, Başkent Üniversitesi Beslenme ve Diyetetik bölümü mezunu. 2016'dan bu yana Ankara Eryaman–Etimesgut'taki kendi merkezinde yüz yüze ve Türkiye genelinde online olarak kişiye özel beslenme danışmanlığı vermektedir.",
+        text: "Ezgi Evgin, Başkent Üniversitesi Beslenme ve Diyetetik bölümü mezunu. 2016'dan bu yana Ankara Eryaman–Etimesgut'taki kendi merkezinde yüz yüze ve Türkiye genelinde online olarak kişiye özel beslenme danışmanlığı vermektedir.",
       },
     },
     {
@@ -168,7 +168,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Diyetisyen Ezgi Evgin hangi konularda uzmanlaşmıştır?",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı hangi konularda uzmanlaşmıştır?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Kilo yönetimi, insülin direnci, PCOS, hamilelik ve emzirme dönemi beslenmesi, çocuk ve ergen beslenmesi, sporcu beslenmesi ve sağlıklı yaşam alışkanlığı edindirme alanlarında deneyim sahibidir.",
@@ -184,7 +184,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Ezgi Evgin Aktaş ile nasıl iletişime geçilir?",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile nasıl iletişime geçilir?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "WhatsApp üzerinden 0546 265 04 40 numarasına, web sitesindeki randevu sayfasından veya iletişim formundan ulaşabilirsiniz. Hızlı yanıt için WhatsApp önerilir.",
@@ -196,13 +196,13 @@ const faqJsonLd = {
 const brandWebPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  name: "Ezgi Evgin Aktaş | Diyetisyen Ezgi Evgin",
+  name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   alternateName: [
     "Ezgi Evgin",
     "Dyt. Ezgi Evgin",
     "Dyt Ezgi Evgin",
-    "Diyetisyen Ezgi Evgin",
-    "Diyetisyen Ezgi Evgin Aktaş",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   ],
   url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
   mainEntity: personJsonLd,
@@ -302,7 +302,7 @@ export default function EzgiEvginDiyetisyenPage() {
               Diyetisyen · Beslenme ve Diyetetik Uzmanı
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[var(--brand-dark)]">
-              Diyetisyen Ezgi Evgin Aktaş
+              Ezgi Evgin Beslenme ve Diyet Danışmanlığı
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed">
               Arama motorunda{" "}
@@ -315,7 +315,7 @@ export default function EzgiEvginDiyetisyenPage() {
               </strong>{" "}
               veya{" "}
               <strong className="text-foreground font-semibold">
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </strong>{" "}
               yazdığınızda aynı uzman diyetisyene ulaşıyorsunuz. Başkent
               Üniversitesi Beslenme ve Diyetetik mezunuyum; 2016&apos;dan bu
@@ -561,7 +561,7 @@ export default function EzgiEvginDiyetisyenPage() {
                   hafiflemeyle birlikte ölçülür.&rdquo;
                 </p>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  — Dyt. Ezgi Evgin Aktaş
+                  — Ezgi Evgin Beslenme ve Diyet Danışmanlığı
                 </p>
               </div>
             </Card>

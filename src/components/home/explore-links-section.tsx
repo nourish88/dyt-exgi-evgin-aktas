@@ -9,8 +9,8 @@ const links = [
   },
   {
     href: "/ezgi-evgin-diyetisyen",
-    title: "Diyetisyen Ezgi Evgin Aktaş",
-    desc: "Eğitimi, yaklaşımı ve danışan deneyimleriyle uzman diyetisyen Ezgi Evgin Aktaş'ı tanıyın.",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    desc: "Eğitimi, yaklaşımı ve danışan deneyimleriyle uzman Ezgi Evgin Beslenme ve Diyet Danışmanlığı'ı tanıyın.",
   },
   {
     href: "/programlar",

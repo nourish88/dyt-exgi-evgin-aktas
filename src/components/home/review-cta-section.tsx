@@ -19,7 +19,7 @@ export function ReviewCtaSection() {
           <div className="text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-sm font-semibold text-[var(--brand-dark)]">
               <Star className="w-4 h-4 text-[var(--brand-warning)] fill-[var(--brand-warning)]" />
-              Diyetisyen Ezgi Evgin Yorumları
+              Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları
             </div>
 
             <motion.h2
@@ -28,7 +28,7 @@ export function ReviewCtaSection() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold"
             >
-              Diyetisyen Ezgi Evgin Yorumları ve Deneyimleriniz
+              Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları ve Deneyimleriniz
             </motion.h2>
 
             <div className="flex justify-center gap-1 my-4">

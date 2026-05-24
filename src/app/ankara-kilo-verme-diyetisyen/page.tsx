@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ankara Kilo Verme Diyetisyeni — Ezgi Evgin Aktaş",
+    title: "Ankara Kilo Verme Diyetisyeni — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Yasaksız, kişiye özel beslenme planıyla sürdürülebilir kilo verme.",
   },
@@ -109,7 +109,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
                 İnternetteki genel listeler herkese aynı şeyi söyler; oysa
                 kilonuzu etkileyen faktörler — uyku düzeniniz, iş temponuz, stres
                 kaynaklarınız, metabolik geçmişiniz — size özeldir. Başkent
-                Üniversitesi Beslenme ve Diyetetik mezunu Ezgi Evgin Aktaş, bu
+                Üniversitesi Beslenme ve Diyetetik mezunu Ezgi Evgin Beslenme ve Diyet Danışmanlığı, bu
                 değişkenleri ilk görüşmede analiz eder ve planı doğrudan sizin
                 yaşamınıza göre şekillendirir. 2016&apos;dan bu yana bin&apos;den
                 fazla danışan bu yaklaşımla kalıcı sonuç elde etmiştir.
@@ -141,7 +141,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
                   href="/ezgi-evgin-diyetisyen"
                   className="text-primary font-medium hover:underline"
                 >
-                  Ezgi Evgin Aktaş
+                  Ezgi Evgin Beslenme ve Diyet Danışmanlığı
                 </Link>{" "}
                 sayfalarına göz atabilirsiniz.
               </p>

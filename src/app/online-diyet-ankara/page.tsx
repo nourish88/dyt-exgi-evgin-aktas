@@ -97,7 +97,7 @@ export default function OnlineDiyetAnkaraPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </Link>{" "}
               ile süreci birlikte yönetirsiniz.
             </p>

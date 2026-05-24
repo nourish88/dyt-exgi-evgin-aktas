@@ -99,7 +99,7 @@ export default function AboutPage() {
             >
               Merhaba, Ben{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </span>
             </motion.h1>
             <motion.p
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   >
                     <Image
                       src={aboutPageSliderImages[heroIndex]}
-                      alt={`Ezgi Evgin Aktaş — görsel ${heroIndex + 1}`}
+                      alt={`Ezgi Evgin Beslenme ve Diyet Danışmanlığı — görsel ${heroIndex + 1}`}
                       fill
                       className="object-contain object-center"
                       sizes="(max-width: 768px) 100vw, 42rem"

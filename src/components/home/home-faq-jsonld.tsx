@@ -29,10 +29,10 @@ export function HomeFaqJsonLd() {
       },
       {
         "@type": "Question",
-        name: "Diyetisyen Ezgi Evgin Aktaş kimdir?",
+        name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Hakkında",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Başkent Üniversitesi Beslenme ve Diyetetik mezunu uzman diyetisyen Ezgi Evgin Aktaş; Ankara Eryaman ofisinde ve online olarak kişiye özel beslenme danışmanlığı hizmeti vermektedir. Resmi web sitesi: ezgievginaktas.com",
+          text: "Başkent Üniversitesi Beslenme ve Diyetetik mezunu uzman Ezgi Evgin Beslenme ve Diyet Danışmanlığı; Ankara Eryaman ofisinde ve online olarak kişiye özel beslenme danışmanlığı hizmeti vermektedir. Resmi web sitesi: ezgievginaktas.com",
         },
       },
       {

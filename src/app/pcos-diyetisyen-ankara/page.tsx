@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PCOS Diyetisyeni — Dyt. Ezgi Evgin Aktaş",
+    title: "PCOS Diyetisyeni — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Polikistik over sendromunda kişiye özel beslenme — Ankara Eryaman ve online.",
   },

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sporcu Beslenmesi — Dyt. Ezgi Evgin Aktaş",
+    title: "Sporcu Beslenmesi — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Antrenmana uyumlu makro ve öğün zamanlaması — Ankara Eryaman ve online.",
   },

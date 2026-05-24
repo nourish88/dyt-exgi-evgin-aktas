@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Çocuk Beslenmesi Diyetisyeni — Dyt. Ezgi Evgin Aktaş",
+    title: "Çocuk Beslenmesi Diyetisyeni — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Aile odaklı, baskısız çocuk beslenmesi danışmanlığı — Ankara Eryaman ve online.",
   },

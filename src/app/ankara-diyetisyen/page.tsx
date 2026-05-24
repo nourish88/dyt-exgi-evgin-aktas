@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ankara Diyetisyen — Ezgi Evgin Aktaş",
+    title: "Ankara Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Ankara'da diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı.",
   },
@@ -103,7 +103,7 @@ export default function AnkaraDiyetisyenPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </Link>{" "}
               ile süreç haftalık görüşme, günlük iletişim ve danışan portalı
               üçlüsüne dayanır.

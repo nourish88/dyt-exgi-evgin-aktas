@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eryaman Diyetisyen — Dyt. Ezgi Evgin Aktaş",
+    title: "Eryaman Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Eryaman Optimum AVM karşısı, kişiye özel beslenme danışmanlığı.",
   },
@@ -279,7 +279,7 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman ve Etimesgut&apos;ta diyetisyen arıyorsanız doğru
                 adrestesiniz. Kilo yönetimi, insülin direnci, hamilelik
                 beslenmesi, çocuk ve sporcu beslenmesi — alanında uzman
-                diyetisyen Ezgi Evgin Aktaş ile yüz yüze veya online
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile yüz yüze veya online
                 danışmanlık. Aç kalmadan, yasaksız ve sürdürülebilir.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
@@ -406,7 +406,7 @@ export default function EryamanDiyetisyenPage() {
               </p>
               <p>
                 Başkent Üniversitesi Beslenme ve Diyetetik mezunu uzman
-                diyetisyen Ezgi Evgin Aktaş, 2016&apos;dan bu yana kendi
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı, 2016&apos;dan bu yana kendi
                 merkezinde <strong>yasaksız ve sürdürülebilir</strong>{" "}
                 beslenme yaklaşımıyla binden fazla danışana rehberlik etmiştir.
                 Hızlı diyet, şok program veya katı kısıtlama değil; yaşam

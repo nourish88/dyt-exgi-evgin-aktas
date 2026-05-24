@@ -18,7 +18,7 @@ export function Footer() {
           <div className="lg:col-span-3 space-y-5">
             <Image
               src="/ezgi_evgin.png"
-              alt="Ezgi Evgin Aktaş - Beslenme ve Diyet Danışmanlığı"
+              alt="Ezgi Evgin Beslenme ve Diyet Danışmanlığı - Beslenme ve Diyet Danışmanlığı"
               width={120}
               height={40}
               className="h-10 w-auto"
@@ -317,7 +317,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Ezgi Evgin Aktaş. Tüm hakları saklıdır.
+              © {currentYear} Ezgi Evgin Beslenme ve Diyet Danışmanlığı. Tüm hakları saklıdır.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link

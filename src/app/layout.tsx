@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ezgievginaktas.com"),
   title: {
     default:
-      "Diyetisyen Ezgi Evgin Aktaş | Ezgi Evgin | Ankara Eryaman",
-    template: "%s | Dyt. Ezgi Evgin Aktaş",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ezgi Evgin | Ankara Eryaman",
+    template: "%s | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   },
   description:
-    "Ankara ve Eryaman diyetisyen Ezgi Evgin Aktaş: online diyet Ankara, yüz yüze beslenme danışmanlığı Etimesgut–Eryaman, kişiye özel program ve uygulama ile takip. Ezgi Evgin (Dyt Ezgi Evgin) ile sürdürülebilir kilo yönetimi.",
+    "Ankara ve Eryaman Ezgi Evgin Beslenme ve Diyet Danışmanlığı: online diyet Ankara, yüz yüze beslenme danışmanlığı Etimesgut–Eryaman, kişiye özel program ve uygulama ile takip. Ezgi Evgin (Dyt Ezgi Evgin) ile sürdürülebilir kilo yönetimi.",
   keywords: [
     "ankara diyetisyen",
     "eryaman diyetisyen",
@@ -57,11 +57,11 @@ export const metadata: Metadata = {
     "kişiye özel diyet",
     "whatsapp diyetisyen",
     "uzaktan diyet",
-    "Ezgi Evgin Aktaş",
+    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   ],
-  authors: [{ name: "Ezgi Evgin Aktaş" }],
-  creator: "Ezgi Evgin Aktaş",
-  publisher: "Ezgi Evgin Aktaş",
+  authors: [{ name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı" }],
+  creator: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+  publisher: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   formatDetection: {
     email: false,
     address: false,

@@ -19,10 +19,10 @@ export function StructuredData() {
     email: "ezgievgin_dytsyn@hotmail.com",
     medicalSpecialty: "DietNutrition",
     alternateName: [
-      "Diyetisyen Ezgi Evgin",
-      "Dyt. Ezgi Evgin Aktaş",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
       "Ezgi Evgin",
-      "Diyetisyen Ezgi Evgin Yorumları",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları",
       "Ata Yıldız Plaza Diyetisyen",
       "Diyetisyen",
     ],
@@ -103,8 +103,8 @@ export function StructuredData() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Ezgi Evgin Aktaş",
-    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Diyetisyen Ezgi Evgin", "Diyetisyen Ezgi Evgin Yorumları", "Ata Yıldız Plaza Diyetisyen"],
+    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları", "Ata Yıldız Plaza Diyetisyen"],
     jobTitle: "Diyetisyen",
     description:
       "Uzman diyetisyen; Ankara Eryaman ve online diyet ile beslenme danışmanlığı",
@@ -142,7 +142,7 @@ export function StructuredData() {
     description: "Online beslenme danışmanlığı ve kilo yönetimi programları",
     publisher: {
       "@type": "Person",
-      name: "Ezgi Evgin Aktaş",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     },
     inLanguage: "tr-TR",
   };

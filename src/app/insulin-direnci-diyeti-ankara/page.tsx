@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "İnsülin Direnci Diyeti — Dyt. Ezgi Evgin Aktaş",
+    title: "İnsülin Direnci Diyeti — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Tanı sonrası kişiye özel insülin direnci beslenme planı, Ankara Eryaman ve online.",
   },

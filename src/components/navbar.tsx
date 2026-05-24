@@ -34,7 +34,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/ezgi_evgin.png"
-              alt="Ezgi Evgin Aktaş - Beslenme ve Diyet Danışmanlığı"
+              alt="Ezgi Evgin Beslenme ve Diyet Danışmanlığı - Beslenme ve Diyet Danışmanlığı"
               width={180}
               height={50}
               className="h-11 w-auto md:h-12"
@@ -45,7 +45,7 @@ export function Navbar() {
                 Diyetisyen
               </p>
               <p className="text-[15px] font-bold tracking-[0.08em] bg-gradient-to-r from-[#312858] via-[#7c216e] to-[#dc107d] bg-clip-text text-transparent">
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </p>
             </div>
           </Link>

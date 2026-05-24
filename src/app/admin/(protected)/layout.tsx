@@ -34,7 +34,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="w-56 bg-white border-r border-gray-200 flex flex-col">
         <div className="p-4 border-b border-gray-100">
           <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Admin Panel</p>
-          <p className="text-sm font-semibold text-gray-800 mt-0.5">Ezgi Evgin Aktaş</p>
+          <p className="text-sm font-semibold text-gray-800 mt-0.5">Ezgi Evgin Beslenme ve Diyet Danışmanlığı</p>
         </div>
 
         <nav className="flex-1 p-3 space-y-0.5">

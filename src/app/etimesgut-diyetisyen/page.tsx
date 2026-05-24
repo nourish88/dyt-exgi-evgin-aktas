@@ -41,13 +41,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    title: "Etimesgut Diyetisyen — Dyt. Ezgi Evgin Aktaş",
+    title: "Etimesgut Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Etimesgut ve Eryaman hattında yüz yüze veya online kişiye özel beslenme danışmanlığı.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Etimesgut Diyetisyen — Ezgi Evgin Aktaş",
+    title: "Etimesgut Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Etimesgut'ta kilo yönetimi, insülin direnci, PCOS ve sağlıklı beslenme desteği.",
   },
@@ -192,7 +192,7 @@ export default function EtimesgutDiyetisyenPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Aktaş
+                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
               </Link>{" "}
               ile plan; tahlilleriniz, günlük rutininiz, hedefiniz ve yemek
               alışkanlıklarınıza göre kişiselleştirilir.
