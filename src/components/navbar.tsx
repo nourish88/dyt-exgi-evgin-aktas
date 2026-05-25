@@ -4,34 +4,61 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/lib/analytics";
 
+type NavLeaf = { href: string; label: string };
+type NavGroup = { label: string; items: NavLeaf[]; basePath: string };
+type NavItem = NavLeaf | NavGroup;
+
+const isGroup = (item: NavItem): item is NavGroup =>
+  (item as NavGroup).items !== undefined;
+
+const districtItems: NavLeaf[] = [
+  { href: "/eryaman-diyetisyen", label: "Eryaman" },
+  { href: "/etimesgut-diyetisyen", label: "Etimesgut" },
+  { href: "/sincan-diyetisyen", label: "Sincan" },
+  { href: "/cankaya-diyetisyen", label: "Çankaya" },
+  { href: "/yenimahalle-diyetisyen", label: "Yenimahalle" },
+  { href: "/batikent-diyetisyen", label: "Batıkent" },
+];
+
+const toolsItems: NavLeaf[] = [
+  { href: "/blog", label: "Blog" },
+  { href: "/tarifler", label: "Tarifler" },
+  { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
+];
+
+const navItems: NavItem[] = [
+  { href: "/", label: "Ana Sayfa" },
+  { href: "/hakkimda", label: "Hakkımda" },
+  { href: "/online-diyet-ankara", label: "Online Diyet" },
+  { href: "/programlar", label: "Programlar" },
+  { label: "Bölgeler", items: districtItems, basePath: "diyetisyen" },
+  { label: "İçerik", items: toolsItems, basePath: "icerik" },
+  { href: "/randevu", label: "Randevu Al" },
+  { href: "/iletisim", label: "İletişim" },
+];
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
-  const navItems = [
-    { href: "/", label: "Ana Sayfa" },
-    { href: "/hakkimda", label: "Hakkımda" },
-    { href: "/online-diyet-ankara", label: "Online Diyet" },
-    { href: "/programlar", label: "Programlar" },
-    { href: "/hesaplayicilar", label: "Hesaplayıcılar" },
-    { href: "/tarifler", label: "Tarifler" },
-    { href: "/blog", label: "Blog" },
-    { href: "/randevu", label: "Randevu Al" },
-    { href: "/iletisim", label: "İletişim" },
-  ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/80">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/ezgi_evgin.png"
               alt="Ezgi Evgin Beslenme ve Diyet Danışmanlığı - Beslenme ve Diyet Danışmanlığı"
@@ -40,29 +67,68 @@ export function Navbar() {
               className="h-11 w-auto md:h-12"
               priority
             />
-            <div className="hidden xl:flex flex-col justify-center">
-              <p className="text-[15px] font-bold tracking-[0.08em] bg-gradient-to-r from-[#312858] via-[#7c216e] to-[#dc107d] bg-clip-text text-transparent">
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
+            <div className="hidden 2xl:flex flex-col justify-center max-w-[260px]">
+              <p className="text-[13px] font-bold tracking-[0.06em] whitespace-nowrap bg-gradient-to-r from-[#312858] via-[#7c216e] to-[#dc107d] bg-clip-text text-transparent">
+                Dyt. Ezgi Evgin Aktaş
+              </p>
+              <p className="text-[10px] font-medium tracking-[0.08em] text-muted-foreground whitespace-nowrap">
+                Beslenme ve Diyet Danışmanlığı
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                  pathname === item.href
-                    ? "text-[var(--brand-primary)] bg-pink-50"
-                    : "text-muted-foreground hover:text-[var(--brand-dark)] hover:bg-slate-50"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (isGroup(item)) {
+                const isActive = item.items.some((sub) => pathname === sub.href);
+                return (
+                  <DropdownMenu key={item.label}>
+                    <DropdownMenuTrigger
+                      className={cn(
+                        "inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors outline-none",
+                        isActive
+                          ? "text-[var(--brand-primary)] bg-pink-50"
+                          : "text-muted-foreground hover:text-[var(--brand-dark)] hover:bg-slate-50"
+                      )}
+                    >
+                      {item.label}
+                      <ChevronDown className="w-3.5 h-3.5" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="min-w-[200px]">
+                      {item.items.map((sub) => (
+                        <DropdownMenuItem key={sub.href} asChild>
+                          <Link
+                            href={sub.href}
+                            className={cn(
+                              "w-full cursor-pointer",
+                              pathname === sub.href &&
+                                "text-[var(--brand-primary)] bg-pink-50"
+                            )}
+                          >
+                            {sub.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                    pathname === item.href
+                      ? "text-[var(--brand-primary)] bg-pink-50"
+                      : "text-muted-foreground hover:text-[var(--brand-dark)] hover:bg-slate-50"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Button */}
@@ -110,21 +176,47 @@ export function Navbar() {
       {isOpen && (
         <div className="xl:hidden border-t bg-white/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 space-y-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "block px-4 py-2.5 rounded-lg transition-colors text-sm font-medium",
-                  pathname === item.href
-                    ? "bg-pink-50 text-[var(--brand-primary)]"
-                    : "hover:bg-accent text-[var(--brand-dark)]"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (isGroup(item)) {
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <div className="px-4 pt-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      {item.label}
+                    </div>
+                    {item.items.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                          "block px-6 py-2 rounded-lg transition-colors text-sm font-medium",
+                          pathname === sub.href
+                            ? "bg-pink-50 text-[var(--brand-primary)]"
+                            : "hover:bg-accent text-[var(--brand-dark)]"
+                        )}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "block px-4 py-2.5 rounded-lg transition-colors text-sm font-medium",
+                    pathname === item.href
+                      ? "bg-pink-50 text-[var(--brand-primary)]"
+                      : "hover:bg-accent text-[var(--brand-dark)]"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <a
               href="https://www.doktortakvimi.com/ezgi-evgin/diyetisyen-beslenme-uzmani/ankara"
               target="_blank"

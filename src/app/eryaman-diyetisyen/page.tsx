@@ -279,7 +279,7 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman ve Etimesgut&apos;ta diyetisyen arıyorsanız doğru
                 adrestesiniz. Kilo yönetimi, insülin direnci, hamilelik
                 beslenmesi, çocuk ve sporcu beslenmesi — alanında uzman
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile yüz yüze veya online
+                Dyt. Ezgi Evgin ile yüz yüze veya online
                 danışmanlık. Aç kalmadan, yasaksız ve sürdürülebilir.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
@@ -405,8 +405,8 @@ export default function EryamanDiyetisyenPage() {
                 imkanları da kolay.
               </p>
               <p>
-                Başkent Üniversitesi Beslenme ve Diyetetik mezunu uzman
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı, 2016&apos;dan bu yana kendi
+                Başkent Üniversitesi Beslenme ve Diyetetik mezunu
+                Dyt. Ezgi Evgin, 2016&apos;dan bu yana kendi
                 merkezinde <strong>yasaksız ve sürdürülebilir</strong>{" "}
                 beslenme yaklaşımıyla binden fazla danışana rehberlik etmiştir.
                 Hızlı diyet, şok program veya katı kısıtlama değil; yaşam

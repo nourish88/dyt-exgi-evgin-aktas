@@ -192,7 +192,7 @@ export default function EtimesgutDiyetisyenPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
+                Dyt. Ezgi Evgin
               </Link>{" "}
               ile plan; tahlilleriniz, günlük rutininiz, hedefiniz ve yemek
               alışkanlıklarınıza göre kişiselleştirilir.

@@ -40,7 +40,7 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
 
     const interval = setInterval(() => {
       goToNext();
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [isHovered, goToNext]);
@@ -76,7 +76,10 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 60vw"
+                quality={75}
                 priority={currentSlide.id === 1}
+                fetchPriority={currentSlide.id === 1 ? "high" : "auto"}
+                loading={currentSlide.id === 1 ? undefined : "lazy"}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent pointer-events-none" />
             </div>
