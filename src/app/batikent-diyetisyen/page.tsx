@@ -14,6 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import { LocalProofSection } from "@/components/local-seo/local-proof-section";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import {
   GOOGLE_MAPS_PROFILE_URL,
@@ -168,6 +169,16 @@ export default function BatikentDiyetisyenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          {
+            name: "Bölgeler",
+            item: "https://ezgievginaktas.com/ankara-diyetisyen",
+          },
+          { name: "Batıkent Diyetisyen", item: PAGE_URL },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-white via-pink-50/30 to-cyan-50/30">

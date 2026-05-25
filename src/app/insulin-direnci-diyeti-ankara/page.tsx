@@ -8,6 +8,7 @@ import {
   HeartPulse,
 } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import {
   SpecialtyPage,
   buildLocalBusinessJsonLd,
@@ -184,6 +185,16 @@ export default function InsulinDirenciPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          {
+            name: "Uzmanlık Alanları",
+            item: "https://ezgievginaktas.com/programlar",
+          },
+          { name: "İnsülin Direnci Diyeti", item: PAGE_URL },
+        ]}
       />
       <SpecialtyPage
         heroBadge="Tanı sonrası kişiye özel plan · Ankara & online"

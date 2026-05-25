@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageCircle, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CheckCircle2, MapPin } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
 export const metadata: Metadata = {
   title: "Ankara Diyetisyen — Beslenme Danışmanlığı",
@@ -84,6 +85,15 @@ export default function AnkaraDiyetisyenPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          {
+            name: "Ankara Diyetisyen",
+            item: "https://ezgievginaktas.com/ankara-diyetisyen",
+          },
+        ]}
+      />
       <div className="min-h-screen bg-gradient-to-br from-white via-pink-50/30 to-cyan-50/30">
         <article className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-6">
@@ -103,7 +113,7 @@ export default function AnkaraDiyetisyenPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
+                Dyt. Ezgi Evgin
               </Link>{" "}
               ile süreç haftalık görüşme, günlük iletişim ve danışan portalı
               üçlüsüne dayanır.
@@ -179,6 +189,59 @@ export default function AnkaraDiyetisyenPage() {
                   </div>
                 </Card>
               ))}
+            </div>
+          </div>
+
+          <div className="container mx-auto px-4 max-w-4xl mt-14">
+            <div className="rounded-2xl border bg-white/80 p-6 md:p-8">
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="w-5 h-5 text-[var(--brand-primary)]" />
+                <h2 className="text-xl font-bold text-[var(--brand-dark)]">
+                  Ankara&apos;da semt bazlı bilgi sayfaları
+                </h2>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Eryaman ofisi merkez olmak üzere yakın semtlerden danışanlar
+                için ulaşım, randevu ve süreç detaylarını içeren bilgi sayfaları:
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                <Link
+                  href="/eryaman-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Eryaman diyetisyen
+                </Link>
+                <Link
+                  href="/etimesgut-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Etimesgut diyetisyen
+                </Link>
+                <Link
+                  href="/sincan-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Sincan diyetisyen
+                </Link>
+                <Link
+                  href="/yenimahalle-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Yenimahalle diyetisyen
+                </Link>
+                <Link
+                  href="/batikent-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Batıkent diyetisyen
+                </Link>
+                <Link
+                  href="/cankaya-diyetisyen"
+                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
+                >
+                  Çankaya diyetisyen
+                </Link>
+              </div>
             </div>
           </div>
 

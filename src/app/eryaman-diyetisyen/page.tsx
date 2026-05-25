@@ -20,6 +20,7 @@ import {
   ClipboardList,
 } from "lucide-react";
 import { LocalProofSection } from "@/components/local-seo/local-proof-section";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import {
   GOOGLE_MAPS_PROFILE_URL,
@@ -258,6 +259,19 @@ export default function EryamanDiyetisyenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          {
+            name: "Bölgeler",
+            item: "https://ezgievginaktas.com/ankara-diyetisyen",
+          },
+          {
+            name: "Eryaman Diyetisyen",
+            item: "https://ezgievginaktas.com/eryaman-diyetisyen",
+          },
+        ]}
       />
 
       <article>

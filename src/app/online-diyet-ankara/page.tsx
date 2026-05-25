@@ -4,6 +4,36 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, CheckCircle2, Smartphone } from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
+
+const PAGE_URL = "https://ezgievginaktas.com/online-diyet-ankara";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "Dyt. Ezgi Evgin — Online Beslenme Danışmanlığı",
+  description:
+    "Türkiye genelinden online diyet ve beslenme danışmanlığı. Haftalık görüşme, danışan portalı ve günlük geri bildirim.",
+  url: PAGE_URL,
+  telephone: "+90 546 265 04 40",
+  image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
+    addressLocality: "Etimesgut",
+    addressRegion: "Ankara",
+    postalCode: "06820",
+    addressCountry: "TR",
+  },
+  areaServed: [
+    { "@type": "Country", name: "Türkiye" },
+    { "@type": "City", name: "Ankara" },
+    { "@type": "City", name: "İstanbul" },
+    { "@type": "City", name: "İzmir" },
+  ],
+  priceRange: "₺₺",
+  medicalSpecialty: "Nutrition",
+};
 
 export const metadata: Metadata = {
   title: { absolute: "Online Diyet Ankara — Uzaktan Beslenme Danışmanlığı" },
@@ -76,7 +106,17 @@ export default function OnlineDiyetAnkaraPage() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          { name: "Online Diyet Ankara", item: PAGE_URL },
+        ]}
       />
       <div className="min-h-screen bg-white">
         <article className="py-16 md:py-24">
@@ -97,7 +137,7 @@ export default function OnlineDiyetAnkaraPage() {
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Ezgi Evgin Beslenme ve Diyet Danışmanlığı
+                Dyt. Ezgi Evgin
               </Link>{" "}
               ile süreci birlikte yönetirsiniz.
             </p>
@@ -172,6 +212,138 @@ export default function OnlineDiyetAnkaraPage() {
                 </Card>
               ))}
             </div>
+          </div>
+
+          <div className="container mx-auto px-4 mt-14 prose prose-slate max-w-prose">
+            <h2 className="text-2xl font-bold text-[var(--brand-dark)]">
+              Online diyet sürecinde en çok çalışılan konular
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Online danışmanlık modeli, hedef farkı gözetmeksizin aynı disiplinle
+              yürür. Her hedef için bireysel plan oluşturulur ve haftalık güncellenir.
+            </p>
+            <ul className="text-muted-foreground leading-relaxed">
+              <li>
+                <Link
+                  href="/ankara-kilo-verme-diyetisyen"
+                  className="text-primary hover:underline"
+                >
+                  Kilo verme ve kilo koruma
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/insulin-direnci-diyeti-ankara"
+                  className="text-primary hover:underline"
+                >
+                  İnsülin direnci beslenmesi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pcos-diyetisyen-ankara"
+                  className="text-primary hover:underline"
+                >
+                  PCOS dostu beslenme
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hamilelik-beslenmesi-ankara"
+                  className="text-primary hover:underline"
+                >
+                  Hamilelik ve emzirme dönemi beslenmesi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sporcu-beslenmesi-ankara"
+                  className="text-primary hover:underline"
+                >
+                  Sporcu beslenmesi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cocuk-beslenmesi-diyetisyen"
+                  className="text-primary hover:underline"
+                >
+                  Çocuk ve ergen beslenmesi
+                </Link>
+              </li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-[var(--brand-dark)] mt-10">
+              Ankara&apos;dan ofise gelmek tercih edenler için
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Yüz yüze görüşmeyi tercih ediyorsanız{" "}
+              <Link
+                href="/eryaman-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Eryaman diyetisyen
+              </Link>{" "}
+              ofisi, Optimum AVM karşısında konumlanır. Yakın bölgelerden
+              danışanlarımız için ayrıca{" "}
+              <Link
+                href="/etimesgut-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Etimesgut
+              </Link>
+              ,{" "}
+              <Link
+                href="/sincan-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Sincan
+              </Link>
+              ,{" "}
+              <Link
+                href="/yenimahalle-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Yenimahalle
+              </Link>
+              ,{" "}
+              <Link
+                href="/batikent-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Batıkent
+              </Link>{" "}
+              ve{" "}
+              <Link
+                href="/cankaya-diyetisyen"
+                className="text-primary hover:underline"
+              >
+                Çankaya
+              </Link>{" "}
+              bilgi sayfaları açıktır.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[var(--brand-dark)] mt-10">
+              Online diyet ücretleri ve program seçenekleri
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Süreç haftalık görüşmelerle 4, 8 veya 12 haftalık paketler şeklinde
+              yürür. Detaylı paket bilgisi ve fiyatlandırma için{" "}
+              <Link
+                href="/programlar"
+                className="text-primary hover:underline"
+              >
+                programlar sayfasına
+              </Link>{" "}
+              göz atabilir, randevu için{" "}
+              <Link
+                href="/randevu"
+                className="text-primary hover:underline"
+              >
+                randevu formunu
+              </Link>{" "}
+              kullanabilirsiniz.
+            </p>
           </div>
 
           <div className="container mx-auto px-4 max-w-3xl mt-14 text-center space-y-3">

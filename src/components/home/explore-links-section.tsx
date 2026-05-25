@@ -52,6 +52,51 @@ export function ExploreLinksSection() {
             </Link>{" "}
             ya da aşağıdaki sayfalardan daha fazla bilgi edinin.
           </p>
+          <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+            Yüz yüze görüşme için{" "}
+            <Link
+              href="/eryaman-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Eryaman diyetisyen
+            </Link>
+            ,{" "}
+            <Link
+              href="/etimesgut-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Etimesgut diyetisyen
+            </Link>
+            ,{" "}
+            <Link
+              href="/sincan-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Sincan diyetisyen
+            </Link>
+            ,{" "}
+            <Link
+              href="/yenimahalle-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Yenimahalle diyetisyen
+            </Link>
+            ,{" "}
+            <Link
+              href="/batikent-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Batıkent diyetisyen
+            </Link>{" "}
+            ve{" "}
+            <Link
+              href="/cankaya-diyetisyen"
+              className="text-[var(--brand-primary)] underline underline-offset-4"
+            >
+              Çankaya diyetisyen
+            </Link>{" "}
+            sayfalarına göz atabilirsiniz.
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {links.map((l) => (
