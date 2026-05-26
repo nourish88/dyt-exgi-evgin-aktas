@@ -107,8 +107,8 @@ export default function RootLayout({
         {/* Geo meta — yerel SEO sinyali (Bing, Yandex ve dolaylı Google) */}
         <meta name="geo.region" content="TR-06" />
         <meta name="geo.placename" content="Etimesgut, Ankara — Atayıldız Plaza" />
-        <meta name="geo.position" content="39.947;32.677" />
-        <meta name="ICBM" content="39.947, 32.677" />
+        <meta name="geo.position" content="39.9669753;32.6358095" />
+        <meta name="ICBM" content="39.9669753, 32.6358095" />
         {/* hreflang — tek dil site hijyeni */}
         <link rel="alternate" hrefLang="tr-TR" href="https://ezgievginaktas.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://ezgievginaktas.com/" />
