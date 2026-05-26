@@ -18,7 +18,6 @@ import {
   Dumbbell,
   Apple,
   ClipboardList,
-  Star,
   TrendingUp,
 } from "lucide-react";
 import { LocalProofSection } from "@/components/local-seo/local-proof-section";
@@ -250,7 +249,7 @@ const faqJsonLd = {
       name: "Sigorta kapsamında mı, ödeme yöntemleri neler?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor. Fatura talep eden danışanlar için e-fatura kesilebilir.",
+        text: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor.",
       },
     },
     {
@@ -395,26 +394,6 @@ const eryamanNeighborhoods = [
   { name: "Yenimahalle", slug: "yenimahalle-diyetisyen" },
 ];
 
-const testimonials = [
-  {
-    text: "Eryaman'da bu kalitede bir diyetisyen bulmak çok zor. Ezgi Hanım gerçekten dinleyen, baskı yapmayan bir yaklaşımla 3 ayda hedefime ulaşmamı sağladı.",
-    author: "Selin K.",
-    area: "Eryaman 3. Etap",
-    stars: 5,
-  },
-  {
-    text: "İnsülin direncim için Etimesgut'tan geliyorum. Ofis çok merkezi, randevu almak kolay ve süreç gerçekten işe yarıyor.",
-    author: "Mehmet Y.",
-    area: "Etimesgut",
-    stars: 5,
-  },
-  {
-    text: "Hamilelik sürecinde beslenme konusunda çok yorum duyuyorsunuz ama Ezgi Hanım bilimsel bir çerçevede ilerledi. Hem ben hem bebeğim sağlıklıyız.",
-    author: "Ayşe T.",
-    area: "Yapracık",
-    stars: 5,
-  },
-];
 
 // SSS — mevcut + 5 yeni soru
 const faqs = [
@@ -436,7 +415,7 @@ const faqs = [
   },
   {
     q: "Sigorta kapsamında mı, ödeme yöntemleri neler?",
-    a: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor. Fatura talep eden danışanlar için e-fatura kesilebilir.",
+    a: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor.",
   },
   {
     q: "Eryaman dışında Sincan veya Etimesgut'tan gelmek mantıklı mı, online yeterli mi?",
@@ -870,57 +849,6 @@ export default function EryamanDiyetisyenPage() {
           </div>
         </section>
 
-        {/* ── DANIŞAN DENEYİMLERİ ──────────────────────────────────────────── */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
-                Eryaman&apos;dan Danışan Deneyimleri
-              </h2>
-              <p className="text-muted-foreground mt-2">
-                Gerçek sonuçlar — Eryaman ve çevresinden danışanlarımız
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {testimonials.map((t) => (
-                <Card key={t.author} className="p-5 flex flex-col">
-                  <div className="flex gap-0.5 mb-3">
-                    {Array.from({ length: t.stars }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 italic">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <p className="font-semibold text-sm text-[var(--brand-dark)]">
-                      {t.author}
-                    </p>
-                    <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
-                      <MapPin className="w-3 h-3" />
-                      {t.area}
-                    </p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-            <p className="text-center text-sm text-muted-foreground mt-6">
-              Daha fazla deneyim için{" "}
-              <a
-                href={GOOGLE_MAPS_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-              >
-                Google yorumlarımıza
-              </a>{" "}
-              bakabilirsiniz.
-            </p>
-          </div>
-        </section>
 
         {/* ── ULAŞIM & GOOGLE MAPS ─────────────────────────────────────────── */}
         <section className="py-12 md:py-16 bg-white/60">
