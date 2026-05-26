@@ -58,6 +58,10 @@ module.exports = {
     "/server-sitemap.xml",
     "/blog/[slug]",
     "/tarifler/[slug]",
+    "/batikent-diyetisyen",
+    "/cankaya-diyetisyen",
+    "/sincan-diyetisyen",
+    "/yenimahalle-diyetisyen",
   ],
   transform: async (config, path) => {
     const override = PAGE_PRIORITY_MAP[path];

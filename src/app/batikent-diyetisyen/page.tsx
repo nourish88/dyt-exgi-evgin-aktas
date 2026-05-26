@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "ankara diyetisyen",
   ],
   alternates: { canonical: PAGE_URL },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     url: PAGE_URL,
