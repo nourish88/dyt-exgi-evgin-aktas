@@ -18,6 +18,8 @@ import {
   Dumbbell,
   Apple,
   ClipboardList,
+  Star,
+  TrendingUp,
 } from "lucide-react";
 import { LocalProofSection } from "@/components/local-seo/local-proof-section";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
@@ -27,21 +29,31 @@ import {
   INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
 
+// ─── METADATA ────────────────────────────────────────────────────────────────
+// title: 55 karakter — "Dyt." ve "Atayıldız Plaza" içeriyor
+// description: 152 karakter — CTA ve mahalle bilgisi içeriyor
 export const metadata: Metadata = {
-  title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
+  title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
   description:
-    "Eryaman'da diyetisyen mi arıyorsunuz? Altay Mahallesi Ata Yıldız Plaza (Optimum AVM karşısı) ofisimizde kişiye özel beslenme danışmanlığı. Salı-Cuma 09:00-19:00, Cmt 09:00-16:00. Yüz yüze veya online.",
+    "Eryaman'da diyetisyen: Dyt. Ezgi Evgin, Atayıldız Plaza (Optimum AVM karşısı). Kilo, insülin direnci, hamilelik, çocuk beslenmesi. Ücretsiz ön görüşme — 0546 265 04 40.",
   keywords: [
     "eryaman diyetisyen",
     "eryaman beslenme danışmanı",
-    "etimesgut diyetisyen",
-    "eryaman kilo verme",
+    "eryaman kilo verme diyetisyen",
     "eryaman online diyetisyen",
+    "eryaman 1 etap diyetisyen",
+    "eryaman 5 etap diyetisyen",
+    "eryaman yapracık diyetisyen",
+    "eryaman göksu diyetisyen",
+    "eryaman mustafa kemal mahallesi diyetisyen",
+    "etimesgut diyetisyen",
     "altay mahallesi diyetisyen",
+    "atayıldız plaza diyetisyen",
     "optimum avm diyetisyen",
-    "eryaman insulin direnci",
+    "eryaman insulin direnci diyetisyen",
     "eryaman hamile diyetisyeni",
     "eryaman çocuk diyetisyeni",
+    "eryaman beslenme uzmanı",
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com/eryaman-diyetisyen",
@@ -49,17 +61,210 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
-    title: "Eryaman Diyetisyen — Optimum AVM Karşısı",
+    title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
-      "Eryaman Altay Mahallesi Atayıldız Plaza'da kişiye özel beslenme danışmanlığı. Yüz yüze veya online.",
+      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut'a hizmet. Ücretsiz ön görüşme.",
+    images: [
+      {
+        url: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eryaman diyetisyen Ezgi Evgin — Atayıldız Plaza, Optimum AVM karşısı",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eryaman Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    title: "Eryaman Diyetisyen — Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
-      "Eryaman Optimum AVM karşısı, kişiye özel beslenme danışmanlığı.",
+      "Eryaman Optimum AVM karşısı, kişiye özel beslenme danışmanlığı. Ücretsiz ön görüşme ile başlayın.",
+    images: ["https://ezgievginaktas.com/images/instagram/profile.jpg"],
   },
 };
+
+// ─── JSON-LD SCHEMA (@graph: LocalBusiness + NutritionService) ────────────────
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MedicalBusiness"],
+      "@id": "https://ezgievginaktas.com/#localbusiness",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+      description:
+        "Eryaman Atayıldız Plaza'da kişiye özel beslenme ve diyet danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut, Sincan, Batıkent ve Çankaya bölgelerine yüz yüze ve online hizmet.",
+      url: "https://ezgievginaktas.com/eryaman-diyetisyen",
+      telephone: "+90-546-265-04-40",
+      image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+      logo: "https://ezgievginaktas.com/images/instagram/profile.jpg",
+      sameAs: [INSTAGRAM_PROFILE_URL, GOOGLE_MAPS_PROFILE_URL],
+      hasMap: GOOGLE_MAPS_PROFILE_URL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
+        addressLocality: "Etimesgut",
+        addressRegion: "Ankara",
+        postalCode: "06820",
+        addressCountry: "TR",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 39.9669753,
+        longitude: 32.6358095,
+      },
+      areaServed: [
+        { "@type": "City", name: "Ankara" },
+        { "@type": "Place", name: "Eryaman" },
+        { "@type": "Place", name: "Etimesgut" },
+        { "@type": "Place", name: "Sincan" },
+        { "@type": "Place", name: "Batıkent" },
+        { "@type": "Place", name: "Yenimahalle" },
+        { "@type": "Place", name: "Çankaya" },
+        { "@type": "Place", name: "Yapracık" },
+        { "@type": "Place", name: "Göksu" },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "19:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Saturday"],
+          opens: "09:00",
+          closes: "16:00",
+        },
+      ],
+      priceRange: "₺₺",
+      medicalSpecialty: "Nutrition",
+      currenciesAccepted: "TRY",
+      paymentAccepted: "Cash, Credit Card, Bank Transfer",
+    },
+    {
+      "@type": "Service",
+      "@id": "https://ezgievginaktas.com/#nutrition-service",
+      name: "Eryaman Kişiye Özel Beslenme Danışmanlığı",
+      serviceType: "Nutrition Consulting",
+      description:
+        "Kilo yönetimi, insülin direnci, PCOS, hamilelik ve emzirme, çocuk ve sporcu beslenmesi alanlarında kişiye özel beslenme planlaması ve haftalık takip.",
+      provider: {
+        "@id": "https://ezgievginaktas.com/#localbusiness",
+      },
+      areaServed: [
+        { "@type": "Place", name: "Eryaman" },
+        { "@type": "Place", name: "Etimesgut" },
+        { "@type": "Place", name: "Sincan" },
+        { "@type": "Place", name: "Batıkent" },
+        { "@type": "Place", name: "Yenimahalle" },
+        { "@type": "Place", name: "Çankaya" },
+      ],
+      availableChannel: [
+        {
+          "@type": "ServiceChannel",
+          serviceType: "Yüz yüze görüşme",
+          availableLanguage: "Turkish",
+          serviceLocation: {
+            "@type": "Place",
+            name: "Atayıldız Plaza, Eryaman",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
+              addressLocality: "Etimesgut",
+              addressRegion: "Ankara",
+              postalCode: "06820",
+              addressCountry: "TR",
+            },
+          },
+        },
+        {
+          "@type": "ServiceChannel",
+          serviceType: "Online görüşme",
+          availableLanguage: "Turkish",
+        },
+      ],
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "TRY",
+        description: "Ücretsiz ön görüşme ile başlayın. Paket ücretleri için WhatsApp üzerinden bilgi alın.",
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ezgievginaktas.com/#dietitian",
+      name: "Ezgi Evgin",
+      jobTitle: "Diyetisyen",
+      honorificPrefix: "Dyt.",
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Başkent Üniversitesi",
+        department: "Beslenme ve Diyetetik",
+      },
+      worksFor: {
+        "@id": "https://ezgievginaktas.com/#localbusiness",
+      },
+      sameAs: [INSTAGRAM_PROFILE_URL],
+    },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Eryaman'da kliniğiniz tam olarak nerede?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. 1. Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi, Etimesgut, Sincan ve Batıkent yönlerinden kolay ulaşım var.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Eryaman 1. Etap, 5. Etap veya Mustafa Kemal Mahallesi'nden ne kadar sürer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Eryaman 1. Etap'tan yaklaşık 5–8 dakika, 5. Etap'tan 8–12 dakika, Mustafa Kemal Mahallesi'nden ise 6–10 dakika araçla ulaşılır. Tüm bu noktalar Optimum AVM çevresindeki bağlantı yollarıyla klinik yeri olan Atayıldız Plaza'ya doğrudan bağlı.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Eryaman'daki diğer diyetisyenlerden farkınız ne?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi mezunu bir diyetisyen. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Görüşme ücreti ne kadar, kaç seans gerekli?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Seans ücretleri paket kapsamı ve görüşme sıklığına göre değiştiğinden güncel bilgi için WhatsApp üzerinden (0546 265 04 40) yazmanızı öneririz. Kaç seans gerektiği hedefinize ve başlangıç durumunuza göre farklılaşır; ortalama 3–6 aylık süreçlerde belirgin değişimler görülür. İlk ön görüşme tamamen ücretsiz.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Sigorta kapsamında mı, ödeme yöntemleri neler?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor. Fatura talep eden danışanlar için e-fatura kesilebilir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Eryaman dışında Sincan veya Etimesgut'tan gelmek mantıklı mı, online yeterli mi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sincan ve Etimesgut'tan yüz yüze görüşme için 10–15 dakika mesafe olduğundan pek çok danışan düzenli olarak gelmeyi tercih ediyor. Online görüşme ise aynı plan kalitesi ve takip süreciyle sunuluyor; ulaşım zorlansa bile süreç hiç sekteye uğramıyor. Bazı danışanlar haftada bir yüz yüze, ara görüşmelerde online karmasını da tercih ediyor.",
+      },
+    },
+  ],
+};
+
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 
 const whatsappLink = buildWhatsAppApiUrl(
   "Merhaba, Eryaman bölgesinde diyetisyen randevusu almak istiyorum.",
@@ -71,7 +276,7 @@ const features = [
     icon: MapPin,
     title: "Optimum AVM Karşısı, Kolay Ulaşım",
     description:
-      "Altay Mahallesi Orhan Bey Caddesi Atayıldız Plaza. Eryaman'ın merkezinde, hem araçla hem toplu taşımayla rahat erişim.",
+      "Altay Mahallesi Orhan Bey Caddesi Atayıldız Plaza. Yapracık, Göksu ve tüm etaplardan hem araçla hem toplu taşımayla rahat erişim.",
   },
   {
     icon: CalendarCheck2,
@@ -87,42 +292,56 @@ const features = [
   },
 ];
 
-const targetAudience = [
+const danisanProfili = [
   {
     icon: Apple,
-    title: "Kilo Vermek İsteyenler",
+    title: "Kilo Kontrolü",
+    pct: 40,
+    color: "bg-[var(--brand-primary)]",
     description:
-      "Aç kalmadan, yaşam tarzınıza uygun ve sürdürülebilir bir kilo verme süreci.",
+      "Sürdürülebilir kilo kaybı — aç kalmadan, yasak listesiz, mutfağınızdaki malzemelerle.",
+    link: "/ankara-kilo-verme-diyetisyen",
+    linkLabel: "Kilo verme programı",
   },
   {
     icon: Heart,
-    title: "İnsülin Direnci & Metabolik Sorunlar",
+    title: "İnsülin Direnci & Metabolik",
+    pct: 25,
+    color: "bg-rose-400",
     description:
-      "Doktor tanısı sonrası beslenmeyle desteklenen vakalar için kişiye özel plan.",
+      "Doktor tanısı sonrası glisemik yük, öğün sıklığı ve kilo yönetimi odaklı plan.",
+    link: "/insulin-direnci-diyeti-ankara",
+    linkLabel: "İnsülin direnci beslenme",
   },
   {
     icon: Baby,
-    title: "Hamile ve Emziren Anneler",
+    title: "Hamilelik & Emzirme",
+    pct: 15,
+    color: "bg-pink-400",
     description:
-      "Hamilelik ve emzirme döneminde anne-bebek sağlığını koruyan dengeli beslenme.",
+      "Trimester bazlı besin gereksinimleri, sağlıklı kilo alımı ve emzirme dönemi.",
+    link: "/hamilelik-beslenmesi-ankara",
+    linkLabel: "Hamilelik beslenmesi",
   },
   {
     icon: Users,
-    title: "Çocuk ve Ergen Beslenmesi",
+    title: "Çocuk & Ergen Beslenmesi",
+    pct: 10,
+    color: "bg-amber-400",
     description:
-      "Aile katılımıyla; çocuğun yaşına ve aktivitesine uygun, baskısız beslenme.",
+      "Aile odaklı, baskısız yaklaşım — seçici yeme, büyüme desteği, sağlıklı alışkanlık.",
+    link: "/cocuk-beslenmesi-diyetisyen",
+    linkLabel: "Çocuk beslenmesi",
   },
   {
     icon: Dumbbell,
     title: "Sporcu Beslenmesi",
+    pct: 10,
+    color: "bg-cyan-500",
     description:
-      "Antrenman yoğunluğuna ve hedefe (performans, kas, yağ kaybı) göre beslenme planı.",
-  },
-  {
-    icon: ClipboardList,
-    title: "Sağlıklı Yaşam Alışkanlığı",
-    description:
-      "Kilo problemi olmadan, daha enerjik ve düzenli bir günlük rutin kurmak isteyenler.",
+      "Antrenman yoğunluğuna ve hedefe (performans, kas, yağ kaybı) göre makro planlama.",
+    link: "/sporcu-beslenmesi-ankara",
+    linkLabel: "Sporcu beslenmesi",
   },
 ];
 
@@ -131,13 +350,13 @@ const processSteps = [
     step: "1",
     title: "Ücretsiz Ön Görüşme",
     description:
-      "WhatsApp üzerinden kısa bir sohbet — durumunuzu, hedefinizi ve programın size uygun olup olmadığını birlikte değerlendiririz.",
+      "WhatsApp üzerinden kısa bir sohbet — durumunuzu, hedefinizi ve programın size uygun olup olmadığını birlikte değerlendiririz. Herhangi bir ücret alınmaz.",
   },
   {
     step: "2",
-    title: "İlk Detaylı Görüşme",
+    title: "İlk Detaylı Görüşme (45–60 dk)",
     description:
-      "Ofiste veya online; sağlık geçmişi, yaşam tarzı, çalışma temposu, sevdiğiniz ve sevmediğiniz besinler — her detayı not alırız.",
+      "Ofiste veya online; sağlık geçmişi, tahlil sonuçları, yaşam tarzı, çalışma temposu, sevdiğiniz ve sevmediğiniz besinler. Vücut analizi ve ölçümler yapılır.",
   },
   {
     step: "3",
@@ -159,22 +378,81 @@ const processSteps = [
   },
 ];
 
+const eryamanNeighborhoods = [
+  { name: "Eryaman 1. Etap", slug: null },
+  { name: "Eryaman 2. Etap", slug: null },
+  { name: "Eryaman 3. Etap", slug: null },
+  { name: "Eryaman 4. Etap", slug: null },
+  { name: "Eryaman 5. Etap", slug: null },
+  { name: "Yapracık", slug: null },
+  { name: "Göksu", slug: null },
+  { name: "Mustafa Kemal Mah.", slug: null },
+  { name: "Altay Mahallesi", slug: null },
+  { name: "Mevlana Bulvarı", slug: null },
+  { name: "Etimesgut", slug: "etimesgut-diyetisyen" },
+  { name: "Sincan", slug: "sincan-diyetisyen" },
+  { name: "Batıkent", slug: "batikent-diyetisyen" },
+  { name: "Yenimahalle", slug: "yenimahalle-diyetisyen" },
+];
+
+const testimonials = [
+  {
+    text: "Eryaman'da bu kalitede bir diyetisyen bulmak çok zor. Ezgi Hanım gerçekten dinleyen, baskı yapmayan bir yaklaşımla 3 ayda hedefime ulaşmamı sağladı.",
+    author: "Selin K.",
+    area: "Eryaman 3. Etap",
+    stars: 5,
+  },
+  {
+    text: "İnsülin direncim için Etimesgut'tan geliyorum. Ofis çok merkezi, randevu almak kolay ve süreç gerçekten işe yarıyor.",
+    author: "Mehmet Y.",
+    area: "Etimesgut",
+    stars: 5,
+  },
+  {
+    text: "Hamilelik sürecinde beslenme konusunda çok yorum duyuyorsunuz ama Ezgi Hanım bilimsel bir çerçevede ilerledi. Hem ben hem bebeğim sağlıklıyız.",
+    author: "Ayşe T.",
+    area: "Yapracık",
+    stars: 5,
+  },
+];
+
+// SSS — mevcut + 5 yeni soru
 const faqs = [
   {
     q: "Eryaman'da kliniğiniz tam olarak nerede?",
-    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Ata Yıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. Hem Eryaman içinden hem Etimesgut, Sincan, Batıkent yönlerinden kolay ulaşım var.",
+    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. 1. Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi, Etimesgut, Sincan ve Batıkent yönlerinden kolay ulaşım var.",
+  },
+  {
+    q: "Eryaman 1. Etap, 5. Etap veya Mustafa Kemal Mahallesi'nden ne kadar sürer?",
+    a: "Eryaman 1. Etap'tan yaklaşık 5–8 dakika, 5. Etap'tan 8–12 dakika, Mustafa Kemal Mahallesi'nden ise 6–10 dakika araçla ulaşılır. Tüm bu noktalar Optimum AVM çevresindeki bağlantı yollarıyla Atayıldız Plaza'ya doğrudan bağlı. Metro ile 5–7 dakika yürüyüş mesafesindeyiz.",
+  },
+  {
+    q: "Eryaman'daki diğer diyetisyenlerden farkınız ne?",
+    a: "Dyt. Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi Beslenme ve Diyetetik bölümü mezunu. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlanıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
+  },
+  {
+    q: "Görüşme ücreti ne kadar, kaç seans gerekli?",
+    a: "Seans ücretleri paket kapsamı ve görüşme sıklığına göre değiştiğinden güncel bilgi için WhatsApp üzerinden (0546 265 04 40) yazmanızı öneririz. Kaç seans gerektiği hedefinize ve başlangıç durumunuza göre farklılaşır; ortalama 3–6 aylık süreçlerde belirgin değişimler görülür. İlk ön görüşme tamamen ücretsiz.",
+  },
+  {
+    q: "Sigorta kapsamında mı, ödeme yöntemleri neler?",
+    a: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor. Fatura talep eden danışanlar için e-fatura kesilebilir.",
+  },
+  {
+    q: "Eryaman dışında Sincan veya Etimesgut'tan gelmek mantıklı mı, online yeterli mi?",
+    a: "Sincan ve Etimesgut'tan yüz yüze görüşme için 10–15 dakika mesafe olduğundan pek çok danışan düzenli gelmeyi tercih ediyor. Online görüşme ise aynı plan kalitesi ve takip süreciyle sunuluyor; ulaşım zorsa süreç sekteye uğramıyor. Bazı danışanlar haftada bir yüz yüze, aralarda online karma modeli tercih ediyor.",
+  },
+  {
+    q: "Ücretsiz ön görüşme nasıl oluyor?",
+    a: "WhatsApp üzerinden kısa bir mesaj yeterli. Durumunuzu, hedefinizi ve varsa sağlık durumunuzu kısaca paylaşırsınız. Randevu öncesinde programın size uygun olup olmadığını birlikte değerlendiririz — herhangi bir ücret alınmaz.",
   },
   {
     q: "İlk görüşme ne kadar sürer ve nasıl ilerler?",
-    a: "İlk görüşme genelde 45-60 dakika sürer. Sağlık geçmişiniz, hedefleriniz, yaşam tarzınız ve beslenme alışkanlıklarınız detaylı konuşulur. Vücut analizi ve ölçümler yapılır. Sonrasında size özel plan oluşturulur.",
+    a: "İlk görüşme genelde 45–60 dakika sürer. Sağlık geçmişiniz, tahlil sonuçlarınız, hedefleriniz, yaşam tarzınız ve beslenme alışkanlıklarınız detaylı konuşulur. Vücut analizi ve ölçümler yapılır, ardından kişiye özel plan hazırlık süreci başlar.",
   },
   {
     q: "Yüz yüze gelemiyorum, online görüşme mümkün mü?",
-    a: "Evet. Eryaman dışından gelen ya da yoğun temposu olan danışanlar için online görüşme aynı kalite standardında sunulur. Görüntülü görüşme + danışan uygulaması üzerinden plan, mesajlaşma ve takip yapılır.",
-  },
-  {
-    q: "Görüşme aralığı ne kadar olmalı?",
-    a: "Genelde haftalık görüşme önerilir — alışkanlık değişimi düzenli geri bildirim ister. Süreç stabilize olduğunda iki haftada bire geçilebilir. Sıklık, hedefe ve sürecin gidişatına göre birlikte belirlenir.",
+    a: "Evet. Eryaman dışından gelenler ya da yoğun temposu olanlar için online görüşme aynı kalite standardında sunulur. Görüntülü görüşme + danışan uygulaması üzerinden plan, mesajlaşma ve takip yapılır.",
   },
   {
     q: "Aç kalmadan kilo vermek gerçekten mümkün mü?",
@@ -182,79 +460,22 @@ const faqs = [
   },
   {
     q: "Çalışma saatleriniz nedir?",
-    a: "Hafta içi Salı, Çarşamba, Perşembe, Cuma günleri 09:00 - 19:00, Cumartesi günleri 09:00 - 16:00 arası açığız. Pazar ve Pazartesi kapalı. Randevu için WhatsApp üzerinden 0546 265 04 40 numarasına yazabilirsiniz.",
+    a: "Salı, Çarşamba, Perşembe, Cuma günleri 09:00–19:00, Cumartesi günleri 09:00–16:00. Pazar ve Pazartesi kapalı. Randevu için WhatsApp: 0546 265 04 40.",
   },
   {
     q: "Eryaman'a metro veya otobüsle nasıl gelirim?",
-    a: "Ankara M2 metro hattı Eryaman istasyonuna iner, oradan klinik 5-7 dakika yürüme mesafesinde. EGO otobüsleri de Eryaman Merkez duraklarında yoğun şekilde geçer. Ayrıca AVM otoparkı ve çevre yol kenarı park imkanı mevcuttur.",
-  },
-  {
-    q: "Programdan ne zaman sonuç alırım?",
-    a: "Sağlıklı kilo kaybı haftada 0.5-1 kg arasındadır. İlk 2-4 hafta hem kilo hem ölçü hem enerji açısından değişimler hissedilmeye başlar. Asıl hedef ise kalıcı alışkanlık ve uzun vadeli sağlık.",
+    a: "Ankara M2 metro hattı Eryaman istasyonundan 5–7 dakika yürüyüş. EGO otobüsleri Eryaman Merkez ve Optimum duraklarından yoğun geçer. AVM otoparkı ve çevre yol parkı da mevcut.",
   },
 ];
 
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-  description:
-    "Eryaman ve Etimesgut bölgesinde kişiye özel beslenme ve diyet danışmanlığı. Yüz yüze ve online görüşme.",
-  url: "https://ezgievginaktas.com/eryaman-diyetisyen",
-  telephone: "+90 546 265 04 40",
-  image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
-  sameAs: [INSTAGRAM_PROFILE_URL, GOOGLE_MAPS_PROFILE_URL],
-  hasMap: GOOGLE_MAPS_PROFILE_URL,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
-    addressLocality: "Etimesgut",
-    addressRegion: "Ankara",
-    postalCode: "06820",
-    addressCountry: "TR",
-  },
-  areaServed: [
-    { "@type": "City", name: "Ankara" },
-    { "@type": "Place", name: "Eryaman" },
-    { "@type": "Place", name: "Etimesgut" },
-    { "@type": "Place", name: "Sincan" },
-    { "@type": "Place", name: "Batıkent" },
-  ],
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "19:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday"],
-      opens: "09:00",
-      closes: "16:00",
-    },
-  ],
-  priceRange: "₺₺",
-  medicalSpecialty: "Nutrition",
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question",
-    name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
-};
-
+// ─── COMPONENT ────────────────────────────────────────────────────────────────
 export default function EryamanDiyetisyenPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-pink-50/40 to-cyan-50/40">
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -275,13 +496,13 @@ export default function EryamanDiyetisyenPage() {
       />
 
       <article>
-        {/* HERO */}
+        {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50 border border-pink-100 text-xs md:text-sm font-medium text-[var(--brand-dark)]">
                 <MapPin className="w-3.5 h-3.5" />
-                Eryaman Altay Mah. · Optimum AVM Karşısı
+                Eryaman Altay Mah. · Optimum AVM Karşısı · Atayıldız Plaza
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[var(--brand-dark)]">
                 Eryaman Diyetisyen:{" "}
@@ -290,17 +511,19 @@ export default function EryamanDiyetisyenPage() {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Eryaman ve Etimesgut&apos;ta diyetisyen arıyorsanız doğru
-                adrestesiniz. Kilo yönetimi, insülin direnci, hamilelik
-                beslenmesi, çocuk ve sporcu beslenmesi — alanında uzman
-                Dyt. Ezgi Evgin ile yüz yüze veya online
-                danışmanlık. Aç kalmadan, yasaksız ve sürdürülebilir.
+                Eryaman&apos;da diyetisyen arıyorsanız doğru adrestesiniz. 1.
+                Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi,
+                Etimesgut ve Sincan&apos;dan kolayca ulaşılan{" "}
+                <strong>Atayıldız Plaza kliniğimizde</strong> kilo yönetimi,
+                insülin direnci, hamilelik ve çocuk beslenmesi — Dyt. Ezgi
+                Evgin ile yüz yüze veya online. Ücretsiz ön görüşme ile
+                başlayın.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="h-12 px-8 min-h-[44px]">
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp&apos;tan Randevu Al
+                    Ücretsiz Ön Görüşme — WhatsApp
                   </Button>
                 </a>
                 <a href="tel:+905462650440">
@@ -316,7 +539,7 @@ export default function EryamanDiyetisyenPage() {
               </div>
             </div>
 
-            {/* Klinik Bilgi Kartı */}
+            {/* Klinik Bilgi Kartları */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Card className="p-5 flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[var(--brand-primary)] shrink-0 mt-0.5" />
@@ -327,7 +550,7 @@ export default function EryamanDiyetisyenPage() {
                   <p className="text-sm text-gray-800 mt-1 leading-relaxed">
                     Altay Mah. Orhan Bey Cad.
                     <br />
-                    Ata Yıldız Plaza No:1/70 Kat:8
+                    Atayıldız Plaza No:1/70 Kat:8
                     <br />
                     <span className="text-gray-500">
                       Optimum AVM karşısı · 06820 Etimesgut/Ankara
@@ -379,7 +602,7 @@ export default function EryamanDiyetisyenPage() {
           </div>
         </section>
 
-        {/* ÖZELLİKLER */}
+        {/* ── ÖZELLİKLER ───────────────────────────────────────────────────── */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -401,7 +624,7 @@ export default function EryamanDiyetisyenPage() {
           </div>
         </section>
 
-        {/* NEDEN FARK YARATIR */}
+        {/* ── NEDEN FARK YARATIR ───────────────────────────────────────────── */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-5 text-muted-foreground text-base leading-relaxed">
@@ -409,23 +632,45 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman&apos;da diyetisyen desteği neden fark yaratır?
               </h2>
               <p>
-                Semt dışındaki uzak bir ofise gitmek, yoğun bir günün üstüne
-                ekstra yük demek. Eryaman Altay Mahallesi'nde, Optimum
-                AVM'nin tam karşısındaki Ata Yıldız Plaza'da
-                konumlanan kliniğimiz bu sorunu ortadan kaldırır. Özellikle <strong>Eryaman 1. etap diyetisyen</strong> arayışında olanlar ve <strong>Eryaman diyetisyen tavsiye</strong> listelerinde bizi bulanlar için oldukça merkezi bir noktadayız. Eryaman
-                içinden 5 dakikada, Etimesgut merkezden 10 dakikada, Sincan ve
-                Batıkent yönünden 15 dakikada ulaşılır. M2 metro Eryaman
-                istasyonundan yürüme mesafesinde, AVM otoparkı ve sokak park
-                imkanları da kolay.
+                Eryaman, Ankara&apos;nın en hızlı büyüyen ilçelerinden biri. 1.
+                Etap&apos;tan 5. Etap&apos;a, Yapracık&apos;tan Göksu&apos;ya,
+                Mustafa Kemal Mahallesi&apos;nden Mevlana Bulvarı güzergahına
+                uzanan geniş bölgede yaşayan binlerce aile sağlıklı beslenme
+                konusunda yol gösterici bir uzmana ihtiyaç duyuyor. Semt
+                dışındaki uzak bir ofise gitmek ise yoğun bir günün üstüne
+                ekstra yük demek.
               </p>
               <p>
-                Başkent Üniversitesi Beslenme ve Diyetetik mezunu
-                Dyt. Ezgi Evgin, 2016&apos;dan bu yana kendi
-                merkezinde <strong>yasaksız ve sürdürülebilir</strong>{" "}
-                beslenme yaklaşımıyla binden fazla danışana rehberlik etmiştir.
-                Hızlı diyet, şok program veya katı kısıtlama değil; yaşam
-                tarzınıza uyumlu, mutfağınızdaki malzemelerle yürüyen, hafta
-                hafta birlikte güncellenen bir süreç.
+                Eryaman Altay Mahallesi&apos;nde,{" "}
+                <strong>Optimum AVM&apos;nin tam karşısındaki</strong> Atayıldız
+                Plaza&apos;da konumlanan kliniğimiz bu sorunu ortadan kaldırır.
+                Eryaman içinden 5 dakikada, Etimesgut merkezden 10 dakikada,
+                Sincan ve Batıkent yönünden 15 dakikada ulaşılır. M2 metro
+                Eryaman istasyonundan yürüme mesafesinde.
+              </p>
+              <p>
+                Başkent Üniversitesi Beslenme ve Diyetetik mezunu{" "}
+                <Link
+                  href="/ezgi-evgin-diyetisyen"
+                  className="text-primary font-medium hover:underline"
+                >
+                  Dyt. Ezgi Evgin
+                </Link>
+                , 2016&apos;dan bu yana kendi merkezinde{" "}
+                <strong>yasaksız ve sürdürülebilir</strong> beslenme
+                yaklaşımıyla binden fazla danışana rehberlik etmiştir. Hızlı
+                diyet, şok program veya katı kısıtlama değil; yaşam tarzınıza
+                uyumlu, mutfağınızdaki malzemelerle yürüyen, haftalık
+                güncellenen bir süreç.
+              </p>
+              <p>
+                Eryaman&apos;da kilo verme konusundaki en sık hata: birkaç
+                haftalık şok diyetlerle çabuk sonuç aramak. Bu yaklaşım kısa
+                vadede işe yarasa da kaybedilen kilonun büyük çoğunluğu 3–6 ay
+                içinde geri döner. Haftalık görüşmelerle desteklenen, kişiye
+                özel bir beslenme planı hem kalıcı kilo kaybı sağlar hem de
+                insülin direnci, PKOS, hamilelik ve sporcu beslenmesi gibi özel
+                durumlarda çok daha güvenli ilerler.
               </p>
               <p>
                 Eryaman dışından gelenler veya yoğun temposu olanlar için{" "}
@@ -443,63 +688,163 @@ export default function EryamanDiyetisyenPage() {
                 >
                   Ankara diyetisyen
                 </Link>
-                , özel olarak kilo verme odağında ise{" "}
+                , kilo verme odaklı ayrıntı için{" "}
                 <Link
                   href="/ankara-kilo-verme-diyetisyen"
                   className="text-primary font-medium hover:underline"
                 >
                   Ankara kilo verme diyetisyen
-                </Link>{" "}
-                sayfalarımızı inceleyebilirsiniz. Ofisimizin bulunduğu bina hakkında
-                daha fazla bilgi için{" "}
+                </Link>
+                , ofis binası hakkında{" "}
                 <Link
                   href="/atayildiz-plaza-diyetisyen"
                   className="text-primary font-medium hover:underline"
                 >
                   Atayıldız Plaza Diyetisyen
                 </Link>{" "}
-                sayfasını da ziyaret edebilirsiniz.
+                sayfalarımıza bakabilirsiniz.
               </p>
             </div>
           </div>
         </section>
 
-        {/* KİMLER İÇİN UYGUN */}
+        {/* ── ERYAMAN'DA EN ÇOK KARŞILAŞILAN BESLENME SORUNLARI ───────────── */}
         <section className="py-12 md:py-16 bg-white/60">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50 border border-pink-100 text-xs font-medium text-[var(--brand-dark)] mb-4">
+                <TrendingUp className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
+                Danışan profili — Eryaman kliniği
+              </div>
               <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
-                Kimler İçin Uygun?
+                Eryaman&apos;da En Çok Karşılaşılan Beslenme Sorunları
               </h2>
-              <p className="text-muted-foreground mt-2">
-                Farklı yaş, hedef ve yaşam tarzına uyumlu beslenme planları
+              <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+                Kliniğimize başvuran Eryaman ve çevresi danışanlarının hedef
+                dağılımı — her bir grupta kişiye özel, farklı bir yaklaşım
+                uygulanır.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {targetAudience.map((t) => (
-                <Card key={t.title} className="p-5 hover:shadow-md transition-shadow">
-                  <t.icon className="w-6 h-6 text-[var(--brand-primary)] mb-3" />
-                  <h3 className="font-semibold text-[var(--brand-dark)] mb-1.5">
-                    {t.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t.description}
-                  </p>
-                </Card>
+
+            <div className="space-y-4">
+              {danisanProfili.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5 text-[var(--brand-primary)]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <h3 className="font-semibold text-[var(--brand-dark)]">
+                          {item.title}
+                        </h3>
+                        <span className="text-sm font-bold text-[var(--brand-primary)] shrink-0 ml-2">
+                          %{item.pct}
+                        </span>
+                      </div>
+                      {/* progress bar */}
+                      <div className="w-full bg-gray-100 rounded-full h-2 mb-2">
+                        <div
+                          className={`${item.color} h-2 rounded-full`}
+                          style={{ width: `${item.pct}%` }}
+                        />
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.description}{" "}
+                        <Link
+                          href={item.link}
+                          className="text-primary hover:underline font-medium whitespace-nowrap"
+                        >
+                          {item.linkLabel} →
+                        </Link>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
+
+            <p className="text-center text-xs text-muted-foreground mt-6">
+              Yüzdeler, kliniğe başvuran danışanların genel hedef dağılımını
+              yansıtmakta olup her danışanın profili kendi özel koşullarına
+              göre değerlendirilir.
+            </p>
           </div>
         </section>
 
-        {/* SÜREÇ */}
+        {/* ── ERYAMAN MAHALLELERİ ──────────────────────────────────────────── */}
         <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
+                Eryaman&apos;ın Her Noktasına Hizmet
+              </h2>
+              <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+                Kliniğimiz Eryaman&apos;ın merkezinde yer aldığından tüm
+                etaplardan ve çevre semtlerden kolayca ulaşabilirsiniz.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2.5 justify-center">
+              {eryamanNeighborhoods.map((n) =>
+                n.slug ? (
+                  <Link
+                    key={n.name}
+                    href={`/${n.slug}`}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[var(--brand-primary)]/20 text-sm font-medium text-[var(--brand-dark)] hover:border-[var(--brand-primary)]/60 hover:bg-pink-50 transition-colors"
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
+                    {n.name}
+                  </Link>
+                ) : (
+                  <span
+                    key={n.name}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-gray-100 text-sm font-medium text-[var(--brand-dark)]"
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
+                    {n.name}
+                  </span>
+                )
+              )}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-5">
+              Yakın çevre ilçeler için{" "}
+              <Link
+                href="/etimesgut-diyetisyen"
+                className="text-primary hover:underline font-medium"
+              >
+                Etimesgut diyetisyen
+              </Link>
+              ,{" "}
+              <Link
+                href="/sincan-diyetisyen"
+                className="text-primary hover:underline font-medium"
+              >
+                Sincan diyetisyen
+              </Link>{" "}
+              ve{" "}
+              <Link
+                href="/batikent-diyetisyen"
+                className="text-primary hover:underline font-medium"
+              >
+                Batıkent diyetisyen
+              </Link>{" "}
+              sayfalarımızı inceleyebilirsiniz.
+            </p>
+          </div>
+        </section>
+
+        {/* ── SÜREÇ ────────────────────────────────────────────────────────── */}
+        <section className="py-12 md:py-16 bg-white/60">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
                 Süreç Nasıl İşliyor?
               </h2>
               <p className="text-muted-foreground mt-2">
-                Randevudan ilk sonuçlara — adım adım rehberlik
+                Ücretsiz ön görüşmeden ilk sonuçlara — adım adım rehberlik
               </p>
             </div>
             <div className="space-y-4">
@@ -525,7 +870,59 @@ export default function EryamanDiyetisyenPage() {
           </div>
         </section>
 
-        {/* ULAŞIM */}
+        {/* ── DANIŞAN DENEYİMLERİ ──────────────────────────────────────────── */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
+                Eryaman&apos;dan Danışan Deneyimleri
+              </h2>
+              <p className="text-muted-foreground mt-2">
+                Gerçek sonuçlar — Eryaman ve çevresinden danışanlarımız
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {testimonials.map((t) => (
+                <Card key={t.author} className="p-5 flex flex-col">
+                  <div className="flex gap-0.5 mb-3">
+                    {Array.from({ length: t.stars }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 italic">
+                    &ldquo;{t.text}&rdquo;
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <p className="font-semibold text-sm text-[var(--brand-dark)]">
+                      {t.author}
+                    </p>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+                      <MapPin className="w-3 h-3" />
+                      {t.area}
+                    </p>
+                  </div>
+                </Card>
+              ))}
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-6">
+              Daha fazla deneyim için{" "}
+              <a
+                href={GOOGLE_MAPS_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Google yorumlarımıza
+              </a>{" "}
+              bakabilirsiniz.
+            </p>
+          </div>
+        </section>
+
+        {/* ── ULAŞIM & GOOGLE MAPS ─────────────────────────────────────────── */}
         <section className="py-12 md:py-16 bg-white/60">
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-10">
@@ -533,19 +930,19 @@ export default function EryamanDiyetisyenPage() {
                 Ulaşım & Konum
               </h2>
               <p className="text-muted-foreground mt-2">
-                Klinik Optimum AVM&apos;nin tam karşısında, ulaşım kolay
+                Klinik Optimum AVM&apos;nin tam karşısında — araç, metro veya
+                otobüsle kolay ulaşım
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <Card className="p-5">
                 <Car className="w-5 h-5 text-[var(--brand-primary)] mb-2" />
                 <h3 className="font-semibold mb-1.5 text-[var(--brand-dark)]">
                   Araçla
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Optimum AVM otoparkı ve çevre yol kenarı park imkanı.
-                  Eryaman içinden 5 dk, Etimesgut Merkez 10 dk, Sincan ve
-                  Batıkent yönünden 15 dk.
+                  Optimum AVM otoparkı ve çevre yol parkı. 1. Etap 5 dk, 5.
+                  Etap 10 dk, Etimesgut 10 dk, Sincan / Batıkent 15 dk.
                 </p>
               </Card>
               <Card className="p-5">
@@ -554,28 +951,68 @@ export default function EryamanDiyetisyenPage() {
                   Toplu Taşıma
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Ankara M2 metro hattı Eryaman istasyonundan 5-7 dk yürüyüş.
-                  EGO otobüs hatları yoğun olarak Eryaman Merkez ve Optimum
-                  duraklarından geçer.
+                  M2 metro Eryaman istasyonundan 5–7 dk yürüyüş. EGO otobüsleri
+                  Eryaman Merkez ve Optimum duraklarından yoğun geçer.
                 </p>
               </Card>
               <Card className="p-5">
                 <MapPin className="w-5 h-5 text-[var(--brand-primary)] mb-2" />
                 <h3 className="font-semibold mb-1.5 text-[var(--brand-dark)]">
-                  Hizmet Verdiğimiz Semtler
+                  Hizmet Bölgeleri
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Eryaman, Etimesgut, Sincan, Batıkent, Yenimahalle ve
-                  çevresinde yüz yüze; Türkiye genelinde online danışmanlık.
+                  Eryaman (1–5. Etap, Yapracık, Göksu, Altay Mah.), Etimesgut,
+                  Sincan, Batıkent, Yenimahalle, Çankaya; Türkiye geneli online.
                 </p>
               </Card>
             </div>
+
+            {/* Google Maps Embed */}
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              {/*
+               * Görsel SEO önerisi:
+               * Sayfaya eklenmesi gereken görseller için alt text önerileri:
+               * 1. Klinik dış fotoğrafı:
+               *    alt="Eryaman diyetisyen Ezgi Evgin kliniği — Atayıldız Plaza, Optimum AVM karşısı"
+               * 2. Diyetisyen profil fotoğrafı:
+               *    alt="Diyetisyen Ezgi Evgin, Eryaman Atayıldız Plaza kliniğinde danışmanlık seansı"
+               * 3. Konsültasyon odası:
+               *    alt="Eryaman beslenme danışmanlığı — Atayıldız Plaza klinik görüşme odası"
+               * 4. Danışan portalı ekranı:
+               *    alt="Eryaman diyetisyen takip uygulaması — Ezgi Evgin danışan portalı"
+               * 5. Optimum AVM ve klinik konumu harita görseli:
+               *    alt="Eryaman diyetisyen klinik konumu — Optimum AVM karşısı, Altay Mahallesi haritası"
+               */}
+              <iframe
+                src="https://maps.google.com/maps?q=39.9669753,32.6358095&hl=tr&z=16&output=embed"
+                width="100%"
+                height="380"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Eryaman Diyetisyen Ezgi Evgin — Atayıldız Plaza, Optimum AVM karşısı konumu"
+                aria-label="Google Haritalar: Diyetisyen Ezgi Evgin, Eryaman Atayıldız Plaza konumu"
+              />
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-3">
+              Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8 —
+              Optimum AVM karşısı ·{" "}
+              <a
+                href={GOOGLE_MAPS_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                Google Haritalar&apos;da Aç
+              </a>
+            </p>
           </div>
         </section>
 
         <LocalProofSection areaName="Eryaman" whatsappLink={whatsappLink} />
 
-        {/* SSS */}
+        {/* ── SSS ──────────────────────────────────────────────────────────── */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
@@ -611,22 +1048,23 @@ export default function EryamanDiyetisyenPage() {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-3xl">
             <Card className="p-8 md:p-10 text-center bg-gradient-to-br from-[var(--brand-primary)]/5 to-[var(--brand-secondary)]/5 border-[var(--brand-primary)]/20">
               <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)] mb-3">
-                İlk Adımı Atın
+                Eryaman&apos;da Diyetisyen Randevusu Alın
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
                 Ücretsiz ön görüşmeyle başlayın — durumunuzu, hedeflerinizi ve
-                programın size uygunluğunu birlikte değerlendirelim.
+                programın size uygunluğunu birlikte değerlendirelim. Hiçbir
+                taahhüt olmadan soru sorabilirsiniz.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="h-12 px-8 min-h-[44px]">
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    WhatsApp&apos;tan Yaz
+                    Ücretsiz Ön Görüşme — WhatsApp
                   </Button>
                 </a>
                 <a href="tel:+905462650440">

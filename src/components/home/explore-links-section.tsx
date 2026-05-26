@@ -3,6 +3,11 @@ import { ArrowRight } from "lucide-react";
 
 const links = [
   {
+    href: "/eryaman-diyetisyen",
+    title: "Eryaman Diyetisyen",
+    desc: "Atayıldız Plaza (Optimum AVM karşısı) kliniğimizde yüz yüze kişiye özel beslenme danışmanlığı.",
+  },
+  {
     href: "/online-diyet-ankara",
     title: "Online Diyet Ankara",
     desc: "Ankara ve Türkiye genelinden uzaktan kişiye özel beslenme danışmanlığı ve haftalık takip.",
