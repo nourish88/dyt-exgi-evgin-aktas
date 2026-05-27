@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
     title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
-      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut'a hizmet. Ücretsiz ön görüşme.",
+      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Eryaman'da hizmet. Ücretsiz ön görüşme.",
     images: [
       {
         url: "https://ezgievginaktas.com/images/instagram/profile.jpg",
@@ -85,7 +85,7 @@ const pageJsonLd = {
       "@id": "https://ezgievginaktas.com/#localbusiness",
       name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
       description:
-        "Eryaman Atayıldız Plaza'da kişiye özel beslenme ve diyet danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut, Sincan, Batıkent ve Çankaya bölgelerine yüz yüze ve online hizmet.",
+        "Eryaman Atayıldız Plaza'da kişiye özel beslenme ve diyet danışmanlığı. Eryaman'da yüz yüze ve online hizmet.",
       url: "https://ezgievginaktas.com/eryaman-diyetisyen",
       telephone: "+90-546-265-04-40",
       image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
@@ -108,13 +108,8 @@ const pageJsonLd = {
       areaServed: [
         { "@type": "City", name: "Ankara" },
         { "@type": "Place", name: "Eryaman" },
-        { "@type": "Place", name: "Etimesgut" },
-        { "@type": "Place", name: "Sincan" },
-        { "@type": "Place", name: "Batıkent" },
-        { "@type": "Place", name: "Yenimahalle" },
-        { "@type": "Place", name: "Çankaya" },
-        { "@type": "Place", name: "Yapracık" },
-        { "@type": "Place", name: "Göksu" },
+        { "@type": "Place", name: "Etimesgut" }
+       
       ],
       openingHoursSpecification: [
         {
@@ -147,11 +142,7 @@ const pageJsonLd = {
       },
       areaServed: [
         { "@type": "Place", name: "Eryaman" },
-        { "@type": "Place", name: "Etimesgut" },
-        { "@type": "Place", name: "Sincan" },
-        { "@type": "Place", name: "Batıkent" },
-        { "@type": "Place", name: "Yenimahalle" },
-        { "@type": "Place", name: "Çankaya" },
+        { "@type": "Place", name: "Etimesgut" }
       ],
       availableChannel: [
         {
