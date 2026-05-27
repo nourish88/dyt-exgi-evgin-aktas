@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ImageUpload } from "./image-upload";
 import type { Recipe } from "@prisma/client";
 
 const CATEGORIES = ["Kahvaltı", "Öğle Yemeği", "Akşam Yemeği", "Ara Öğün", "Salata", "Çorba", "Ana Yemek", "Tatlı", "İçecek", "Atıştırmalık"];
@@ -15,8 +17,12 @@ type Props = {
 };
 
 export function RecipeForm({ recipe, action, submitLabel }: Props) {
+  const [imageUrl, setImageUrl] = useState(recipe?.image ?? "");
+
   return (
     <form action={action} className="space-y-5">
+      <input type="hidden" name="image" value={imageUrl} />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="md:col-span-2 space-y-1.5">
           <Label htmlFor="title">Tarif Adı *</Label>
@@ -83,13 +89,10 @@ export function RecipeForm({ recipe, action, submitLabel }: Props) {
         </div>
 
         <div className="md:col-span-2 space-y-1.5">
-          <Label htmlFor="image">Görsel URL</Label>
-          <Input
-            id="image"
-            name="image"
-            type="url"
-            defaultValue={recipe?.image ?? ""}
-            placeholder="https://... veya /images/tarifler/gorsel.jpg"
+          <ImageUpload
+            value={imageUrl}
+            onChange={setImageUrl}
+            label="Tarif Görseli"
           />
         </div>
 
