@@ -29,25 +29,21 @@ import {
 } from "@/lib/external-links";
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
-// title: 55 karakter — "Dyt." ve "Atayıldız Plaza" içeriyor
+// title: 36 karakter — Google sonuçlarında kesilmemesi için template suffix'i kullanılmaz
 // description: 152 karakter — CTA ve mahalle bilgisi içeriyor
 export const metadata: Metadata = {
-  title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
+  title: {
+    absolute: "Eryaman Diyetisyen | Dyt. Ezgi Evgin",
+  },
   description:
     "Eryaman'da diyetisyen: Dyt. Ezgi Evgin, Atayıldız Plaza (Optimum AVM karşısı). Kilo, insülin direnci, hamilelik, çocuk beslenmesi. Ücretsiz ön görüşme — 0546 265 04 40.",
   keywords: [
     "eryaman diyetisyen",
     "eryaman beslenme danışmanı",
     "eryaman kilo verme",
-    "eryaman online diyetisyen",
+    "eryaman online diyet",
     "etimesgut diyetisyen",
-    "altay mahallesi diyetisyen",
     "atayıldız plaza diyetisyen",
-    "optimum avm diyetisyen",
-    "eryaman insulin direnci diyetisyen",
-    "eryaman hamile diyetisyeni",
-    "eryaman çocuk diyetisyeni",
-    "eryaman beslenme uzmanı",
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com/eryaman-diyetisyen",
@@ -57,7 +53,7 @@ export const metadata: Metadata = {
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
     title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
-      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Eryaman'da hizmet. Ücretsiz ön görüşme.",
+      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut'a hizmet. Ücretsiz ön görüşme.",
     images: [
       {
         url: "https://ezgievginaktas.com/images/instagram/profile.jpg",
@@ -81,56 +77,6 @@ const pageJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "MedicalBusiness"],
-      "@id": "https://ezgievginaktas.com/#localbusiness",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      description:
-        "Eryaman Atayıldız Plaza'da kişiye özel beslenme ve diyet danışmanlığı. Eryaman'da yüz yüze ve online hizmet.",
-      url: "https://ezgievginaktas.com/eryaman-diyetisyen",
-      telephone: "+90-546-265-04-40",
-      image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
-      logo: "https://ezgievginaktas.com/images/instagram/profile.jpg",
-      sameAs: [INSTAGRAM_PROFILE_URL, GOOGLE_MAPS_PROFILE_URL],
-      hasMap: GOOGLE_MAPS_PROFILE_URL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
-        addressLocality: "Etimesgut",
-        addressRegion: "Ankara",
-        postalCode: "06820",
-        addressCountry: "TR",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 39.9669753,
-        longitude: 32.6358095,
-      },
-      areaServed: [
-        { "@type": "City", name: "Ankara" },
-        { "@type": "Place", name: "Eryaman" },
-        { "@type": "Place", name: "Etimesgut" }
-       
-      ],
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "09:00",
-          closes: "19:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Saturday"],
-          opens: "09:00",
-          closes: "16:00",
-        },
-      ],
-      priceRange: "₺₺",
-      medicalSpecialty: "Nutrition",
-      currenciesAccepted: "TRY",
-      paymentAccepted: "Cash, Credit Card, Bank Transfer",
-    },
-    {
       "@type": "Service",
       "@id": "https://ezgievginaktas.com/#nutrition-service",
       name: "Eryaman Kişiye Özel Beslenme Danışmanlığı",
@@ -138,11 +84,15 @@ const pageJsonLd = {
       description:
         "Kilo yönetimi, insülin direnci, PCOS, hamilelik ve emzirme, çocuk ve sporcu beslenmesi alanlarında kişiye özel beslenme planlaması ve haftalık takip.",
       provider: {
-        "@id": "https://ezgievginaktas.com/#localbusiness",
+        "@id": "https://ezgievginaktas.com",
       },
       areaServed: [
         { "@type": "Place", name: "Eryaman" },
-        { "@type": "Place", name: "Etimesgut" }
+        { "@type": "Place", name: "Etimesgut" },
+        { "@type": "Place", name: "Sincan" },
+        { "@type": "Place", name: "Batıkent" },
+        { "@type": "Place", name: "Yenimahalle" },
+        { "@type": "Place", name: "Çankaya" },
       ],
       availableChannel: [
         {
@@ -187,7 +137,7 @@ const pageJsonLd = {
         department: "Beslenme ve Diyetetik",
       },
       worksFor: {
-        "@id": "https://ezgievginaktas.com/#localbusiness",
+        "@id": "https://ezgievginaktas.com",
       },
       sameAs: [INSTAGRAM_PROFILE_URL],
     },

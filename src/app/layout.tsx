@@ -27,17 +27,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ezgievginaktas.com"),
   title: {
     default:
-      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ezgi Evgin | Ankara Eryaman",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ankara",
     template: "%s | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   },
   description:
-    "Ankara ve Eryaman Ezgi Evgin Beslenme ve Diyet Danışmanlığı: online diyet Ankara, yüz yüze beslenme danışmanlığı Etimesgut–Eryaman, kişiye özel program ve uygulama ile takip. Ezgi Evgin (Dyt Ezgi Evgin) ile sürdürülebilir kilo yönetimi.",
+    "Ankara Ezgi Evgin Beslenme ve Diyet Danışmanlığı: online diyet Ankara, yüz yüze beslenme danışmanlığı, kişiye özel program ve uygulama ile takip. Dyt Ezgi Evgin ile sürdürülebilir kilo yönetimi.",
   keywords: [
     "ankara diyetisyen",
-    "eryaman diyetisyen",
     "online diyet ankara",
     "dyt ezgi evgin",
-    "etimesgut diyetisyen",
     "kişiye özel diyet programı",
   ],
   authors: [{ name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı" }],
@@ -66,14 +64,14 @@ export const metadata: Metadata = {
     siteName: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Online Beslenme Danışmanlığı Ankara",
     description:
-      "Ankara Eryaman ve Etimesgut'ta online beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
+      "Ankara'da online ve yüz yüze beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
     // images otomatik olarak app/opengraph-image.tsx'den 1200x630 üretiliyor
   },
   twitter: {
     card: "summary_large_image",
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
-      "Eryaman ve Etimesgut odaklı online/yüz yüze beslenme danışmanlığı",
+      "Ankara odaklı online ve yüz yüze beslenme danışmanlığı",
     // images otomatik olarak app/twitter-image.tsx veya opengraph-image.tsx'den
   },
   robots: {
