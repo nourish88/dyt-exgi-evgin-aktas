@@ -96,7 +96,7 @@ const faqJsonLd = {
       name: "Online diyette öğün takibi nasıl yapılıyor?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Danışan portalından öğün paylaşımı, hatırlatmalar ve gelişim grafikleri kullanılır; diyetisyeniniz geri bildirim ve revizyon sürecini buradan yönetir.",
+        text: "Danışan portalından öğün paylaşımı, hatırlatmalar ve gelişim grafikleri kullanılır; diyetisyeniniz geri bildirim ve revizyon sürecini buradan yönetir. Ayrıca süreç boyunca WhatsApp üzerinden de diyetisyeninizle birebir etkileşim halinde olursunuz.",
       },
     },
   ],
