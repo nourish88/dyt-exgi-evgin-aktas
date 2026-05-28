@@ -85,25 +85,6 @@ export function ProgramsSection() {
 
         <OnlineSupportFeatures />
 
-        <div className="mt-6 rounded-2xl border border-primary/20 bg-gradient-to-r from-cyan-50 to-pink-50 p-5 md:p-6">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <p className="text-base font-semibold text-[var(--brand-dark)]">
-                Danışan portalı — giriş ve günlük takip
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Telefon numaranızla giriş yapın; diyet planları, geçmiş kayıtlar
-                ve mesajlar tek ekranda. Yeni sekmede güvenli giriş.
-              </p>
-            </div>
-            <a href={clientAppUrl} target="_blank" rel="noopener noreferrer">
-              <Button className="h-11 px-5 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] hover:opacity-90 text-white">
-                Danışan portalına git
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Button>
-            </a>
-          </div>
-        </div>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a
