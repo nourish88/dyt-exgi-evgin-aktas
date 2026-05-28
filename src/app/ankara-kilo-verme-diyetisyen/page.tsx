@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MessageCircle, TrendingDown, Salad, Activity } from "lucide-react";
+import {
+  TrendingDown,
+  Salad,
+  Activity,
+  Target,
+  Heart,
+  Utensils,
+} from "lucide-react";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
+import {
+  SpecialtyPage,
+  buildLocalBusinessJsonLd,
+  buildFaqJsonLd,
+  type SpecialtyFaq,
+  type SpecialtyParagraph,
+} from "@/components/specialty/specialty-page";
+
+const PAGE_URL = "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen";
 
 export const metadata: Metadata = {
   title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",
@@ -16,12 +30,11 @@ export const metadata: Metadata = {
     "kilo yönetimi ankara",
     "online diyetisyen ankara",
   ],
-  alternates: {
-    canonical: "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen",
-  },
+  alternates: { canonical: PAGE_URL },
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://ezgievginaktas.com/ankara-kilo-verme-diyetisyen",
+    url: PAGE_URL,
     title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",
     description:
       "Ankara'da kilo vermek için yasaksız ve kişiye özel beslenme planı. Haftalık takip ve uzman destek.",
@@ -39,12 +52,58 @@ const whatsappLink = buildWhatsAppApiUrl(
   "ankara-kilo-verme-diyetisyen"
 );
 
-const features = [
+const faqs: SpecialtyFaq[] = [
+  {
+    q: "Aç kalacak mıyım?",
+    a: "Kesinlikle hayır. Kilo vermek aç kalmak değil, doğru besinleri doğru porsiyonlarda ve zamanlarda tüketmektir. Planınız, tokluk hissinizi maksimize edecek lif ve protein dengesiyle oluşturulur.",
+  },
+  {
+    q: "Yasaklı yiyecekler olacak mı?",
+    a: "Yasaklar yerine 'denge' prensibini benimsiyoruz. Sevdiğiniz tatlıları veya yemekleri tamamen hayatınızdan çıkarmak yerine, bunları günlük kalori ve makro bütçenize nasıl entegre edebileceğinizi öğreniyoruz.",
+  },
+  {
+    q: "Listeler ne sıklıkla güncellenir?",
+    a: "Beslenme planınız, haftalık kontrollerimizdeki ölçüm sonuçlarınıza, sosyal takviminize ve geri bildirimlerinize göre her hafta yenilenir. Böylece metabolizmanızın duraklamasını (plato) engelleriz.",
+  },
+  {
+    q: "Sadece liste mi veriyorsunuz?",
+    a: "Hayır. Amacımız sadece bir kağıt parçası vermek değil, size beslenme eğitimi vermektir. Porsiyon kontrolü, etiket okuma ve duygusal yeme ile başa çıkma stratejileri sürecimizin temel bir parçasıdır.",
+  },
+  {
+    q: "Online veya Yüz Yüze görüşme fark eder mi?",
+    a: "Eryaman ofisimizde yüz yüze görüşmelerde vücut analizi cihazı (BİA) kullanıyoruz. Online takiplerde ise evdeki tartınız ve mezura ölçümlerinizle ilerliyoruz. Her iki yöntemde de uygulanan diyet stratejisi ve elde edilen başarı oranı aynıdır.",
+  },
+];
+
+const body: SpecialtyParagraph[] = [
+  { kind: "h2", text: "Neden genel diyetler işe yaramaz?" },
+  {
+    kind: "p",
+    text: "Kilo vermek çoğu zaman 'ne yememem lazım' sorusuyla başlar, oysa doğru soru 'nasıl bir düzen kurabilirim' olmalı. İnternetteki standart listeler kısa sürede hızlı kilo vermenizi sağlayabilir, ancak bu kilolar normal yeme düzeninize döndüğünüzde fazlasıyla geri alınır (Yo-yo etkisi).",
+  },
+  {
+    kind: "p",
+    text: "Başkent Üniversitesi Beslenme ve Diyetetik mezunu Ezgi Evgin Beslenme ve Diyet Danışmanlığı olarak, kilonuzu etkileyen değişkenleri (uyku düzeniniz, iş temponuz, stres kaynaklarınız, metabolik geçmişiniz) ilk görüşmede analiz eder ve planı doğrudan sizin yaşamınıza göre şekillendiririz.",
+  },
+  { kind: "h2", text: "Kalıcı Kilo Verme Kimler İçin Uygundur?" },
+  {
+    kind: "ul",
+    items: [
+      "Sürekli diyet yapıp bırakma döngüsünden (yo-yo diyeti) yorulanlar",
+      "Kendi yaşam tarzına ve çalışma saatlerine uygun bir beslenme düzeni arayanlar",
+      "Yasaklardan sıkılan, sevdiği yemekleri yiyerek kilo vermek isteyenler",
+      "Kilo verirken kas kaybı yaşamak istemeyen, enerjisini korumak isteyenler",
+      "Sadece zayıflamak değil, sağlıklı beslenmeyi yaşam tarzı haline getirmek isteyenler",
+    ],
+  },
+];
+
+const principles = [
   {
     icon: TrendingDown,
     title: "Hızlı Değil, Kalıcı Sonuç",
     description:
-      "Şok diyetler yerine metabolizmanıza ve yaşam tempounuza uygun, adım adım ilerleyen bir süreç.",
+      "Şok diyetler yerine metabolizmanıza ve yaşam temponuza uygun, adım adım ilerleyen kalıcı bir süreç.",
   },
   {
     icon: Salad,
@@ -53,102 +112,104 @@ const features = [
       "Sevdiğiniz besinleri tamamen çıkarmak yerine porsiyon ve zamanlama dengesine dayalı, uygulanabilir bir yaklaşım.",
   },
   {
-    icon: Activity,
-    title: "Haftalık Ölçüm ve Revizyon",
+    icon: Target,
+    title: "Bireysel Hedefleme",
     description:
-      "Her hafta birlikte değerlendirme; hedefler güncellenur, plan ihtiyaca göre şekillendirilir.",
+      "Genelgeçer kalori hedefleri değil, sizin yaşınıza, boyunuza, cinsiyetinize ve aktivite düzeyinize özel makro dağılımı.",
+  },
+  {
+    icon: Activity,
+    title: "Dinamik Revizyon",
+    description:
+      "Her hafta değişen hayat şartlarınıza (tatil, kutlama, yoğun iş haftası) göre esneyebilen dinamik planlar.",
+  },
+  {
+    icon: Heart,
+    title: "Psikolojik Destek",
+    description:
+      "Duygusal yeme krizleri, stres kaynaklı atıştırmalar ve motivasyon kayıplarına karşı yanınızda olan uzman rehberliği.",
+  },
+  {
+    icon: Utensils,
+    title: "Besin Eğitimi",
+    description:
+      "Neyi neden yediğinizi anlama, porsiyon kontrolü pratiği ve uzun vadede kendi diyetisyeniniz olma becerisi.",
   },
 ];
 
+const process: SpecialtyParagraph[] = [
+  { kind: "h2", text: "Süreç nasıl ilerliyor?" },
+  {
+    kind: "strongP",
+    lead: "İlk Analiz Görüşmesi:",
+    text: "Kan tahlilleriniz, yaşam tarzınız, sağlık geçmişiniz ve beslenme alışkanlıklarınız detaylı olarak incelenir. Size özel hedefler belirlenir.",
+  },
+  {
+    kind: "strongP",
+    lead: "Kişiselleştirilmiş Plan:",
+    text: "İlk görüşme sonrasında, günlük rutininize %100 uyumlu, aç bırakmayan ve yasakların olmadığı ilk beslenme planınız oluşturulur.",
+  },
+  {
+    kind: "strongP",
+    lead: "Haftalık Takip:",
+    text: "Her hafta düzenli ölçüm (yüz yüze veya online) ve değerlendirme yapılır. İhtiyaçlara ve sonuçlara göre listeleriniz tamamen güncellenir.",
+  },
+  {
+    kind: "strongP",
+    lead: "Koruma Dönemi:",
+    text: "Hedef kiloya ulaşıldığında, elde edilen sonucu ömür boyu korumanızı sağlayacak Kilo Koruma Programı'na geçilir.",
+  },
+];
+
+const localBusinessJsonLd = buildLocalBusinessJsonLd({
+  name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Kilo Verme",
+  description:
+    "Ankara'da sürdürülebilir, yasaksız ve kişiye özel kilo verme danışmanlığı.",
+  url: PAGE_URL,
+});
+
+const faqJsonLd = buildFaqJsonLd(faqs);
+
 export default function AnkaraKiloVermeDiyetisyenPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <article>
-        <section className="py-20 bg-gradient-to-br from-pink-50 via-white to-cyan-50">
-          <div className="container mx-auto px-4 max-w-5xl text-center space-y-5">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[var(--brand-dark)]">
-              Ankara&apos;da Kilo Vermek:{" "}
-              <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
-                Sürdürülebilir ve Kişiye Özel
-              </span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Kilo vermek çoğu zaman &ldquo;ne yememem lazım&rdquo; sorusuyla
-              başlar, oysa doğru soru &ldquo;nasıl bir düzen kurabilirim&rdquo;
-              olmalı. Ankara&apos;da kilo verme diyetisyeni olarak yaklaşımımız
-              tam da bu: yasak listesi değil, günlük hayatınıza uyan
-              sürdürülebilir bir beslenme planı. Haftalık görüşmeler ve danışan
-              portalıyla süreci birlikte yönetiyoruz.
-            </p>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="h-12 px-8 min-h-[44px]">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp&apos;tan Randevu Al
-              </Button>
-            </a>
-          </div>
-        </section>
-
-        <section className="py-14">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {features.map((f) => (
-                <Card key={f.title} className="p-6 hover:shadow-lg transition-shadow">
-                  <f.icon className="w-6 h-6 text-[var(--brand-primary)] mb-3" />
-                  <h2 className="font-semibold mb-2">{f.title}</h2>
-                  <p className="text-sm text-muted-foreground">{f.description}</p>
-                </Card>
-              ))}
-            </div>
-
-            <div className="mt-14 max-w-prose mx-auto space-y-5 text-sm md:text-base text-muted-foreground leading-relaxed">
-              <h2 className="text-2xl font-bold text-[var(--brand-dark)]">
-                Profesyonel destek neden fark yaratır?
-              </h2>
-              <p>
-                İnternetteki genel listeler herkese aynı şeyi söyler; oysa
-                kilonuzu etkileyen faktörler — uyku düzeniniz, iş temponuz, stres
-                kaynaklarınız, metabolik geçmişiniz — size özeldir. Başkent
-                Üniversitesi Beslenme ve Diyetetik mezunu Ezgi Evgin Beslenme ve Diyet Danışmanlığı, bu
-                değişkenleri ilk görüşmede analiz eder ve planı doğrudan sizin
-                yaşamınıza göre şekillendirir. 2016&apos;dan bu yana bin&apos;den
-                fazla danışan bu yaklaşımla kalıcı sonuç elde etmiştir.
-              </p>
-              <p>
-                Yüz yüze görüşmeler{" "}
-                <Link
-                  href="/eryaman-diyetisyen"
-                  className="text-primary font-medium hover:underline"
-                >
-                  Eryaman–Etimesgut ofisinde
-                </Link>
-                ; şehrin her yerinden veya Ankara dışından{" "}
-                <Link
-                  href="/online-diyet-ankara"
-                  className="text-primary font-medium hover:underline"
-                >
-                  online diyet
-                </Link>{" "}
-                ile aynı kalitede takip yapılır. Genel hizmet profili için{" "}
-                <Link
-                  href="/ankara-diyetisyen"
-                  className="text-primary font-medium hover:underline"
-                >
-                  Ankara diyetisyen
-                </Link>{" "}
-                ve uzman hakkında detay için{" "}
-                <Link
-                  href="/ezgi-evgin-diyetisyen"
-                  className="text-primary font-medium hover:underline"
-                >
-                  Ezgi Evgin Beslenme ve Diyet Danışmanlığı
-                </Link>{" "}
-                sayfalarına göz atabilirsiniz.
-              </p>
-            </div>
-          </div>
-        </section>
-      </article>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
+          { name: "Ankara Diyetisyen", item: "https://ezgievginaktas.com/ankara-diyetisyen" },
+          { name: "Kilo Verme", item: PAGE_URL },
+        ]}
+      />
+      <SpecialtyPage
+        heroBadge="Yasaksız ve Sürdürülebilir Sonuç"
+        heroBadgeIcon={TrendingDown}
+        titleLead="Ankara'da Kilo Vermek:"
+        titleHighlight=" Sürdürülebilir ve Kişiye Özel"
+        intro="Kilo vermek çoğu zaman 'ne yememem lazım' sorusuyla başlar, oysa doğru soru 'nasıl bir düzen kurabilirim' olmalı. Ankara'da kilo verme diyetisyeni olarak yaklaşımımız tam da bu: yasak listesi değil, günlük hayatınıza uyan sürdürülebilir bir beslenme planı. Haftalık görüşmeler ve danışan portalıyla süreci birlikte yönetiyoruz."
+        whatsappLink={whatsappLink}
+        body={body}
+        principlesIntro="Başarıya ulaşmanın sırrı şok diyetlerde değil, bedeninize duyduğunuz saygıda ve uygulanan yöntemin sürdürülebilirliğindedir."
+        principles={principles}
+        process={process}
+        faqs={faqs}
+        ctaTitle="Diyet Döngüsünü Kırın, Kalıcı Sonuca Ulaşın"
+        ctaText="WhatsApp'tan ulaşın, yaşam tarzınıza en uygun planı birlikte oluşturalım."
+        related={[
+          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
+          { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
+          { href: "/programlar", label: "Programlar" },
+        ]}
+      />
+    </>
   );
 }
