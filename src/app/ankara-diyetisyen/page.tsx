@@ -114,11 +114,11 @@ export default function AnkaraDiyetisyenPage() {
               <Image
                 src="/images/instagram/posts/clinic-01.jpeg"
                 alt="Ankara diyetisyen Ezgi Evgin Eryaman Etimesgut kliniği"
-                width={1200}
-                height={800}
+                width={1920}
+                height={2560}
                 priority
                 className="w-auto h-auto max-w-full max-h-[350px] sm:max-h-[450px] md:max-h-[550px] object-contain"
-                sizes="(max-width: 768px) 100vw, 800px"
+                sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>
             <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed text-justify md:text-center">
