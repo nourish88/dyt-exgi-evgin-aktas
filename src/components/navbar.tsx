@@ -27,9 +27,6 @@ const districtItems: NavLeaf[] = [
   { href: "/eryaman-diyetisyen", label: "Eryaman" },
   { href: "/etimesgut-diyetisyen", label: "Etimesgut" },
   { href: "/sincan-diyetisyen", label: "Sincan" },
-  { href: "/cankaya-diyetisyen", label: "Çankaya" },
-  { href: "/yenimahalle-diyetisyen", label: "Yenimahalle" },
-  { href: "/batikent-diyetisyen", label: "Batıkent" },
 ];
 
 const toolsItems: NavLeaf[] = [

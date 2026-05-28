@@ -298,27 +298,6 @@ export default function OnlineDiyetAnkaraPage() {
                 className="text-primary hover:underline"
               >
                 Sincan
-              </Link>
-              ,{" "}
-              <Link
-                href="/yenimahalle-diyetisyen"
-                className="text-primary hover:underline"
-              >
-                Yenimahalle
-              </Link>
-              ,{" "}
-              <Link
-                href="/batikent-diyetisyen"
-                className="text-primary hover:underline"
-              >
-                Batıkent
-              </Link>{" "}
-              ve{" "}
-              <Link
-                href="/cankaya-diyetisyen"
-                className="text-primary hover:underline"
-              >
-                Çankaya
               </Link>{" "}
               bilgi sayfaları açıktır.
             </p>

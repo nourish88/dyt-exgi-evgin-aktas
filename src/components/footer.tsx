@@ -192,30 +192,7 @@ export function Footer() {
                   Sincan diyetisyen
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/yenimahalle-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Yenimahalle diyetisyen
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/batikent-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Batıkent diyetisyen
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cankaya-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Çankaya diyetisyen
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/ankara-kilo-verme-diyetisyen"

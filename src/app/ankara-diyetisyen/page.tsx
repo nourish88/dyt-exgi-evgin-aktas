@@ -223,24 +223,6 @@ export default function AnkaraDiyetisyenPage() {
                 >
                   Sincan diyetisyen
                 </Link>
-                <Link
-                  href="/yenimahalle-diyetisyen"
-                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Yenimahalle diyetisyen
-                </Link>
-                <Link
-                  href="/batikent-diyetisyen"
-                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Batıkent diyetisyen
-                </Link>
-                <Link
-                  href="/cankaya-diyetisyen"
-                  className="px-3 py-2 rounded-lg bg-pink-50/60 hover:bg-pink-100/80 text-[var(--brand-dark)] hover:text-[var(--brand-primary)] transition-colors"
-                >
-                  Çankaya diyetisyen
-                </Link>
               </div>
             </div>
           </div>

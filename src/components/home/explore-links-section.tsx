@@ -78,27 +78,6 @@ export function ExploreLinksSection() {
               className="text-[var(--brand-primary)] underline underline-offset-4"
             >
               Sincan diyetisyen
-            </Link>
-            ,{" "}
-            <Link
-              href="/yenimahalle-diyetisyen"
-              className="text-[var(--brand-primary)] underline underline-offset-4"
-            >
-              Yenimahalle diyetisyen
-            </Link>
-            ,{" "}
-            <Link
-              href="/batikent-diyetisyen"
-              className="text-[var(--brand-primary)] underline underline-offset-4"
-            >
-              Batıkent diyetisyen
-            </Link>{" "}
-            ve{" "}
-            <Link
-              href="/cankaya-diyetisyen"
-              className="text-[var(--brand-primary)] underline underline-offset-4"
-            >
-              Çankaya diyetisyen
             </Link>{" "}
             sayfalarına göz atabilirsiniz.
           </p>

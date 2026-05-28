@@ -88,11 +88,6 @@ const pageJsonLd = {
       },
       areaServed: [
         { "@type": "Place", name: "Eryaman" },
-        { "@type": "Place", name: "Etimesgut" },
-        { "@type": "Place", name: "Sincan" },
-        { "@type": "Place", name: "Batıkent" },
-        { "@type": "Place", name: "Yenimahalle" },
-        { "@type": "Place", name: "Çankaya" },
       ],
       availableChannel: [
         {
@@ -324,10 +319,6 @@ const eryamanNeighborhoods = [
   { name: "Mustafa Kemal Mah.", slug: null },
   { name: "Altay Mahallesi", slug: null },
   { name: "Mevlana Bulvarı", slug: null },
-  { name: "Etimesgut", slug: "etimesgut-diyetisyen" },
-  { name: "Sincan", slug: "sincan-diyetisyen" },
-  { name: "Batıkent", slug: "batikent-diyetisyen" },
-  { name: "Yenimahalle", slug: "yenimahalle-diyetisyen" },
 ];
 
 
@@ -724,30 +715,6 @@ export default function EryamanDiyetisyenPage() {
                 )
               )}
             </div>
-            <p className="text-center text-sm text-muted-foreground mt-5">
-              Yakın çevre ilçeler için{" "}
-              <Link
-                href="/etimesgut-diyetisyen"
-                className="text-primary hover:underline font-medium"
-              >
-                Etimesgut diyetisyen
-              </Link>
-              ,{" "}
-              <Link
-                href="/sincan-diyetisyen"
-                className="text-primary hover:underline font-medium"
-              >
-                Sincan diyetisyen
-              </Link>{" "}
-              ve{" "}
-              <Link
-                href="/batikent-diyetisyen"
-                className="text-primary hover:underline font-medium"
-              >
-                Batıkent diyetisyen
-              </Link>{" "}
-              sayfalarımızı inceleyebilirsiniz.
-            </p>
           </div>
         </section>
 
