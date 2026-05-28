@@ -57,10 +57,19 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
-/** Hakkımda sayfası küçük çerçeveli galeri — klinik + ofis görselleri */
 export const aboutPageSliderImages = Array.from(
   new Set([
     ...heroSlides.map((s) => s.backgroundImage).filter(Boolean) as string[],
+    "/images/clinic/tgrt-haber-ornek-menu.jpg",
+    "/images/clinic/tgrt-haber-ornek-ogun.jpg",
+    "/images/clinic/basina-demec-verirken.jpg",
+    "/images/clinic/ilkokul-cocuklari-beslenme-egitimi.jpg",
+    "/images/clinic/okullarda-egitim.jpg",
+    "/images/clinic/kamu-kurumlari-dengeli-beslenme-egitimi.jpg",
+    "/images/clinic/saglik-beslenme-egitimi.jpg",
+    "/images/clinic/egitim-verirken.jpg",
+    "/images/clinic/kamu-kurumlari-egitimi.jpg",
+    "/images/clinic/egitimde.jpg",
     "/images/instagram/posts/post-09.jpeg",
     "/images/instagram/posts/post-07.jpeg",
     "/images/instagram/posts/post-04.jpeg",
