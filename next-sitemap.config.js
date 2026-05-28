@@ -60,7 +60,6 @@ module.exports = {
     "/tarifler/[slug]",
     "/batikent-diyetisyen",
     "/cankaya-diyetisyen",
-    "/sincan-diyetisyen",
     "/yenimahalle-diyetisyen",
   ],
   transform: async (config, path) => {
