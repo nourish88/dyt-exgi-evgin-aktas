@@ -32,24 +32,34 @@ export default function MobileAppPage() {
   const featureCards = useMemo(
     () => [
       {
-        title: "Anlık Bildirimler",
-        description: "Öğün zamanı, su hatırlatmaları ve süreç bildirimleri tek ekranda.",
+        title: "Öğün Öncesi Bildirimler",
+        description: "Unutkanlığa son. Her öğün ve ara öğün öncesi telefonunuza gelen hatırlatıcılarla diyetinize tam uyum sağlayın.",
         icon: BellRing,
       },
       {
-        title: "Diyetisyen ile Hızlı İletişim",
-        description: "Sorularınızı bekletmeden iletin, günlük süreci aktif yönetin.",
+        title: "Su İçme Hatırlatıcıları",
+        description: "Günlük su hedefinizi belirleyin, uygulamanız size düzenli aralıklarla su içmeyi hatırlatsın.",
+        icon: Clock3,
+      },
+      {
+        title: "Diyetisyenle Anlık Mesajlaşma",
+        description: "Aklınıza takılan soruları, restoran menülerini veya porsiyonlarınızı doğrudan diyetisyeninize yazın.",
         icon: MessageCircle,
       },
       {
         title: "Grafiksel Gelişim Takibi",
-        description: "Kilo ve ölçü değişimlerinizi haftalık grafiklerle net görün.",
+        description: "Kilo, yağ oranı ve bel/basen ölçümlerinizi haftalık grafiklerle net görün, motivasyonunuzu artırın.",
         icon: LineChart,
       },
       {
-        title: "Telefonla Hızlı Giriş",
-        description: "Danışan girişi telefon numarasıyla pratik ve güvenli şekilde ilerler.",
-        icon: Clock3,
+        title: "Tahlil ve Ölçüm Yükleme",
+        description: "Kan tahlillerinizi ve evdeki tartı/mezura sonuçlarınızı kolayca sisteme yükleyin, dosya kalabalığından kurtulun.",
+        icon: Smartphone,
+      },
+      {
+        title: "Besin Değişim Listeleri",
+        description: "Evde olan malzemeye göre listeyi bozmadan neyi neyle değiştirebileceğinizi uygulama üzerinden anında görün.",
+        icon: CheckCircle2,
       },
     ],
     []
@@ -191,19 +201,31 @@ export default function MobileAppPage() {
       </section>
 
       <section className="container mx-auto px-4 pb-16 md:pb-24">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featureCards.map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl border border-black/5 bg-white/80 backdrop-blur p-5 shadow-sm"
+              className="rounded-2xl border border-black/5 bg-white/80 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/15 flex items-center justify-center text-[var(--brand-primary)] mb-4">
-                <item.icon className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--brand-secondary)]/15 flex items-center justify-center text-[var(--brand-primary)] mb-5">
+                <item.icon className="w-6 h-6" />
               </div>
-              <h2 className="text-lg font-semibold text-[var(--brand-dark)]">{item.title}</h2>
-              <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+              <h2 className="text-lg font-bold text-[var(--brand-dark)]">{item.title}</h2>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{item.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto mt-20 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)] mb-4">
+            Diyet Takip Uygulaması ile Sürdürülebilir Başarı
+          </h2>
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+            Diyet sürecinde motivasyonu korumanın en zor yanı takiptir. Kağıt listelerin kaybolduğu, WhatsApp mesajlarının karıştığı dönemi geride bırakıyoruz. <strong>Ezgi Evgin Danışan Portalı (PWA)</strong>, telefonunuza herhangi bir uygulama mağazasından indirme gerektirmeden, doğrudan tarayıcınız üzerinden &quot;Ana Ekrana Ekle&quot; seçeneğiyle saniyeler içinde kurulur.
+          </p>
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+            İster Ankara Eryaman ofisimizde yüz yüze danışanımız olun, ister Türkiye&apos;nin bir ucundan <strong>online diyet</strong> alın; öğün hatırlatmalarından grafiksel kilo takibine kadar sürecinizin tüm kontrolü artık cebinizde.
+          </p>
         </div>
       </section>
     </div>
