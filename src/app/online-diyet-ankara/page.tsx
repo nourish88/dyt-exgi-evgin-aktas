@@ -4,6 +4,12 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, CheckCircle2, Smartphone } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
@@ -334,6 +340,24 @@ export default function OnlineDiyetAnkaraPage() {
               </Link>{" "}
               kullanabilirsiniz.
             </p>
+          </div>
+
+          <div className="container mx-auto px-4 max-w-3xl mt-16">
+            <h2 className="text-2xl font-bold text-[var(--brand-dark)] mb-6 text-center">
+              Sıkça Sorulan Sorular
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqJsonLd.mainEntity.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold text-[var(--brand-dark)]">
+                    {faq.name}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed text-base">
+                    {faq.acceptedAnswer.text}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
           <div className="container mx-auto px-4 max-w-3xl mt-14 text-center space-y-3">
