@@ -21,6 +21,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { LocalProofSection } from "@/components/local-seo/local-proof-section";
+import { ClinicGallery } from "@/components/local-seo/clinic-gallery";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import {
@@ -790,6 +791,10 @@ export default function EryamanDiyetisyenPage() {
               </a>
             </p>
           </div>
+        </section>
+
+        <section className="container mx-auto px-4 max-w-5xl">
+          <ClinicGallery />
         </section>
 
         <LocalProofSection areaName="Eryaman" whatsappLink={whatsappLink} />

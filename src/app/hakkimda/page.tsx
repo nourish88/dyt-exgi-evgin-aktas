@@ -66,12 +66,33 @@ export default function AboutPage() {
 
   const expertise = [
     "Fonksiyonel Tıp Diyetisyeni",
-    "Kilo Yönetimi ve Obezite Tedavisi",
+    "Şişmanlık (Obezite)",
+    "Diyabet (Şeker Hastalığı)",
+    "Kilo Problemi",
+    "Aşırı Kilo Alımı",
+    "Hiperlipidemi",
+    "Kilo Alma Diyetleri",
+    "Çocuk ve Ergenlerde Kilo Kontrolü",
+    "Tip 1 Diyabet",
+    "Yeni Doğan Metabolik Hastalık",
+    "Sağlıklı Beslenme",
+    "Troid Hastalıklarında Beslenme",
+    "Anoreksiya ve Bulimia Hastalarında Beslenme",
+    "Kalp Damar Hastalıkları ve Beslenme",
+    "Zayıflama Programı",
+    "Kurumsal Beslenme Danışmanlığı",
+    "Metabolik Hastalıklarda Beslenme",
     "Sporcu Beslenmesi",
-    "Diyabet Diyeti",
-    "Hamilelik ve Emzirme Dönemi Beslenmesi",
-    "Çocuk ve Ergen Beslenmesi",
-    "Beslenme Koçluğu",
+    "Çocuk Beslenmesi",
+    "İnsülin Direnci ve Metabolik Sendrom",
+    "Gelişme Geriliği",
+    "Gut Hastalığı ve Beslenme",
+    "Gebelik ve Beslenme",
+    "Non-Çölyak Glüten Hassasiyeti",
+    "Yaşam Koçluğu",
+    "Tip 2 Diyabet",
+    "Obezite",
+    "İrritabl Bağırsak Sendromu"
   ];
 
   const slideCount = aboutPageSliderImages.length;
@@ -350,7 +371,7 @@ export default function AboutPage() {
               <Card className="p-6 border-2 hover:border-primary/20 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-bold mb-5 flex items-center gap-2">
                   <Target className="w-5 h-5 text-secondary" />
-                  Uzmanlık Alanları
+                  Uzmanlık ve İlgi Alanları
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {expertise.map((item) => (
