@@ -308,18 +308,6 @@ const processSteps = [
   },
 ];
 
-const eryamanNeighborhoods = [
-  { name: "Eryaman 1. Etap", slug: null },
-  { name: "Eryaman 2. Etap", slug: null },
-  { name: "Eryaman 3. Etap", slug: null },
-  { name: "Eryaman 4. Etap", slug: null },
-  { name: "Eryaman 5. Etap", slug: null },
-  { name: "Yapracık", slug: null },
-  { name: "Göksu", slug: null },
-  { name: "Mustafa Kemal Mah.", slug: null },
-  { name: "Altay Mahallesi", slug: null },
-  { name: "Mevlana Bulvarı", slug: null },
-];
 
 
 // SSS — mevcut + 5 yeni soru
@@ -678,43 +666,6 @@ export default function EryamanDiyetisyenPage() {
               yansıtmakta olup her danışanın profili kendi özel koşullarına
               göre değerlendirilir.
             </p>
-          </div>
-        </section>
-
-        {/* ── ERYAMAN MAHALLELERİ ──────────────────────────────────────────── */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-[var(--brand-dark)]">
-                Eryaman&apos;ın Her Noktasına Hizmet
-              </h2>
-              <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
-                Kliniğimiz Eryaman&apos;ın merkezinde yer aldığından tüm
-                etaplardan ve çevre semtlerden kolayca ulaşabilirsiniz.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2.5 justify-center">
-              {eryamanNeighborhoods.map((n) =>
-                n.slug ? (
-                  <Link
-                    key={n.name}
-                    href={`/${n.slug}`}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[var(--brand-primary)]/20 text-sm font-medium text-[var(--brand-dark)] hover:border-[var(--brand-primary)]/60 hover:bg-pink-50 transition-colors"
-                  >
-                    <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
-                    {n.name}
-                  </Link>
-                ) : (
-                  <span
-                    key={n.name}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-gray-100 text-sm font-medium text-[var(--brand-dark)]"
-                  >
-                    <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" />
-                    {n.name}
-                  </span>
-                )
-              )}
-            </div>
           </div>
         </section>
 
