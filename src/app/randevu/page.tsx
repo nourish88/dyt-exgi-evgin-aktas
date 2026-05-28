@@ -157,7 +157,7 @@ export default function RandevuPage() {
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h2 className="text-2xl font-bold mb-2">Randevu Almak Çok Kolay</h2>
           <p className="text-muted-foreground mb-8">
-            Doktor Takvimi üzerinden uygun saati seçip anında randevu oluşturabilirsiniz.
+            Doktor Takvimi üzerinden uygun saati seçip anında randevu oluşturabilirsiniz veya doğrudan ofisimin WhatsApp hattından asistanımla görüşerek randevu ayarlayabilirsiniz.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
