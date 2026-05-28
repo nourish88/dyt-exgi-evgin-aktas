@@ -7,7 +7,7 @@ import { InstagramSection } from "@/components/home/instagram-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { ExploreLinksSection } from "@/components/home/explore-links-section";
 import { HomeFaqJsonLd } from "@/components/home/home-faq-jsonld";
-import { ReviewCtaSection } from "@/components/home/review-cta-section";
+import { MobileAppPromoSection } from "@/components/home/mobile-app-promo-section";
 import { prisma } from "@/lib/prisma";
 
 export default async function HomePage() {
@@ -32,7 +32,7 @@ export default async function HomePage() {
       <TestimonialsSection />
       <ExploreLinksSection />
       <InstagramSection />
-      <ReviewCtaSection />
+      <MobileAppPromoSection />
     </>
   );
 }
