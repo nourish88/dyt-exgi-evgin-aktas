@@ -134,14 +134,14 @@ export default function OnlineDiyetAnkaraPage() {
                 Uzaktan Profesyonel Danışmanlık
               </span>
             </h1>
-            <div className="relative w-full mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white/60 bg-slate-50 flex items-center justify-center">
+            <div className="relative w-fit mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white/60">
               <Image
                 src="/images/online/online-diyet-yazarken.jpg"
                 alt="Online diyetisyen Ankara Ezgi Evgin uzaktan beslenme danışmanlığı görüşmesi"
                 width={1200}
                 height={800}
                 priority
-                className="w-full h-auto max-h-[550px] object-contain"
+                className="w-auto h-auto max-w-full max-h-[350px] sm:max-h-[450px] md:max-h-[550px] object-contain"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
