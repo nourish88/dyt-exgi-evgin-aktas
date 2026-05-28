@@ -145,12 +145,12 @@ export default function OnlineDiyetAnkaraPage() {
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
-            <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed text-justify md:text-center">
               İş temposu, ulaşım veya farklı şehirde yaşamak yüz yüze
               görüşmeyi zorlaştırıyorsa, online diyet tam size göre. Ankara
               merkezli ofisimizle paralel yürüyen online danışmanlık modeli;
               haftalık görüşme, danışan portalı ve günlük iletişimle yüz yüze
-              süreçle birebir aynı takip kalitesini sunar. Diyetisyen{" "}
+              süreçle birebir aynı takip kalitesini sunar.{" "}
               <Link
                 href="/ezgi-evgin-diyetisyen"
                 className="text-primary hover:underline font-medium"
