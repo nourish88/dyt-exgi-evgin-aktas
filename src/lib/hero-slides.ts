@@ -11,7 +11,7 @@ export const heroSlides: HeroSlide[] = [
     id: 1,
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile Kişiye Özel Beslenme",
     description:
-      "Ezgi Evgin olarak Ankara Etimesgut–Eryaman ofisinde yüz yüze veya Türkiye genelinde online diyet ile hedefinize uygun, uygulanabilir planlar sunuyorum.",
+      "Fonksiyonel tıp diyetisyeni Ezgi Evgin olarak Ankara Etimesgut–Eryaman ofisinde yüz yüze veya Türkiye genelinde online diyet ile bedeninize uygun, kalıcı planlar sunuyorum.",
     backgroundGradient: "from-pink-600/70 via-rose-700/70 to-pink-900/70",
     backgroundImage: "/images/instagram/posts/clinic-01.jpeg",
   },

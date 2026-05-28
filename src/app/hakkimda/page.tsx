@@ -65,6 +65,7 @@ export default function AboutPage() {
   ];
 
   const expertise = [
+    "Fonksiyonel Tıp Diyetisyeni",
     "Kilo Yönetimi ve Obezite Tedavisi",
     "Sporcu Beslenmesi",
     "Diyabet Diyeti",
@@ -108,9 +109,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
             >
-              Ankara Eryaman merkezli kliniğimde ve online görüşmelerde; kilo
-              verme, sürdürülebilir beslenme, metabolik hastalıklarda beslenme
-              ve yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
+              Fonksiyonel tıp diyetisyeni olarak Ankara Eryaman merkezli kliniğimde ve online görüşmelerde; fonksiyonel tıp prensipleriyle bütüncül yaklaşım, kilo verme, sürdürülebilir beslenme ve metabolik hastalıklarda yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
