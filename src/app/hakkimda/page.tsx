@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { MediaGallery } from "@/components/about/media-gallery";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award, Heart, Target } from "lucide-react";
@@ -390,6 +391,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Media & Training Gallery */}
+      <MediaGallery />
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-[var(--brand-primary)] via-[var(--brand-secondary)] to-[var(--brand-accent)]">
         <div className="container mx-auto px-4">
@@ -424,6 +428,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
