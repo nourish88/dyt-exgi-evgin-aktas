@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, CheckCircle2, Smartphone } from "lucide-react";
@@ -122,11 +123,21 @@ export default function OnlineDiyetAnkaraPage() {
         <article className="py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[var(--brand-dark)]">
-              Online Diyet:{" "}
+              Online Diyet Ankara:{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
-                Nerede Olursanız Olun, Aynı Disiplin
+                Uzaktan Profesyonel Danışmanlık
               </span>
             </h1>
+            <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-3xl overflow-hidden shadow-xl border-4 border-white/60">
+              <Image
+                src="/images/online/online-diyet-yazarken.jpg"
+                alt="Online diyetisyen Ankara Ezgi Evgin uzaktan beslenme danışmanlığı görüşmesi"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
             <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed">
               İş temposu, ulaşım veya farklı şehirde yaşamak yüz yüze
               görüşmeyi zorlaştırıyorsa, online diyet tam size göre. Ankara
