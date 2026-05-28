@@ -3,6 +3,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, CheckCircle2, MapPin } from "lucide-react";
+import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 
@@ -103,7 +110,18 @@ export default function AnkaraDiyetisyenPage() {
                 Bilimsel Yaklaşım, Kişiye Özel Plan
               </span>
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed">
+            <div className="relative w-fit mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white/60">
+              <Image
+                src="/images/instagram/posts/clinic-01.jpeg"
+                alt="Ankara diyetisyen Ezgi Evgin Eryaman Etimesgut kliniği"
+                width={1200}
+                height={800}
+                priority
+                className="w-auto h-auto max-w-full max-h-[350px] sm:max-h-[450px] md:max-h-[550px] object-contain"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="text-base md:text-lg text-muted-foreground max-w-prose mx-auto leading-relaxed text-justify md:text-center">
               Ankara&apos;da diyetisyen desteği almak; hazır listelerle
               başlayıp birkaç hafta sonra bırakmak zorunda değilsiniz.
               Etimesgut–Eryaman ofisinde yüz yüze veya Türkiye&apos;nin her
@@ -225,6 +243,24 @@ export default function AnkaraDiyetisyenPage() {
                 </Link>
               </div>
             </div>
+          </div>
+
+          <div className="container mx-auto px-4 max-w-3xl mt-16">
+            <h2 className="text-2xl font-bold text-[var(--brand-dark)] mb-6 text-center">
+              Sıkça Sorulan Sorular
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqJsonLd.mainEntity.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold text-[var(--brand-dark)]">
+                    {faq.name}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed text-base">
+                    {faq.acceptedAnswer.text}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
           <div className="container mx-auto px-4 max-w-3xl mt-14 text-center space-y-4">
