@@ -80,6 +80,7 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
                 priority={currentSlide.id === 1}
                 fetchPriority={currentSlide.id === 1 ? "high" : "auto"}
                 loading={currentSlide.id === 1 ? undefined : "lazy"}
+                unoptimized={true}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent pointer-events-none" />
             </div>

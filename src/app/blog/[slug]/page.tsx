@@ -53,6 +53,12 @@ function formatDate(date: Date) {
   }).format(date);
 }
 
+function absoluteImageUrl(image?: string | null) {
+  if (!image) return undefined;
+  if (image.startsWith("http")) return image;
+  return `https://ezgievginaktas.com${image}`;
+}
+
 function calculateReadingTime(content: string): number {
   const wordsPerMinute = 200;
   const words = content.trim().split(/\s+/).length;
@@ -133,6 +139,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const imageUrl = absoluteImageUrl(post.image);
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -146,13 +154,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/blog/${post.slug}`,
       publishedTime: post.createdAt.toISOString(),
       modifiedTime: post.updatedAt.toISOString(),
-      images: post.image ? [{ url: post.image, alt: post.title }] : undefined,
+      images: imageUrl ? [{ url: imageUrl, alt: post.title }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: post.image ? [post.image] : undefined,
+      images: imageUrl ? [imageUrl] : undefined,
     },
   };
 }
@@ -178,12 +186,14 @@ export default async function BlogPostPage({ params }: Props) {
     `blog_${post.slug}`
   );
 
+  const imageUrl = absoluteImageUrl(post.image);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    image: post.image ? [post.image] : undefined,
+    image: imageUrl ? [imageUrl] : undefined,
     datePublished: post.createdAt.toISOString(),
     dateModified: post.updatedAt.toISOString(),
     author: {
