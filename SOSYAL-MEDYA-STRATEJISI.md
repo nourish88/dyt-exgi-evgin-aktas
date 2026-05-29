@@ -58,57 +58,61 @@ Link: https://ezgievginaktas.com
 
 ---
 
-## 📅 İÇERİK TAKVİMİ (Haftalık Plan)
+## 🔗 WEB SİTESİ & INSTAGRAM ENTEGRASYONU (Trafik Çekme Stratejisi)
 
-### Pazartesi
+Instagram'daki takipçileri web sitesine çekmek, hem randevu oranlarını artırır hem de Google SEO'suna inanılmaz bir "Sosyal Sinyal" gücü katar. İşte site linklerini kullanma rehberi:
 
-- **Sabah (09:00):** Motivasyon postu
-  - "Yeni haftaya enerjik başla!"
-  - Sağlıklı kahvaltı fotoğrafı
-- **Akşam (19:00):** Story - Gün içi danışan mesajları (gizli)
+1. **Blog Yazılarına Yönlendirme (Güven & Otorite):** 
+   - *Konu:* İnsülin Direnci
+   - *Instagram:* "Sürekli tatlı krizine mi giriyorsunuz? Sebebi insülin direnci olabilir. Detayları ve çözüm yollarını web sitemizdeki yeni blog yazımda anlattım. Link profilde/hikayede!"
+   - *Hedef Link:* `ezgievginaktas.com/blog/...`
 
-### Salı
+2. **Hizmet Sayfalarına Yönlendirme (Randevu & Satış):**
+   - *Konu:* Hamilelik Beslenmesi
+   - *Instagram:* Hamile bir danışanın başarı hikayesi paylaşılır. "Gebelik sürecinde hem bebeğinizi besleyip hem de fazla kilo almaktan korkmayın. Gebelik beslenmesi programımız hakkında detaylı bilgi için sitemizi ziyaret edin."
+   - *Hedef Link:* `ezgievginaktas.com/hamilelik-beslenmesi-ankara`
 
-- **Sabah (10:00):** Tarif paylaşımı
-  - Detaylı malzemeler
-  - Kalori bilgisi
-  - Adım adım fotoğraflar
-- **Akşam (20:00):** Reels - "Yanlış Bilinen 5 Beslenme Efsanesi"
+3. **Hesaplayıcılara Yönlendirme (Etkileşim & Trafik):**
+   - *Konu:* İdeal Kilo
+   - *Instagram:* "Acaba gerçekten kilo vermeye ihtiyacınız var mı? Profilimdeki linkten web sitemize giderek Vücut Kitle İndeksinizi (VKİ) saniyeler içinde ücretsiz hesaplayabilirsiniz."
+   - *Hedef Link:* `ezgievginaktas.com/hesaplayicilar`
 
-### Çarşamba
+4. **Yerel SEO Destekli Story Yönlendirmeleri (Lokal Çekim):**
+   - *Konu:* Eryaman/Etimesgut Danışanları
+   - *Instagram:* Eryaman Optimum civarından bir story atılır. "Eryaman ve Etimesgut bölgesindeki yüz yüze danışanlarımız için kliniğimizin detayları ve yol tarifi sitemizde!"
+   - *Hedef Link:* `ezgievginaktas.com/eryaman-diyetisyen`
 
-- **Öğle (13:00):** Eğitici carousel post
-  - 10 slayt
-  - "Kilo Vermek İçin Yapmanız Gerekenler"
-  - PDF indirme linki (e-posta toplama)
-- **Akşam (21:00):** Story - Q&A (Soru-Cevap)
+---
 
-### Perşembe
+## 📅 İÇERİK TAKVİMİ (Haftalık Plan - Web Site Entegreli)
 
-- **Sabah (09:00):** Başarı hikayesi (müşteri izinli)
-  - Önce/Sonra fotoğrafları (yüz gizli)
-  - Kısa hikaye
-  - Motivasyon
-- **Akşam (18:00):** Story - "Bugün ne yedim?" (günlük beslenme)
+### Pazartesi: Yeni Haftaya Motivasyon & Hedef Kitle (Örn: PCOS / İnsülin Direnci)
+- **Sabah (10:00) Post/Carousel:** "PCOS'ta Kilo Vermeyi Zorlaştıran 3 Hata" (Eğitici slaytlar). Son slaytta: *Detaylı beslenme planı için web sitemizi ziyaret edin.*
+- **Öğle (13:00) Story:** Kahve/Ofis masası fotoğrafı. "Haftaya PCOS danışanlarımızın listelerini hazırlayarak başladım 🌸 PCOS beslenmesi hakkında yazdığım detaylı blog yazısını okumak için linke tıklayın 👉 [Blog Linki]"
 
-### Cuma
+### Salı: Etkileşim & Araç Kullanımı
+- **Akşam (19:30) Reels:** "Kilo verirken kalorileri takıntı haline getirmeyin!" temalı kısa ve samimi bir konuşma videosu.
+- **Akşam (20:00) Story:** "İdeal kilonuzda mısınız? Hadi sitemizdeki ücretsiz VKİ hesaplayıcı ile hemen öğrenelim!" 👉 [Hesaplayıcı Linki] (Etkileşim etiketi ve anket ekleyin: Çıkan sonucu benimle paylaşın!)
 
-- **Sabah (11:00):** Reels - Hızlı atıştırmalık tarifi (30 saniye)
-- **Akşam (19:00):** Live yayın - "Haftalık Beslenme Soruları"
+### Çarşamba: Yemek Tarifleri & Pratik Bilgiler
+- **Öğle (12:30) Post/Reels:** Pratik ve düşük kalorili bir öğle yemeği tarifi (Örn: Enginarlı Bahar Pilavı). Videoda yapılışı hızlıca gösterilir.
+- **Öğle (13:00) Story:** "Tarifin malzemeleri, kalori değeri ve tüm detayları web sitemizdeki 'Sağlıklı Tarifler' köşesinde! Denemek için linki tıklayın" 👉 [Tarif Sayfası Linki]
 
-### Cumartesi
+### Perşembe: Sosyal Kanıt & Hizmet Tanıtımı
+- **Sabah (10:00) Carousel/Post:** Müşteri Başarı Hikayesi (Öncesi/Sonrası veya mesaj ekran görüntüsü). "Ayşe hanım ile 3 ayda aç kalmadan -10kg veda ettik."
+- **Öğle (14:00) Story:** "Siz de Ayşe Hanım gibi hafiflemek istiyorsanız 'Online Diyet' veya yüz yüze 'Ankara Diyetisyen' programlarımızı web sitemizden detaylıca inceleyebilirsiniz." 👉 [Programlar Linki]
 
-- **Öğle (14:00):** Eğlenceli içerik
-  - Meme veya trend ses kullan
-  - "Diyet yaparken ben vs arkadaşlarım"
-- **Akşam (20:00):** Story - Hafta sonu aktiviteleri
+### Cuma: Yerel Odak (Lokal SEO'ya Destek)
+- **Akşam (18:00) Reels/Fotoğraf:** Etimesgut veya Eryaman'da bilinen bir parkta, kafede veya kliniğin önünde çekilmiş rahat bir fotoğraf. "Cuma yorgunluğu atılıyor..."
+- **Akşam (19:00) Story:** "Eryaman ve Etimesgut çevresinde oturan danışanlarımla yüz yüze görüşmekten çok keyif alıyorum. Kliniğimize ulaşım ve randevu bilgileri için sitemize göz atın." 👉 [Eryaman/Etimesgut Diyetisyen Linki]
 
-### Pazar
+### Cumartesi: Samimiyet & Yaşam Tarzı
+- **Öğle (13:00) Post/Reels:** Eğlenceli bir hafta sonu Reels'i (Örn: "Diyetteyim deyip hafta sonu porsiyon kontrolünü kaçıranlar derneği 😅")
+- **Gün İçi Story:** Hafta sonu yürüyüşü, kahve keyfi veya evcil hayvan paylaşımı. (Burası satışı değil, samimiyeti artırır, site linkine gerek yok, WhatsApp yeterli).
 
-- **Sabah (10:00):** Haftalık özet
-  - Bu hafta neler öğrendik
-  - Gelecek hafta konular
-- **Akşam (19:00):** Rahatlatıcı içerik - "Haftaya hazır mısın?"
+### Pazar: Hazırlık & Soru-Cevap
+- **Akşam (19:00) Story Soru Çıkartması:** "Yeni hafta öncesi beslenmeyle ilgili sorularınızı alayım 👇"
+- **Akşam (20:00) Story Cevapları:** Gelen soruları yanıtlarken, cevap sitede bir yazıda varsa "Bu konuyu blogda çok detaylı anlattım, okumak isterseniz 👉 [Blog Linki]" şeklinde web sitesine yönlendirme yapın.
 
 ---
 
