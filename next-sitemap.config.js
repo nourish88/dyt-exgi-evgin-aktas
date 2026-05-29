@@ -20,6 +20,7 @@ const PAGE_PRIORITY_MAP = {
   "/ankara-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/ankara-kilo-verme-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   // Yeni uzmanlık sayfaları — eklendikçe burada da yer alacak
+  "/fonksiyonel-tip-diyetisyeni-ankara": { priority: 0.8, changefreq: "monthly" },
   "/insulin-direnci-diyeti-ankara": { priority: 0.8, changefreq: "monthly" },
   "/pcos-diyetisyen-ankara": { priority: 0.8, changefreq: "monthly" },
   "/hamilelik-beslenmesi-ankara": { priority: 0.8, changefreq: "monthly" },

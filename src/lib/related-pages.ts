@@ -58,6 +58,11 @@ export const SERVICE_PAGES = {
     hint: "Uzman tanıtım",
   },
   // Uzmanlık sayfaları (henüz yayında olmayanlar yayına alındığında çalışacak)
+  fonksiyonelTip: {
+    href: "/fonksiyonel-tip-diyetisyeni-ankara",
+    label: "Fonksiyonel Tıp Diyetisyeni",
+    hint: "Bütüncül beslenme tedavisi",
+  },
   insulinDirenci: {
     href: "/insulin-direnci-diyeti-ankara",
     label: "İnsülin Direnci Diyeti",
@@ -186,6 +191,11 @@ const TAG_HINTS: Record<string, RelatedPage> = {
   eryaman: SERVICE_PAGES.eryaman,
   etimesgut: SERVICE_PAGES.etimesgut,
   ankara: SERVICE_PAGES.ankaraGenel,
+  fonksiyonel: SERVICE_PAGES.fonksiyonelTip,
+  "fonksiyonel tıp": SERVICE_PAGES.fonksiyonelTip,
+  bütüncül: SERVICE_PAGES.fonksiyonelTip,
+  butuncul: SERVICE_PAGES.fonksiyonelTip,
+  eliminasyon: SERVICE_PAGES.fonksiyonelTip,
 };
 
 export function getRelatedPagesForPost(

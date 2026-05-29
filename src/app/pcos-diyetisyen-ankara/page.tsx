@@ -211,10 +211,10 @@ export default function PcosPage() {
         ctaTitle="PCOS tanınız varsa — başlamak için doğru zaman"
         ctaText="WhatsApp'tan ulaşın, kısa bir ön görüşmeyle tanı tablonuzu ve hedeflerinizi birlikte değerlendirelim."
         related={[
+          { href: "/fonksiyonel-tip-diyetisyeni-ankara", label: "Fonksiyonel tıp" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
           { href: "/online-diyet-ankara", label: "Online diyet" },
-          { href: "/hamilelik-beslenmesi-ankara", label: "Hamilelik beslenmesi" },
           { href: "/programlar", label: "Programlar" },
         ]}
       />

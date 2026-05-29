@@ -231,6 +231,14 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/fonksiyonel-tip-diyetisyeni-ankara"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Fonksiyonel tıp diyetisyeni
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/insulin-direnci-diyeti-ankara"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >

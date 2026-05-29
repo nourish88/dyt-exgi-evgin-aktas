@@ -211,10 +211,10 @@ export default function InsulinDirenciPage() {
         ctaTitle="Tanınız varsa, sürece bugün başlayabiliriz"
         ctaText="WhatsApp'tan ulaşın, kısa bir ön görüşmeyle tahlilleriniz ve hedefleriniz üzerinden uygunluğu birlikte değerlendirelim."
         related={[
-          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/ankara-diyetisyen", label: "Ankara diyetisyen" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/fonksiyonel-tip-diyetisyeni-ankara", label: "Fonksiyonel tıp" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
+          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/online-diyet-ankara", label: "Online diyet" },
           { href: "/programlar", label: "Programlar" },
         ]}
       />

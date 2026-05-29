@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
@@ -130,7 +131,13 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
             >
-              Fonksiyonel tıp diyetisyeni olarak Ankara Eryaman merkezli kliniğimde ve online görüşmelerde; fonksiyonel tıp prensipleriyle bütüncül yaklaşım, kilo verme, sürdürülebilir beslenme ve metabolik hastalıklarda yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
+              <Link
+                href="/fonksiyonel-tip-diyetisyeni-ankara"
+                className="text-[var(--brand-primary)] hover:underline font-semibold"
+              >
+                Fonksiyonel tıp diyetisyeni
+              </Link>{" "}
+              olarak Ankara Eryaman merkezli kliniğimde ve online görüşmelerde; fonksiyonel tıp prensipleriyle bütüncül yaklaşım, kilo verme, sürdürülebilir beslenme ve metabolik hastalıklarda yaşam tarzı değişikliği odaklı danışmanlık veriyorum.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
