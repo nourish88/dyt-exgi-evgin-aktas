@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   title: {
     default:
       "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ankara",
-    template: "%s | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    template: "%s | Dyt. Ezgi Evgin",
   },
   description:
-    "Ankara Ezgi Evgin Beslenme ve Diyet Danışmanlığı: online diyet Ankara, yüz yüze beslenme danışmanlığı, kişiye özel program ve uygulama ile takip. Dyt Ezgi Evgin ile sürdürülebilir kilo yönetimi.",
+    "Ankara'da yüz yüze ve online beslenme danışmanlığı. Dyt. Ezgi Evgin ile kişiye özel diyet programı ve sağlıklı kilo yönetimine hemen başlayın.",
   keywords: [
     "ankara diyetisyen",
     "online diyet ankara",
@@ -107,9 +107,6 @@ export default function RootLayout({
         <meta name="geo.placename" content="Etimesgut, Ankara — Atayıldız Plaza" />
         <meta name="geo.position" content="39.9669753;32.6358095" />
         <meta name="ICBM" content="39.9669753, 32.6358095" />
-        {/* hreflang — tek dil site hijyeni */}
-        <link rel="alternate" hrefLang="tr-TR" href="https://ezgievginaktas.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://ezgievginaktas.com/" />
       </head>
       <body
         className={`${poppins.variable} ${inter.variable} font-sans antialiased`}

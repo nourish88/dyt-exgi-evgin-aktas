@@ -45,9 +45,17 @@ export const metadata: Metadata = {
     "atayıldız plaza kat 8",
     "eryaman kilo verme diyetisyen",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Atayıldız Plaza Diyetisyen — Eryaman Ofis",

@@ -21,8 +21,7 @@ const PAGE_URL = "https://ezgievginaktas.com/sporcu-beslenmesi-ankara";
 
 export const metadata: Metadata = {
   title: "Sporcu Beslenmesi Ankara — Diyetisyen Desteği",
-  description:
-    "Performans, kas kazanımı veya yağ kaybı odaklı sporcu beslenmesi. Ankara Eryaman ofisinde ve Türkiye genelinde online diyetisyen takibi; antrenmana uyumlu öğün ve makro planlaması.",
+  description: "Performans artışı, kas kazanımı veya yağ kaybı odaklı sporcu beslenmesi planları. Profesyonel ve amatör sporcular için Ankara'da uzman destek.",
   keywords: [
     "sporcu beslenmesi ankara",
     "sporcu diyetisyeni",
@@ -31,9 +30,17 @@ export const metadata: Metadata = {
     "performans beslenmesi",
     "online sporcu diyetisyeni",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Sporcu Beslenmesi Ankara — Performans Odaklı Plan",

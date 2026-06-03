@@ -36,9 +36,17 @@ export const metadata: Metadata = {
     "sincan insülin direnci diyeti",
     "eryaman diyetisyen",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: false, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Sincan Diyetisyen — Dyt. Ezgi Evgin",

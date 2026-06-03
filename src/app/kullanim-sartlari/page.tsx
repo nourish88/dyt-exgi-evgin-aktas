@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kullanım Şartları",
-  description:
-    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",
-  alternates: { canonical: "https://ezgievginaktas.com/kullanim-sartlari" },
+  description: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi kullanım şartları: hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve ...",
+  alternates: {
+    canonical: "https://ezgievginaktas.com/kullanim-sartlari" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/kullanim-sartlari" ,
+      "x-default": "https://ezgievginaktas.com/kullanim-sartlari" ,
+    },
+  },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/kullanim-sartlari",
     type: "website",
     url: "https://ezgievginaktas.com/kullanim-sartlari",
     title: "Kullanım Şartları — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",

@@ -14,9 +14,17 @@ export const metadata: Metadata = {
     "danışan takip portalı",
     "öğün hatırlatıcı",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Diyet Takip Uygulaması | Ezgi Evgin Beslenme",
@@ -36,8 +44,7 @@ const softwareSchema = {
     price: "0",
     priceCurrency: "TRY",
   },
-  description:
-    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı danışanları için özel geliştirilmiş; öğün bildirimleri, su hatırlatıcıları ve diyetisyenle iletişim kurmayı sağlayan ilerici web uygulaması (PWA).",
+  description: "Danışan portalı ile diyet programınız cebinizde. Öğün takibi, su hatırlatıcı ve diyetisyene anlık mesajlaşma imkanı.",
   url: PAGE_URL,
 };
 

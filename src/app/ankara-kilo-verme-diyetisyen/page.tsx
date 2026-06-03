@@ -30,9 +30,17 @@ export const metadata: Metadata = {
     "kilo yönetimi ankara",
     "online diyetisyen ankara",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",

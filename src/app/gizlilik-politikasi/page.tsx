@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gizlilik Politikası",
-  description:
-    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı haklarının korunması hakkında bilgilendirme.",
-  alternates: { canonical: "https://ezgievginaktas.com/gizlilik-politikasi" },
+  description: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı web sitesi gizlilik politikası: kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı hak...",
+  alternates: {
+    canonical: "https://ezgievginaktas.com/gizlilik-politikasi" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/gizlilik-politikasi" ,
+      "x-default": "https://ezgievginaktas.com/gizlilik-politikasi" ,
+    },
+  },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/gizlilik-politikasi",
     type: "website",
     url: "https://ezgievginaktas.com/gizlilik-politikasi",
     title: "Gizlilik Politikası — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",

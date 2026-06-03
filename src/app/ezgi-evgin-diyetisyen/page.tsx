@@ -23,8 +23,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-  description:
-    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı (Ezgi Evgin Beslenme ve Diyet Danışmanlığı): Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ofisi ve Türkiye genelinde online beslenme danışmanlığı.",
+  description: "Dyt. Ezgi Evgin: Ankara'da yüz yüze ve online beslenme danışmanlığı. Kalıcı kilo verme, sağlıklı yaşam ve kişiye özel diyet programları.",
   keywords: [
     "ezgi evgin",
     "ezgi evgin aktaş",
@@ -40,6 +39,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
     type: "profile",
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
@@ -79,8 +80,7 @@ const personJsonLd = {
   givenName: "Ezgi",
   familyName: "Evgin Aktaş",
   jobTitle: "Diyetisyen · Beslenme ve Diyetetik Uzmanı",
-  description:
-    "Başkent Üniversitesi Beslenme ve Diyetetik mezunu, 2016'dan bu yana Ankara Eryaman ofisinde ve Türkiye genelinde online beslenme danışmanlığı sunan uzman diyetisyen.",
+  description: "Dyt. Ezgi Evgin: Ankara'da yüz yüze ve online beslenme danışmanlığı. Kalıcı kilo verme, sağlıklı yaşam ve kişiye özel diyet programları.",
   url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
   image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
   telephone: "+905462650440",

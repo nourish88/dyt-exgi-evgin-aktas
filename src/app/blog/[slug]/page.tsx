@@ -145,7 +145,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+    canonical: `/blog/${post.slug,
+    languages: {
+      "tr-TR": `/blog/${post.slug,
+      "x-default": `/blog/${post.slug,
+    },
+  },`,
     },
     openGraph: {
       type: "article",
@@ -356,6 +361,9 @@ export default async function BlogPostPage({ params }: Props) {
                       {children}
                     </a>
                   );
+                },
+                h1: ({ children, node, ...props }) => {
+                  return <h2 {...props}>{children}</h2>;
                 },
                 h2: ({ children, node, ...props }) => {
                   const text = String(children);

@@ -21,8 +21,7 @@ const PAGE_URL = "https://ezgievginaktas.com/cocuk-beslenmesi-diyetisyen";
 
 export const metadata: Metadata = {
   title: "Çocuk Beslenmesi Diyetisyeni — Ankara",
-  description:
-    "Çocuk ve ergen beslenmesinde uzman diyetisyen desteği. Sağlıklı büyüme, kilo yönetimi ve seçici yeme alışkanlığı için Ankara Eryaman ofisinde ve online aileyle birlikte planlanan beslenme.",
+  description: "Çocuk ve ergen beslenmesinde uzman diyetisyen desteği. İştahsızlık, kilo sorunları ve sağlıklı gelişim için Ankara'da kişiye özel program.",
   keywords: [
     "çocuk beslenmesi diyetisyen",
     "ankara çocuk diyetisyeni",
@@ -31,9 +30,17 @@ export const metadata: Metadata = {
     "seçici yeme",
     "online çocuk diyetisyeni",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Çocuk Beslenmesi Diyetisyeni — Aile Odaklı Yaklaşım",

@@ -21,8 +21,7 @@ const PAGE_URL = "https://ezgievginaktas.com/insulin-direnci-diyeti-ankara";
 
 export const metadata: Metadata = {
   title: "İnsülin Direnci Diyeti Ankara — Beslenme Planı",
-  description:
-    "İnsülin direnci tanısı sonrası kişiye özel beslenme planı. Ankara Eryaman ofisinde yüz yüze veya Türkiye genelinde online diyetisyen takibi. Glisemik yük, öğün sıklığı ve sürdürülebilir kilo yönetimi.",
+  description: "İnsülin direnci tanısı sonrası kişiye özel beslenme tedavisi. Ankara'da insülin direnci diyetisyeni ile sağlıklı ve kalıcı kilo verin.",
   keywords: [
     "insülin direnci diyeti ankara",
     "insülin direnci diyetisyen",
@@ -31,9 +30,17 @@ export const metadata: Metadata = {
     "eryaman insülin direnci diyetisyeni",
     "online insülin direnci diyeti",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "İnsülin Direnci Diyeti Ankara — Kişiye Özel Beslenme Planı",
@@ -113,8 +120,7 @@ const principles = [
   {
     icon: Clock,
     title: "Öğün sıklığı kişiye göre ayarlanır",
-    description:
-      "Bazıları için 3 ana öğün, bazıları için 3 ana + 2 ara öğün uygundur. Tek bir reçete yoktur — semptom günlüğüne ve varsa kan şekeri seyrine göre belirlenir.",
+    description: "İnsülin direnci tanısı sonrası kişiye özel beslenme tedavisi. Ankara'da insülin direnci diyetisyeni ile sağlıklı ve kalıcı kilo verin.",
   },
   {
     icon: Utensils,

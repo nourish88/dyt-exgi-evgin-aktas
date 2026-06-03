@@ -4,8 +4,16 @@ export const metadata: Metadata = {
   title: "KVKK Aydınlatma Metni",
   description:
     "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi, danışan portalı ve haklarınız hakkında bilgilendirme.",
-  alternates: { canonical: "https://ezgievginaktas.com/kvkk" },
+  alternates: {
+    canonical: "https://ezgievginaktas.com/kvkk" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/kvkk" ,
+      "x-default": "https://ezgievginaktas.com/kvkk" ,
+    },
+  },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/kvkk",
     type: "website",
     url: "https://ezgievginaktas.com/kvkk",
     title: "KVKK Aydınlatma Metni",

@@ -21,8 +21,7 @@ const PAGE_URL = "https://ezgievginaktas.com/pcos-diyetisyen-ankara";
 
 export const metadata: Metadata = {
   title: "PCOS Diyetisyeni Ankara — Beslenme Planı",
-  description:
-    "PCOS (Polikistik Over Sendromu) için kişiye özel beslenme planı. Hormonal denge, insülin duyarlılığı, kilo yönetimi ve düzenli adet için Ankara Eryaman ofisinde ve online diyetisyen.",
+  description: "PCOS (Polikistik Over Sendromu) için kişiye özel beslenme tedavisi. Hormon dostu diyet ile semptomları hafifletin ve kilo verin.",
   keywords: [
     "pcos diyetisyen ankara",
     "pcos diyeti",
@@ -31,9 +30,17 @@ export const metadata: Metadata = {
     "ankara pcos diyetisyeni",
     "online pcos diyetisyeni",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "PCOS Diyetisyeni Ankara — Hormon Dostu Beslenme",

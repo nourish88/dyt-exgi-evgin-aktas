@@ -16,11 +16,18 @@ import { DOKTORTAKVIMI_PROFILE_URL } from "@/lib/external-links";
 
 export const metadata: Metadata = {
   title: "Randevu Al — Online & Yüz Yüze Görüşme",
-  description:
-    "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın. Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile yüz yüze veya online görüşme. Kolay 3 adımda randevu.",
-  alternates: { canonical: "https://ezgievginaktas.com/randevu" },
+  description: "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın. İlk görüşme tamamen ücretsizdir. Hemen WhatsApp'tan iletişime geçin.",
+  alternates: {
+    canonical: "https://ezgievginaktas.com/randevu" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/randevu" ,
+      "x-default": "https://ezgievginaktas.com/randevu" ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/randevu",
     type: "website",
     url: "https://ezgievginaktas.com/randevu",
     title: "Randevu Al | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",

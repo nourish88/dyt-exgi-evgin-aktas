@@ -60,6 +60,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/online-diyet-ankara",
+    type: "website",
+    url: "https://ezgievginaktas.com/online-diyet-ankara",
     title: "Online Diyet Ankara — Uzaktan Beslenme Danışmanlığı",
     description:
       "Online diyet ile Ankara ve Türkiye genelinden kişiye özel beslenme danışmanlığı ve haftalık takip.",

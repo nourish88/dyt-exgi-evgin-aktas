@@ -13,9 +13,17 @@ export const metadata: Metadata = {
   title: "Sağlıklı & Diyet Tarifleri",
   description:
     "Diyetisyen onaylı lezzetli ve sağlıklı tarifler: düşük kalorili, fit, besleyici ve kolay yemek tarifleriyle mutfağınıza renk katın.",
-  alternates: { canonical: "https://ezgievginaktas.com/tarifler" },
+  alternates: {
+    canonical: "https://ezgievginaktas.com/tarifler" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/tarifler" ,
+      "x-default": "https://ezgievginaktas.com/tarifler" ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/tarifler",
     type: "website",
     url: "https://ezgievginaktas.com/tarifler",
     title: "Sağlıklı Tarifler | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",

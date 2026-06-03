@@ -21,8 +21,7 @@ const PAGE_URL = "https://ezgievginaktas.com/hamilelik-beslenmesi-ankara";
 
 export const metadata: Metadata = {
   title: "Hamilelik Beslenmesi Ankara — Diyetisyen Desteği",
-  description:
-    "Hamilelikte sağlıklı kilo alımı, trimester bazlı besin gereksinimleri ve emzirme dönemi beslenmesi. Ankara Eryaman ofisinde ve Türkiye genelinde online diyetisyen takibi.",
+  description: "Hamilelikte sağlıklı kilo alımı ve emzirme döneminde süt artıran beslenme planı. Ankara'da hamile diyeti için uzman destek alın.",
   keywords: [
     "hamilelik beslenmesi ankara",
     "hamile diyetisyeni",
@@ -31,9 +30,17 @@ export const metadata: Metadata = {
     "emzirme dönemi beslenme",
     "online hamilelik diyetisyeni",
   ],
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL ,
+    languages: {
+      "tr-TR": PAGE_URL ,
+      "x-default": PAGE_URL ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: PAGE_URL,
     type: "website",
     url: PAGE_URL,
     title: "Hamilelik Beslenmesi Ankara — Anne ve Bebek İçin",

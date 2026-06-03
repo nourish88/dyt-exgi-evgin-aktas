@@ -13,9 +13,17 @@ export const metadata: Metadata = {
   title: "Beslenme & Sağlıklı Yaşam Blogu",
   description:
     "Sağlıklı beslenme, kilo verme, insülin direnci, hamile beslenmesi ve güncel diyet konularında uzman diyetisyen kaleminden makaleler.",
-  alternates: { canonical: "https://ezgievginaktas.com/blog" },
+  alternates: {
+    canonical: "https://ezgievginaktas.com/blog" ,
+    languages: {
+      "tr-TR": "https://ezgievginaktas.com/blog" ,
+      "x-default": "https://ezgievginaktas.com/blog" ,
+    },
+  },
   robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com/blog",
     type: "website",
     url: "https://ezgievginaktas.com/blog",
     title: "Beslenme & Sağlıklı Yaşam Blogu | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
