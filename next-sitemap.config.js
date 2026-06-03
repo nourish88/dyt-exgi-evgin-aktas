@@ -12,8 +12,6 @@ const PAGE_PRIORITY_MAP = {
   "/randevu": { priority: 0.9, changefreq: "monthly" },
   // Yerel SEO ve ikincil hizmet sayfaları
   "/eryaman-diyetisyen": { priority: 0.85, changefreq: "monthly" },
-  "/etimesgut-diyetisyen": { priority: 0.85, changefreq: "monthly" },
-  "/sincan-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/cankaya-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/yenimahalle-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/batikent-diyetisyen": { priority: 0.8, changefreq: "monthly" },
@@ -62,6 +60,8 @@ module.exports = {
     "/batikent-diyetisyen",
     "/cankaya-diyetisyen",
     "/yenimahalle-diyetisyen",
+    "/sincan-diyetisyen",
+    "/etimesgut-diyetisyen",
   ],
   transform: async (config, path) => {
     const override = PAGE_PRIORITY_MAP[path];
