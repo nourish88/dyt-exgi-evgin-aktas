@@ -31,8 +31,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/ankara-diyetisyen",
-    type: "website",
-    url: "https://ezgievginaktas.com/ankara-diyetisyen",
     title: "Ankara Diyetisyen — Beslenme ve Diyet Danışmanlığı",
     description:
       "Ankara'da diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı. Kişiye özel plan ve haftalık görüşme.",

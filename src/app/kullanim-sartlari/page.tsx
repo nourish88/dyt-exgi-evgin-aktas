@@ -13,8 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/kullanim-sartlari",
-    type: "website",
-    url: "https://ezgievginaktas.com/kullanim-sartlari",
     title: "Kullanım Şartları — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Hizmet kapsamı, kullanıcı sorumlulukları, fikri mülkiyet hakları ve sorumluluk sınırları.",

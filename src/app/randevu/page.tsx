@@ -28,8 +28,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/randevu",
-    type: "website",
-    url: "https://ezgievginaktas.com/randevu",
     title: "Randevu Al | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Ankara Eryaman ve online beslenme danışmanlığı için randevu alın.",

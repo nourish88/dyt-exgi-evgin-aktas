@@ -145,12 +145,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.excerpt,
     alternates: {
-    canonical: `/blog/${post.slug,
-    languages: {
-      "tr-TR": `/blog/${post.slug,
-      "x-default": `/blog/${post.slug,
-    },
-  },`,
+      canonical: `https://ezgievginaktas.com/blog/${post.slug}`,
+      languages: {
+        "tr-TR": `https://ezgievginaktas.com/blog/${post.slug}`,
+        "x-default": `https://ezgievginaktas.com/blog/${post.slug}`,
+      },
     },
     openGraph: {
       type: "article",

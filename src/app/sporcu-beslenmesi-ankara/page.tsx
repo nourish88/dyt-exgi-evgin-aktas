@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Sporcu Beslenmesi Ankara — Performans Odaklı Plan",
     description:
       "Antrenman tipinize ve hedefe (performans, kas, yağ) göre kişiye özel sporcu beslenmesi.",

@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Çocuk Beslenmesi Diyetisyeni — Aile Odaklı Yaklaşım",
     description:
       "Çocuk ve ergen beslenmesinde sağlıklı büyüme, kilo yönetimi ve seçici yeme alışkanlığı.",

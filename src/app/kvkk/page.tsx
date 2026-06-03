@@ -14,8 +14,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/kvkk",
-    type: "website",
-    url: "https://ezgievginaktas.com/kvkk",
     title: "KVKK Aydınlatma Metni",
     description:
       "6698 sayılı KVKK kapsamında kişisel verilerin işlenmesi ve haklarınız hakkında bilgilendirme.",

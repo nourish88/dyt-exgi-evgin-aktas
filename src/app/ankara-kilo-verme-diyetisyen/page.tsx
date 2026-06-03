@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Ankara Kilo Verme Diyetisyeni — Kalıcı Sonuç",
     description:
       "Ankara'da kilo vermek için yasaksız ve kişiye özel beslenme planı. Haftalık takip ve uzman destek.",

@@ -56,8 +56,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Atayıldız Plaza Diyetisyen — Eryaman Ofis",
     description:
       "Atayıldız Plaza Kat:8'de Ezgi Evgin Beslenme ve Diyet Danışmanlığı. Optimum AVM karşısı, Eryaman'da yüz yüze ve online beslenme danışmanlığı.",

@@ -39,13 +39,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
-    type: "website",
-    url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
     type: "profile",
+    url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Başkent Üniversitesi Beslenme ve Diyetetik mezunu, Ankara Eryaman ve online beslenme danışmanlığı.",
-    url: "https://ezgievginaktas.com/ezgi-evgin-diyetisyen",
     firstName: "Ezgi",
     lastName: "Evgin Aktaş",
     username: "dyt_ezgievgin",

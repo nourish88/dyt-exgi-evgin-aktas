@@ -48,8 +48,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Etimesgut Diyetisyen — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Etimesgut ve Eryaman hattında yüz yüze veya online kişiye özel beslenme danışmanlığı.",

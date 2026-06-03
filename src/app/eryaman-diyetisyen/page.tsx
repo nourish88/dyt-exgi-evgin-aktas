@@ -51,8 +51,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
-    type: "website",
-    url: "https://ezgievginaktas.com/eryaman-diyetisyen",
     title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
       "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut'a hizmet. Ücretsiz ön görüşme.",

@@ -13,8 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/gizlilik-politikasi",
-    type: "website",
-    url: "https://ezgievginaktas.com/gizlilik-politikasi",
     title: "Gizlilik Politikası — Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Kişisel verilerin toplanması, kullanımı, çerezler ve kullanıcı hakları hakkında bilgilendirme.",

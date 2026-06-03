@@ -25,8 +25,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Diyet Takip Uygulaması | Ezgi Evgin Beslenme",
     description:
       "Öğün öncesi bildirimler, su hatırlatıcıları, grafiksel gelişim takibi ve diyetisyenle anlık mesajlaşma sunan online diyet takip uygulamamız.",

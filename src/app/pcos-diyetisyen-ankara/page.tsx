@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "PCOS Diyetisyeni Ankara — Hormon Dostu Beslenme",
     description:
       "Polikistik over sendromunda kişiye özel beslenme planı: insülin duyarlılığı, kilo dengesi, düzenli adet.",

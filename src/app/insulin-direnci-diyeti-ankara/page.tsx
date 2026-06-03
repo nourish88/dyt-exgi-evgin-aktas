@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "İnsülin Direnci Diyeti Ankara — Kişiye Özel Beslenme Planı",
     description:
       "Glisemik yük, öğün düzeni ve sürdürülebilir kilo yönetimiyle insülin direncinde beslenme danışmanlığı.",

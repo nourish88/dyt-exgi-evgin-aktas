@@ -47,8 +47,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Sincan Diyetisyen — Dyt. Ezgi Evgin",
     description:
       "Sincan ve çevresine Eryaman ofisinden yakın mesafede, kişiye özel beslenme danışmanlığı.",

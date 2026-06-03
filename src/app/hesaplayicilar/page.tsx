@@ -15,8 +15,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/hesaplayicilar",
-    type: "website",
-    url: "https://ezgievginaktas.com/hesaplayicilar",
     title: "Sağlıklı Yaşam Hesaplayıcıları | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Ücretsiz BMI, ideal kilo ve günlük kalori ihtiyacı hesaplayıcıları.",

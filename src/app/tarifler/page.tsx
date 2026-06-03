@@ -24,8 +24,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/tarifler",
-    type: "website",
-    url: "https://ezgievginaktas.com/tarifler",
     title: "Sağlıklı Tarifler | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
       "Diyetisyen onaylı, düşük kalorili ve besleyici sağlıklı yemek tarifleri.",

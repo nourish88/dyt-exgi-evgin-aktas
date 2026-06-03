@@ -41,8 +41,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    type: "website",
-    url: PAGE_URL,
     title: "Hamilelik Beslenmesi Ankara — Anne ve Bebek İçin",
     description:
       "Trimester bazlı kişiye özel beslenme planı, sağlıklı kilo alımı ve emzirme dönemi desteği.",
