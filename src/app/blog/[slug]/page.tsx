@@ -313,7 +313,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Share - top */}
             <div className="mt-5">
-              <ShareButtons url={postUrl} title={post.title} />
+              <ShareButtons url={postUrl} title={post.title} compact />
             </div>
           </header>
 

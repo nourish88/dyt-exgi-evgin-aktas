@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import { ShareButtons } from "@/components/blog/share-buttons";
 
 export const revalidate = 3600;
 
@@ -322,6 +323,10 @@ export default async function RecipeDetailPage({ params }: Props) {
               öğün zamanı ve yanında tüketilecek besinler kişinin hedefi,
               kan değerleri ve yaşam düzenine göre değişebilir.
             </p>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-gray-100">
+            <ShareButtons url={recipeUrl} title={recipe.title} />
           </div>
         </div>
 

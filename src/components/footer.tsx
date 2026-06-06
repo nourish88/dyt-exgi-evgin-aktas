@@ -36,9 +36,10 @@ export function Footer() {
               <Link
                 href={INSTAGRAM_PROFILE_URL}
                 target="_blank"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-full border hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] transition-colors"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white hover:scale-105 hover:shadow-lg transition-all"
+                title="Bizi Instagram'da Takip Edin"
               >
-                <Instagram size={18} />
+                <Instagram size={20} />
               </Link>
             </div>
           </div>
