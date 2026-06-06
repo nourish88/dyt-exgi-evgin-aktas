@@ -5,7 +5,7 @@
 const PAGE_PRIORITY_MAP = {
   "/": { priority: 1.0, changefreq: "weekly" },
   // En kritik organik sayfalar (homepage + uzman + ana hizmet)
-  "/online-diyet-ankara": { priority: 0.9, changefreq: "monthly" },
+  "/online-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/ezgi-evgin-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/hakkimda": { priority: 0.9, changefreq: "monthly" },
   "/programlar": { priority: 0.9, changefreq: "monthly" },
@@ -14,8 +14,8 @@ const PAGE_PRIORITY_MAP = {
   "/eryaman-diyetisyen": { priority: 0.85, changefreq: "monthly" },
   "/cankaya-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   "/yenimahalle-diyetisyen": { priority: 0.8, changefreq: "monthly" },
-  "/batikent-diyetisyen": { priority: 0.8, changefreq: "monthly" },
-  "/ankara-diyetisyen": { priority: 0.8, changefreq: "monthly" },
+  "/online-diyetisyen": { priority: 0.9, changefreq: "monthly" },
+  "/ankara-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/ankara-kilo-verme-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   // Yeni uzmanlık sayfaları — eklendikçe burada da yer alacak
   "/fonksiyonel-tip-diyetisyeni-ankara": { priority: 0.8, changefreq: "monthly" },

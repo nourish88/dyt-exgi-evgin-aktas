@@ -37,7 +37,7 @@ Sol menü: **URL denetimi** (URL Inspection). Her URL için:
 4. https://ezgievginaktas.com/iletisim
 5. https://ezgievginaktas.com/hakkimda
 6. https://ezgievginaktas.com/ankara-diyetisyen
-7. https://ezgievginaktas.com/online-diyet-ankara
+7. https://ezgievginaktas.com/online-diyetisyen
 
 ### Öncelik B (yeni uzmanlık sayfaları)
 8. https://ezgievginaktas.com/insulin-direnci-diyeti-ankara

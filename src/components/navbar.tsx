@@ -38,7 +38,7 @@ const toolsItems: NavLeaf[] = [
 const navItems: NavItem[] = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/hakkimda", label: "Hakkımda" },
-  { href: "/online-diyet-ankara", label: "Online Diyet" },
+  { href: "/online-diyetisyen", label: "Online Diyet" },
   { href: "/programlar", label: "Programlar" },
   { label: "Bölgeler", items: districtItems, basePath: "diyetisyen" },
   { label: "İçerik", items: toolsItems, basePath: "icerik" },

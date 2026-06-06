@@ -185,7 +185,7 @@ export default function FonksiyonelTipPage() {
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/programlar", label: "Programlar" },
         ]}
       />

@@ -107,9 +107,9 @@ Eklenmesi yasak (gerekçesiz): TanStack Query, Auth.js, Zustand, axios. Bunlar S
 
 Site üç tip sayfa etrafında kurulu. Yeni sayfa eklerken doğru kategoriye yerleştir:
 
-**A. Çekirdek sayfalar:** Ana Sayfa, Hakkımda (`/hakkimda`), Online Diyet (`/online-diyet-ankara`), Programlar (`/programlar`), Randevu (`/randevu`), İletişim (`/iletisim`), Hesaplayıcılar (`/hesaplayicilar` — BMI, ideal kilo, kalori), Tarifler (`/tarifler`), Blog (`/blog`).
+**A. Çekirdek sayfalar:** Ana Sayfa, Hakkımda (`/hakkimda`), Online Diyet (`/online-diyetisyen`), Programlar (`/programlar`), Randevu (`/randevu`), İletişim (`/iletisim`), Hesaplayıcılar (`/hesaplayicilar` — BMI, ideal kilo, kalori), Tarifler (`/tarifler`), Blog (`/blog`).
 
-**B. Yerel SEO bölge sayfaları** (`/<ilce>-diyetisyen`): Eryaman, Etimesgut, Sincan, Yenimahalle, Batıkent, Çankaya, Ankara, Atayıldız Plaza, ayrıca `/ankara-kilo-verme-diyetisyen`, `/online-diyet-ankara`. Her biri o bölgeye özgü `areaServed` + **benzersiz içerik** ile.
+**B. Yerel SEO bölge sayfaları** (`/<ilce>-diyetisyen`): Eryaman, Etimesgut, Sincan, Yenimahalle, Batıkent, Çankaya, Ankara, Atayıldız Plaza, ayrıca `/ankara-kilo-verme-diyetisyen`, `/online-diyetisyen`. Her biri o bölgeye özgü `areaServed` + **benzersiz içerik** ile.
 
 **C. Uzmanlık sayfaları** (`/<konu>-...-ankara`): insülin direnci diyeti, PCOS, hamilelik beslenmesi, sporcu beslenmesi, çocuk beslenmesi.
 

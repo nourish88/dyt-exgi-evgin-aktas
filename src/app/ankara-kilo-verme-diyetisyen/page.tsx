@@ -210,7 +210,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
         ctaText="WhatsApp'tan ulaşın, yaşam tarzınıza en uygun planı birlikte oluşturalım."
         related={[
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/programlar", label: "Programlar" },

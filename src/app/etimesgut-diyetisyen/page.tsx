@@ -275,7 +275,7 @@ export default function EtimesgutDiyetisyenPage() {
               ve Batıkent hattından kolay ulaşılabilir. Yüz yüze gelemeyen
               danışanlar için{" "}
               <Link
-                href="/online-diyet-ankara"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline"
               >
                 online diyet Ankara

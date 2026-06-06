@@ -217,7 +217,7 @@ export default function HamilelikPage() {
         ctaText="WhatsApp'tan ulaşın, kısa bir ön görüşmeyle gebelik haftanız, tahlilleriniz ve hedefleriniz üzerinden başlangıç planını birlikte konuşalım."
         related={[
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/cocuk-beslenmesi-diyetisyen", label: "Çocuk beslenmesi" },
           { href: "/programlar", label: "Programlar" },

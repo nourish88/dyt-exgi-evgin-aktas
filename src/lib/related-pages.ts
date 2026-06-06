@@ -17,7 +17,7 @@ export type RelatedPage = {
 // yazmayı önler ve typo riskini azaltır.
 export const SERVICE_PAGES = {
   onlineDiyet: {
-    href: "/online-diyet-ankara",
+    href: "/online-diyetisyen",
     label: "Online Diyet Ankara",
     hint: "Türkiye geneli uzaktan takip",
   },

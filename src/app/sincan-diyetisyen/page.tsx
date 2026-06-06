@@ -259,7 +259,7 @@ export default function SincanDiyetisyenPage() {
               güzergahında olduğu için işten dönüş yolunda kolayca
               uğranabiliyor. Yoğun tempoda olan danışanlar için{" "}
               <Link
-                href="/online-diyet-ankara"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline"
               >
                 online diyet süreci

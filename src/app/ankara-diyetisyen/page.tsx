@@ -173,7 +173,7 @@ export default function AnkaraDiyetisyenPage() {
               hattında konumlanmıştır. Ankara&apos;nın diğer ilçelerinden veya
               şehir dışından sürece katılmak isteyenler için{" "}
               <Link
-                href="/online-diyet-ankara"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline"
               >
                 online diyet

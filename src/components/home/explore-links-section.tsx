@@ -8,7 +8,7 @@ const links = [
     desc: "Atayıldız Plaza (Optimum AVM karşısı) kliniğimizde yüz yüze kişiye özel beslenme danışmanlığı.",
   },
   {
-    href: "/online-diyet-ankara",
+    href: "/online-diyetisyen",
     title: "Online Diyet Ankara",
     desc: "Ankara ve Türkiye genelinden uzaktan kişiye özel beslenme danışmanlığı ve haftalık takip.",
   },

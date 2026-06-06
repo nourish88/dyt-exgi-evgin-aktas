@@ -569,7 +569,7 @@ export default function EryamanDiyetisyenPage() {
               <p>
                 Eryaman dışından gelenler veya yoğun temposu olanlar için{" "}
                 <Link
-                  href="/online-diyet-ankara"
+                  href="/online-diyetisyen"
                   className="text-primary font-medium hover:underline"
                 >
                   online diyet

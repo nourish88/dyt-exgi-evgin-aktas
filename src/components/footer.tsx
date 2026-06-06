@@ -211,7 +211,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/online-diyet-ankara"
+                  href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Online diyet Ankara

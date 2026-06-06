@@ -419,7 +419,7 @@ export default function AtayildizPlazaDiyetisyenPage() {
                 <strong>Atayıldız Plaza</strong>&apos;daki ofisimiz semtinizde uzman
                 diyetisyen desteği için en yakın ve erişilebilir seçenektir. Yüz yüze
                 danışmanlık tercih etmeyenler için aynı kalite standardında{" "}
-                <Link href="/online-diyet-ankara" className="text-primary font-medium hover:underline">
+                <Link href="/online-diyetisyen" className="text-primary font-medium hover:underline">
                   online diyet
                 </Link>{" "}
                 seçeneği de mevcuttur.
@@ -544,7 +544,7 @@ export default function AtayildizPlazaDiyetisyenPage() {
                 Ankara Diyetisyen
               </Link>
               <span className="text-muted-foreground" aria-hidden>·</span>
-              <Link href="/online-diyet-ankara" className="text-primary hover:underline font-medium">
+              <Link href="/online-diyetisyen" className="text-primary hover:underline font-medium">
                 Online Diyet Ankara
               </Link>
               <span className="text-muted-foreground" aria-hidden>·</span>

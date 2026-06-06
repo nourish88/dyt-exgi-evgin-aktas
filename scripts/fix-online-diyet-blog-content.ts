@@ -22,7 +22,7 @@ function fixContent(raw: string): string {
 
   content = content.replace(
     "👉 Online programlarımı incelemek için ilgili sayfayı ziyaret edebilirsiniz.",
-    "👉 [Online programlarımızı](/programlar) inceleyebilir veya [online diyet sayfasından](/online-diyet-ankara) detaylı bilgi alabilirsiniz."
+    "👉 [Online programlarımızı](/programlar) inceleyebilir veya [online diyet sayfasından](/online-diyetisyen) detaylı bilgi alabilirsiniz."
   );
 
   content = content.replace(
@@ -32,7 +32,7 @@ function fixContent(raw: string): string {
 
   content = content.replace(
     "Süreç hakkında detaylı bilgi almak için online diyet sayfasını inceleyebilir veya randevu oluşturabilirsiniz.",
-    "Süreç hakkında detaylı bilgi almak için [online diyet sayfasını](/online-diyet-ankara) inceleyebilir veya [randevu oluşturabilirsiniz](/randevu)."
+    "Süreç hakkında detaylı bilgi almak için [online diyet sayfasını](/online-diyetisyen) inceleyebilir veya [randevu oluşturabilirsiniz](/randevu)."
   );
 
   content = content.replace(

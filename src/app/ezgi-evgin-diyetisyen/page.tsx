@@ -326,7 +326,7 @@ export default function EzgiEvginDiyetisyenPage() {
               </Link>{" "}
               ofisimde ve{" "}
               <Link
-                href="/online-diyet-ankara"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
                 online
@@ -637,7 +637,7 @@ export default function EzgiEvginDiyetisyenPage() {
                 ·
               </span>
               <Link
-                href="/online-diyet-ankara"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
                 Online diyet Ankara

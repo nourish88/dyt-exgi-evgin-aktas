@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
         destination: "/ezgi-evgin-diyetisyen",
         permanent: true,
       },
+      {
+        source: "/online-diyet-ankara",
+        destination: "/online-diyetisyen",
+        permanent: true,
+      },
     ];
   },
   async headers() {

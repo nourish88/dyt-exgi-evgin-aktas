@@ -218,7 +218,7 @@ export default function SporcuPage() {
         ctaText="WhatsApp'tan ulaşın, antrenman programınız ve hedefiniz üzerinden ön görüşmeyle başlayalım."
         related={[
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/ankara-kilo-verme-diyetisyen", label: "Kilo verme" },
           { href: "/programlar", label: "Programlar" },
           { href: "/hesaplayicilar", label: "BMI & Kalori" },

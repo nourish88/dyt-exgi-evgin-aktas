@@ -219,7 +219,7 @@ export default function CocukPage() {
         ctaText="WhatsApp'tan ulaşın, kısa bir ön görüşmeyle çocuğunuzun ihtiyaçlarını ve sürecinizi birlikte değerlendirelim."
         related={[
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
-          { href: "/online-diyet-ankara", label: "Online diyet" },
+          { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/hamilelik-beslenmesi-ankara", label: "Hamilelik beslenmesi" },
           { href: "/ankara-diyetisyen", label: "Ankara diyetisyen" },
           { href: "/programlar", label: "Programlar" },
