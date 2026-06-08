@@ -32,7 +32,7 @@ export const SERVICE_PAGES = {
     hint: "Eryaman ofisi · Etimesgut",
   },
   ankaraGenel: {
-    href: "/ankara-diyetisyen",
+    href: "/",
     label: "Ankara Diyetisyen",
     hint: "Genel beslenme danışmanlığı",
   },
@@ -53,9 +53,9 @@ export const SERVICE_PAGES = {
     hint: "Ücretsiz araçlar",
   },
   ezgi: {
-    href: "/ezgi-evgin-diyetisyen",
-    label: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    hint: "Uzman tanıtım",
+    href: "/hakkimda",
+    label: "Dyt. Ezgi Evgin Aktaş",
+    hint: "Hakkımda · uzman tanıtım",
   },
   // Uzmanlık sayfaları (henüz yayında olmayanlar yayına alındığında çalışacak)
   fonksiyonelTip: {

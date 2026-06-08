@@ -91,9 +91,9 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
                   {"Ankara & Eryaman · Online beslenme danışmanlığı"}
                 </div>
 
-                <h1 className="text-xl md:text-4xl font-bold leading-tight text-[var(--brand-dark)]">
+                <h2 className="text-xl md:text-4xl font-bold leading-tight text-[var(--brand-dark)]">
                   {currentSlide.title}
-                </h1>
+                </h2>
 
                 <p className="text-sm md:text-lg text-slate-700 break-words">
                   {currentSlide.description}

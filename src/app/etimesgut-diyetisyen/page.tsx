@@ -180,10 +180,6 @@ export default function EtimesgutDiyetisyenPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Bölgeler",
-            item: "https://ezgievginaktas.com/ankara-diyetisyen",
-          },
           { name: "Etimesgut Diyetisyen", item: PAGE_URL },
         ]}
       />
@@ -206,7 +202,7 @@ export default function EtimesgutDiyetisyenPage() {
               Mahallesi&apos;ndeki ofiste yüz yüze veya online görüşmeyle
               sürdürülebilir bir beslenme süreci başlatabilirsiniz. Diyetisyen{" "}
               <Link
-                href="/ezgi-evgin-diyetisyen"
+                href="/hakkimda"
                 className="text-primary hover:underline font-medium"
               >
                 Dyt. Ezgi Evgin

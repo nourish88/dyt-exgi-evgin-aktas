@@ -6,16 +6,11 @@ const PAGE_PRIORITY_MAP = {
   "/": { priority: 1.0, changefreq: "weekly" },
   // En kritik organik sayfalar (homepage + uzman + ana hizmet)
   "/online-diyetisyen": { priority: 0.9, changefreq: "monthly" },
-  "/ezgi-evgin-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/hakkimda": { priority: 0.9, changefreq: "monthly" },
   "/programlar": { priority: 0.9, changefreq: "monthly" },
   "/randevu": { priority: 0.9, changefreq: "monthly" },
   // Yerel SEO ve ikincil hizmet sayfaları
   "/eryaman-diyetisyen": { priority: 0.85, changefreq: "monthly" },
-  "/cankaya-diyetisyen": { priority: 0.8, changefreq: "monthly" },
-  "/yenimahalle-diyetisyen": { priority: 0.8, changefreq: "monthly" },
-  "/online-diyetisyen": { priority: 0.9, changefreq: "monthly" },
-  "/ankara-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/ankara-kilo-verme-diyetisyen": { priority: 0.8, changefreq: "monthly" },
   // Yeni uzmanlık sayfaları — eklendikçe burada da yer alacak
   "/fonksiyonel-tip-diyetisyeni-ankara": { priority: 0.8, changefreq: "monthly" },
@@ -57,9 +52,7 @@ module.exports = {
     "/server-sitemap.xml",
     "/blog/[slug]",
     "/tarifler/[slug]",
-    "/batikent-diyetisyen",
-    "/cankaya-diyetisyen",
-    "/yenimahalle-diyetisyen",
+    // sincan/etimesgut bilinçli olarak noindex — sitemap dışında tutuluyor.
     "/sincan-diyetisyen",
     "/etimesgut-diyetisyen",
   ],

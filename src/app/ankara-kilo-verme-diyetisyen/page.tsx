@@ -190,7 +190,6 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          { name: "Ankara Diyetisyen", item: "https://ezgievginaktas.com/ankara-diyetisyen" },
           { name: "Kilo Verme", item: PAGE_URL },
         ]}
       />

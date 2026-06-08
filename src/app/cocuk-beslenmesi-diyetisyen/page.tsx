@@ -221,7 +221,7 @@ export default function CocukPage() {
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/hamilelik-beslenmesi-ankara", label: "Hamilelik beslenmesi" },
-          { href: "/ankara-diyetisyen", label: "Ankara diyetisyen" },
+          { href: "/", label: "Ankara diyetisyen" },
           { href: "/programlar", label: "Programlar" },
         ]}
       />

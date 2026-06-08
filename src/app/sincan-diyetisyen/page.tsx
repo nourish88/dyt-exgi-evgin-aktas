@@ -179,10 +179,6 @@ export default function SincanDiyetisyenPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Bölgeler",
-            item: "https://ezgievginaktas.com/ankara-diyetisyen",
-          },
           { name: "Sincan Diyetisyen", item: PAGE_URL },
         ]}
       />
@@ -206,7 +202,7 @@ export default function SincanDiyetisyenPage() {
               uzaklıktadır. Yüz yüze veya online görüşmeyle, hedeflerinize
               uygun kişiye özel plan{" "}
               <Link
-                href="/ezgi-evgin-diyetisyen"
+                href="/hakkimda"
                 className="text-primary hover:underline font-medium"
               >
                 Dyt. Ezgi Evgin

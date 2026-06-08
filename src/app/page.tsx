@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { HeroSlider } from "@/components/home/hero-slider";
+import { AnkaraPillarSection } from "@/components/home/ankara-pillar-section";
 import { TrustStrip } from "@/components/home/trust-strip";
 import { StatsSection } from "@/components/home/stats-section";
 import { ProgramsSection } from "@/components/home/programs-section";
@@ -6,9 +8,36 @@ import { WhyChooseSection } from "@/components/home/why-choose-section";
 import { InstagramSection } from "@/components/home/instagram-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { ExploreLinksSection } from "@/components/home/explore-links-section";
-import { HomeFaqJsonLd } from "@/components/home/home-faq-jsonld";
 import { MobileAppPromoSection } from "@/components/home/mobile-app-promo-section";
 import { prisma } from "@/lib/prisma";
+
+// Ana sayfa "Ankara Diyetisyen" keyword'ünü sahiplenir (eski /ankara-diyetisyen
+// buraya 301). Layout default title'ı yerine sayfaya özel absolute title.
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "Ankara Diyetisyen | Dyt. Ezgi Evgin Aktaş — Beslenme ve Diyet Danışmanlığı",
+  },
+  description:
+    "Ankara diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı. Başkent Üniversitesi tecrübesiyle kişiye özel diyet, haftalık takip ve danışan portalı.",
+  keywords: [
+    "ankara diyetisyen",
+    "diyetisyen ankara",
+    "ankara beslenme uzmanı",
+    "eryaman diyetisyen",
+    "online diyetisyen ankara",
+  ],
+  alternates: {
+    canonical: "https://ezgievginaktas.com",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ezgievginaktas.com",
+    title: "Ankara Diyetisyen | Dyt. Ezgi Evgin Aktaş",
+    description:
+      "Ankara'da yüz yüze (Eryaman) ve online beslenme danışmanlığı. Kişiye özel, yasaksız ve sürdürülebilir diyet programları.",
+  },
+};
 
 export default async function HomePage() {
   const heroImages = await prisma.siteImage.findMany({
@@ -23,8 +52,8 @@ export default async function HomePage() {
 
   return (
     <>
-      <HomeFaqJsonLd />
       <HeroSlider imageOverrides={imageOverrides} />
+      <AnkaraPillarSection />
       <TrustStrip />
       <StatsSection />
       <ProgramsSection />

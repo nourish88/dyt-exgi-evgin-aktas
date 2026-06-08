@@ -117,7 +117,7 @@ export function LocalProofSection({
                   İletişim bilgileri
                 </Link>
                 <Link
-                  href="/ezgi-evgin-diyetisyen"
+                  href="/hakkimda"
                   className="text-primary hover:underline font-medium"
                 >
                   Diyetisyen hakkında

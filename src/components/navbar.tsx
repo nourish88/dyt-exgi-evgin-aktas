@@ -25,8 +25,7 @@ const isGroup = (item: NavItem): item is NavGroup =>
 
 const districtItems: NavLeaf[] = [
   { href: "/eryaman-diyetisyen", label: "Eryaman" },
-  { href: "/etimesgut-diyetisyen", label: "Etimesgut" },
-  { href: "/sincan-diyetisyen", label: "Sincan" },
+  { href: "/ankara-kilo-verme-diyetisyen", label: "Ankara Kilo Verme" },
 ];
 
 const toolsItems: NavLeaf[] = [

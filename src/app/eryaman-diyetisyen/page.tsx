@@ -379,10 +379,6 @@ export default function EryamanDiyetisyenPage() {
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
           {
-            name: "Bölgeler",
-            item: "https://ezgievginaktas.com/ankara-diyetisyen",
-          },
-          {
             name: "Eryaman Diyetisyen",
             item: "https://ezgievginaktas.com/eryaman-diyetisyen",
           },
@@ -545,7 +541,7 @@ export default function EryamanDiyetisyenPage() {
               <p>
                 Başkent Üniversitesi Beslenme ve Diyetetik mezunu{" "}
                 <Link
-                  href="/ezgi-evgin-diyetisyen"
+                  href="/hakkimda"
                   className="text-primary font-medium hover:underline"
                 >
                   Dyt. Ezgi Evgin
@@ -577,7 +573,7 @@ export default function EryamanDiyetisyenPage() {
                 seçeneği de aynı kalite standardında. Genel Ankara aramaları
                 için{" "}
                 <Link
-                  href="/ankara-diyetisyen"
+                  href="/"
                   className="text-primary font-medium hover:underline"
                 >
                   Ankara diyetisyen
@@ -588,13 +584,6 @@ export default function EryamanDiyetisyenPage() {
                   className="text-primary font-medium hover:underline"
                 >
                   Ankara kilo verme diyetisyen
-                </Link>
-                , ofis binası hakkında{" "}
-                <Link
-                  href="/atayildiz-plaza-diyetisyen"
-                  className="text-primary font-medium hover:underline"
-                >
-                  Atayıldız Plaza Diyetisyen
                 </Link>{" "}
                 sayfalarımıza bakabilirsiniz.
               </p>

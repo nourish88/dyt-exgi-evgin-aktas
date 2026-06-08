@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { OnlineSupportFeatures } from "@/components/online-support-features";
@@ -48,19 +49,26 @@ export default function ProgramsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Online Diyet{" "}
+              Diyet Programları ve{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
                 Takip Sistemimiz
               </span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Çalıntı paket yok, ezber diyet yok. Size özel planlanan;
-              haftalık görüşme, devamlı online takip ve mobil uygulama destekli
-              tek bir güçlü sistem.
+              haftalık görüşme, devamlı takip ve mobil uygulama destekli tek bir
+              güçlü sistem.
             </p>
             <p className="text-sm md:text-base text-muted-foreground">
-              Hedefimiz yalnızca kilo vermek değil; süreci sürdürülebilir,
-              takip edilebilir ve motive kalabileceğiniz hale getirmek.
+              Tamamen uzaktan ilerlemek isteyenler için{" "}
+              <Link
+                href="/online-diyetisyen"
+                className="text-[var(--brand-primary)] underline underline-offset-4 font-medium"
+              >
+                online diyetisyen
+              </Link>{" "}
+              hizmetimizle; yüz yüze tercih edenler için Eryaman ofisimizle aynı
+              takip sistemini sunuyoruz.
             </p>
             <a
               href={whatsappLink}

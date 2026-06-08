@@ -13,9 +13,9 @@ const links = [
     desc: "Ankara ve Türkiye genelinden uzaktan kişiye özel beslenme danışmanlığı ve haftalık takip.",
   },
   {
-    href: "/ezgi-evgin-diyetisyen",
-    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    desc: "Eğitimi, yaklaşımı ve danışan deneyimleriyle uzman Ezgi Evgin Beslenme ve Diyet Danışmanlığı'ı tanıyın.",
+    href: "/hakkimda",
+    title: "Dyt. Ezgi Evgin Aktaş",
+    desc: "Eğitimi, klinik deneyimi ve yasaksız beslenme yaklaşımıyla uzman diyetisyen Ezgi Evgin Aktaş'ı tanıyın.",
   },
   {
     href: "/programlar",
@@ -64,20 +64,13 @@ export function ExploreLinksSection() {
               className="text-[var(--brand-primary)] underline underline-offset-4"
             >
               Eryaman diyetisyen
-            </Link>
-            ,{" "}
+            </Link>{" "}
+            ya da{" "}
             <Link
-              href="/etimesgut-diyetisyen"
+              href="/ankara-kilo-verme-diyetisyen"
               className="text-[var(--brand-primary)] underline underline-offset-4"
             >
-              Etimesgut diyetisyen
-            </Link>
-            ,{" "}
-            <Link
-              href="/sincan-diyetisyen"
-              className="text-[var(--brand-primary)] underline underline-offset-4"
-            >
-              Sincan diyetisyen
+              Ankara kilo verme
             </Link>{" "}
             sayfalarına göz atabilirsiniz.
           </p>

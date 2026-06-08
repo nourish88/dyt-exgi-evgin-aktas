@@ -25,29 +25,49 @@ const nextConfig: NextConfig = {
         destination: "/blog/saglikli-beslenmeye-baslamak-i-cin-pazartesiyi-beklemeyin-mpe87qa4",
         permanent: true,
       },
+      // Kişi/marka sayfası konsolidasyonu: tüm isim varyasyonları ve eski
+      // /ezgi-evgin-diyetisyen tek kaynak /hakkimda'ya (zincirsiz, doğrudan).
+      {
+        source: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
+        permanent: true,
+      },
       {
         source: "/ezgi-evgin",
-        destination: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
         permanent: true,
       },
       {
         source: "/ezgi-evgin-aktas",
-        destination: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
         permanent: true,
       },
       {
         source: "/dyt-ezgi-evgin",
-        destination: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
         permanent: true,
       },
       {
         source: "/diyetisyen-ezgi-evgin",
-        destination: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
         permanent: true,
       },
       {
         source: "/diyetisyen-ezgi-evgin-aktas",
-        destination: "/ezgi-evgin-diyetisyen",
+        destination: "/hakkimda",
+        permanent: true,
+      },
+      // "ankara diyetisyen" pillar'ı ana sayfada konsolide edildi.
+      {
+        source: "/ankara-diyetisyen",
+        destination: "/",
+        permanent: true,
+      },
+      // Atayıldız Plaza = Eryaman ofisinin kendisi; "eryaman diyetisyen"
+      // cannibalization'ını önlemek için eryaman sayfasına konsolide edildi.
+      {
+        source: "/atayildiz-plaza-diyetisyen",
+        destination: "/eryaman-diyetisyen",
         permanent: true,
       },
       {

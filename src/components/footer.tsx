@@ -163,37 +163,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/atayildiz-plaza-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Atayıldız Plaza Diyetisyen
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/eryaman-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Eryaman diyetisyen tavsiye
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/etimesgut-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Etimesgut diyetisyen
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/sincan-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Sincan diyetisyen
-                </Link>
-              </li>
-
               <li>
                 <Link
                   href="/ankara-kilo-verme-diyetisyen"
@@ -204,26 +179,18 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/ankara-diyetisyen"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Ankara diyetisyen
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Online diyet Ankara
+                  Online diyetisyen
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/ezgi-evgin-diyetisyen"
+                  href="/hakkimda"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ezgi Evgin diyetisyen
+                  Diyetisyen Ezgi Evgin Aktaş
                 </Link>
               </li>
             </ul>
