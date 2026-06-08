@@ -88,7 +88,7 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
             <div className="px-5 py-5 sm:px-7 sm:py-7 lg:px-9 lg:py-10 bg-gradient-to-br from-white to-slate-50/70">
               <div key={`text-${currentSlide.id}`} className="space-y-3 lg:space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-50 text-[11px] md:text-xs font-semibold text-[var(--brand-dark)] text-left leading-snug max-w-full">
-                  {"Ankara & Eryaman · Online beslenme danışmanlığı"}
+                  {"Ankara & Eryaman · Kişiye özel beslenme danışmanlığı"}
                 </div>
 
                 <h2 className="text-xl md:text-4xl font-bold leading-tight text-[var(--brand-dark)]">
@@ -105,12 +105,12 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
 
                 <div className="pt-1 flex flex-col items-stretch gap-3">
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <Link href="/online-diyetisyen" className="w-full sm:w-auto">
+                    <Link href="/randevu" className="w-full sm:w-auto">
                       <Button
                         size="lg"
                         className="w-full sm:w-auto min-h-[44px] bg-[var(--brand-dark)] text-white hover:bg-[var(--brand-secondary)] shadow-lg transition-all duration-300 group h-11 md:h-12 px-6"
                       >
-                        Online Diyeti İncele
+                        Randevu Al
                         <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>

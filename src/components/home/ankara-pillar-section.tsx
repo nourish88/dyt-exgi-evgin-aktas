@@ -29,15 +29,15 @@ const services = [
 const faqPairs = [
   {
     q: "Ankara'da diyetisyen randevu fiyatları / seans ücretleri ne kadar?",
-    a: "Diyetisyen seans ücretleri alacağınız paketin süresine (1 aylık, 3 aylık) ve görüşme modeline (online veya yüz yüze) göre değişiklik göstermektedir. Bütçenize en uygun programı seçmek ve güncel fiyat bilgisi almak için WhatsApp üzerinden bizimle iletişime geçebilirsiniz.",
+    a: "Diyetisyen seans ücretleri alacağınız paketin süresine (1 aylık, 3 aylık), takip sıklığına ve görüşme modeline göre değişiklik göstermektedir. Bütçenize en uygun programı seçmek ve güncel fiyat bilgisi almak için WhatsApp üzerinden bizimle iletişime geçebilirsiniz.",
   },
   {
-    q: "Online diyet ile yüz yüze (ofis) görüşmesi arasında kalite farkı var mı?",
-    a: "Kesinlikle kalite veya süreç işleyişi farkı yoktur. İster Eryaman'daki ofisimize gelin, ister Ankara'nın öbür ucundan (veya şehir dışından) online katılın; haftalık 45 dakikalık görüşmelerimiz, danışan portalı erişiminiz ve WhatsApp üzerinden günlük anlık iletişim hakkınız aynı standartta korunur.",
+    q: "Yüz yüze görüşme dışında uzaktan takip seçeneği var mı?",
+    a: "Evet. İster Eryaman'daki ofisimize gelin, ister şehir dışından uzaktan katılın; haftalık görüşmeler, danışan portalı erişimi ve WhatsApp üzerinden günlük iletişim aynı standartta korunur.",
   },
   {
     q: "Randevular sadece Eryaman ofisinde mi yapılıyor?",
-    a: "Yüz yüze görüşmelerimiz Eryaman'daki Atayıldız Plaza ofisimizde gerçekleşmektedir. Trafik veya mesafe sorunu yaşamak istemeyen danışanlarımız aynı takip kalitesiyle online diyet sürecini tercih edebilir.",
+    a: "Yüz yüze görüşmelerimiz Eryaman'daki Atayıldız Plaza ofisimizde gerçekleşmektedir. Trafik veya mesafe sorunu yaşamak istemeyen danışanlarımız için uzaktan takip seçeneği de bulunmaktadır.",
   },
   {
     q: "Diyet listelerinde yasaklar, aç kalma veya bulması zor yiyecekler oluyor mu?",
@@ -57,7 +57,7 @@ const faqPairs = [
   },
   {
     q: "Kredi kartı ile ödeme yapabiliyor muyuz?",
-    a: "Evet, hem online ödeme altyapısı üzerinden hem de ofisimizde kredi kartı veya banka havalesi / EFT ile ödeme yapma imkanınız bulunmaktadır.",
+    a: "Evet, güvenli ödeme altyapısı üzerinden, ofisimizde kredi kartıyla veya banka havalesi / EFT ile ödeme yapma imkanınız bulunmaktadır.",
   },
   {
     q: "Çocuk ve ergen beslenmesi konusunda destek veriyor musunuz?",
@@ -92,7 +92,7 @@ export function AnkaraPillarSection() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center space-y-5 mb-12">
             <span className="inline-flex items-center rounded-full bg-pink-100 px-3 py-1 text-sm font-semibold text-[var(--brand-primary)]">
-              Ankara &amp; Online Beslenme Danışmanlığı
+              Ankara &amp; Eryaman Beslenme Danışmanlığı
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--brand-dark)] leading-[1.15]">
               Ankara Diyetisyen:{" "}
@@ -104,11 +104,12 @@ export function AnkaraPillarSection() {
               İnternetteki kopya diyet listelerinden sıkıldınız mı? Başkent
               Üniversitesi klinik tecrübesiyle; kan değerlerinize, mesainize ve
               damak tadınıza tamamen özel hazırlanan beslenme programlarıyla
-              kalıcı başarıya ulaşın. Eryaman ofisinde yüz yüze veya{" "}
+              kalıcı başarıya ulaşın. Eryaman ofisinde yüz yüze görüşme ve şehir
+              dışındaki danışanlar için{" "}
               <Link href="/online-diyetisyen" className="text-[var(--brand-primary)] hover:underline font-medium">
-                online diyetisyen
+                online diyetisyen desteği
               </Link>{" "}
-              desteğiyle.
+              sunulur.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -117,9 +118,9 @@ export function AnkaraPillarSection() {
                   Ücretsiz Ön Görüşme Yapın
                 </Button>
               </a>
-              <Link href="/online-diyetisyen" className="w-full sm:w-auto">
+              <Link href="/eryaman-diyetisyen" className="w-full sm:w-auto">
                 <Button variant="outline" size="lg" className="w-full h-14 px-8 text-base rounded-xl border-slate-300">
-                  Online Diyeti İncele
+                  Eryaman Ofisini İncele
                 </Button>
               </Link>
             </div>
@@ -198,18 +199,17 @@ export function AnkaraPillarSection() {
               <strong>Altay Mahallesi, Ata Yıldız Plaza</strong>&apos;daki
               kliniğimiz, Optimum AVM karşısında olup ulaşımı oldukça rahattır.
               Ağırlıklı olarak <Link href="/eryaman-diyetisyen">Eryaman</Link>
-              çevresinden gelen danışanlarımızı ağırlıyoruz. Daha uzak
-              bölgelerde yaşayan danışanlarımız için online diyet süreci aynı
-              takip kalitesiyle devam eder.
+              çevresinden gelen danışanlarımızı ağırlıyoruz. Ölçüm,
+              değerlendirme ve beslenme planı kişisel sağlık geçmişiniz,
+              tahlilleriniz ve günlük rutininiz dikkate alınarak hazırlanır.
             </p>
 
-            <h2>Vaktiniz Yok mu? Online Diyet Seçeneği</h2>
+            <h2>Görüşmelerde Takip Nasıl İlerler?</h2>
             <p>
-              Ankara trafiğinde zaman kaybetmek istemiyorsanız tüm süreci akıllı
-              telefonunuzdan yönetebilirsiniz.{" "}
-              <Link href="/online-diyetisyen">Online diyet hizmetimiz</Link>;
-              özel bir danışan mobil portalı, her hafta görüntülü seanslar ve
-              anlık WhatsApp iletişimini içerir.
+              İlk seansta sağlık geçmişiniz, beslenme alışkanlıklarınız ve
+              hedefleriniz birlikte değerlendirilir. Sonrasında danışan portalı,
+              düzenli görüşmeler ve WhatsApp iletişimiyle planınız sürdürülebilir
+              şekilde güncellenir.
             </p>
           </div>
         </div>

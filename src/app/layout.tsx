@@ -62,16 +62,16 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     url: "https://ezgievginaktas.com",
     siteName: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Online Beslenme Danışmanlığı Ankara",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı | Ankara Diyetisyen",
     description:
-      "Ankara'da online ve yüz yüze beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
+      "Ankara Eryaman'da yüz yüze beslenme danışmanlığı, sağlıklı kilo verme ve kişiye özel diyet programları.",
     // images otomatik olarak app/opengraph-image.tsx'den 1200x630 üretiliyor
   },
   twitter: {
     card: "summary_large_image",
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
-      "Ankara odaklı online ve yüz yüze beslenme danışmanlığı",
+      "Ankara Eryaman odaklı yüz yüze beslenme danışmanlığı",
     // images otomatik olarak app/twitter-image.tsx veya opengraph-image.tsx'den
   },
   robots: {

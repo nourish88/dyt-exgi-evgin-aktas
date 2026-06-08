@@ -22,8 +22,8 @@ const items = [
   },
   {
     icon: MapPin,
-    title: "Eryaman ofis · Online Türkiye",
-    description: "Eryaman’da yüz yüze; tüm illerden online danışmanlık.",
+    title: "Eryaman ofis · Ankara",
+    description: "Atayıldız Plaza'da yüz yüze beslenme danışmanlığı.",
     href: "/iletisim",
     external: false,
   },
@@ -82,7 +82,7 @@ export function TrustStrip() {
           })}
         </ul>
         <p className="mt-4 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
-          1000+ danışan deneyimi ve sürekli online destek ile sürecinizi birlikte yönetiyoruz.
+          1000+ danışan deneyimi ve düzenli takip ile sürecinizi birlikte yönetiyoruz.
         </p>
       </div>
     </section>

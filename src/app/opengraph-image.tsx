@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Online Beslenme Danışmanlığı Ankara";
+export const alt = "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Ankara Diyetisyen";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -67,7 +67,7 @@ export default async function OpenGraphImage() {
               maxWidth: 980,
             }}
           >
-            Ankara · Eryaman · Online beslenme danışmanlığı ve kişiye özel diyet programları
+            Ankara · Eryaman · Kişiye özel beslenme danışmanlığı ve diyet programları
           </div>
         </div>
 

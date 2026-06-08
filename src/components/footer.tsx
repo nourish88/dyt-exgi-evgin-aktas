@@ -24,8 +24,8 @@ export function Footer() {
               className="h-10 w-auto"
             />
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              Eryaman merkezli; online ve yüz yüze beslenme
-              danışmanlığı, kilo yönetimi ve sürdürülebilir yaşam odaklı
+              Eryaman merkezli; yüz yüze beslenme danışmanlığı, kilo yönetimi ve
+              sürdürülebilir yaşam odaklı
               diyetisyen hizmeti.
             </p>
             <div className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -116,7 +116,7 @@ export function Footer() {
                   href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Online takip ve anlık iletişim
+                  Uzaktan takip ve anlık iletişim
                 </Link>
               </li>
               <li>
@@ -174,7 +174,7 @@ export function Footer() {
                   href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Online diyetisyen
+                  Uzaktan takip
                 </Link>
               </li>
               <li>

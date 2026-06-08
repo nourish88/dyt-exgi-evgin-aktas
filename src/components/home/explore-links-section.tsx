@@ -8,11 +8,6 @@ const links = [
     desc: "Atayıldız Plaza (Optimum AVM karşısı) kliniğimizde yüz yüze kişiye özel beslenme danışmanlığı.",
   },
   {
-    href: "/online-diyetisyen",
-    title: "Online Diyetisyen",
-    desc: "Türkiye ve yurtdışından katılabileceğiniz kişiye özel online beslenme danışmanlığı ve haftalık takip.",
-  },
-  {
     href: "/hakkimda",
     title: "Dyt. Ezgi Evgin Aktaş",
     desc: "Eğitimi, klinik deneyimi ve yasaksız beslenme yaklaşımıyla uzman diyetisyen Ezgi Evgin Aktaş'ı tanıyın.",
@@ -43,14 +38,9 @@ export function ExploreLinksSection() {
             Size nasıl yardımcı olabilirim?
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Online diyetisyen desteği için{" "}
-            <Link
-              href="/online-diyetisyen"
-              className="text-[var(--brand-primary)] underline underline-offset-4"
-            >
-              online diyetisyen sayfasını inceleyin
-            </Link>{" "}
-            ya da aşağıdaki sayfalardan daha fazla bilgi edinin.
+            Ankara ve Eryaman odaklı beslenme danışmanlığı, kilo yönetimi ve
+            klinik beslenme başlıkları için aşağıdaki sayfalardan daha fazla
+            bilgi edinin.
           </p>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
             Yüz yüze görüşme için{" "}

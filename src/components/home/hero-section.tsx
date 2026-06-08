@@ -72,9 +72,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Online beslenme danışmanlığı ile dünyanın neresinde olursanız olun,
-            kişiye özel diyet programları ve uzman desteğiyle hedeflerinize
-            ulaşın.
+            Ankara Eryaman'da kişiye özel diyet programları ve uzman desteğiyle
+            hedeflerinize sürdürülebilir şekilde yaklaşın.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -84,12 +83,12 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/online-diyetisyen">
+            <Link href="/randevu">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                Online Diyeti İncele
+                Randevu Al
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -121,7 +120,7 @@ export function HeroSection() {
             {[
               { value: "1000+", label: "Mutlu Danışan" },
               { value: "%95", label: "Başarı Oranı" },
-              { value: "7/24", label: "Online Destek" },
+              { value: "7/24", label: "Süreç Desteği" },
             ].map((stat, index) => (
               <div key={index} className="space-y-2">
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">

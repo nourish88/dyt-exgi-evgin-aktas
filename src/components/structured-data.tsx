@@ -11,7 +11,7 @@ export function StructuredData() {
     "@id": "https://ezgievginaktas.com",
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
     description:
-      "Online beslenme danışmanlığı, kilo yönetimi programları ve sağlıklı yaşam koçluğu hizmeti veren uzman diyetisyen.",
+      "Ankara Eryaman'da kilo yönetimi, klinik beslenme ve sağlıklı yaşam danışmanlığı hizmeti veren uzman diyetisyen.",
     image: "https://ezgievginaktas.com/ezgi_evgin.png",
     logo: "https://ezgievginaktas.com/ezgi_evgin.png",
     url: "https://ezgievginaktas.com",
@@ -82,9 +82,9 @@ export function StructuredData() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Online Beslenme Danışmanlığı",
+            name: "Beslenme Danışmanlığı",
             description:
-              "Kişiye özel online diyet programları ve beslenme danışmanlığı",
+              "Kişiye özel diyet programları ve beslenme danışmanlığı",
           },
         },
         {
@@ -107,7 +107,7 @@ export function StructuredData() {
     alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları", "Ata Yıldız Plaza Diyetisyen"],
     jobTitle: "Diyetisyen",
     description:
-      "Uzman diyetisyen; Ankara Eryaman ve online diyet ile beslenme danışmanlığı",
+      "Uzman diyetisyen; Ankara Eryaman'da beslenme danışmanlığı",
     url: "https://ezgievginaktas.com",
     image: "https://ezgievginaktas.com/ezgi_evgin.png",
     telephone: "+905462650440",
@@ -126,7 +126,7 @@ export function StructuredData() {
     ],
     knowsAbout: [
       "Beslenme ve Diyetetik",
-      "Online Diyet Danışmanlığı",
+      "Beslenme Danışmanlığı",
       "Kilo Yönetimi",
       "İnsülin Direnci ve Beslenme",
       "Sporcu Beslenmesi",
@@ -139,7 +139,7 @@ export function StructuredData() {
     "@id": "https://ezgievginaktas.com/#website",
     url: "https://ezgievginaktas.com",
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    description: "Online beslenme danışmanlığı ve kilo yönetimi programları",
+    description: "Ankara Eryaman beslenme danışmanlığı ve kilo yönetimi programları",
     publisher: {
       "@type": "Person",
       name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
@@ -151,7 +151,7 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    description: "Online ve yüz yüze beslenme danışmanlığı hizmetleri",
+    description: "Ankara Eryaman'da yüz yüze beslenme danışmanlığı hizmetleri",
     image: "https://ezgievginaktas.com/ezgi_evgin.png",
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",

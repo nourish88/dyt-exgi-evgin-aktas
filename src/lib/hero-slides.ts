@@ -11,13 +11,13 @@ export const heroSlides: HeroSlide[] = [
     id: 1,
     title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile Kişiye Özel Beslenme",
     description:
-      "Fonksiyonel tıp diyetisyeni Ezgi Evgin olarak Ankara Eryaman ofisinde yüz yüze veya Türkiye genelinde online diyet ile bedeninize uygun, kalıcı planlar sunuyorum.",
+      "Fonksiyonel tıp diyetisyeni Ezgi Evgin olarak Ankara Eryaman ofisinde bedeninize, tahlillerinize ve yaşam düzeninize uygun kalıcı planlar sunuyorum.",
     backgroundGradient: "from-pink-600/70 via-rose-700/70 to-pink-900/70",
     backgroundImage: "/images/instagram/posts/clinic-01.jpeg",
   },
   {
     id: 2,
-    title: "Online Diyet ve Anlık Diyetisyen Desteği",
+    title: "Danışan Portalı ve Sürekli Diyetisyen Desteği",
     description:
       "Nerede olursanız olun mesajlaşma, öğün geri bildirimi ve hatırlatmalarla süreç kopmadan ilerler. Haftalık görüşmelerle planınız güncellenir.",
     backgroundGradient: "from-cyan-700/70 via-teal-800/70 to-cyan-900/70",
