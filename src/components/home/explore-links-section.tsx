@@ -9,8 +9,8 @@ const links = [
   },
   {
     href: "/online-diyetisyen",
-    title: "Online Diyet Ankara",
-    desc: "Ankara ve Türkiye genelinden uzaktan kişiye özel beslenme danışmanlığı ve haftalık takip.",
+    title: "Online Diyetisyen",
+    desc: "Türkiye ve yurtdışından katılabileceğiniz kişiye özel online beslenme danışmanlığı ve haftalık takip.",
   },
   {
     href: "/hakkimda",
@@ -48,12 +48,12 @@ export function ExploreLinksSection() {
             Size nasıl yardımcı olabilirim?
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Ankara&apos;da online diyet için{" "}
+            Online diyetisyen desteği için{" "}
             <Link
-              href="/randevu"
+              href="/online-diyetisyen"
               className="text-[var(--brand-primary)] underline underline-offset-4"
             >
-              randevu alın
+              online diyetisyen sayfasını inceleyin
             </Link>{" "}
             ya da aşağıdaki sayfalardan daha fazla bilgi edinin.
           </p>

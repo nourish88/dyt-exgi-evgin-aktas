@@ -19,13 +19,13 @@ export const metadata: Metadata = {
       "Ankara Diyetisyen | Dyt. Ezgi Evgin Aktaş — Beslenme ve Diyet Danışmanlığı",
   },
   description:
-    "Ankara diyetisyen: Eryaman ofisinde yüz yüze veya online beslenme danışmanlığı. Başkent Üniversitesi tecrübesiyle kişiye özel diyet, haftalık takip ve danışan portalı.",
+    "Ankara diyetisyen Ezgi Evgin: Eryaman ofisinde yüz yüze beslenme danışmanlığı, kişiye özel diyet planı, haftalık takip ve danışan portalı desteği.",
   keywords: [
     "ankara diyetisyen",
     "diyetisyen ankara",
     "ankara beslenme uzmanı",
     "eryaman diyetisyen",
-    "online diyetisyen ankara",
+    "eryaman beslenme uzmanı",
   ],
   alternates: {
     canonical: "https://ezgievginaktas.com",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://ezgievginaktas.com",
     title: "Ankara Diyetisyen | Dyt. Ezgi Evgin Aktaş",
     description:
-      "Ankara'da yüz yüze (Eryaman) ve online beslenme danışmanlığı. Kişiye özel, yasaksız ve sürdürülebilir diyet programları.",
+      "Ankara Eryaman'da yüz yüze beslenme danışmanlığı. Kişiye özel, yasaksız ve sürdürülebilir diyet programları.",
   },
 };
 

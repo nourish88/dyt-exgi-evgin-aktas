@@ -18,8 +18,8 @@ export type RelatedPage = {
 export const SERVICE_PAGES = {
   onlineDiyet: {
     href: "/online-diyetisyen",
-    label: "Online Diyet Ankara",
-    hint: "Türkiye geneli uzaktan takip",
+    label: "Online Diyetisyen",
+    hint: "Kişiye özel uzaktan takip",
   },
   eryaman: {
     href: "/eryaman-diyetisyen",

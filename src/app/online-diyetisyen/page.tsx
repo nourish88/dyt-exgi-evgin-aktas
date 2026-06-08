@@ -53,10 +53,50 @@ const localBusinessJsonLd = {
   medicalSpecialty: "Nutrition",
 };
 
-export const metadata: Metadata = {
-  title: { absolute: "Online Diyetisyen: Evden Çıkmadan Kesintisiz Takip" },
+const onlineDietitianServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${PAGE_URL}#service`,
+  name: "Online Diyetisyen Hizmeti",
+  alternateName: [
+    "Online diyet",
+    "Online beslenme danışmanlığı",
+    "Uzaktan diyetisyen takibi",
+  ],
   description:
-    "Uzman Online Diyetisyen Ezgi Evgin ile mekandan bağımsız, kişiye özel beslenme. Danışan portalı, haftalık görüşme ve anlık mesajlaşma ile zayıflama.",
+    "Dyt. Ezgi Evgin ile Türkiye ve yurtdışından katılabileceğiniz, haftalık video görüşme, kişiye özel beslenme planı, danışan portalı ve anlık mesajlaşma desteği içeren online diyetisyen hizmeti.",
+  serviceType: "Online beslenme danışmanlığı",
+  url: PAGE_URL,
+  provider: {
+    "@type": "MedicalBusiness",
+    name: "Dyt. Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    url: "https://ezgievginaktas.com",
+    telephone: "+90 546 265 04 40",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
+      addressLocality: "Etimesgut",
+      addressRegion: "Ankara",
+      postalCode: "06820",
+      addressCountry: "TR",
+    },
+  },
+  areaServed: [
+    { "@type": "Country", name: "Türkiye" },
+    { "@type": "Country", name: "Germany" },
+    { "@type": "Country", name: "United Kingdom" },
+  ],
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: PAGE_URL,
+    servicePhone: "+90 546 265 04 40",
+  },
+};
+
+export const metadata: Metadata = {
+  title: { absolute: "Online Diyetisyen | Kişiye Özel Online Diyet Takibi" },
+  description:
+    "Online diyetisyen Ezgi Evgin ile kişiye özel beslenme planı, haftalık video görüşme, danışan portalı ve anlık mesajlaşma desteği alın.",
   keywords: [
     "online diyetisyen",
     "online diyet",
@@ -72,9 +112,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: PAGE_URL,
-    title: "Online Diyetisyen: Evden Çıkmadan Kesintisiz Takip",
+    title: "Online Diyetisyen | Kişiye Özel Online Diyet Takibi",
     description:
-      "Danışan portalı, haftalık görüşme ve anlık mesajlaşma desteğiyle kusursuz online diyet süreci.",
+      "Dyt. Ezgi Evgin ile haftalık video görüşme, danışan portalı ve anlık mesajlaşma destekli online diyetisyen süreci.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Online Diyetisyen | Kişiye Özel Online Diyet Takibi",
+    description:
+      "Haftalık video görüşme, kişiye özel beslenme planı ve danışan portalı ile online diyetisyen desteği.",
   },
 };
 
@@ -154,6 +200,12 @@ export default function OnlineDiyetisyenPage() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(onlineDietitianServiceJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <BreadcrumbJsonLd
@@ -175,14 +227,13 @@ export default function OnlineDiyetisyenPage() {
                   <Smartphone className="w-4 h-4 mr-2" /> Danışan Portalı ile Her An Yanınızda
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--brand-dark)] leading-[1.1]">
-                  Mekandan Bağımsız, <br className="hidden md:block"/>
+                  Online Diyetisyen ile <br className="hidden md:block"/>
                   <span className="bg-gradient-to-r from-[var(--brand-primary)] to-pink-500 bg-clip-text text-transparent">
-                    Kusursuz Takip.
+                    Kişiye Özel Takip
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                  İş temposu, yol veya şehir dışı engeli olmadan profesyonel beslenme danışmanlığı alın. 
-                  Sıradan bir PDF listesi değil; haftalık video görüşmeler ve mobil uygulama üzerinden günlük etkileşimli bir süreç yaşayın.
+                  Online diyetisyen Ezgi Evgin ile iş temposu, yol veya şehir dışı engeli olmadan profesyonel beslenme danışmanlığı alın. Sıradan bir PDF listesi değil; haftalık video görüşmeler, kişiye özel online diyet planı ve mobil uygulama üzerinden günlük etkileşimli bir süreç yaşayın.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
@@ -237,8 +288,8 @@ export default function OnlineDiyetisyenPage() {
         <section className="py-20 lg:py-28 bg-white relative">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-dark)] mb-4">Süreç Nasıl İlerliyor?</h2>
-              <p className="text-lg text-slate-600">Karmaşık PDF dosyalarına son. Tamamen size özel ve yönetilebilir bir sistem kuruyoruz.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--brand-dark)] mb-4">Online Diyetisyen Süreci Nasıl İlerliyor?</h2>
+              <p className="text-lg text-slate-600">Karmaşık PDF dosyalarına son. Online diyet sürecinizi tamamen size özel ve yönetilebilir bir sistemle kuruyoruz.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -267,7 +318,7 @@ export default function OnlineDiyetisyenPage() {
               <div className="w-full md:w-1/2 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold leading-tight">Teknolojiyi Sürecinize Dahil Edin</h2>
                 <p className="text-slate-300 text-lg leading-relaxed">
-                  Online diyet sadece WhatsApp'tan liste göndermek değildir. Danışan portalımız sayesinde günlük su tüketiminiz, porsiyon takipleriniz, değişim listeleriniz ve kilo grafikleriniz her an elinizin altında.
+                  Online diyetisyen takibi sadece WhatsApp'tan liste göndermek değildir. Danışan portalımız sayesinde günlük su tüketiminiz, porsiyon takipleriniz, değişim listeleriniz ve kilo grafikleriniz her an elinizin altında.
                 </p>
                 <ul className="space-y-4 pt-4">
                   {[
@@ -329,7 +380,7 @@ export default function OnlineDiyetisyenPage() {
         {/* WHO IS THIS FOR? */}
         <section className="py-20 bg-pink-50/50">
            <div className="container mx-auto px-4 max-w-4xl text-center">
-              <h2 className="text-3xl font-bold text-[var(--brand-dark)] mb-10">Online Diyet Kimler İçin Uygun?</h2>
+              <h2 className="text-3xl font-bold text-[var(--brand-dark)] mb-10">Online Diyetisyen Takibi Kimler İçin Uygun?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
                 {[
                   "Kilo vermek / almak isteyenler",

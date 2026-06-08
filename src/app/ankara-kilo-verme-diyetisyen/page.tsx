@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "ankara kilo verme diyetisyeni",
     "ankara zayıflama",
     "kilo yönetimi ankara",
-    "online diyetisyen ankara",
+    "sağlıklı kilo verme ankara",
   ],
   alternates: {
     canonical: PAGE_URL ,

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Online Diyet Ankara — Uzaktan Beslenme Danışmanlığı · Ezgi Evgin Beslenme ve Diyet Danışmanlığı";
+export const alt = "Online Diyetisyen — Uzaktan Beslenme Danışmanlığı · Ezgi Evgin Beslenme ve Diyet Danışmanlığı";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,7 +32,7 @@ export default async function OpenGraphImage() {
             }}
           />
           <div style={{ fontSize: 28, color: "#475569", letterSpacing: 0.5 }}>
-            ezgievginaktas.com / online-diyet-ankara
+            ezgievginaktas.com / online-diyetisyen
           </div>
         </div>
 
@@ -57,7 +57,7 @@ export default async function OpenGraphImage() {
               letterSpacing: -1.5,
             }}
           >
-            Online Diyet Ankara
+            Online Diyetisyen
           </div>
           <div
             style={{

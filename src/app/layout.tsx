@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     template: "%s | Dyt. Ezgi Evgin",
   },
   description:
-    "Ankara'da yüz yüze ve online beslenme danışmanlığı. Dyt. Ezgi Evgin ile kişiye özel diyet programı ve sağlıklı kilo yönetimine hemen başlayın.",
+    "Ankara Eryaman'da yüz yüze beslenme danışmanlığı ve kişiye özel diyet programları. Dyt. Ezgi Evgin ile sağlıklı kilo yönetimine başlayın.",
   keywords: [
     "ankara diyetisyen",
-    "online diyet ankara",
+    "eryaman diyetisyen",
     "dyt ezgi evgin",
     "kişiye özel diyet programı",
   ],
