@@ -105,10 +105,10 @@ export function LocalProofSection({
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-sm">
                 <Link
-                  href="/programlar"
+                  href="/online-diyetisyen"
                   className="text-primary hover:underline font-medium"
                 >
-                  Programlar
+                  Online diyet
                 </Link>
                 <Link
                   href="/iletisim"

@@ -194,10 +194,6 @@ export default function HamilelikPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Uzmanlık Alanları",
-            item: "https://ezgievginaktas.com/programlar",
-          },
           { name: "Hamilelik Beslenmesi", item: PAGE_URL },
         ]}
       />
@@ -220,7 +216,6 @@ export default function HamilelikPage() {
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/cocuk-beslenmesi-diyetisyen", label: "Çocuk beslenmesi" },
-          { href: "/programlar", label: "Programlar" },
         ]}
       />
     </>

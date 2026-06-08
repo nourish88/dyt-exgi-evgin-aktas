@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     "eryaman beslenme danışmanı",
     "eryaman kilo verme",
     "eryaman online diyet",
-    "etimesgut diyetisyen",
     "atayıldız plaza diyetisyen",
   ],
   alternates: {
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
     title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
     description:
-      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu, 1–5. Etap, Etimesgut'a hizmet. Ücretsiz ön görüşme.",
+      "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu ve 1–5. Etap için ücretsiz ön görüşme.",
     images: [
       {
         url: "https://ezgievginaktas.com/images/instagram/profile.jpg",
@@ -148,7 +147,7 @@ const faqJsonLd = {
       name: "Eryaman'da kliniğiniz tam olarak nerede?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. 1. Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi, Etimesgut, Sincan ve Batıkent yönlerinden kolay ulaşım var.",
+        text: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. 1. Etap, 5. Etap, Yapracık, Göksu ve Mustafa Kemal Mahallesi yönlerinden kolay ulaşım var.",
       },
     },
     {
@@ -185,10 +184,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Eryaman dışında Sincan veya Etimesgut'tan gelmek mantıklı mı, online yeterli mi?",
+      name: "Eryaman dışında oturanlar için online görüşme yeterli mi?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sincan ve Etimesgut'tan yüz yüze görüşme için 10–15 dakika mesafe olduğundan pek çok danışan düzenli olarak gelmeyi tercih ediyor. Online görüşme ise aynı plan kalitesi ve takip süreciyle sunuluyor; ulaşım zorlansa bile süreç hiç sekteye uğramıyor. Bazı danışanlar haftada bir yüz yüze, ara görüşmelerde online karmasını da tercih ediyor.",
+        text: "Eryaman dışından gelen danışanlar yüz yüze görüşmeyi tercih edebilir; online görüşme ise aynı plan kalitesi ve takip süreciyle sunulur. Ulaşım zor olduğunda süreç sekteye uğramadan online devam edebilir.",
       },
     },
   ],
@@ -314,7 +313,7 @@ const processSteps = [
 const faqs = [
   {
     q: "Eryaman'da kliniğiniz tam olarak nerede?",
-    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. Etimesgut/Ankara 06820. 1. Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi, Etimesgut, Sincan ve Batıkent yönlerinden kolay ulaşım var.",
+    a: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. 1. Etap, 5. Etap, Yapracık, Göksu ve Mustafa Kemal Mahallesi yönlerinden kolay ulaşım var.",
   },
   {
     q: "Eryaman 1. Etap, 5. Etap veya Mustafa Kemal Mahallesi'nden ne kadar sürer?",
@@ -333,8 +332,8 @@ const faqs = [
     a: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor.",
   },
   {
-    q: "Eryaman dışında Sincan veya Etimesgut'tan gelmek mantıklı mı, online yeterli mi?",
-    a: "Sincan ve Etimesgut'tan yüz yüze görüşme için 10–15 dakika mesafe olduğundan pek çok danışan düzenli gelmeyi tercih ediyor. Online görüşme ise aynı plan kalitesi ve takip süreciyle sunuluyor; ulaşım zorsa süreç sekteye uğramıyor. Bazı danışanlar haftada bir yüz yüze, aralarda online karma modeli tercih ediyor.",
+    q: "Eryaman dışında oturanlar için online görüşme yeterli mi?",
+    a: "Eryaman dışından gelen danışanlar yüz yüze görüşmeyi tercih edebilir; online görüşme ise aynı plan kalitesi ve takip süreciyle sunulur. Ulaşım zorsa süreç sekteye uğramadan online devam edebilir.",
   },
   {
     q: "Ücretsiz ön görüşme nasıl oluyor?",
@@ -402,8 +401,7 @@ export default function EryamanDiyetisyenPage() {
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Eryaman&apos;da diyetisyen arıyorsanız doğru adrestesiniz. 1.
-                Etap, 5. Etap, Yapracık, Göksu, Mustafa Kemal Mahallesi,
-                Etimesgut ve Sincan&apos;dan kolayca ulaşılan{" "}
+                Etap, 5. Etap, Yapracık, Göksu ve Mustafa Kemal Mahallesi&apos;nden kolayca ulaşılan{" "}
                 <strong>Atayıldız Plaza kliniğimizde</strong> kilo yönetimi,
                 insülin direnci, hamilelik ve çocuk beslenmesi — Dyt. Ezgi
                 Evgin ile yüz yüze veya online. Ücretsiz ön görüşme ile
@@ -534,8 +532,7 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman Altay Mahallesi&apos;nde,{" "}
                 <strong>Optimum AVM&apos;nin tam karşısındaki</strong> Atayıldız
                 Plaza&apos;da konumlanan kliniğimiz bu sorunu ortadan kaldırır.
-                Eryaman içinden 5 dakikada, Etimesgut merkezden 10 dakikada,
-                Sincan ve Batıkent yönünden 15 dakikada ulaşılır. M2 metro
+                Eryaman içinden kısa sürede ulaşılır. M2 metro
                 Eryaman istasyonundan yürüme mesafesinde.
               </p>
               <p>
@@ -712,8 +709,8 @@ export default function EryamanDiyetisyenPage() {
                   Araçla
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Optimum AVM otoparkı ve çevre yol parkı. 1. Etap 5 dk, 5.
-                  Etap 10 dk, Etimesgut 10 dk, Sincan / Batıkent 15 dk.
+                  Optimum AVM otoparkı ve çevre yol parkı. 1. Etap ve 5.
+                  Etap yönünden kısa sürede ulaşım.
                 </p>
               </Card>
               <Card className="p-5">
@@ -732,8 +729,8 @@ export default function EryamanDiyetisyenPage() {
                   Hizmet Bölgeleri
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Eryaman (1–5. Etap, Yapracık, Göksu, Altay Mah.), Etimesgut,
-                  Sincan, Batıkent, Yenimahalle, Çankaya; Türkiye geneli online.
+                  Eryaman (1–5. Etap, Yapracık, Göksu, Altay Mah.) ve Türkiye
+                  geneli online.
                 </p>
               </Card>
             </div>
@@ -853,10 +850,10 @@ export default function EryamanDiyetisyenPage() {
 
             <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
               <Link
-                href="/programlar"
+                href="/online-diyetisyen"
                 className="text-primary hover:underline font-medium"
               >
-                Takip sistemini incele
+                Online takip sistemini incele
               </Link>
               <span className="text-muted-foreground" aria-hidden>
                 ·

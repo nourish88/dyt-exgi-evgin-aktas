@@ -196,10 +196,6 @@ export default function CocukPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Uzmanlık Alanları",
-            item: "https://ezgievginaktas.com/programlar",
-          },
           { name: "Çocuk Beslenmesi Diyetisyeni", item: PAGE_URL },
         ]}
       />
@@ -222,7 +218,6 @@ export default function CocukPage() {
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/hamilelik-beslenmesi-ankara", label: "Hamilelik beslenmesi" },
           { href: "/", label: "Ankara diyetisyen" },
-          { href: "/programlar", label: "Programlar" },
         ]}
       />
     </>

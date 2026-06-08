@@ -195,10 +195,6 @@ export default function SporcuPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Uzmanlık Alanları",
-            item: "https://ezgievginaktas.com/programlar",
-          },
           { name: "Sporcu Beslenmesi", item: PAGE_URL },
         ]}
       />
@@ -220,7 +216,6 @@ export default function SporcuPage() {
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/ankara-kilo-verme-diyetisyen", label: "Kilo verme" },
-          { href: "/programlar", label: "Programlar" },
           { href: "/hesaplayicilar", label: "BMI & Kalori" },
         ]}
       />

@@ -193,10 +193,6 @@ export default function InsulinDirenciPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Uzmanlık Alanları",
-            item: "https://ezgievginaktas.com/programlar",
-          },
           { name: "İnsülin Direnci Diyeti", item: PAGE_URL },
         ]}
       />
@@ -219,7 +215,6 @@ export default function InsulinDirenciPage() {
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
-          { href: "/programlar", label: "Programlar" },
         ]}
       />
     </>

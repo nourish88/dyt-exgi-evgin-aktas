@@ -105,12 +105,12 @@ export function HeroSlider({ imageOverrides = {} }: { imageOverrides?: Record<nu
 
                 <div className="pt-1 flex flex-col items-stretch gap-3">
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <Link href="/programlar" className="w-full sm:w-auto">
+                    <Link href="/online-diyetisyen" className="w-full sm:w-auto">
                       <Button
                         size="lg"
                         className="w-full sm:w-auto min-h-[44px] bg-[var(--brand-dark)] text-white hover:bg-[var(--brand-secondary)] shadow-lg transition-all duration-300 group h-11 md:h-12 px-6"
                       >
-                        Programları İncele
+                        Online Diyeti İncele
                         <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>

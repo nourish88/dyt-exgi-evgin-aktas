@@ -71,6 +71,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/etimesgut-diyetisyen",
+        destination: "/eryaman-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/sincan-diyetisyen",
+        destination: "/eryaman-diyetisyen",
+        permanent: true,
+      },
+      {
+        source: "/programlar",
+        destination: "/online-diyetisyen",
+        permanent: true,
+      },
+      {
         source: "/online-diyet-ankara",
         destination: "/online-diyetisyen",
         permanent: true,

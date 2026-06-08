@@ -23,7 +23,7 @@ const items = [
   {
     icon: MapPin,
     title: "Eryaman ofis · Online Türkiye",
-    description: "Etimesgut–Eryaman’da yüz yüze; tüm illerden online danışmanlık.",
+    description: "Eryaman’da yüz yüze; tüm illerden online danışmanlık.",
     href: "/iletisim",
     external: false,
   },

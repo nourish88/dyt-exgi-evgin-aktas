@@ -76,7 +76,7 @@ export function StructuredData() {
 
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Beslenme ve Diyet Programları",
+      name: "Beslenme ve Diyet Hizmetleri",
       itemListElement: [
         {
           "@type": "Offer",

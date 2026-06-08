@@ -84,12 +84,12 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/programlar">
+            <Link href="/online-diyetisyen">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                Programları İncele
+                Online Diyeti İncele
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

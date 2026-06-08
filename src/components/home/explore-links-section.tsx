@@ -18,11 +18,6 @@ const links = [
     desc: "Eğitimi, klinik deneyimi ve yasaksız beslenme yaklaşımıyla uzman diyetisyen Ezgi Evgin Aktaş'ı tanıyın.",
   },
   {
-    href: "/programlar",
-    title: "Online Programlar",
-    desc: "Kilo verme, kilo alma ve sürdürülebilir yaşam odaklı kişiye özel diyet programları.",
-  },
-  {
     href: "/hesaplayicilar",
     title: "Hesaplayıcılar",
     desc: "Vücut kitle indeksi (BMI), ideal kilo ve günlük kalori ihtiyacınızı ücretsiz hesaplayın.",

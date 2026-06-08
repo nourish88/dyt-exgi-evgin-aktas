@@ -212,7 +212,6 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
-          { href: "/programlar", label: "Programlar" },
         ]}
       />
     </>

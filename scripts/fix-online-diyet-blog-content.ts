@@ -21,13 +21,8 @@ function fixContent(raw: string): string {
   );
 
   content = content.replace(
-    "👉 Online programlarımı incelemek için ilgili sayfayı ziyaret edebilirsiniz.",
-    "👉 [Online programlarımızı](/programlar) inceleyebilir veya [online diyet sayfasından](/online-diyetisyen) detaylı bilgi alabilirsiniz."
-  );
-
-  content = content.replace(
     "Yüz yüze görüşmeyi tercih eden danışanlar için Eryaman / Etimesgut ofisim her zaman bir seçenek olarak devam ediyor.",
-    "Yüz yüze görüşmeyi tercih eden danışanlar için [Eryaman / Etimesgut ofisimiz](/eryaman-diyetisyen) her zaman bir seçenek olarak devam ediyor."
+    "Yüz yüze görüşmeyi tercih eden danışanlar için [Eryaman ofisimiz](/eryaman-diyetisyen) her zaman bir seçenek olarak devam ediyor."
   );
 
   content = content.replace(
@@ -37,8 +32,10 @@ function fixContent(raw: string): string {
 
   content = content.replace(
     "📱 WhatsApp üzerinden iletişime geçebilir,  \n📅 randevu oluşturabilir  \nveya online program detaylarını inceleyebilirsiniz.",
-    "📱 [WhatsApp üzerinden iletişime geçebilir](/iletisim), 📅 [randevu oluşturabilir](/randevu) veya [online program detaylarını](/programlar) inceleyebilirsiniz."
+    "📱 [WhatsApp üzerinden iletişime geçebilir](/iletisim), 📅 [randevu oluşturabilir](/randevu) veya [online diyetisyen hizmetini](/online-diyetisyen) inceleyebilirsiniz."
   );
+
+  content = content.replace(/\]\(\/online-diyet-ankara\)/g, "](/online-diyetisyen)");
 
   for (const heading of FAQ_HEADINGS) {
     content = content.replace(`## ${heading}`, `### ${heading}`);

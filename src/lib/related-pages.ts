@@ -26,11 +26,6 @@ export const SERVICE_PAGES = {
     label: "Eryaman Diyetisyen",
     hint: "Yüz yüze · Optimum AVM karşısı",
   },
-  etimesgut: {
-    href: "/etimesgut-diyetisyen",
-    label: "Etimesgut Diyetisyen",
-    hint: "Eryaman ofisi · Etimesgut",
-  },
   ankaraGenel: {
     href: "/",
     label: "Ankara Diyetisyen",
@@ -40,11 +35,6 @@ export const SERVICE_PAGES = {
     href: "/ankara-kilo-verme-diyetisyen",
     label: "Kilo Verme Diyetisyeni",
     hint: "Kalıcı kilo yönetimi",
-  },
-  programlar: {
-    href: "/programlar",
-    label: "Diyet Programları",
-    hint: "Online & yüz yüze paketler",
   },
   randevu: { href: "/randevu", label: "Randevu Al" },
   hesaplayicilar: {
@@ -98,40 +88,34 @@ const CATEGORY_MAP: Record<string, RelatedPage[]> = {
     SERVICE_PAGES.kiloVerme,
     SERVICE_PAGES.onlineDiyet,
     SERVICE_PAGES.eryaman,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.hesaplayicilar,
   ],
   Beslenme: [
     SERVICE_PAGES.onlineDiyet,
     SERVICE_PAGES.ankaraGenel,
     SERVICE_PAGES.eryaman,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.hesaplayicilar,
   ],
   Tarifler: [
     SERVICE_PAGES.tarifler,
     SERVICE_PAGES.onlineDiyet,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.hesaplayicilar,
   ],
   "Sağlıklı Yaşam": [
     SERVICE_PAGES.onlineDiyet,
     SERVICE_PAGES.ankaraGenel,
     SERVICE_PAGES.eryaman,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.ezgi,
   ],
   "Spor Beslenmesi": [
     SERVICE_PAGES.sporcu,
     SERVICE_PAGES.onlineDiyet,
     SERVICE_PAGES.eryaman,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.hesaplayicilar,
   ],
   "Diyet İpuçları": [
     SERVICE_PAGES.kiloVerme,
     SERVICE_PAGES.onlineDiyet,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.hesaplayicilar,
     SERVICE_PAGES.eryaman,
   ],
@@ -139,14 +123,12 @@ const CATEGORY_MAP: Record<string, RelatedPage[]> = {
     SERVICE_PAGES.cocuk,
     SERVICE_PAGES.eryaman,
     SERVICE_PAGES.onlineDiyet,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.ezgi,
   ],
   "Gebelik Beslenmesi": [
     SERVICE_PAGES.hamilelik,
     SERVICE_PAGES.eryaman,
     SERVICE_PAGES.onlineDiyet,
-    SERVICE_PAGES.programlar,
     SERVICE_PAGES.ezgi,
   ],
 };
@@ -155,9 +137,7 @@ const CATEGORY_MAP: Record<string, RelatedPage[]> = {
 const DEFAULT_RELATED: RelatedPage[] = [
   SERVICE_PAGES.onlineDiyet,
   SERVICE_PAGES.eryaman,
-  SERVICE_PAGES.etimesgut,
   SERVICE_PAGES.ankaraGenel,
-  SERVICE_PAGES.programlar,
   SERVICE_PAGES.randevu,
   SERVICE_PAGES.ezgi,
 ];
@@ -189,7 +169,6 @@ const TAG_HINTS: Record<string, RelatedPage> = {
   "kilo verme": SERVICE_PAGES.kiloVerme,
   online: SERVICE_PAGES.onlineDiyet,
   eryaman: SERVICE_PAGES.eryaman,
-  etimesgut: SERVICE_PAGES.etimesgut,
   ankara: SERVICE_PAGES.ankaraGenel,
   fonksiyonel: SERVICE_PAGES.fonksiyonelTip,
   "fonksiyonel tıp": SERVICE_PAGES.fonksiyonelTip,

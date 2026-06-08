@@ -46,7 +46,7 @@ export default async function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            Eryaman · Etimesgut · Ankara
+            Eryaman · Ankara
           </div>
           <div
             style={{

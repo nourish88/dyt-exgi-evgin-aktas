@@ -36,8 +36,8 @@ const faqPairs = [
     a: "Kesinlikle kalite veya süreç işleyişi farkı yoktur. İster Eryaman'daki ofisimize gelin, ister Ankara'nın öbür ucundan (veya şehir dışından) online katılın; haftalık 45 dakikalık görüşmelerimiz, danışan portalı erişiminiz ve WhatsApp üzerinden günlük anlık iletişim hakkınız aynı standartta korunur.",
   },
   {
-    q: "Randevular sadece Etimesgut / Eryaman bölgesinde mi yapılıyor?",
-    a: "Yüz yüze görüşmelerimiz ulaşımı çok kolay olan Eryaman - Etimesgut sınırlarındaki Atayıldız Plaza'daki ofisimizde gerçekleşmektedir. Ancak Yenimahalle, Çankaya, Sincan veya Keçiören gibi uzak ilçelerden trafik sorunu yaşamak istemeyen danışanlarımız genellikle online diyet programlarımızı tercih etmektedir.",
+    q: "Randevular sadece Eryaman ofisinde mi yapılıyor?",
+    a: "Yüz yüze görüşmelerimiz Eryaman'daki Atayıldız Plaza ofisimizde gerçekleşmektedir. Trafik veya mesafe sorunu yaşamak istemeyen danışanlarımız aynı takip kalitesiyle online diyet sürecini tercih edebilir.",
   },
   {
     q: "Diyet listelerinde yasaklar, aç kalma veya bulması zor yiyecekler oluyor mu?",
@@ -117,9 +117,9 @@ export function AnkaraPillarSection() {
                   Ücretsiz Ön Görüşme Yapın
                 </Button>
               </a>
-              <Link href="/programlar" className="w-full sm:w-auto">
+              <Link href="/online-diyetisyen" className="w-full sm:w-auto">
                 <Button variant="outline" size="lg" className="w-full h-14 px-8 text-base rounded-xl border-slate-300">
-                  Süreç ve Paketler
+                  Online Diyeti İncele
                 </Button>
               </Link>
             </div>
@@ -193,15 +193,14 @@ export function AnkaraPillarSection() {
               ))}
             </div>
 
-            <h2>Yüz Yüze Görüşme: Eryaman - Etimesgut Ofisi</h2>
+            <h2>Yüz Yüze Görüşme: Eryaman Ofisi</h2>
             <p>
               <strong>Altay Mahallesi, Ata Yıldız Plaza</strong>&apos;daki
               kliniğimiz, Optimum AVM karşısında olup ulaşımı oldukça rahattır.
-              Ağırlıklı olarak{" "}
-              <Link href="/eryaman-diyetisyen">Eryaman</Link>, Etimesgut, Sincan
-              ve Yenimahalle bölgesinden gelen danışanlarımızı ağırlıyoruz.
-              Batıkent ve Çayyolu gibi bölgelerden de çevre yolu üzerinden
-              kolayca ulaşım sağlanabilmektedir.
+              Ağırlıklı olarak <Link href="/eryaman-diyetisyen">Eryaman</Link>
+              çevresinden gelen danışanlarımızı ağırlıyoruz. Daha uzak
+              bölgelerde yaşayan danışanlarımız için online diyet süreci aynı
+              takip kalitesiyle devam eder.
             </p>
 
             <h2>Vaktiniz Yok mu? Online Diyet Seçeneği</h2>

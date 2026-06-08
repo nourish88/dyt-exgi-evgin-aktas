@@ -242,9 +242,9 @@ export default function OnlineDiyetisyenPage() {
                       Bilgi ve Randevu Al
                     </Button>
                   </a>
-                  <Link href="/programlar" className="w-full sm:w-auto">
+                  <Link href="/randevu" className="w-full sm:w-auto">
                     <Button variant="outline" size="lg" className="w-full h-14 px-8 text-base rounded-xl bg-white/50 backdrop-blur-sm hover:bg-white/80">
-                      Paketleri İncele
+                      Randevu Al
                     </Button>
                   </Link>
                 </div>
@@ -426,7 +426,7 @@ export default function OnlineDiyetisyenPage() {
           <div className="container mx-auto px-4 max-w-3xl text-center space-y-8">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Yeni Bir Başlangıç Yapmaya Hazır mısınız?</h2>
             <p className="text-lg md:text-xl text-pink-100 max-w-xl mx-auto">
-              Size en uygun programı seçmek veya ücretsiz ön değerlendirme yapmak için hemen WhatsApp üzerinden iletişime geçin.
+              Size en uygun görüşme modelini seçmek veya ücretsiz ön değerlendirme yapmak için hemen WhatsApp üzerinden iletişime geçin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">

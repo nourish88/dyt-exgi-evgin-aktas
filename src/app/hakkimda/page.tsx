@@ -365,9 +365,9 @@ export default function AboutPage() {
                 <h2 className="text-2xl font-bold">Vizyonum</h2>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Eryaman ve Etimesgut başta olmak üzere Ankara&apos;da yüz yüze,
-                Türkiye ve yurt dışından danışanlarla online olarak bilimsel ve
-                uygulanabilir beslenme danışmanlığı sunmak.
+                Eryaman ofisinde yüz yüze, Türkiye ve yurt dışından
+                danışanlarla online olarak bilimsel ve uygulanabilir beslenme
+                danışmanlığı sunmak.
               </p>
             </Card>
           </div>
@@ -674,10 +674,10 @@ export default function AboutPage() {
                 WhatsApp&apos;tan İletişime Geç
               </a>
               <Link
-                href="/programlar"
+                href="/online-diyetisyen"
                 className="inline-flex items-center justify-center h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold border-2 border-white/30 transition-colors"
               >
-                Programları İncele
+                Online Diyeti İncele
               </Link>
             </div>
 

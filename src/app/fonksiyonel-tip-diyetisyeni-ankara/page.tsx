@@ -160,10 +160,6 @@ export default function FonksiyonelTipPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana Sayfa", item: "https://ezgievginaktas.com/" },
-          {
-            name: "Uzmanlık Alanları",
-            item: "https://ezgievginaktas.com/programlar",
-          },
           { name: "Fonksiyonel Tıp Diyetisyeni", item: PAGE_URL },
         ]}
       />
@@ -186,7 +182,6 @@ export default function FonksiyonelTipPage() {
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
-          { href: "/programlar", label: "Programlar" },
         ]}
       />
     </>

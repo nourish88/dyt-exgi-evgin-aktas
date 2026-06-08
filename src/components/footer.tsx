@@ -24,7 +24,7 @@ export function Footer() {
               className="h-10 w-auto"
             />
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              Eryaman ve Etimesgut merkezli; online ve yüz yüze beslenme
+              Eryaman merkezli; online ve yüz yüze beslenme
               danışmanlığı, kilo yönetimi ve sürdürülebilir yaşam odaklı
               diyetisyen hizmeti.
             </p>
@@ -62,14 +62,6 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Hakkımda
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/programlar"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Online Programlar
                 </Link>
               </li>
               <li>
@@ -113,7 +105,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/programlar"
+                  href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Haftalık görüşme ve plan güncellemesi
@@ -121,7 +113,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programlar"
+                  href="/online-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Online takip ve anlık iletişim
@@ -137,7 +129,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/programlar"
+                  href="/mobil-uygulamamiz"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Öğün hatırlatıcı ve bildirimler

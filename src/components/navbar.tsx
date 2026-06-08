@@ -38,7 +38,6 @@ const navItems: NavItem[] = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/hakkimda", label: "Hakkımda" },
   { href: "/online-diyetisyen", label: "Online Diyet" },
-  { href: "/programlar", label: "Programlar" },
   { label: "Bölgeler", items: districtItems, basePath: "diyetisyen" },
   { label: "İçerik", items: toolsItems, basePath: "icerik" },
   { href: "/randevu", label: "Randevu Al" },

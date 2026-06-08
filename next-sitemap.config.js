@@ -7,7 +7,6 @@ const PAGE_PRIORITY_MAP = {
   // En kritik organik sayfalar (homepage + uzman + ana hizmet)
   "/online-diyetisyen": { priority: 0.9, changefreq: "monthly" },
   "/hakkimda": { priority: 0.9, changefreq: "monthly" },
-  "/programlar": { priority: 0.9, changefreq: "monthly" },
   "/randevu": { priority: 0.9, changefreq: "monthly" },
   // Yerel SEO ve ikincil hizmet sayfaları
   "/eryaman-diyetisyen": { priority: 0.85, changefreq: "monthly" },
@@ -50,9 +49,11 @@ module.exports = {
     "/admin/*",
     "/api/*",
     "/server-sitemap.xml",
+    "/programlar",
+    "/programlar/*",
     "/blog/[slug]",
     "/tarifler/[slug]",
-    // sincan/etimesgut bilinçli olarak noindex — sitemap dışında tutuluyor.
+    // sincan/etimesgut Eryaman sayfasına konsolide edildi.
     "/sincan-diyetisyen",
     "/etimesgut-diyetisyen",
   ],
