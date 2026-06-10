@@ -127,7 +127,7 @@ export function AnkaraPillarSection() {
           </div>
 
           <div className="prose prose-slate prose-lg max-w-none prose-headings:text-[var(--brand-dark)] prose-a:text-[var(--brand-primary)]">
-            <h2>Neden Profesyonel Bir Ankara Diyetisyeni İle Çalışmalısınız?</h2>
+            <h2>Ankara'da Neden Profesyonel Bir Diyetisyen İle Çalışmalısınız?</h2>
             <p>
               İnsan vücudu bir makine değildir;{" "}
               <strong>
@@ -202,6 +202,9 @@ export function AnkaraPillarSection() {
               çevresinden gelen danışanlarımızı ağırlıyoruz. Ölçüm,
               değerlendirme ve beslenme planı kişisel sağlık geçmişiniz,
               tahlilleriniz ve günlük rutininiz dikkate alınarak hazırlanır.
+              Ankara dışında veya yoğun mesaide olan danışanlarımız için{" "}
+              <Link href="/online-diyetisyen" className="text-[var(--brand-primary)] hover:underline font-medium">Ankara online diyetisyen</Link>
+              {" "}seçeneğimiz mevcuttur.
             </p>
 
             <h2>Görüşmelerde Takip Nasıl İlerler?</h2>

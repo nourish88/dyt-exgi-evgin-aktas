@@ -165,6 +165,38 @@ const faqJsonLd = {
         text: "Hayır. Diyet listelerimiz tamamen sizin bütçenize, mutfak alışkanlıklarınıza ve sevdiğiniz gıdalara göre 'yasaksız' bir mantıkla sürdürülebilir şekilde planlanır.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Tahlil sonuçlarımı size nasıl iletiyorum?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "İlk görüşme öncesinde veya sürecin herhangi bir aşamasında, son 6 aya ait kan tahlillerinizi WhatsApp üzerinden veya danışan portalımız aracılığıyla PDF / fotoğraf olarak bize iletebilirsiniz. Listeleriniz bu tahlillere (örneğin insülin, demir, tiroid değerleri) göre şekillenir.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ödeme işlemleri nasıl gerçekleşiyor, kredi kartı geçerli mi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ödemelerinizi güvenli ödeme altyapısı (iyzico vb. link üzerinden) kredi kartı ile taksitli olarak veya doğrudan EFT/Havale yoluyla gerçekleştirebilirsiniz.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Görüşme saatlerini çalışma tempoma göre ayarlayabilir miyim?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Evet. Özellikle çalışan danışanlarımız için esnek randevu saatlerimiz bulunuyor. Video görüşmelerini öğle aranızda veya mesai bitiminizde planlayabiliriz.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Ankara'da yaşıyorum ama yine de online diyet tercih edebilir miyim?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Kesinlikle! Ankara'da yaşayan ancak yoğun trafik, mesai saatleri veya küçük çocuk sebebiyle Eryaman kliniğimize gelemeyen birçok danışanımız online takip sistemini tercih etmektedir. Kalite veya verimde hiçbir düşüş yaşanmaz.",
+      },
+    },
   ],
 };
 
@@ -400,6 +432,60 @@ export default function OnlineDiyetisyenPage() {
                 Ankara'da ikamet ediyor ve yüz yüze görüşmek istiyorsanız <Link href="/eryaman-diyetisyen" className="text-pink-600 hover:underline">Eryaman ofisimizi</Link> ziyaret edebilirsiniz.
               </p>
            </div>
+        </section>
+
+        {/* COMPARISON AND ANKARA SECTION */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="flex flex-col lg:flex-row gap-12">
+              <div className="lg:w-1/2 space-y-6">
+                <h2 className="text-3xl font-bold text-[var(--brand-dark)]">Ankara'dan veya Şehir Dışından Uzaktan Takip</h2>
+                <div className="prose prose-slate prose-lg text-slate-600">
+                  <p>
+                    <strong>Ankara online diyetisyen</strong> arayışında olan ancak mesai yoğunluğu, trafik veya Eryaman bölgesine uzaklık sebebiyle kliniğimize gelemeyen danışanlarımız için kusursuz bir uzaktan takip sistemi kurduk. Sadece Ankara değil; İstanbul, İzmir gibi büyükşehirler ile Almanya ve İngiltere başta olmak üzere yurtdışındaki gurbetçilerimize de aktif hizmet veriyoruz.
+                  </p>
+                  <p>
+                    Online beslenme danışmanlığı, yüz yüze seanslara göre çok daha esnek bir yapıdadır. Öğle aranızda bile 45 dakikalık görüşmemizi tamamlayabilir, listenizi anında mobil uygulamanızda görebilirsiniz.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:w-1/2">
+                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+                  <h3 className="text-2xl font-bold text-[var(--brand-dark)] mb-6">Yüz Yüze Diyet vs. Online Diyet</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center shrink-0">
+                        <LineChart className="w-6 h-6 text-pink-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-slate-800">Ölçüm Farkı</h4>
+                        <p className="text-slate-600 mt-1">Yüz yüze seansta profesyonel tartı ile detaylı vücut analizi yapılırken, online süreçte kendi ev tartınızı ve mezura ölçümlerinizi kullanarak aynı grafik takibini yaparız.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center shrink-0">
+                        <MessageCircle className="w-6 h-6 text-cyan-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-slate-800">İletişim Yoğunluğu</h4>
+                        <p className="text-slate-600 mt-1">Online diyette danışan portalı ve WhatsApp mesajlaşması çok daha aktif kullanılır. Motivasyon kaybı yaşamanıza izin verilmez.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                        <CalendarDays className="w-6 h-6 text-emerald-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-slate-800">Zaman ve Maliyet</h4>
+                        <p className="text-slate-600 mt-1">Yolda geçecek zamanı sıfıra indirir. Planlaması çok daha kolaydır ve çoğu zaman klinik ziyaretine göre daha ekonomiktir.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* FAQ SECTION */}

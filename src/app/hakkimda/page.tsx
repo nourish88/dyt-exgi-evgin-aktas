@@ -398,7 +398,7 @@ export default function AboutPage() {
             konuda gelmez. Bir kişi insülin direnciyle gelir, üç ay sonra
             hamilelik planlaması ekler; başka biri sporcu olarak başlar, sezonu
             kapatınca farklı bir öğün düzenine geçer. Süreç değişir; danışmanlık
-            da bununla birlikte değişmelidir.
+            da bununla birlikte değişmelidir. Eryaman'daki yüz yüze görüşmelerimin yanı sıra, yurtiçi ve yurtdışından katılan yüzlerce danışanıma <Link href="/online-diyetisyen" className="text-[var(--brand-primary)] hover:underline font-semibold">online diyetisyen</Link> olarak da aynı titizlikle hizmet veriyorum.
           </p>
           <p>
             Mesleki yaklaşımım iki sütuna dayanır:{" "}
