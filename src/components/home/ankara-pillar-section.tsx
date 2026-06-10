@@ -95,7 +95,7 @@ export function AnkaraPillarSection() {
               Ankara &amp; Eryaman Beslenme Danışmanlığı
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--brand-dark)] leading-[1.15]">
-              Ankara Diyetisyen:{" "}
+              Ankara &amp; Eryaman Diyetisyeni:{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-pink-500 bg-clip-text text-transparent">
                 Bilimsel Yaklaşım, Kişiye Özel Plan
               </span>

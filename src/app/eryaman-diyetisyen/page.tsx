@@ -33,10 +33,10 @@ import {
 // description: 152 karakter — CTA ve mahalle bilgisi içeriyor
 export const metadata: Metadata = {
   title: {
-    absolute: "Eryaman Diyetisyen | Dyt. Ezgi Evgin",
+    absolute: "Eryaman Diyetisyen | Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   },
   description:
-    "Eryaman'da diyetisyen: Dyt. Ezgi Evgin, Atayıldız Plaza (Optimum AVM karşısı). Kilo, insülin direnci, hamilelik, çocuk beslenmesi. Ücretsiz ön görüşme — 0546 265 04 40.",
+    "Eryaman'da kişiye özel beslenme danışmanlığı: Ezgi Evgin, Atayıldız Plaza (Optimum AVM karşısı). Kilo, insülin direnci, hamilelik. Ücretsiz ön görüşme — 0546 265 04 40.",
   keywords: [
     "eryaman diyetisyen",
     "eryaman beslenme danışmanı",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://ezgievginaktas.com/eryaman-diyetisyen",
-    title: "Eryaman Diyetisyen | Dyt. Ezgi Evgin · Atayıldız Plaza",
+    title: "Eryaman Beslenme ve Diyet Danışmanlığı | Ezgi Evgin · Atayıldız Plaza",
     description:
       "Eryaman Atayıldız Plaza'da (Optimum AVM karşısı) kişiye özel beslenme danışmanlığı. Yapracık, Göksu ve 1–5. Etap için ücretsiz ön görüşme.",
     images: [
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "https://ezgievginaktas.com/images/instagram/profile.jpg",
         width: 1200,
         height: 630,
-        alt: "Eryaman diyetisyen Ezgi Evgin — Atayıldız Plaza, Optimum AVM karşısı",
+        alt: "Eryaman beslenme danışmanlığı Ezgi Evgin — Atayıldız Plaza, Optimum AVM karşısı",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eryaman Diyetisyen — Dyt. Ezgi Evgin · Atayıldız Plaza",
+    title: "Eryaman Beslenme Danışmanlığı — Ezgi Evgin · Atayıldız Plaza",
     description:
       "Eryaman Optimum AVM karşısı, kişiye özel beslenme danışmanlığı. Ücretsiz ön görüşme ile başlayın.",
     images: ["https://ezgievginaktas.com/images/instagram/profile.jpg"],
@@ -122,9 +122,9 @@ const pageJsonLd = {
     {
       "@type": "Person",
       "@id": "https://ezgievginaktas.com/#dietitian",
-      name: "Ezgi Evgin",
+      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+      alternateName: "Ezgi Evgin",
       jobTitle: "Diyetisyen",
-      honorificPrefix: "Dyt.",
       alumniOf: {
         "@type": "CollegeOrUniversity",
         name: "Başkent Üniversitesi",
@@ -160,7 +160,7 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Eryaman'daki diğer diyetisyenlerden farkınız ne?",
+      name: "Eryaman'daki diğer beslenme uzmanlarından farkınız ne?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi mezunu bir diyetisyen. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
@@ -320,7 +320,7 @@ const faqs = [
     a: "Eryaman 1. Etap'tan yaklaşık 5–8 dakika, 5. Etap'tan 8–12 dakika, Mustafa Kemal Mahallesi'nden ise 6–10 dakika araçla ulaşılır. Tüm bu noktalar Optimum AVM çevresindeki bağlantı yollarıyla Atayıldız Plaza'ya doğrudan bağlı. Metro ile 5–7 dakika yürüyüş mesafesindeyiz.",
   },
   {
-    q: "Eryaman'daki diğer diyetisyenlerden farkınız ne?",
+    q: "Eryaman'daki diğer beslenme uzmanlarından farkınız ne?",
     a: "Dyt. Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi Beslenme ve Diyetetik bölümü mezunu. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlanıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
   },
   {
@@ -394,17 +394,16 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman Altay Mah. · Optimum AVM Karşısı · Atayıldız Plaza
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[var(--brand-dark)]">
-                Eryaman Diyetisyen:{" "}
+                Eryaman Beslenme Danışmanlığı:{" "}
                 <span className="bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] bg-clip-text text-transparent">
                   Yanı Başınızda Uzman Destek
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Eryaman&apos;da diyetisyen arıyorsanız doğru adrestesiniz. 1.
+                Eryaman&apos;da beslenme danışmanı arıyorsanız doğru adrestesiniz. 1.
                 Etap, 5. Etap, Yapracık, Göksu ve Mustafa Kemal Mahallesi&apos;nden kolayca ulaşılan{" "}
                 <strong>Atayıldız Plaza kliniğimizde</strong> kilo yönetimi,
-                insülin direnci, hamilelik ve çocuk beslenmesi — Dyt. Ezgi
-                Evgin ile yüz yüze veya online. Ücretsiz ön görüşme ile
+                insülin direnci, hamilelik ve çocuk beslenmesi — Ezgi Evgin Beslenme ve Diyet Danışmanlığı ile yüz yüze veya online. Ücretsiz ön görüşme ile
                 başlayın.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
@@ -517,7 +516,7 @@ export default function EryamanDiyetisyenPage() {
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="space-y-5 text-muted-foreground text-base leading-relaxed">
               <h2 className="text-3xl font-bold text-[var(--brand-dark)] mb-4">
-                Eryaman&apos;da diyetisyen desteği neden fark yaratır?
+                Eryaman&apos;da beslenme danışmanlığı desteği neden fark yaratır?
               </h2>
               <p>
                 Eryaman, Ankara&apos;nın en hızlı büyüyen ilçelerinden biri. 1.
@@ -741,15 +740,15 @@ export default function EryamanDiyetisyenPage() {
                * Görsel SEO önerisi:
                * Sayfaya eklenmesi gereken görseller için alt text önerileri:
                * 1. Klinik dış fotoğrafı:
-               *    alt="Eryaman diyetisyen Ezgi Evgin kliniği — Atayıldız Plaza, Optimum AVM karşısı"
+               *    alt="Eryaman beslenme danışmanlığı Ezgi Evgin kliniği — Atayıldız Plaza, Optimum AVM karşısı"
                * 2. Diyetisyen profil fotoğrafı:
                *    alt="Diyetisyen Ezgi Evgin, Eryaman Atayıldız Plaza kliniğinde danışmanlık seansı"
                * 3. Konsültasyon odası:
                *    alt="Eryaman beslenme danışmanlığı — Atayıldız Plaza klinik görüşme odası"
                * 4. Danışan portalı ekranı:
-               *    alt="Eryaman diyetisyen takip uygulaması — Ezgi Evgin danışan portalı"
+               *    alt="Eryaman beslenme uzmanı takip uygulaması — Ezgi Evgin danışan portalı"
                * 5. Optimum AVM ve klinik konumu harita görseli:
-               *    alt="Eryaman diyetisyen klinik konumu — Optimum AVM karşısı, Altay Mahallesi haritası"
+               *    alt="Eryaman beslenme danışmanlığı klinik konumu — Optimum AVM karşısı, Altay Mahallesi haritası"
                */}
               <iframe
                 src="https://maps.google.com/maps?q=39.9669753,32.6358095&hl=tr&z=16&output=embed"

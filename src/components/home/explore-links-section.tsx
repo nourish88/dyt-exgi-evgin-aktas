@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 const links = [
   {
     href: "/eryaman-diyetisyen",
-    title: "Eryaman Diyetisyen",
+    title: "Eryaman Beslenme Danışmanlığı",
     desc: "Atayıldız Plaza (Optimum AVM karşısı) kliniğimizde yüz yüze kişiye özel beslenme danışmanlığı.",
   },
   {
     href: "/hakkimda",
-    title: "Dyt. Ezgi Evgin Aktaş",
-    desc: "Eğitimi, klinik deneyimi ve yasaksız beslenme yaklaşımıyla uzman diyetisyen Ezgi Evgin Aktaş'ı tanıyın.",
+    title: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    desc: "Eğitimi, klinik deneyimi ve yasaksız beslenme yaklaşımıyla uzman diyetisyen Ezgi Evgin'i tanıyın.",
   },
   {
     href: "/hesaplayicilar",
@@ -48,7 +48,7 @@ export function ExploreLinksSection() {
               href="/eryaman-diyetisyen"
               className="text-[var(--brand-primary)] underline underline-offset-4"
             >
-              Eryaman diyetisyen
+              Eryaman beslenme danışmanlığı
             </Link>{" "}
             ya da{" "}
             <Link
