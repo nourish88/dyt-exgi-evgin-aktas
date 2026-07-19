@@ -21,37 +21,9 @@ import {
 } from "@/components/ui/accordion";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
+import { BUSINESS_ID } from "@/lib/seo-entities";
 
 const PAGE_URL = "https://ezgievginaktas.com/online-diyetisyen";
-
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  name: "Dyt. Ezgi Evgin — Online Diyetisyen ve Beslenme Danışmanlığı",
-  description:
-    "Türkiye ve yurtdışı için online diyet ve beslenme danışmanlığı. Danışan portalı uygulaması, haftalık video görüşme ve anlık mesajlaşma ile sürdürülebilir zayıflama.",
-  url: PAGE_URL,
-  telephone: "+90 546 265 04 40",
-  image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
-    addressLocality: "Etimesgut",
-    addressRegion: "Ankara",
-    postalCode: "06820",
-    addressCountry: "TR",
-  },
-  areaServed: [
-    { "@type": "Country", name: "Türkiye" },
-    { "@type": "City", name: "İstanbul" },
-    { "@type": "City", name: "Ankara" },
-    { "@type": "City", name: "İzmir" },
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "United Kingdom" },
-  ],
-  priceRange: "₺₺",
-  medicalSpecialty: "Nutrition",
-};
 
 const onlineDietitianServiceJsonLd = {
   "@context": "https://schema.org",
@@ -67,20 +39,7 @@ const onlineDietitianServiceJsonLd = {
     "Dyt. Ezgi Evgin ile Türkiye ve yurtdışından katılabileceğiniz, haftalık video görüşme, kişiye özel beslenme planı, danışan portalı ve anlık mesajlaşma desteği içeren online diyetisyen hizmeti.",
   serviceType: "Online beslenme danışmanlığı",
   url: PAGE_URL,
-  provider: {
-    "@type": "MedicalBusiness",
-    name: "Dyt. Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    url: "https://ezgievginaktas.com",
-    telephone: "+90 546 265 04 40",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Altay Mah. Orhan Bey Cad. Atayıldız No:1/70 Kat:8",
-      addressLocality: "Etimesgut",
-      addressRegion: "Ankara",
-      postalCode: "06820",
-      addressCountry: "TR",
-    },
-  },
+  provider: { "@id": BUSINESS_ID },
   areaServed: [
     { "@type": "Country", name: "Türkiye" },
     { "@type": "Country", name: "Germany" },
@@ -226,10 +185,6 @@ const steps = [
 export default function OnlineDiyetisyenPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

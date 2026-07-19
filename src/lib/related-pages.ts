@@ -23,8 +23,8 @@ export const SERVICE_PAGES = {
   },
   eryaman: {
     href: "/eryaman-diyetisyen",
-    label: "Eryaman Diyetisyen",
-    hint: "Yüz yüze · Optimum AVM karşısı",
+    label: "Eryaman ve Etimesgut Diyetisyen",
+    hint: "Yüz yüze · Atayıldız Plaza",
   },
   ankaraGenel: {
     href: "/",

@@ -11,7 +11,7 @@ import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import {
   SpecialtyPage,
-  buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
   buildFaqJsonLd,
   type SpecialtyFaq,
   type SpecialtyParagraph,
@@ -172,7 +172,7 @@ const process: SpecialtyParagraph[] = [
   },
 ];
 
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
+const serviceJsonLd = buildServiceJsonLd({
   name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Sporcu Beslenmesi",
   description:
     "Performans ve vücut kompozisyonu odaklı sporcu beslenmesi danışmanlığı, Ankara Eryaman ve online.",
@@ -186,7 +186,7 @@ export default function SporcuPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -213,7 +213,7 @@ export default function SporcuPage() {
         ctaTitle="Performansınızı bir üst seviyeye taşıyalım"
         ctaText="WhatsApp'tan ulaşın, antrenman programınız ve hedefiniz üzerinden ön görüşmeyle başlayalım."
         related={[
-          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/eryaman-diyetisyen", label: "Eryaman ve Etimesgut ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/ankara-kilo-verme-diyetisyen", label: "Kilo verme" },
           { href: "/hesaplayicilar", label: "BMI & Kalori" },

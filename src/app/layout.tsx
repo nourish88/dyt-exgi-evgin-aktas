@@ -8,6 +8,7 @@ import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { StructuredData } from "@/components/structured-data";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { MetaPixel } from "@/components/meta-pixel";
+import { PERSON_NAME, PERSON_PROFILE_URL } from "@/lib/seo-entities";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     "dyt ezgi evgin",
     "kişiye özel diyet programı",
   ],
-  authors: [{ name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı" }],
+  authors: [{ name: PERSON_NAME, url: PERSON_PROFILE_URL }],
   creator: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   publisher: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   formatDetection: {

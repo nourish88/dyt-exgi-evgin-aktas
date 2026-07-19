@@ -11,7 +11,7 @@ import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import {
   SpecialtyPage,
-  buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
   buildFaqJsonLd,
   type SpecialtyFaq,
   type SpecialtyParagraph,
@@ -137,7 +137,7 @@ const process: SpecialtyParagraph[] = [
   },
 ];
 
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
+const serviceJsonLd = buildServiceJsonLd({
   name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Fonksiyonel Tıp Diyetisyeni",
   description:
     "Ankara Eryaman'da bütüncül yaklaşımla fonksiyonel tıp diyetisyeni ve beslenme danışmanlığı.",
@@ -151,7 +151,7 @@ export default function FonksiyonelTipPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -180,7 +180,7 @@ export default function FonksiyonelTipPage() {
         related={[
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
-          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/eryaman-diyetisyen", label: "Eryaman ve Etimesgut ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
         ]}
       />

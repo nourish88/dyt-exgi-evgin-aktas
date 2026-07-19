@@ -17,6 +17,12 @@ import {
   GOOGLE_MAPS_PROFILE_URL,
   INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
+import {
+  BUSINESS_ID,
+  PERSON_ID,
+  PERSON_NAME,
+  PERSON_PROFILE_URL,
+} from "@/lib/seo-entities";
 
 export const metadata: Metadata = {
   title: {
@@ -62,36 +68,24 @@ export const metadata: Metadata = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Ezgi Evgin Aktaş",
+  "@id": PERSON_ID,
+  name: PERSON_NAME,
   alternateName: [
     "Ezgi Evgin",
     "Dyt. Ezgi Evgin",
     "Dyt Ezgi Evgin",
     "Diyetisyen Ezgi Evgin",
-    "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
   ],
   givenName: "Ezgi",
   familyName: "Evgin Aktaş",
   jobTitle: "Diyetisyen · Beslenme ve Diyetetik Uzmanı",
   description:
     "Dyt. Ezgi Evgin: Ankara'da yüz yüze ve online beslenme danışmanlığı. Kalıcı kilo verme, sağlıklı yaşam ve kişiye özel diyet programları.",
-  url: "https://ezgievginaktas.com/hakkimda",
+  url: PERSON_PROFILE_URL,
   image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
   telephone: "+905462650440",
   email: "ezgievgin_dytsyn@hotmail.com",
-  worksFor: {
-    "@type": "MedicalBusiness",
-    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    url: "https://ezgievginaktas.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Altay Mah. Orhan Bey Cad. Ata Yıldız Plaza No:1/70 Kat:8",
-      addressLocality: "Etimesgut",
-      addressRegion: "Ankara",
-      postalCode: "06820",
-      addressCountry: "TR",
-    },
-  },
+  worksFor: { "@id": BUSINESS_ID },
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Başkent Üniversitesi",
@@ -136,7 +130,7 @@ const profilePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   name: "Diyetisyen Ezgi Evgin Aktaş — Hakkımda",
-  url: "https://ezgievginaktas.com/hakkimda",
+  url: PERSON_PROFILE_URL,
   mainEntity: personJsonLd,
 };
 

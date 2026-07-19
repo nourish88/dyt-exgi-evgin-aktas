@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <div className="flex items-start gap-2 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              Altay Mah. Orhan Bey Cad. Atayıldız No:1, Eryaman / Ankara
+              Altay Mah. Orhan Bey Cad. Atayıldız No:1, Etimesgut / Ankara
             </div>
             <div className="flex space-x-3">
               <Link
@@ -158,7 +158,7 @@ export function Footer() {
                   href="/eryaman-diyetisyen"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Eryaman diyetisyen tavsiye
+                  Eryaman ve Etimesgut diyetisyen
                 </Link>
               </li>
               <li>

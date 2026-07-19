@@ -11,7 +11,7 @@ import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import {
   SpecialtyPage,
-  buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
   buildFaqJsonLd,
   type SpecialtyFaq,
   type SpecialtyParagraph,
@@ -173,7 +173,7 @@ const process: SpecialtyParagraph[] = [
   },
 ];
 
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
+const serviceJsonLd = buildServiceJsonLd({
   name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Çocuk Beslenmesi",
   description:
     "Çocuk ve ergen beslenmesi için kişiye özel danışmanlık, aile odaklı yaklaşım. Ankara Eryaman ve online.",
@@ -187,7 +187,7 @@ export default function CocukPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -214,7 +214,7 @@ export default function CocukPage() {
         ctaTitle="Çocuğunuz için sağlıklı bir beslenme yolculuğu başlatalım"
         ctaText="WhatsApp'tan ulaşın, kısa bir ön görüşmeyle çocuğunuzun ihtiyaçlarını ve sürecinizi birlikte değerlendirelim."
         related={[
-          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/eryaman-diyetisyen", label: "Eryaman ve Etimesgut ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/hamilelik-beslenmesi-ankara", label: "Hamilelik beslenmesi" },
           { href: "/", label: "Ankara diyetisyen" },

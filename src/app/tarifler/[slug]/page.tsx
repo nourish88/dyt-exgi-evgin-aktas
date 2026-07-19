@@ -17,6 +17,11 @@ import {
 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
+import {
+  PERSON_ID,
+  PERSON_NAME,
+  PERSON_PROFILE_URL,
+} from "@/lib/seo-entities";
 import { ShareButtons } from "@/components/blog/share-buttons";
 
 export const revalidate = 3600;
@@ -139,8 +144,9 @@ export default async function RecipeDetailPage({ params }: Props) {
     image: recipeImage ? [recipeImage] : undefined,
     author: {
       "@type": "Person",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      url: "https://ezgievginaktas.com/hakkimda",
+      "@id": PERSON_ID,
+      name: PERSON_NAME,
+      url: PERSON_PROFILE_URL,
     },
     datePublished: recipe.createdAt.toISOString(),
     dateModified: recipe.updatedAt.toISOString(),

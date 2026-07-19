@@ -92,10 +92,10 @@ export function AnkaraPillarSection() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center space-y-5 mb-12">
             <span className="inline-flex items-center rounded-full bg-pink-100 px-3 py-1 text-sm font-semibold text-[var(--brand-primary)]">
-              Ankara &amp; Eryaman Beslenme Danışmanlığı
+              Ankara Beslenme Danışmanlığı
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--brand-dark)] leading-[1.15]">
-              Ankara &amp; Eryaman Diyetisyeni:{" "}
+              Ankara Diyetisyeni:{" "}
               <span className="bg-gradient-to-r from-[var(--brand-primary)] to-pink-500 bg-clip-text text-transparent">
                 Bilimsel Yaklaşım, Kişiye Özel Plan
               </span>
@@ -120,7 +120,7 @@ export function AnkaraPillarSection() {
               </a>
               <Link href="/eryaman-diyetisyen" className="w-full sm:w-auto">
                 <Button variant="outline" size="lg" className="w-full h-14 px-8 text-base rounded-xl border-slate-300">
-                  Eryaman Ofisini İncele
+                  Eryaman ve Etimesgut Ofisini İncele
                 </Button>
               </Link>
             </div>

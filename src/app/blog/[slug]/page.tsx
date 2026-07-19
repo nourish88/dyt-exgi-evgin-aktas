@@ -20,6 +20,13 @@ import { prisma } from "@/lib/prisma";
 import { ShareButtons } from "@/components/blog/share-buttons";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { getRelatedPagesForPost } from "@/lib/related-pages";
+import {
+  BUSINESS_ID,
+  BUSINESS_NAME,
+  PERSON_ID,
+  PERSON_NAME,
+  PERSON_PROFILE_URL,
+} from "@/lib/seo-entities";
 
 export const revalidate = 3600;
 
@@ -202,12 +209,14 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.updatedAt.toISOString(),
     author: {
       "@type": "Person",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      url: "https://ezgievginaktas.com/hakkimda",
+      "@id": PERSON_ID,
+      name: PERSON_NAME,
+      url: PERSON_PROFILE_URL,
     },
     publisher: {
       "@type": "Organization",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+      "@id": BUSINESS_ID,
+      name: BUSINESS_NAME,
       logo: {
         "@type": "ImageObject",
         url: "https://ezgievginaktas.com/ezgi_evgin.png",

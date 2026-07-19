@@ -11,7 +11,7 @@ import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import {
   SpecialtyPage,
-  buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
   buildFaqJsonLd,
   type SpecialtyFaq,
   type SpecialtyParagraph,
@@ -167,7 +167,7 @@ const process: SpecialtyParagraph[] = [
   },
 ];
 
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
+const serviceJsonLd = buildServiceJsonLd({
   name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı — Kilo Verme",
   description:
     "Ankara'da sürdürülebilir, yasaksız ve kişiye özel kilo verme danışmanlığı.",
@@ -181,7 +181,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -208,7 +208,7 @@ export default function AnkaraKiloVermeDiyetisyenPage() {
         ctaTitle="Diyet Döngüsünü Kırın, Kalıcı Sonuca Ulaşın"
         ctaText="WhatsApp'tan ulaşın, yaşam tarzınıza en uygun planı birlikte oluşturalım."
         related={[
-          { href: "/eryaman-diyetisyen", label: "Eryaman ofisi" },
+          { href: "/eryaman-diyetisyen", label: "Eryaman ve Etimesgut ofisi" },
           { href: "/online-diyetisyen", label: "Online diyet" },
           { href: "/insulin-direnci-diyeti-ankara", label: "İnsülin direnci" },
           { href: "/pcos-diyetisyen-ankara", label: "PCOS diyetisyeni" },

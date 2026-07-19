@@ -25,8 +25,8 @@ import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { buildWhatsAppApiUrl } from "@/lib/whatsapp";
 import {
   GOOGLE_MAPS_PROFILE_URL,
-  INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
+import { BUSINESS_ID } from "@/lib/seo-entities";
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 // title: 36 karakter — Google sonuçlarında kesilmemesi için template suffix'i kullanılmaz
@@ -83,10 +83,11 @@ const pageJsonLd = {
       description:
         "Kilo yönetimi, insülin direnci, PCOS, hamilelik ve emzirme, çocuk ve sporcu beslenmesi alanlarında kişiye özel beslenme planlaması ve haftalık takip.",
       provider: {
-        "@id": "https://ezgievginaktas.com",
+        "@id": BUSINESS_ID,
       },
       areaServed: [
         { "@type": "Place", name: "Eryaman" },
+        { "@type": "AdministrativeArea", name: "Etimesgut" },
       ],
       availableChannel: [
         {
@@ -117,77 +118,6 @@ const pageJsonLd = {
         availability: "https://schema.org/InStock",
         priceCurrency: "TRY",
         description: "Ücretsiz ön görüşme ile başlayın. Paket ücretleri için WhatsApp üzerinden bilgi alın.",
-      },
-    },
-    {
-      "@type": "Person",
-      "@id": "https://ezgievginaktas.com/#dietitian",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      alternateName: "Ezgi Evgin",
-      jobTitle: "Diyetisyen",
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Başkent Üniversitesi",
-        department: "Beslenme ve Diyetetik",
-      },
-      worksFor: {
-        "@id": "https://ezgievginaktas.com",
-      },
-      sameAs: [INSTAGRAM_PROFILE_URL],
-    },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Eryaman'da kliniğiniz tam olarak nerede?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Eryaman Altay Mahallesi Orhan Bey Caddesi, Atayıldız Plaza No:1/70 Kat:8, Optimum AVM'nin tam karşısında. 1. Etap, 5. Etap, Yapracık, Göksu ve Mustafa Kemal Mahallesi yönlerinden kolay ulaşım var.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Eryaman 1. Etap, 5. Etap veya Mustafa Kemal Mahallesi'nden ne kadar sürer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Eryaman 1. Etap'tan yaklaşık 5–8 dakika, 5. Etap'tan 8–12 dakika, Mustafa Kemal Mahallesi'nden ise 6–10 dakika araçla ulaşılır. Tüm bu noktalar Optimum AVM çevresindeki bağlantı yollarıyla klinik yeri olan Atayıldız Plaza'ya doğrudan bağlı.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Eryaman'daki diğer beslenme uzmanlarından farkınız ne?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi mezunu bir diyetisyen. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Görüşme ücreti ne kadar, kaç seans gerekli?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Seans ücretleri paket kapsamı ve görüşme sıklığına göre değiştiğinden güncel bilgi için WhatsApp üzerinden (0546 265 04 40) yazmanızı öneririz. Kaç seans gerektiği hedefinize ve başlangıç durumunuza göre farklılaşır; ortalama 3–6 aylık süreçlerde belirgin değişimler görülür. İlk ön görüşme tamamen ücretsiz.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Sigorta kapsamında mı, ödeme yöntemleri neler?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Klinik özel muayene kapsamında hizmet vermekte olup SGK veya özel sigorta geri ödemesi mevcut değil. Nakit, kredi/banka kartı ve havale/EFT ile ödeme kabul ediliyor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Eryaman dışında oturanlar için online görüşme yeterli mi?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Eryaman dışından gelen danışanlar yüz yüze görüşmeyi tercih edebilir; online görüşme ise aynı plan kalitesi ve takip süreciyle sunulur. Ulaşım zor olduğunda süreç sekteye uğramadan online devam edebilir.",
       },
     },
   ],
@@ -320,6 +250,10 @@ const faqs = [
     a: "Eryaman 1. Etap'tan yaklaşık 5–8 dakika, 5. Etap'tan 8–12 dakika, Mustafa Kemal Mahallesi'nden ise 6–10 dakika araçla ulaşılır. Tüm bu noktalar Optimum AVM çevresindeki bağlantı yollarıyla Atayıldız Plaza'ya doğrudan bağlı. Metro ile 5–7 dakika yürüyüş mesafesindeyiz.",
   },
   {
+    q: "Etimesgut'tan kliniğe nasıl ulaşabilirim?",
+    a: "Klinik, Etimesgut ilçesinin Altay Mahallesi'ndeki Atayıldız Plaza'da, Optimum AVM'nin karşısındadır. Etimesgut merkez, Elvankent ve Eryaman yönlerinden araçla veya Optimum çevresindeki toplu taşıma bağlantılarıyla ulaşabilirsiniz.",
+  },
+  {
     q: "Eryaman'daki diğer beslenme uzmanlarından farkınız ne?",
     a: "Dyt. Ezgi Evgin, 2016'dan bu yana 1000+ danışanla çalışmış, Başkent Üniversitesi Beslenme ve Diyetetik bölümü mezunu. Hazır liste ya da şok diyet yerine yaşam tarzınıza ve mutfağınıza uygun, haftalık güncellenen kişisel planlar hazırlanıyor. Görüşmeler arası sürekli iletişim (danışan portalı) ve uzun vadeli alışkanlık odağı en belirgin farklar.",
   },
@@ -360,6 +294,16 @@ const faqs = [
     a: "Ankara M2 metro hattı Eryaman istasyonundan 5–7 dakika yürüyüş. EGO otobüsleri Eryaman Merkez ve Optimum duraklarından yoğun geçer. AVM otoparkı ve çevre yol parkı da mevcut.",
   },
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
 
 // ─── COMPONENT ────────────────────────────────────────────────────────────────
 export default function EryamanDiyetisyenPage() {
@@ -519,7 +463,7 @@ export default function EryamanDiyetisyenPage() {
                 Eryaman&apos;da beslenme danışmanlığı desteği neden fark yaratır?
               </h2>
               <p>
-                Eryaman, Ankara&apos;nın en hızlı büyüyen ilçelerinden biri. 1.
+                Eryaman, Ankara&apos;nın gelişen yerleşim bölgelerinden biri. 1.
                 Etap&apos;tan 5. Etap&apos;a, Yapracık&apos;tan Göksu&apos;ya,
                 Mustafa Kemal Mahallesi&apos;nden Mevlana Bulvarı güzergahına
                 uzanan geniş bölgede yaşayan binlerce aile sağlıklı beslenme
@@ -550,13 +494,13 @@ export default function EryamanDiyetisyenPage() {
                 güncellenen bir süreç.
               </p>
               <p>
-                Eryaman&apos;da kilo verme konusundaki en sık hata: birkaç
-                haftalık şok diyetlerle çabuk sonuç aramak. Bu yaklaşım kısa
-                vadede işe yarasa da kaybedilen kilonun büyük çoğunluğu 3–6 ay
-                içinde geri döner. Haftalık görüşmelerle desteklenen, kişiye
-                özel bir beslenme planı hem kalıcı kilo kaybı sağlar hem de
-                insülin direnci, PKOS, hamilelik ve sporcu beslenmesi gibi özel
-                durumlarda çok daha güvenli ilerler.
+                Eryaman&apos;da kilo verme konusundaki yaygın hatalardan biri,
+                birkaç haftalık şok diyetlerle çabuk sonuç aramaktır. Katı ve
+                günlük yaşama uymayan planların sürdürülmesi zor olabilir.
+                Haftalık görüşmelerle desteklenen kişiye özel bir beslenme
+                planı; kilo yönetiminin yanında insülin direnci, PKOS,
+                hamilelik ve sporcu beslenmesi gibi özel durumların gerektirdiği
+                bireysel düzenlemelere de alan açar.
               </p>
               <p>
                 Eryaman dışından gelenler veya yoğun temposu olanlar için{" "}
@@ -689,6 +633,45 @@ export default function EryamanDiyetisyenPage() {
         </section>
 
 
+        {/* ── ETİMESGUT YEREL NİYETİ — AYRI SAYFA OLUŞTURMADAN ───────────── */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <Card className="p-6 md:p-8 border-pink-100 bg-white/80">
+              <div className="flex flex-col md:flex-row gap-5 items-start">
+                <div className="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-[var(--brand-primary)]" />
+                </div>
+                <div className="space-y-3">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[var(--brand-dark)]">
+                    Etimesgut&apos;tan Eryaman Ofisine Ulaşım
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Kliniğimiz, <strong>Etimesgut ilçesinin Altay Mahallesi</strong>
+                    &apos;nde bulunan Atayıldız Plaza&apos;da, Optimum AVM&apos;nin
+                    karşısındadır. Bu nedenle Etimesgut merkez, Elvankent,
+                    Eryaman etapları, Göksu ve Yapracık yönlerinden yüz yüze
+                    görüşme için aynı ofise ulaşılır.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Ayrı bir Etimesgut şubesi bulunmamaktadır; yüz yüze
+                    görüşmeler bu adreste yapılır. Konumu doğrulamak ve rota
+                    oluşturmak için aşağıdaki Google Haritalar bağlantısını,
+                    görüşme modeli hakkında bilgi almak içinse{" "}
+                    <Link
+                      href="/iletisim"
+                      className="text-primary font-medium hover:underline"
+                    >
+                      iletişim sayfasını
+                    </Link>{" "}
+                    kullanabilirsiniz.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+
         {/* ── ULAŞIM & GOOGLE MAPS ─────────────────────────────────────────── */}
         <section className="py-12 md:py-16 bg-white/60">
           <div className="container mx-auto px-4 max-w-4xl">
@@ -728,8 +711,8 @@ export default function EryamanDiyetisyenPage() {
                   Hizmet Bölgeleri
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Eryaman (1–5. Etap, Yapracık, Göksu, Altay Mah.) ve Türkiye
-                  geneli online.
+                  Eryaman (1–5. Etap, Yapracık, Göksu, Altay Mah.), Etimesgut
+                  ve Türkiye geneli online.
                 </p>
               </Card>
             </div>

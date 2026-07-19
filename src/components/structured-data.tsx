@@ -3,35 +3,38 @@ import {
   GOOGLE_MAPS_PROFILE_URL,
   INSTAGRAM_PROFILE_URL,
 } from "@/lib/external-links";
+import {
+  BUSINESS_ID,
+  BUSINESS_NAME,
+  PERSON_ID,
+  PERSON_NAME,
+  PERSON_PROFILE_URL,
+  SITE_URL,
+  WEBSITE_ID,
+} from "@/lib/seo-entities";
 
 export function StructuredData() {
-  const organizationSchema = {
-    "@context": "https://schema.org",
+  const businessSchema = {
     "@type": ["LocalBusiness", "MedicalClinic"],
-    "@id": "https://ezgievginaktas.com",
-    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    "@id": BUSINESS_ID,
+    name: BUSINESS_NAME,
     description:
       "Ankara Eryaman'da kilo yönetimi, klinik beslenme ve sağlıklı yaşam danışmanlığı hizmeti veren uzman diyetisyen.",
     image: "https://ezgievginaktas.com/ezgi_evgin.png",
     logo: "https://ezgievginaktas.com/ezgi_evgin.png",
-    url: "https://ezgievginaktas.com",
+    url: SITE_URL,
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
     medicalSpecialty: "DietNutrition",
     alternateName: [
-      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-      "Ezgi Evgin",
-      "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları",
+      "Ezgi Evgin Beslenme ve Diyet Danışmanlık Merkezi",
       "Ata Yıldız Plaza Diyetisyen",
-      "Diyetisyen",
     ],
     sameAs: [
-      "https://diyetisyenezgievgin.com",
-      DOKTORTAKVIMI_PROFILE_URL,
       INSTAGRAM_PROFILE_URL,
       GOOGLE_MAPS_PROFILE_URL,
     ],
+    founder: { "@id": PERSON_ID },
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -70,7 +73,8 @@ export function StructuredData() {
     priceRange: "$$",
     areaServed: [
       { "@type": "City", name: "Ankara", containedInPlace: { "@type": "Country", name: "Türkiye" } },
-      { "@type": "Place", name: "Eryaman, Etimesgut, Ankara" },
+      { "@type": "Place", name: "Eryaman" },
+      { "@type": "AdministrativeArea", name: "Etimesgut" },
       { "@type": "Country", name: "Türkiye" },
     ],
 
@@ -101,15 +105,22 @@ export function StructuredData() {
   };
 
   const personSchema = {
-    "@context": "https://schema.org",
     "@type": "Person",
-    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    alternateName: ["Ezgi Evgin", "Dyt Ezgi Evgin", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı", "Ezgi Evgin Beslenme ve Diyet Danışmanlığı Yorumları", "Ata Yıldız Plaza Diyetisyen"],
+    "@id": PERSON_ID,
+    name: PERSON_NAME,
+    givenName: "Ezgi",
+    familyName: "Evgin Aktaş",
+    alternateName: [
+      "Ezgi Evgin",
+      "Dyt. Ezgi Evgin",
+      "Dyt Ezgi Evgin",
+      "Diyetisyen Ezgi Evgin",
+    ],
     jobTitle: "Diyetisyen",
     description:
       "Uzman diyetisyen; Ankara Eryaman'da beslenme danışmanlığı",
-    url: "https://ezgievginaktas.com",
-    image: "https://ezgievginaktas.com/ezgi_evgin.png",
+    url: PERSON_PROFILE_URL,
+    image: `${SITE_URL}/images/instagram/profile.jpg`,
     telephone: "+905462650440",
     email: "ezgievgin_dytsyn@hotmail.com",
     address: {
@@ -122,8 +133,8 @@ export function StructuredData() {
       "https://diyetisyenezgievgin.com",
       INSTAGRAM_PROFILE_URL,
       DOKTORTAKVIMI_PROFILE_URL,
-      GOOGLE_MAPS_PROFILE_URL,
     ],
+    worksFor: { "@id": BUSINESS_ID },
     knowsAbout: [
       "Beslenme ve Diyetetik",
       "Beslenme Danışmanlığı",
@@ -134,64 +145,24 @@ export function StructuredData() {
   };
 
   const websiteSchema = {
-    "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://ezgievginaktas.com/#website",
-    url: "https://ezgievginaktas.com",
-    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
+    "@id": WEBSITE_ID,
+    url: SITE_URL,
+    name: BUSINESS_NAME,
     description: "Ankara Eryaman beslenme danışmanlığı ve kilo yönetimi programları",
-    publisher: {
-      "@type": "Person",
-      name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    },
+    publisher: { "@id": BUSINESS_ID },
     inLanguage: "tr-TR",
   };
 
-  const professionalServiceSchema = {
+  const graphSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Ezgi Evgin Beslenme ve Diyet Danışmanlığı",
-    description: "Ankara Eryaman'da yüz yüze beslenme danışmanlığı hizmetleri",
-    image: "https://ezgievginaktas.com/ezgi_evgin.png",
-    telephone: "+905462650440",
-    email: "ezgievgin_dytsyn@hotmail.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Altay mah. Orhan Bey cad. Atayıldız no:1/70 kat:8",
-      addressLocality: "Etimesgut",
-      addressRegion: "Ankara",
-      postalCode: "06820",
-      addressCountry: "TR",
-    },
-    priceRange: "$$",
-    areaServed: [
-      { "@type": "City", name: "Ankara", containedInPlace: { "@type": "Country", name: "Türkiye" } },
-      { "@type": "Place", name: "Eryaman, Etimesgut, Ankara" },
-      { "@type": "Country", name: "Türkiye" },
-    ],
+    "@graph": [businessSchema, personSchema, websiteSchema],
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceSchema),
-        }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
+    />
   );
 }

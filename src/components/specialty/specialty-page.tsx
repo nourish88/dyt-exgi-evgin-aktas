@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { BUSINESS_ID } from "@/lib/seo-entities";
 
 export type SpecialtyFaq = { q: string; a: string };
 
@@ -285,35 +286,25 @@ function BodyRenderer({
   );
 }
 
-/** MedicalBusiness JSON-LD üreten yardımcı (her uzmanlık sayfası için). */
-export function buildLocalBusinessJsonLd(opts: {
+/** Uzmanlık sayfasını tek işletmeye bağlayan Service JSON-LD yardımcısı. */
+export function buildServiceJsonLd(opts: {
   name: string;
   description: string;
   url: string;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "Service",
+    "@id": `${opts.url}#service`,
     name: opts.name,
     description: opts.description,
     url: opts.url,
-    telephone: "+90 546 265 04 40",
-    image: "https://ezgievginaktas.com/images/instagram/profile.jpg",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Altay Mah. Orhan Bey Cad. Atayıldız Plaza No:1/70 Kat:8",
-      addressLocality: "Etimesgut",
-      addressRegion: "Ankara",
-      postalCode: "06820",
-      addressCountry: "TR",
-    },
+    serviceType: "Beslenme ve diyet danışmanlığı",
+    provider: { "@id": BUSINESS_ID },
     areaServed: [
       { "@type": "City", name: "Ankara" },
       { "@type": "Country", name: "Türkiye" },
     ],
-    medicalSpecialty: "Nutrition",
-    priceRange: "₺₺",
   };
 }
 
